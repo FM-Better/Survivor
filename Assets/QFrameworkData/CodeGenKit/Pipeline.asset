@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621f3f918dd5423d93a746ad8fc9082d, type: 3}
+  m_Name: Pipeline
+  m_EditorClassIdentifier: 
+  CurrentTask:
+    ShowLog: 0
+    Status: 1
+    GameObject: {fileID: 0}
+    From: 0
+    NameToFullName: []
+    BindInfos:
+    - TypeName: CircleCollider2D
+      PathToRoot: HurtBox
+      MemberName: HurtBox
+    ScriptsFolder: Assets/Scripts/Game
+    ClassName: Player
+    Namespace: Survivor
+    MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace Survivor\r\n{\r\n\tpublic
+      partial class Player : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:b9c495de-268b-48ea-85d3-fcc812668345\r\nusing UnityEngine;\r\n\r\nnamespace
+      Survivor\r\n{\r\n\tpublic partial class Player\r\n\t{\r\n\r\n\t\tpublic CircleCollider2D
+      HurtBox;\r\n\r\n\t\tpublic UnityEngine.Rigidbody2D selfRigidbody;\r\n\r\n\t}\r\n}\r\n"

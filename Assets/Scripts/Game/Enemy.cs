@@ -18,8 +18,11 @@ namespace Survivor
 
 		private void Update()
 		{
-			var direction = (playerTrans.position - transform.position).normalized;
-			transform.Translate(direction * (moveSpeed * Time.deltaTime));
+			if (playerTrans)
+			{
+				var direction = (playerTrans.position - transform.position).normalized;
+				transform.Translate(direction * (moveSpeed * Time.deltaTime));	
+			}
 		}
 	}
 }
