@@ -39,7 +39,6 @@ namespace Survivor
 		{
 			this.DestroyGameObjGracefully();
 			Global.Exp.Value ++ ;
-			UIKit.OpenPanel<UIGamePassPanel>();
 		}
 	}
 }
