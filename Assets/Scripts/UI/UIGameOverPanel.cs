@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
+using UnityEngine.SceneManagement;
 
 namespace Survivor
 {
@@ -12,7 +13,16 @@ namespace Survivor
 		protected override void OnInit(IUIData uiData = null)
 		{
 			mData = uiData as UIGameOverPanelData ?? new UIGameOverPanelData();
-			// please add init code here
+			
+			// 监听按下空格 重新开始游戏
+			ActionKit.OnUpdate.Register(() =>
+			{
+				if (Input.GetKeyDown(KeyCode.Space))
+				{
+					SceneManager.LoadScene("Game");
+					this.CloseSelf();
+				}
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 		}
 		
 		protected override void OnOpen(IUIData uiData = null)

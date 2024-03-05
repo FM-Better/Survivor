@@ -13,6 +13,7 @@ namespace Survivor
 			HurtBox.OnTriggerEnter2DEvent((colider) =>
 			{
 				this.DestroyGameObjGracefully();
+				
 				UIKit.OpenPanel<UIGameOverPanel>();
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 		}

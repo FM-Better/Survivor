@@ -6,13 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="3a2b9e56-376e-497f-9d7b-000d63ff874b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/QFramework/Framework/PackageVersion.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFramework/Framework/PackageVersion.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/QFramework/Toolkits/AudioKit/Example.unitypackage" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFramework/Toolkits/AudioKit/Example.unitypackage" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/QFramework/Toolkits/AudioKit/Example.unitypackage.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFramework/Toolkits/AudioKit/Example.unitypackage.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/QFramework/Toolkits/AudioKit/Scripts/AudioKit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFramework/Toolkits/AudioKit/Scripts/AudioKit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/QFramework/Toolkits/AudioKit/Scripts/AudioPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFramework/Toolkits/AudioKit/Scripts/AudioPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/QFramework/Toolkits/_CoreKit/ActionKit/Scripts/DeprecateActionKit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFramework/Toolkits/_CoreKit/ActionKit/Scripts/DeprecateActionKit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/QFramework/Toolkits/_CoreKit/ActionKit/Scripts/Framework/IAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFramework/Toolkits/_CoreKit/ActionKit/Scripts/Framework/IAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/QFramework/Toolkits/_CoreKit/PoolKit/Scripts/SimpleObjectPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFramework/Toolkits/_CoreKit/PoolKit/Scripts/SimpleObjectPool.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIGameOverPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIGameOverPanel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
@@ -105,13 +109,14 @@
       <workItem from="1709552539299" duration="84000" />
       <workItem from="1709552664100" duration="8000" />
       <workItem from="1709552723617" duration="4000" />
-      <workItem from="1709600695508" duration="1988000" />
+      <workItem from="1709600695508" duration="2901000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="Vcs.Log.Tabs.Properties">
