@@ -765,6 +765,7 @@ MonoBehaviour:
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
   moveSpeed: 2
+  hp: 3
   Sprite: {fileID: 565257071}
 --- !u!4 &760812492
 Transform:

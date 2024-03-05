@@ -7,7 +7,7 @@ namespace Survivor
 {
 	public partial class SimpleAbility : ViewController
 	{
-		[FormerlySerializedAs("attackDis")] [SerializeField] private float attackDistance;
+		[SerializeField] private float attackDistance;
 		[SerializeField] private float attackCD;
 		private float timer;
 		[SerializeField] private float hurtDuringTime;
@@ -31,9 +31,14 @@ namespace Survivor
 					if ((playerTrans.position - enemy.transform.position).magnitude <= attackDistance)
 					{
 						enemy.Sprite.color = Color.red;
+						enemy.Hurt();
+						
 						ActionKit.Delay(hurtDuringTime,() =>
 						{
-							enemy.Sprite.color = Color.white;
+							if (enemy)
+							{
+								enemy.Sprite.color = Color.white;	
+							}
 						}).StartGlobal();
 					}
 				}

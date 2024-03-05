@@ -10,6 +10,7 @@ namespace Survivor
 	{
 		[SerializeField] private float moveSpeed;
 		private Transform playerTrans;
+		[SerializeField] private int hp;
 		
 		void Start()
 		{
@@ -23,6 +24,21 @@ namespace Survivor
 				var direction = (playerTrans.position - transform.position).normalized;
 				transform.Translate(direction * (moveSpeed * Time.deltaTime));	
 			}
+		}
+
+		public void Hurt()
+		{
+			hp--;
+			if (hp <= 0)
+			{
+				Dead();
+			}
+		}
+
+		public void Dead()
+		{
+			this.DestroyGameObjGracefully();
+			UIKit.OpenPanel<UIGamePassPanel>();
 		}
 	}
 }
