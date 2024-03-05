@@ -6,16 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3a2b9e56-376e-497f-9d7b-000d63ff874b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QFramework/Framework/PackageVersion.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFramework/Framework/PackageVersion.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QFramework/Toolkits/AudioKit/Example.unitypackage" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFramework/Toolkits/AudioKit/Example.unitypackage" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QFramework/Toolkits/AudioKit/Example.unitypackage.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFramework/Toolkits/AudioKit/Example.unitypackage.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QFramework/Toolkits/AudioKit/Scripts/AudioKit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFramework/Toolkits/AudioKit/Scripts/AudioKit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QFramework/Toolkits/AudioKit/Scripts/AudioPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFramework/Toolkits/AudioKit/Scripts/AudioPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QFramework/Toolkits/_CoreKit/ActionKit/Scripts/DeprecateActionKit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFramework/Toolkits/_CoreKit/ActionKit/Scripts/DeprecateActionKit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QFramework/Toolkits/_CoreKit/ActionKit/Scripts/Framework/IAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFramework/Toolkits/_CoreKit/ActionKit/Scripts/Framework/IAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QFramework/Toolkits/_CoreKit/PoolKit/Scripts/SimpleObjectPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFramework/Toolkits/_CoreKit/PoolKit/Scripts/SimpleObjectPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIGameOverPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIGameOverPanel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +20,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/c4/40dddad2/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SimpleAbility.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -37,6 +37,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -82,10 +83,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="21184">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="21184" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -109,7 +110,7 @@
       <workItem from="1709552539299" duration="84000" />
       <workItem from="1709552664100" duration="8000" />
       <workItem from="1709552723617" duration="4000" />
-      <workItem from="1709600695508" duration="2901000" />
+      <workItem from="1709600695508" duration="7517000" />
     </task>
     <servers />
   </component>
@@ -153,5 +154,55 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/SimpleAbility.cs</url>
+          <line>60</line>
+          <properties documentPath="E:\Unity\Survivor\Assets\Scripts\Game\SimpleAbility.cs" initialLine="38" containingFunctionPresentation="Lambda expression inside Method 'Update'">
+            <startOffsets>
+              <option value="1462" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1495" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/SimpleAbility.cs</url>
+          <line>55</line>
+          <properties documentPath="E:\Unity\Survivor\Assets\Scripts\Game\SimpleAbility.cs" initialLine="34" containingFunctionPresentation="Method 'Update'">
+            <startOffsets>
+              <option value="1304" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1335" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/SimpleAbility.cs</url>
+          <line>37</line>
+          <properties documentPath="E:\Unity\Survivor\Assets\Scripts\Game\SimpleAbility.cs" initialLine="36" containingFunctionPresentation="Lambda expression inside Method 'Update'">
+            <startOffsets>
+              <option value="938" />
+            </startOffsets>
+            <endOffsets>
+              <option value="971" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
+        <watch expression="this.attackCD" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
