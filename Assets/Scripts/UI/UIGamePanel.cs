@@ -12,7 +12,8 @@ namespace Survivor
 		protected override void OnInit(IUIData uiData = null)
 		{
 			mData = uiData as UIGamePanelData ?? new UIGamePanelData();
-
+			BtnUpgrade.Hide();
+			
 			Global.Exp.RegisterWithInitValue((exp) =>
 			{
 				if (exp >= 5)
@@ -27,6 +28,18 @@ namespace Survivor
 			{
 				TxtLv.text = "等级：" + lv;
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+
+			Global.Lv.Register((lv) =>
+			{
+				Time.timeScale = 0f;
+				BtnUpgrade.Show();
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+			
+			BtnUpgrade.onClick.AddListener(() =>
+			{
+				Time.timeScale = 1f;
+				BtnUpgrade.Hide();
+			});
 		}
 		
 		protected override void OnOpen(IUIData uiData = null)
