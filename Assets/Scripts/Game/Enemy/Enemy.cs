@@ -38,7 +38,7 @@ namespace Survivor
 		public void Dead()
 		{
 			this.DestroyGameObjGracefully();
-			Global.Exp.Value ++ ;
+			Global.Exp.Value++;
 		}
 	}
 }
