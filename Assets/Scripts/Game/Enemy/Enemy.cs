@@ -10,7 +10,7 @@ namespace Survivor
 	{
 		[SerializeField] private float moveSpeed;
 		private Transform playerTrans;
-		[SerializeField] private int hp;
+		[SerializeField] private float hp;
 		
 		void Start()
 		{
@@ -28,7 +28,7 @@ namespace Survivor
 
 		public void Hurt()
 		{
-			hp--;
+			hp -= Global.SimpleAbilityDamage.Value;
 			if (hp <= 0)
 			{
 				Dead();

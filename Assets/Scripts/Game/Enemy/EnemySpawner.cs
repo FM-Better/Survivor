@@ -27,6 +27,7 @@ namespace Survivor
 				spawnTimer = 0f;
 				
 				var spawnPos = CalcSpawnPos(spawnDis);
+				
 				Enemy.Instantiate()
 					.Position(spawnPos)
 					.Show();
@@ -39,7 +40,7 @@ namespace Survivor
 			var rad = Mathf.Deg2Rad * angle;
 			var direction = new Vector3(Mathf.Cos(rad), Mathf.Sin(rad)).normalized;
 
-			return SpwanDistance * direction;
+			return playerTrans.position + SpwanDistance * direction;
 		}
 	}
 }

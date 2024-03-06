@@ -293,7 +293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Namespace: Survivor
   ScriptName: Player
-  ScriptsFolder: Assets/Scripts/Game
+  ScriptsFolder: Assets\Scripts\Game\Player
   GeneratePrefab: 0
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
