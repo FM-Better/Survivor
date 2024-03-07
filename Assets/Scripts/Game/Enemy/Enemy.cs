@@ -47,7 +47,6 @@ namespace Survivor
 		{
 			this.DestroyGameObjGracefully();
 			EnemySpawner.enemyCount.Value--;
-			Global.Exp.Value++;
 		}
 	}
 }
