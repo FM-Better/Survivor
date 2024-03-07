@@ -18,12 +18,16 @@ MonoBehaviour:
     GameObject: {fileID: 0}
     From: 0
     NameToFullName: []
-    BindInfos: []
-    ScriptsFolder: Assets/Scripts/Game/Player
-    ClassName: PickUpArea
+    BindInfos:
+    - TypeName: Survivor.ExpBall
+      PathToRoot: ExpBall
+      MemberName: ExpBall
+    ScriptsFolder: Assets/Scripts/Game
+    ClassName: DropManager
     Namespace: Survivor
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace Survivor\r\n{\r\n\tpublic
-      partial class PickUpArea : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class DropManager : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:07771373-a656-44d2-bb5a-6dfacaf31292\r\nusing UnityEngine;\r\n\r\nnamespace
-      Survivor\r\n{\r\n\tpublic partial class PickUpArea\r\n\t{\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:bdc4189e-1fcc-4785-aaa7-95474652f2d9\r\nusing UnityEngine;\r\n\r\nnamespace
+      Survivor\r\n{\r\n\tpublic partial class DropManager\r\n\t{\r\n\r\n\t\tpublic
+      Survivor.ExpBall ExpBall;\r\n\r\n\t}\r\n}\r\n"

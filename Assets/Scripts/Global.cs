@@ -37,6 +37,11 @@ namespace Survivor
         /// </summary>
         public static BindableProperty<bool> IsEnemySpawnOver = new BindableProperty<bool>(false);
         
+        /// <summary>
+        /// 经验球掉落概率
+        /// </summary>
+        public static BindableProperty<int> ExpBallDropRate = new BindableProperty<int>(90);
+        
         public static void ResetData()
         {
             Exp.Value = 0;
@@ -45,6 +50,8 @@ namespace Survivor
             SimpleAbilityDamage.Value = 1f;
             SimpleAbilityCD.Value = 1.5f;
             IsEnemySpawnOver.Value = false;
+            ExpBallDropRate.Value = 90;
+            
             EnemySpawner.enemyCount.Value = 0;
             Time.timeScale = 1f;
         }
@@ -52,6 +59,17 @@ namespace Survivor
         public static int CurrentLevelExp()
         {
             return Level.Value * 5;
+        }
+
+        public static void SpawnDrop(Vector3 spawnPosition)
+        {
+            var randomNum = Random.Range(1, 101);
+            if (randomNum <= ExpBallDropRate.Value)
+            {
+                DropManager.Default.ExpBall.Instantiate()
+                    .Position(spawnPosition)
+                    .Show();
+            }
         }
     }
 }
