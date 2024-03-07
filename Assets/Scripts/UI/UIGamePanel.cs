@@ -33,13 +33,13 @@ namespace Survivor
 			#region Gloal相关
 			Global.Exp.RegisterWithInitValue((exp) =>
 			{
-				TxtExp.text = "经验值：" + exp;
-				
-				if (exp >= 5)
+				if (exp >= Global.CurrentLevelExp())
 				{
-					Global.Exp.Value -= 5;
+					Global.Exp.Value -= Global.CurrentLevelExp();
 					Global.Level.Value++;
 				}
+				
+				TxtExp.text = $"经验值：({Global.Exp.Value}/{Global.CurrentLevelExp()})";
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			
 			Global.Level.RegisterWithInitValue((lv) =>

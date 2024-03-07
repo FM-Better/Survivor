@@ -48,5 +48,10 @@ namespace Survivor
             EnemySpawner.enemyCount.Value = 0;
             Time.timeScale = 1f;
         }
+
+        public static int CurrentLevelExp()
+        {
+            return Level.Value * 5;
+        }
     }
 }
