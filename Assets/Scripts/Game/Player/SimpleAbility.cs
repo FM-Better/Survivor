@@ -8,9 +8,8 @@ namespace Survivor
 	public partial class SimpleAbility : ViewController
 	{
 		[SerializeField] private float attackDistance;
-		[SerializeField] private float attackCD;
 		private float timer;
-		[SerializeField] private float hurtDuringTime;
+		[SerializeField] private float hurtDurationTime;
 
 		private Transform playerTrans;
 
@@ -21,25 +20,16 @@ namespace Survivor
 		
 		private void Update()
 		{
-				timer += Time.deltaTime;	
+			timer += Time.deltaTime;	
 
-			if (timer >= attackCD)
+			if (timer >= Global.SimpleAbilityCD.Value)
 			{
 				var enemies = FindObjectsOfType<Enemy>(false);
 				foreach (var enemy in enemies)
 				{
 					if ((playerTrans.position - enemy.transform.position).magnitude <= attackDistance)
 					{
-						enemy.Sprite.color = Color.red;
-						enemy.Hurt();
-						
-						ActionKit.Delay(hurtDuringTime,() =>
-						{
-							if (enemy)
-							{
-								enemy.Sprite.color = Color.white;	
-							}
-						}).StartGlobal();
+						enemy.Hurt(Global.SimpleAbilityDamage.Value, hurtDurationTime);
 					}
 				}
 				timer = 0f;

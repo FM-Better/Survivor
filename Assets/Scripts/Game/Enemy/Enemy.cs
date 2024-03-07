@@ -27,9 +27,16 @@ namespace Survivor
 			}
 		}
 
-		public void Hurt()
+		public void Hurt(float damage, float durationTime)
 		{
-			hp -= Global.SimpleAbilityDamage.Value;
+			hp -= damage;
+			this.Sprite.color = Color.red;
+			
+			ActionKit.Delay((durationTime),() =>
+			{
+				this.Sprite.color = Color.white;
+			}).Start(this);
+			
 			if (hp <= 0)
 			{
 				Dead();

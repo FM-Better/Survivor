@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using QFramework;
+using UnityEngine.Serialization;
 using UnityEngine.TextCore.LowLevel;
 using Random = UnityEngine.Random;
 
@@ -10,7 +11,7 @@ namespace Survivor
 	[Serializable]
 	public class EnemyWave
 	{
-		public float During;
+		public float DurationTime;
 		public float SpawnCD;
 		public GameObject EnemyPrefab;
 	}
@@ -52,7 +53,7 @@ namespace Survivor
 				}
 				
 				waveTimer += Time.deltaTime;
-				if (waveTimer >= nowWave.During)
+				if (waveTimer >= nowWave.DurationTime)
 				{
 					waveTimer = 0f;
 					
@@ -65,13 +66,13 @@ namespace Survivor
 			}
 		}
 
-		private Vector3 CalcSpawnPos(float SpwanDistance)
+		private Vector3 CalcSpawnPos(float spwanDistance)
 		{
 			var angle = Random.Range(0, 360f);
 			var rad = Mathf.Deg2Rad * angle;
 			var direction = new Vector3(Mathf.Cos(rad), Mathf.Sin(rad)).normalized;
 
-			return playerTrans.position + SpwanDistance * direction;
+			return playerTrans.position + spwanDistance * direction;
 		}
 	}
 }

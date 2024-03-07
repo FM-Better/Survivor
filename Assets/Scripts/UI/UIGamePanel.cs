@@ -12,14 +12,21 @@ namespace Survivor
 		protected override void OnInit(IUIData uiData = null)
 		{
 			mData = uiData as UIGamePanelData ?? new UIGamePanelData();
-			BtnUpgrade.Hide();
+			UpgradeRoot.Hide();
 
 			#region UI相关
-			BtnUpgrade.onClick.AddListener(() =>
+			BtnSimpleDamage.onClick.AddListener(() =>
 			{
-				Global.SimpleAbilityDamage.Value *= 1.5f; // 提升简单能力伤害1.5倍
+				Global.SimpleAbilityDamage.Value *= 1.5f; // 简单能力伤害提升1.5倍
 				Time.timeScale = 1f;
-				BtnUpgrade.Hide();
+				UpgradeRoot.Hide();
+			});
+			
+			BtnSimpleCD.onClick.AddListener(() =>
+			{
+				Global.SimpleAbilityCD.Value *= 0.5f; // 简单能力时间间隔缩短0.5倍
+				Time.timeScale = 1f;
+				UpgradeRoot.Hide();
 			});
 			#endregion
 			
@@ -43,7 +50,7 @@ namespace Survivor
 			Global.Level.Register((lv) =>
 			{
 				Time.timeScale = 0f;
-				BtnUpgrade.Show();
+				UpgradeRoot.Show();
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 
 			Global.Timer.RegisterWithInitValue((nowTime) =>

@@ -28,6 +28,11 @@ namespace Survivor
         public static BindableProperty<float> SimpleAbilityDamage = new BindableProperty<float>(1f);
         
         /// <summary>
+        /// 简单能力的间隔时间
+        /// </summary>
+        public static BindableProperty<float> SimpleAbilityCD = new BindableProperty<float>(1.5f);
+        
+        /// <summary>
         /// 敌人是否生成完毕
         /// </summary>
         public static BindableProperty<bool> IsEnemySpawnOver = new BindableProperty<bool>(false);
@@ -38,6 +43,7 @@ namespace Survivor
             Level.Value = 1;
             Timer.Value = 0f;
             SimpleAbilityDamage.Value = 1f;
+            SimpleAbilityCD.Value = 1.5f;
             IsEnemySpawnOver.Value = false;
             EnemySpawner.enemyCount.Value = 0;
             Time.timeScale = 1f;

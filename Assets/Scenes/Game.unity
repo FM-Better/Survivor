@@ -962,13 +962,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Namespace: Survivor
   ScriptName: SimpleAbility
-  ScriptsFolder: Assets/Scripts/Game
+  ScriptsFolder: Assets\Scripts\Game\Player
   GeneratePrefab: 0
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
   attackDistance: 5
-  attackCD: 1.5
-  hurtDuringTime: 0.2
+  hurtDurationTime: 0.2
 --- !u!1 &2065685763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,16 +1005,16 @@ MonoBehaviour:
   ArchitectureFullTypeName: 
   spawnDis: 10
   enemyWaveList:
-  - During: 4
+  - DurationTime: 4
     SpawnCD: 1
     EnemyPrefab: {fileID: 760812489}
-  - During: 3
+  - DurationTime: 3
     SpawnCD: 0.5
     EnemyPrefab: {fileID: 760812489}
-  - During: 5
+  - DurationTime: 5
     SpawnCD: 0.3
     EnemyPrefab: {fileID: 760812489}
-  - During: 3
+  - DurationTime: 3
     SpawnCD: 0.2
     EnemyPrefab: {fileID: 760812489}
   Enemy: {fileID: 760812490}
