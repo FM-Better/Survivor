@@ -23,6 +23,8 @@ namespace Survivor
 		[SerializeField] private float spawnDis;
 		[SerializeField] private List<EnemyWave> enemyWaveList = new List<EnemyWave>();
 		private int nowWaveCount = 1;
+
+		public static BindableProperty<int> enemyCount = new BindableProperty<int>();
 		
 		void Start()
 		{
@@ -59,7 +61,7 @@ namespace Survivor
 			}
 			else
 			{
-				Global.IsEnemyPass.Value = true;
+				Global.IsEnemySpawnOver.Value = true;
 			}
 		}
 

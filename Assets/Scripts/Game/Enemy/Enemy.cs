@@ -15,6 +15,7 @@ namespace Survivor
 		void Start()
 		{
 			playerTrans = FindObjectOfType<Player>().transform; // 缓存玩家tarnsfrom
+			EnemySpawner.enemyCount.Value++; // 计数
 		}
 
 		private void Update()
@@ -38,6 +39,7 @@ namespace Survivor
 		public void Dead()
 		{
 			this.DestroyGameObjGracefully();
+			EnemySpawner.enemyCount.Value--;
 			Global.Exp.Value++;
 		}
 	}

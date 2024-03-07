@@ -26,16 +26,11 @@ namespace Survivor
         /// 简单能力的伤害值
         /// </summary>
         public static BindableProperty<float> SimpleAbilityDamage = new BindableProperty<float>(1f);
-
-        /// <summary>
-        /// 时间是否达到通关条件
-        /// </summary>
-        public static BindableProperty<bool> IsTimePass = new BindableProperty<bool>(false);
         
         /// <summary>
-        /// 敌人是否达到通关条件
+        /// 敌人是否生成完毕
         /// </summary>
-        public static BindableProperty<bool> IsEnemyPass = new BindableProperty<bool>(false);
+        public static BindableProperty<bool> IsEnemySpawnOver = new BindableProperty<bool>(false);
         
         public static void ResetData()
         {
@@ -43,8 +38,9 @@ namespace Survivor
             Level.Value = 1;
             Timer.Value = 0f;
             SimpleAbilityDamage.Value = 1f;
-            IsTimePass.Value = false;
-            IsEnemyPass.Value = false;
+            IsEnemySpawnOver.Value = false;
+            EnemySpawner.enemyCount.Value = 0;
+            Time.timeScale = 1f;
         }
     }
 }

@@ -41,7 +41,7 @@ namespace Survivor
 		protected override void OnClose()
 		{
 			Global.ResetData();
-			Time.timeScale = 1f; // 恢复原状
+			Time.timeScale = 1f; // 恢复原状 
 		}
 	}
 }
