@@ -27,6 +27,7 @@ namespace Survivor
 		
 		protected override void OnOpen(IUIData uiData = null)
 		{
+			Time.timeScale = 0f; // 防止玩家和敌人移动
 		}
 		
 		protected override void OnShow()
@@ -39,6 +40,8 @@ namespace Survivor
 		
 		protected override void OnClose()
 		{
+			Global.ResetData();
+			Time.timeScale = 1f; // 恢复原状
 		}
 	}
 }

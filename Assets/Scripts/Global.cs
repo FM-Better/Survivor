@@ -26,5 +26,13 @@ namespace Survivor
         /// 简单能力的伤害值
         /// </summary>
         public static BindableProperty<float> SimpleAbilityDamage = new BindableProperty<float>(1f);
+
+        public static void ResetData()
+        {
+            Exp.Value = 0;
+            Level.Value = 1;
+            Timer.Value = 0f;
+            SimpleAbilityDamage.Value = 1f;
+        }
     }
 }

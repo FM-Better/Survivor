@@ -13,7 +13,17 @@ namespace Survivor
 		{
 			mData = uiData as UIGamePanelData ?? new UIGamePanelData();
 			BtnUpgrade.Hide();
+
+			#region UI相关
+			BtnUpgrade.onClick.AddListener(() =>
+			{
+				Global.SimpleAbilityDamage.Value *= 1.5f; // 提升简单能力伤害1.5倍
+				Time.timeScale = 1f;
+				BtnUpgrade.Hide();
+			});
+			#endregion
 			
+			#region Gloal相关
 			Global.Exp.RegisterWithInitValue((exp) =>
 			{
 				TxtExp.text = "经验值：" + exp;
@@ -43,21 +53,23 @@ namespace Survivor
 					var nowSeconds = Mathf.RoundToInt(nowTime);
 					var mintues = nowSeconds / 60;
 					var seconds = nowSeconds % 60;
-					TxtTimer.text = "时间：" + $"{mintues:00}:{seconds:00}";	
+					TxtTimer.text = "时间：" + $"{mintues:00}:{seconds:00}";
+
+					// 暂定坚持60s通关
+					if (nowSeconds >= 60)
+					{
+						UIKit.OpenPanel<UIGamePassPanel>();
+					}
 				}
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
-			
-			BtnUpgrade.onClick.AddListener(() =>
-			{
-				Global.SimpleAbilityDamage.Value *= 1.5f; // 提升简单能力伤害1.5倍
-				Time.timeScale = 1f;
-				BtnUpgrade.Hide();
-			});
+			#endregion
 
+			#region ActionKit相关
 			ActionKit.OnUpdate.Register(() =>
 			{
 				Global.Timer.Value += Time.deltaTime; // 在Update中计时
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+			#endregion
 		}
 		
 		protected override void OnOpen(IUIData uiData = null)
