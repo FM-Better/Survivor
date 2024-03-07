@@ -55,11 +55,25 @@ namespace Survivor
 					var seconds = nowSeconds % 60;
 					TxtTimer.text = "时间：" + $"{mintues:00}:{seconds:00}";
 
-					// 暂定坚持60s通关
-					if (nowSeconds >= 60)
+					// 暂定坚持60s为通关条件之一
+					if (!Global.IsTimePass.Value && nowSeconds >= 60)
 					{
-						UIKit.OpenPanel<UIGamePassPanel>();
+						Global.IsTimePass.Value = true;
 					}
+				}
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+			
+			Global.IsEnemyPass.Register((isPass) =>
+			{
+				if (isPass)
+				{
+					ActionKit.OnUpdate.Register(() =>
+					{
+						if (Global.IsTimePass.Value && !FindObjectOfType<Enemy>())
+						{
+							UIKit.OpenPanel<UIGamePassPanel>();
+						}
+					}).UnRegisterWhenGameObjectDestroyed(gameObject);
 				}
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			#endregion

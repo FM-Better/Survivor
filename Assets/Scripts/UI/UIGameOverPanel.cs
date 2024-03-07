@@ -39,6 +39,7 @@ namespace Survivor
 		
 		protected override void OnClose()
 		{
+			Global.ResetData();
 		}
 	}
 }

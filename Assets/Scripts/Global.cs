@@ -27,12 +27,24 @@ namespace Survivor
         /// </summary>
         public static BindableProperty<float> SimpleAbilityDamage = new BindableProperty<float>(1f);
 
+        /// <summary>
+        /// 时间是否达到通关条件
+        /// </summary>
+        public static BindableProperty<bool> IsTimePass = new BindableProperty<bool>(false);
+        
+        /// <summary>
+        /// 敌人是否达到通关条件
+        /// </summary>
+        public static BindableProperty<bool> IsEnemyPass = new BindableProperty<bool>(false);
+        
         public static void ResetData()
         {
             Exp.Value = 0;
             Level.Value = 1;
             Timer.Value = 0f;
             SimpleAbilityDamage.Value = 1f;
+            IsTimePass.Value = false;
+            IsEnemyPass.Value = false;
         }
     }
 }

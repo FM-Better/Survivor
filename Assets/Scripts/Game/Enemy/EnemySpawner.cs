@@ -1,19 +1,32 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using QFramework;
+using UnityEngine.TextCore.LowLevel;
+using Random = UnityEngine.Random;
 
 namespace Survivor
 {
+	[Serializable]
+	public class EnemyWave
+	{
+		public float During;
+		public float SpawnCD;
+		public GameObject EnemyPrefab;
+	}
+	
 	public partial class EnemySpawner : ViewController
 	{
 		private Transform playerTrans;
-		[SerializeField] private float spawnCD;
+		private float waveTimer = 0f;
 		private float spawnTimer = 0f;
 		[SerializeField] private float spawnDis;
-
+		[SerializeField] private List<EnemyWave> enemyWaveList = new List<EnemyWave>();
+		private int nowWaveCount = 1;
 		
 		void Start()
 		{
-			playerTrans = FindObjectOfType<Player>().transform;
+			playerTrans = FindObjectOfType<Player>().transform; // 缓存玩家Transform
 		}
 
 		private void Update()
@@ -21,16 +34,32 @@ namespace Survivor
 			if (!playerTrans)
 				return;
 
-			spawnTimer += Time.deltaTime;
-			if (spawnTimer >= spawnCD)
+			if (nowWaveCount <= enemyWaveList.Count)
 			{
-				spawnTimer = 0f;
+				var nowWave = enemyWaveList[nowWaveCount - 1];
 				
-				var spawnPos = CalcSpawnPos(spawnDis);
+				spawnTimer += Time.deltaTime;
+				if (spawnTimer >= nowWave.SpawnCD)
+				{
+					spawnTimer = 0f;
 				
-				Enemy.Instantiate()
-					.Position(spawnPos)
-					.Show();
+					var spawnPos = CalcSpawnPos(spawnDis);
+					nowWave.EnemyPrefab.Instantiate()
+						.Position(spawnPos)
+						.Show();
+				}
+				
+				waveTimer += Time.deltaTime;
+				if (waveTimer >= nowWave.During)
+				{
+					waveTimer = 0f;
+					
+					nowWaveCount++;
+				}
+			}
+			else
+			{
+				Global.IsEnemyPass.Value = true;
 			}
 		}
 

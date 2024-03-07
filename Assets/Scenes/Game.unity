@@ -1004,8 +1004,20 @@ MonoBehaviour:
   GeneratePrefab: 0
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
-  spawnCD: 1
   spawnDis: 10
+  enemyWaveList:
+  - During: 4
+    SpawnCD: 1
+    EnemyPrefab: {fileID: 760812489}
+  - During: 3
+    SpawnCD: 0.5
+    EnemyPrefab: {fileID: 760812489}
+  - During: 5
+    SpawnCD: 0.3
+    EnemyPrefab: {fileID: 760812489}
+  - During: 3
+    SpawnCD: 0.2
+    EnemyPrefab: {fileID: 760812489}
   Enemy: {fileID: 760812490}
 --- !u!4 &2065685765
 Transform:
