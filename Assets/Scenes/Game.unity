@@ -200,7 +200,7 @@ SpriteRenderer:
   m_SortingLayerID: 1587382673
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 39305deb58001e548a34e994753257b5, type: 3}
   m_Color: {r: 0, g: 0.6812062, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -220,7 +220,7 @@ Transform:
   m_GameObject: {fileID: 62560024}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.07, y: 1.432, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 258827204}
@@ -1114,7 +1114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Namespace: Survivor
   ScriptName: Gold
-  ScriptsFolder: Assets\Scripts\Game
+  ScriptsFolder: Assets\Scripts\Game\Drop
   GeneratePrefab: 0
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
@@ -1191,7 +1191,7 @@ SpriteRenderer:
   m_SortingLayerID: 1587382673
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f398aaf2576e4d945acf2feeaca8cbb9, type: 3}
   m_Color: {r: 1, g: 0.83026266, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1211,7 +1211,7 @@ Transform:
   m_GameObject: {fileID: 934244129}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.199, y: 0.198, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 258827204}
@@ -1466,8 +1466,25 @@ MonoBehaviour:
   ArchitectureFullTypeName: 
   spawnDis: 10
   enemyWaveList:
-  - DurationTime: 2
+  - DurationTime: 4
     SpawnCD: 1
+    isWaited: 0
+    WaitTime: 4
+    EnemyPrefab: {fileID: 760812489}
+  - DurationTime: 5
+    SpawnCD: 0.7
+    isWaited: 0
+    WaitTime: 3
+    EnemyPrefab: {fileID: 760812489}
+  - DurationTime: 6
+    SpawnCD: 0.5
+    isWaited: 0
+    WaitTime: 2
+    EnemyPrefab: {fileID: 760812489}
+  - DurationTime: 8
+    SpawnCD: 0.2
+    isWaited: 0
+    WaitTime: 2
     EnemyPrefab: {fileID: 760812489}
   Enemy: {fileID: 760812490}
 --- !u!4 &2065685765

@@ -1204,6 +1204,7 @@ GameObject:
   - component: {fileID: 2831564059696377310}
   - component: {fileID: 7106822406567652916}
   - component: {fileID: 4293449085494830659}
+  - component: {fileID: 7839190473621468522}
   m_Layer: 0
   m_Name: TxtGold
   m_TagString: Untagged
@@ -1289,6 +1290,21 @@ MonoBehaviour:
   CustomComponentName: TxtGold
   CustomComment: 
   mComponentName: UnityEngine.UI.Text
+--- !u!114 &7839190473621468522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919776110073792043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &6395453343512627968
 GameObject:
   m_ObjectHideFlags: 0

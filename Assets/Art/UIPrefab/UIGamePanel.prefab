@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1541300665}
   - component: {fileID: 1541300664}
   - component: {fileID: 1541300663}
+  - component: {fileID: 1850657779}
   m_Layer: 0
   m_Name: TxtGold
   m_TagString: Untagged
@@ -97,6 +98,21 @@ MonoBehaviour:
   CustomComponentName: TxtExp
   CustomComment: 
   mComponentName: UnityEngine.UI.Text
+--- !u!114 &1850657779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541300661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &816456951075164581
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,6 +180,7 @@ GameObject:
   - component: {fileID: 1413703736361813215}
   - component: {fileID: 4306889559301323505}
   - component: {fileID: 6692366004607820755}
+  - component: {fileID: 1850657782}
   m_Layer: 0
   m_Name: TxtLv
   m_TagString: Untagged
@@ -249,6 +266,21 @@ MonoBehaviour:
   CustomComponentName: TxtExp
   CustomComment: 
   mComponentName: UnityEngine.UI.Text
+--- !u!114 &1850657782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984535531155422567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1478000922824720123
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,6 +584,7 @@ GameObject:
   - component: {fileID: 8499169723885796240}
   - component: {fileID: 682323482191105183}
   - component: {fileID: 7248602707800046074}
+  - component: {fileID: 1850657781}
   m_Layer: 0
   m_Name: TxtTimer
   m_TagString: Untagged
@@ -637,6 +670,21 @@ MonoBehaviour:
   CustomComponentName: TxtExp
   CustomComment: 
   mComponentName: UnityEngine.UI.Text
+--- !u!114 &1850657781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5073273660148753639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &5263351402841501540
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,6 +697,7 @@ GameObject:
   - component: {fileID: 7627136314610368552}
   - component: {fileID: 3763869502190016040}
   - component: {fileID: 515518951607889459}
+  - component: {fileID: 1850657783}
   m_Layer: 0
   m_Name: TxtExp
   m_TagString: Untagged
@@ -734,6 +783,21 @@ MonoBehaviour:
   CustomComponentName: TxtExp
   CustomComment: 
   mComponentName: UnityEngine.UI.Text
+--- !u!114 &1850657783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5263351402841501540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &6335413743010078722
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,6 +810,7 @@ GameObject:
   - component: {fileID: 8960183575266506372}
   - component: {fileID: 2162620510649827310}
   - component: {fileID: 4762922351162718965}
+  - component: {fileID: 1850657780}
   m_Layer: 0
   m_Name: TxtEnemy
   m_TagString: Untagged
@@ -831,6 +896,21 @@ MonoBehaviour:
   CustomComponentName: TxtExp
   CustomComment: 
   mComponentName: UnityEngine.UI.Text
+--- !u!114 &1850657780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6335413743010078722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &8200662281177100187
 GameObject:
   m_ObjectHideFlags: 0

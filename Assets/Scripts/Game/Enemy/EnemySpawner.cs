@@ -11,16 +11,19 @@ namespace Survivor
 	[Serializable]
 	public class EnemyWave
 	{
-		public float DurationTime;
-		public float SpawnCD;
+		public float DurationTime; // 持续时间
+		public float SpawnCD; // 刷怪的CD
+		public bool isWaited; // 是否等待完毕
+		public float WaitTime; // 等待下一波的时间
 		public GameObject EnemyPrefab;
 	}
 	
 	public partial class EnemySpawner : ViewController
 	{
 		private Transform playerTrans;
-		private float waveTimer = 0f;
+		private float waitTimer = 0f;
 		private float spawnTimer = 0f;
+		private float waveTimer = 0f;
 		[SerializeField] private float spawnDis;
 		[SerializeField] private List<EnemyWave> enemyWaveList = new List<EnemyWave>();
 		private int nowWaveCount = 1;
@@ -40,29 +43,41 @@ namespace Survivor
 			if (nowWaveCount <= enemyWaveList.Count)
 			{
 				var nowWave = enemyWaveList[nowWaveCount - 1];
-				
-				spawnTimer += Time.deltaTime;
-				if (spawnTimer >= nowWave.SpawnCD)
+
+				if (!nowWave.isWaited)
 				{
-					spawnTimer = 0f;
-				
-					var spawnPos = CalcSpawnPos(spawnDis);
-					nowWave.EnemyPrefab.Instantiate()
-						.Position(spawnPos)
-						.Show();
+					waitTimer += Time.deltaTime;
+					if (waitTimer >= nowWave.WaitTime)
+					{
+						waitTimer = 0f;
+						nowWave.isWaited = true;
+					}
 				}
-				
-				waveTimer += Time.deltaTime;
-				if (waveTimer >= nowWave.DurationTime)
+				else
 				{
-					waveTimer = 0f;
-					
-					nowWaveCount++;
+					spawnTimer += Time.deltaTime;
+					if (spawnTimer >= nowWave.SpawnCD)
+					{
+						spawnTimer = 0f;
+
+						var spawnPos = CalcSpawnPos(spawnDis);
+						nowWave.EnemyPrefab.Instantiate()
+							.Position(spawnPos)
+							.Show();
+					}
+
+					waveTimer += Time.deltaTime;
+					if (waveTimer >= nowWave.DurationTime)
+					{
+						waveTimer = 0f;
+
+						nowWaveCount++;
+					}
 				}
 			}
 			else
 			{
-				Global.IsEnemySpawnOver.Value = true;	
+				Global.IsEnemySpawnOver.Value = true;
 			}
 		}
 
