@@ -1,4 +1,4 @@
-// Generate Id:bdc4189e-1fcc-4785-aaa7-95474652f2d9
+// Generate Id:4f92bb3b-34f1-42ec-bdd7-6432adf1a4a3
 using UnityEngine;
 
 namespace Survivor
@@ -7,6 +7,8 @@ namespace Survivor
 	{
 
 		public Survivor.ExpBall ExpBall;
+
+		public Survivor.Gold Gold;
 
 	}
 }

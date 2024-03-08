@@ -5,7 +5,7 @@ using QFramework;
 
 namespace Survivor
 {
-	// Generate Id:ecea1235-d2fa-46d8-9385-15541aa4f277
+	// Generate Id:35834726-db42-4869-97ae-cf8482188a1e
 	public partial class UIGamePanel
 	{
 		public const string Name = "UIGamePanel";
@@ -18,6 +18,8 @@ namespace Survivor
 		public UnityEngine.UI.Text TxtTimer;
 		[SerializeField]
 		public UnityEngine.UI.Text TxtEnemy;
+		[SerializeField]
+		public UnityEngine.UI.Text TxtGold;
 		[SerializeField]
 		public RectTransform UpgradeRoot;
 		[SerializeField]
@@ -33,6 +35,7 @@ namespace Survivor
 			TxtLv = null;
 			TxtTimer = null;
 			TxtEnemy = null;
+			TxtGold = null;
 			UpgradeRoot = null;
 			BtnSimpleDamage = null;
 			BtnSimpleCD = null;

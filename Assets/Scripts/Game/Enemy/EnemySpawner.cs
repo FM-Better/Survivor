@@ -62,7 +62,11 @@ namespace Survivor
 			}
 			else
 			{
-				Global.IsEnemySpawnOver.Value = true;
+				if (!Global.IsEnemySpawnOver.Value)
+				{
+					Global.IsEnemySpawnOver.Value = true;
+					"刷怪完毕！".LogInfo();	
+				}
 			}
 		}
 

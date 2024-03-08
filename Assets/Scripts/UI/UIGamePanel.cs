@@ -31,15 +31,31 @@ namespace Survivor
 			#endregion
 			
 			#region Gloal相关
-			Global.Exp.RegisterWithInitValue((exp) =>
+
+			Global.Exp.Register((exp) =>
 			{
 				if (exp >= Global.CurrentLevelExp())
 				{
 					Global.Exp.Value -= Global.CurrentLevelExp();
 					Global.Level.Value++;
 				}
-				
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+			
+			Global.Exp.RegisterWithInitValue((exp) =>
+			{
 				TxtExp.text = $"经验值：({Global.Exp.Value}/{Global.CurrentLevelExp()})";
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+
+			Global.Gold.Value = PlayerPrefs.GetInt("Gold", 0);
+			
+			Global.Gold.RegisterWithInitValue((gold) =>
+			{
+				TxtGold.text = "金币：" + gold;
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+			
+			Global.Gold.Register((gold) =>
+			{
+				PlayerPrefs.SetInt("Gold", gold);
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			
 			Global.Level.RegisterWithInitValue((lv) =>

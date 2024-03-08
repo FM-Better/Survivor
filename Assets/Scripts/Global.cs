@@ -42,6 +42,16 @@ namespace Survivor
         /// </summary>
         public static BindableProperty<int> ExpBallDropRate = new BindableProperty<int>(90);
         
+        /// <summary>
+        /// 金币掉落概率
+        /// </summary>
+        public static BindableProperty<int> GoldDropRate = new BindableProperty<int>(40);
+        
+        /// <summary>
+        /// 金币数
+        /// </summary>
+        public static BindableProperty<int> Gold = new BindableProperty<int>(0);
+        
         public static void ResetData()
         {
             Exp.Value = 0;
@@ -64,10 +74,16 @@ namespace Survivor
         public static void SpawnDrop(Vector3 spawnPosition)
         {
             var randomNum = Random.Range(1, 101);
-            if (randomNum <= ExpBallDropRate.Value)
+            if (randomNum <= ExpBallDropRate.Value) // 掉落经验球
             {
                 DropManager.Default.ExpBall.Instantiate()
                     .Position(spawnPosition)
+                    .Show();
+            }
+            if (randomNum <= GoldDropRate.Value) // 掉落金币
+            {
+                DropManager.Default.Gold.Instantiate()
+                    .Position(spawnPosition + Vector3.right)
                     .Show();
             }
         }
