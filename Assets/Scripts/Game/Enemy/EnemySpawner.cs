@@ -34,7 +34,7 @@ namespace Survivor
 
 		private void Update()
 		{
-			if (!playerTrans)
+			if (!playerTrans || Global.IsEnemySpawnOver.Value)
 				return;
 
 			if (nowWaveCount <= enemyWaveList.Count)
@@ -62,11 +62,7 @@ namespace Survivor
 			}
 			else
 			{
-				if (!Global.IsEnemySpawnOver.Value)
-				{
-					Global.IsEnemySpawnOver.Value = true;
-					"刷怪完毕！".LogInfo();	
-				}
+				Global.IsEnemySpawnOver.Value = true;	
 			}
 		}
 

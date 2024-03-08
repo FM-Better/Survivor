@@ -40,19 +40,19 @@ namespace Survivor
         /// <summary>
         /// 经验球掉落概率
         /// </summary>
-        public static BindableProperty<int> ExpBallDropRate = new BindableProperty<int>(90);
+        public static BindableProperty<int> ExpBallDropRate = new BindableProperty<int>(60);
         
         /// <summary>
         /// 金币掉落概率
         /// </summary>
-        public static BindableProperty<int> GoldDropRate = new BindableProperty<int>(40);
+        public static BindableProperty<int> GoldDropRate = new BindableProperty<int>(5);
         
         /// <summary>
         /// 金币数
         /// </summary>
         public static BindableProperty<int> Gold = new BindableProperty<int>(0);
         
-        public static void ResetData()
+        public static void InitGameData()
         {
             Exp.Value = 0;
             Level.Value = 1;
@@ -60,7 +60,10 @@ namespace Survivor
             SimpleAbilityDamage.Value = 1f;
             SimpleAbilityCD.Value = 1.5f;
             IsEnemySpawnOver.Value = false;
-            ExpBallDropRate.Value = 90;
+            
+            ExpBallDropRate.Value = PlayerPrefs.GetInt("ExpBallDropRate", 60);
+            GoldDropRate.Value = PlayerPrefs.GetInt("GoldDropRate", 5);
+            Gold.Value = PlayerPrefs.GetInt("Gold", 0);
             
             EnemySpawner.enemyCount.Value = 0;
             Time.timeScale = 1f;

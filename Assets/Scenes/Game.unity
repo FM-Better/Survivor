@@ -1421,8 +1421,8 @@ MonoBehaviour:
   ArchitectureFullTypeName: 
   spawnDis: 10
   enemyWaveList:
-  - DurationTime: 15
-    SpawnCD: 3
+  - DurationTime: 2
+    SpawnCD: 1
     EnemyPrefab: {fileID: 760812489}
   Enemy: {fileID: 760812490}
 --- !u!4 &2065685765

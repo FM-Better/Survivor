@@ -14,19 +14,16 @@ namespace Survivor
 		{
 			mData = uiData as UIGameOverPanelData ?? new UIGameOverPanelData();
 			
-			// 监听按下空格 重新开始游戏
-			ActionKit.OnUpdate.Register(() =>
+			BtnBackStart.onClick.AddListener(() =>
 			{
-				if (Input.GetKeyDown(KeyCode.Space))
-				{
-					SceneManager.LoadScene("Game");
-					this.CloseSelf();
-				}
-			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+				this.CloseSelf();
+				SceneManager.LoadScene("GameStart");
+			});
 		}
 		
 		protected override void OnOpen(IUIData uiData = null)
 		{
+			Time.timeScale = 0f; // 防止玩家和敌人移动
 		}
 		
 		protected override void OnShow()
@@ -39,7 +36,6 @@ namespace Survivor
 		
 		protected override void OnClose()
 		{
-			Global.ResetData();
 		}
 	}
 }

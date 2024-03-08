@@ -12,7 +12,6 @@ namespace Survivor
 		protected override void OnInit(IUIData uiData = null)
 		{
 			mData = uiData as UIGamePanelData ?? new UIGamePanelData();
-			UpgradeRoot.Hide();
 
 			#region UI相关
 			BtnSimpleDamage.onClick.AddListener(() =>
@@ -31,7 +30,11 @@ namespace Survivor
 			#endregion
 			
 			#region Gloal相关
-
+			Global.Exp.RegisterWithInitValue((exp) =>
+			{
+				TxtExp.text = $"经验值：({Global.Exp.Value}/{Global.CurrentLevelExp()})";
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+			
 			Global.Exp.Register((exp) =>
 			{
 				if (exp >= Global.CurrentLevelExp())
@@ -40,13 +43,6 @@ namespace Survivor
 					Global.Level.Value++;
 				}
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
-			
-			Global.Exp.RegisterWithInitValue((exp) =>
-			{
-				TxtExp.text = $"经验值：({Global.Exp.Value}/{Global.CurrentLevelExp()})";
-			}).UnRegisterWhenGameObjectDestroyed(gameObject);
-
-			Global.Gold.Value = PlayerPrefs.GetInt("Gold", 0);
 			
 			Global.Gold.RegisterWithInitValue((gold) =>
 			{
@@ -79,26 +75,20 @@ namespace Survivor
 					TxtTimer.text = "时间：" + $"{mintues:00}:{seconds:00}";
 				}
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
-			
-			Global.IsEnemySpawnOver.Register((isOver) =>
-			{
-				if (isOver)
-				{
-					ActionKit.OnUpdate.Register(() =>
-					{
-						if (EnemySpawner.enemyCount.Value == 0)
-						{
-							UIKit.OpenPanel<UIGamePassPanel>();
-						}
-					}).UnRegisterWhenGameObjectDestroyed(gameObject);
-				}
-			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			#endregion
 
 			#region EnemySpawner相关
 			EnemySpawner.enemyCount.RegisterWithInitValue((count) =>
 			{
 				TxtEnemy.text = "敌人：" + count;
+				
+				if (count == 0)
+				{
+					if (Global.IsEnemySpawnOver.Value)
+					{
+						UIKit.OpenPanel<UIGamePassPanel>();
+					}
+				}
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			#endregion
 			

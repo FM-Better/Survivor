@@ -5,16 +5,19 @@ using QFramework;
 
 namespace Survivor
 {
-	// Generate Id:2e0384e5-5570-4468-827b-614d64db128a
+	// Generate Id:a58c529c-343b-4f2d-8acd-eedb2ae6546f
 	public partial class UIGamePassPanel
 	{
 		public const string Name = "UIGamePassPanel";
 		
+		[SerializeField]
+		public UnityEngine.UI.Button BtnBackStart;
 		
 		private UIGamePassPanelData mPrivateData = null;
 		
 		protected override void ClearUIComponents()
 		{
+			BtnBackStart = null;
 			
 			mData = null;
 		}

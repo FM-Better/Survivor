@@ -18,19 +18,12 @@ MonoBehaviour:
     GameObject: {fileID: 0}
     From: 0
     NameToFullName: []
-    BindInfos:
-    - TypeName: Survivor.ExpBall
-      PathToRoot: ExpBall
-      MemberName: ExpBall
-    - TypeName: Survivor.Gold
-      PathToRoot: Gold
-      MemberName: Gold
-    ScriptsFolder: Assets/Scripts/Game
-    ClassName: DropManager
+    BindInfos: []
+    ScriptsFolder: Assets\Scripts\Game
+    ClassName: GameStartUIController
     Namespace: Survivor
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace Survivor\r\n{\r\n\tpublic
-      partial class DropManager : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class GameStartUIController : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:4f92bb3b-34f1-42ec-bdd7-6432adf1a4a3\r\nusing UnityEngine;\r\n\r\nnamespace
-      Survivor\r\n{\r\n\tpublic partial class DropManager\r\n\t{\r\n\r\n\t\tpublic
-      Survivor.ExpBall ExpBall;\r\n\r\n\t\tpublic Survivor.Gold Gold;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:d6672eda-1da3-4dd8-8160-225bc67abbe9\r\nusing UnityEngine;\r\n\r\nnamespace
+      Survivor\r\n{\r\n\tpublic partial class GameStartUIController\r\n\t{\r\n\r\n\t}\r\n}\r\n"
