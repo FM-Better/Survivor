@@ -21,13 +21,18 @@ namespace Survivor
 			if (playerTrans)
 			{
 				var direction = (playerTrans.position - transform.position).normalized;
-				transform.Translate(direction * (moveSpeed * Time.deltaTime));	
+				selfRigidbody.velocity = direction * moveSpeed;
+			}
+			else
+			{
+				selfRigidbody.velocity = Vector2.zero;
 			}
 		}
 
 		public void Hurt(float damage, float durationTime)
 		{
 			hp -= damage;
+			AudioKit.PlaySound("Hit");
 			this.Sprite.color = Color.red;
 			
 			ActionKit.Delay((durationTime),() =>

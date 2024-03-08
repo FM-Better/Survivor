@@ -17,8 +17,17 @@ namespace Survivor
 				{
 					if (hitBox.Owner.CompareTag("Enemy"))
 					{
-						this.DestroyGameObjGracefully();
-						UIKit.OpenPanel<UIGameOverPanel>();
+						Global.Hp.Value--;
+						if (Global.Hp.Value <= 0)
+						{
+							AudioKit.PlaySound("Die");
+							this.DestroyGameObjGracefully();
+							UIKit.OpenPanel<UIGameOverPanel>();	
+						}
+						else
+						{
+							AudioKit.PlaySound("Hurt");
+						}
 					}
 				}
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);

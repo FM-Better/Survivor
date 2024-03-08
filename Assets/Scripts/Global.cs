@@ -7,6 +7,17 @@ namespace Survivor
 {
     public class Global : Architecture<Global>
     {
+        #region Model
+        /// <summary>
+        /// 血量
+        /// </summary>
+        public static BindableProperty<int> Hp = new BindableProperty<int>(5);
+        
+        /// <summary>
+        /// 最大血量
+        /// </summary>
+        public static BindableProperty<int> MaxHp = new BindableProperty<int>(5);
+        
         /// <summary>
         /// 经验值
         /// </summary>
@@ -45,12 +56,19 @@ namespace Survivor
         /// <summary>
         /// 金币掉落概率
         /// </summary>
-        public static BindableProperty<int> GoldDropRate = new BindableProperty<int>(5);
+        public static BindableProperty<int> GoldDropRate = new BindableProperty<int>(20);
         
         /// <summary>
         /// 金币数
         /// </summary>
         public static BindableProperty<int> Gold = new BindableProperty<int>(0);
+        
+        /// <summary>
+        /// 回血道具掉落概率
+        /// </summary>
+        public static BindableProperty<int> HpItemDropRate = new BindableProperty<int>(10);
+        #endregion
+        
         
         protected override void Init()
         {
@@ -59,15 +77,20 @@ namespace Survivor
         
         public static void InitGameData()
         {
+            ResKit.Init();
+            
+            Hp.Value = 5;
+            MaxHp.Value = 5;
             Exp.Value = 0;
             Level.Value = 1;
             Timer.Value = 0f;
             SimpleAbilityDamage.Value = 1f;
             SimpleAbilityCD.Value = 1.5f;
             IsEnemySpawnOver.Value = false;
+            HpItemDropRate.Value = 10;
             
             ExpBallDropRate.Value = PlayerPrefs.GetInt("ExpBallDropRate", 60);
-            GoldDropRate.Value = PlayerPrefs.GetInt("GoldDropRate", 5);
+            GoldDropRate.Value = PlayerPrefs.GetInt("GoldDropRate", 20);
             Gold.Value = PlayerPrefs.GetInt("Gold", 0);
             
             EnemySpawner.enemyCount.Value = 0;
@@ -92,6 +115,12 @@ namespace Survivor
             {
                 DropManager.Default.Gold.Instantiate()
                     .Position(spawnPosition + Vector3.right)
+                    .Show();
+            }
+            if (randomNum <= HpItemDropRate.Value) // 掉落回血道具
+            {
+                DropManager.Default.HpItem.Instantiate()
+                    .Position(spawnPosition + Vector3.up)
                     .Show();
             }
         }

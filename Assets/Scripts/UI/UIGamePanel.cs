@@ -30,6 +30,11 @@ namespace Survivor
 			#endregion
 			
 			#region Gloal相关
+			Global.Hp.RegisterWithInitValue((hp) =>
+			{
+				TxtHp.text = $"HP：({hp}/{Global.MaxHp.Value})";
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+			
 			Global.Exp.RegisterWithInitValue((exp) =>
 			{
 				TxtExp.text = $"经验值：({Global.Exp.Value}/{Global.CurrentLevelExp()})";
@@ -63,6 +68,7 @@ namespace Survivor
 			{
 				Time.timeScale = 0f;
 				UpgradeRoot.Show();
+				AudioKit.PlaySound("LevelUp");
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 
 			Global.Timer.RegisterWithInitValue((nowTime) =>

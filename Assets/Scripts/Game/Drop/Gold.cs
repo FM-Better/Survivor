@@ -9,6 +9,7 @@ namespace Survivor
 		{
 			if (other.GetComponent<PickUpArea>())
 			{
+				AudioKit.PlaySound("Gold");
 				Global.Gold.Value++;
 				this.DestroyGameObjGracefully();
 			}

@@ -5,11 +5,13 @@ using QFramework;
 
 namespace Survivor
 {
-	// Generate Id:35834726-db42-4869-97ae-cf8482188a1e
+	// Generate Id:19092949-0f0b-439e-9e83-a9004bc1e062
 	public partial class UIGamePanel
 	{
 		public const string Name = "UIGamePanel";
 		
+		[SerializeField]
+		public UnityEngine.UI.Text TxtHp;
 		[SerializeField]
 		public UnityEngine.UI.Text TxtExp;
 		[SerializeField]
@@ -31,6 +33,7 @@ namespace Survivor
 		
 		protected override void ClearUIComponents()
 		{
+			TxtHp = null;
 			TxtExp = null;
 			TxtLv = null;
 			TxtTimer = null;

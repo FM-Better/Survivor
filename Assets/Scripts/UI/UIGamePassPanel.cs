@@ -23,6 +23,7 @@ namespace Survivor
 		
 		protected override void OnOpen(IUIData uiData = null)
 		{
+			AudioKit.PlaySound("GamePass");
 			Time.timeScale = 0f; // 防止玩家和敌人移动
 		}
 		
