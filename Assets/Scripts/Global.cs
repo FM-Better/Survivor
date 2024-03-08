@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Survivor
 {
-    public class Global
+    public class Global : Architecture<Global>
     {
         /// <summary>
         /// 经验值
@@ -51,6 +51,11 @@ namespace Survivor
         /// 金币数
         /// </summary>
         public static BindableProperty<int> Gold = new BindableProperty<int>(0);
+        
+        protected override void Init()
+        {
+            // 进行模块的注册
+        }
         
         public static void InitGameData()
         {
