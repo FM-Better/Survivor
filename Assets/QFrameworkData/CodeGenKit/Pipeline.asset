@@ -19,29 +19,18 @@ MonoBehaviour:
     From: 0
     NameToFullName: []
     BindInfos:
-    - TypeName: Survivor.ExpBall
-      PathToRoot: ExpBall
-      MemberName: ExpBall
-    - TypeName: Survivor.Gold
-      PathToRoot: Gold
-      MemberName: Gold
-    - TypeName: Survivor.HpItem
-      PathToRoot: HpItem
-      MemberName: HpItem
-    - TypeName: Survivor.Bomb
-      PathToRoot: Bomb
-      MemberName: Bomb
-    - TypeName: Survivor.GetAllExp
-      PathToRoot: GetAllExp
-      MemberName: GetAllExp
-    ScriptsFolder: Assets\Scripts\Game\Drop
-    ClassName: DropManager
+    - TypeName: RectTransform
+      PathToRoot: TextRoot
+      MemberName: TextRoot
+    - TypeName: UnityEngine.UI.Text
+      PathToRoot: TextRoot/Text
+      MemberName: Text
+    ScriptsFolder: Assets/Scripts/Game
+    ClassName: FloatingTextController
     Namespace: Survivor
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace Survivor\r\n{\r\n\tpublic
-      partial class DropManager : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class FloatingTextController : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:be603b0b-6759-41af-a50f-c571fef86d55\r\nusing UnityEngine;\r\n\r\nnamespace
-      Survivor\r\n{\r\n\tpublic partial class DropManager\r\n\t{\r\n\r\n\t\tpublic
-      Survivor.ExpBall ExpBall;\r\n\r\n\t\tpublic Survivor.Gold Gold;\r\n\r\n\t\tpublic
-      Survivor.HpItem HpItem;\r\n\r\n\t\tpublic Survivor.Bomb Bomb;\r\n\r\n\t\tpublic
-      Survivor.GetAllExp GetAllExp;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:ae93434f-e55d-418d-a78c-251e413e2bb6\r\nusing UnityEngine;\r\n\r\nnamespace
+      Survivor\r\n{\r\n\tpublic partial class FloatingTextController\r\n\t{\r\n\r\n\t\tpublic
+      RectTransform TextRoot;\r\n\r\n\t\tpublic UnityEngine.UI.Text Text;\r\n\r\n\t}\r\n}\r\n"

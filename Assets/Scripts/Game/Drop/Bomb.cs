@@ -8,6 +8,7 @@ namespace Survivor
 	public partial class Bomb : ViewController
 	{
 		private CinemachineImpulseSource impulseSource; // 脉冲源
+		public static float Damage = 1;
 			
 		private void Start()
 		{
@@ -21,7 +22,7 @@ namespace Survivor
 				var enemies = FindObjectsByType<Enemy>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
 				foreach (var enemy in enemies)
 				{
-					enemy.Hurt(0);
+					enemy.Hurt(Damage);
 				}
 				
 				AudioKit.PlaySound("Bomb");

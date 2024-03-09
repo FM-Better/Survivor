@@ -35,6 +35,7 @@ namespace Survivor
 		{
 			hp -= damage;
 			AudioKit.PlaySound("Hit");
+			FloatingTextController.ShowFloatingText(transform.position + Vector3.up * 0.5f, damage.ToString()); // 伤害飘字效果
 			this.Sprite.color = Color.red;
 			
 			ActionKit.Delay((hurtDurationTime),() =>
