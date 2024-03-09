@@ -71,7 +71,7 @@ namespace Survivor
         /// <summary>
         /// 炸弹掉落概率
         /// </summary>
-        public static BindableProperty<int> BombDropRate = new BindableProperty<int>(5);
+        public static BindableProperty<int> BombDropRate = new BindableProperty<int>(1);
         
         /// <summary>
         /// 获取当前所有经验
