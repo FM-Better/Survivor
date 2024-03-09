@@ -8,7 +8,9 @@ namespace Survivor
 	{
 		[SerializeField] private float moveSpeed;
 		private Transform playerTrans;
+		public float Hp => hp;
 		[SerializeField] private float hp;
+		[SerializeField] private float hurtDurationTime;
 		
 		void Start()
 		{
@@ -29,13 +31,13 @@ namespace Survivor
 			}
 		}
 
-		public void Hurt(float damage, float durationTime)
+		public void Hurt(float damage)
 		{
 			hp -= damage;
 			AudioKit.PlaySound("Hit");
 			this.Sprite.color = Color.red;
 			
-			ActionKit.Delay((durationTime),() =>
+			ActionKit.Delay((hurtDurationTime),() =>
 			{
 				this.Sprite.color = Color.white;
 			}).Start(this);

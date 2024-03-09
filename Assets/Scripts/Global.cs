@@ -66,7 +66,17 @@ namespace Survivor
         /// <summary>
         /// 回血道具掉落概率
         /// </summary>
-        public static BindableProperty<int> HpItemDropRate = new BindableProperty<int>(10);
+        public static BindableProperty<int> HpItemDropRate = new BindableProperty<int>(2);
+        
+        /// <summary>
+        /// 炸弹掉落概率
+        /// </summary>
+        public static BindableProperty<int> BombDropRate = new BindableProperty<int>(5);
+        
+        /// <summary>
+        /// 获取当前所有经验
+        /// </summary>
+        public static BindableProperty<int> GetAllExpDropRate = new BindableProperty<int>(8);
         #endregion
         
         
@@ -87,7 +97,6 @@ namespace Survivor
             SimpleAbilityDamage.Value = 1f;
             SimpleAbilityCD.Value = 1.5f;
             IsEnemySpawnOver.Value = false;
-            HpItemDropRate.Value = 10;
             
             ExpBallDropRate.Value = PlayerPrefs.GetInt("ExpBallDropRate", 60);
             GoldDropRate.Value = PlayerPrefs.GetInt("GoldDropRate", 20);
@@ -121,6 +130,18 @@ namespace Survivor
             {
                 DropManager.Default.HpItem.Instantiate()
                     .Position(spawnPosition + Vector3.up)
+                    .Show();
+            }
+            if (randomNum <= BombDropRate.Value) // 掉落炸弹
+            {
+                DropManager.Default.Bomb.Instantiate()
+                    .Position(spawnPosition + Vector3.left)
+                    .Show();
+            }
+            if (randomNum <= GetAllExpDropRate.Value) // 掉落获得当前所有经验
+            {
+                DropManager.Default.GetAllExp.Instantiate()
+                    .Position(spawnPosition + Vector3.down)
                     .Show();
             }
         }

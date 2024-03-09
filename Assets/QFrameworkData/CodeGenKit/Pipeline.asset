@@ -28,13 +28,20 @@ MonoBehaviour:
     - TypeName: Survivor.HpItem
       PathToRoot: HpItem
       MemberName: HpItem
+    - TypeName: Survivor.Bomb
+      PathToRoot: Bomb
+      MemberName: Bomb
+    - TypeName: Survivor.GetAllExp
+      PathToRoot: GetAllExp
+      MemberName: GetAllExp
     ScriptsFolder: Assets\Scripts\Game\Drop
     ClassName: DropManager
     Namespace: Survivor
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace Survivor\r\n{\r\n\tpublic
       partial class DropManager : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:b6805219-56dd-40c7-b488-2eb855e40c51\r\nusing UnityEngine;\r\n\r\nnamespace
+    DesignerCode: "// Generate Id:be603b0b-6759-41af-a50f-c571fef86d55\r\nusing UnityEngine;\r\n\r\nnamespace
       Survivor\r\n{\r\n\tpublic partial class DropManager\r\n\t{\r\n\r\n\t\tpublic
       Survivor.ExpBall ExpBall;\r\n\r\n\t\tpublic Survivor.Gold Gold;\r\n\r\n\t\tpublic
-      Survivor.HpItem HpItem;\r\n\r\n\t}\r\n}\r\n"
+      Survivor.HpItem HpItem;\r\n\r\n\t\tpublic Survivor.Bomb Bomb;\r\n\r\n\t\tpublic
+      Survivor.GetAllExp GetAllExp;\r\n\r\n\t}\r\n}\r\n"

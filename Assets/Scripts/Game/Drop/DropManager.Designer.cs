@@ -1,4 +1,4 @@
-// Generate Id:b6805219-56dd-40c7-b488-2eb855e40c51
+// Generate Id:be603b0b-6759-41af-a50f-c571fef86d55
 using UnityEngine;
 
 namespace Survivor
@@ -11,6 +11,10 @@ namespace Survivor
 		public Survivor.Gold Gold;
 
 		public Survivor.HpItem HpItem;
+
+		public Survivor.Bomb Bomb;
+
+		public Survivor.GetAllExp GetAllExp;
 
 	}
 }

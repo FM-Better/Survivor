@@ -9,7 +9,6 @@ namespace Survivor
 	{
 		[SerializeField] private float attackDistance;
 		private float timer;
-		[SerializeField] private float hurtDurationTime;
 
 		private Transform playerTrans;
 
@@ -29,7 +28,7 @@ namespace Survivor
 				{
 					if ((playerTrans.position - enemy.transform.position).magnitude <= attackDistance)
 					{
-						enemy.Hurt(Global.SimpleAbilityDamage.Value, hurtDurationTime);
+						enemy.Hurt(Global.SimpleAbilityDamage.Value);
 					}
 				}
 				timer = 0f;

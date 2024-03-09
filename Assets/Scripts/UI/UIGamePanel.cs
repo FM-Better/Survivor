@@ -19,6 +19,7 @@ namespace Survivor
 				Global.SimpleAbilityDamage.Value *= 1.5f; // 简单能力伤害提升1.5倍
 				Time.timeScale = 1f;
 				UpgradeRoot.Hide();
+				AudioKit.PlaySound("AbilityLevelUp");
 			});
 			
 			BtnSimpleCD.onClick.AddListener(() =>
@@ -26,6 +27,7 @@ namespace Survivor
 				Global.SimpleAbilityCD.Value *= 0.5f; // 简单能力时间间隔缩短0.5倍
 				Time.timeScale = 1f;
 				UpgradeRoot.Hide();
+				AudioKit.PlaySound("AbilityLevelUp");
 			});
 			#endregion
 			
