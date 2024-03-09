@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using QFramework;
 
@@ -35,11 +34,11 @@ namespace Survivor
 
 		private void FixedUpdate()
 		{
-			var horizontal = Input.GetAxis("Horizontal");
-			var vertical = Input.GetAxis("Vertical");
+			var horizontal = Input.GetAxisRaw("Horizontal");
+			var vertical = Input.GetAxisRaw("Vertical");
 			var direction = new Vector2(horizontal, vertical).normalized;
             
-			selfRigidbody.velocity = direction * moveSpeed;
+			selfRigidbody.velocity =  Vector2.Lerp(selfRigidbody.velocity, direction * moveSpeed, 1 - Mathf.Exp(-Time.deltaTime * 5));
 		}
 	}
 }
