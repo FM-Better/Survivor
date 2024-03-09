@@ -89,18 +89,18 @@ namespace Survivor
         {
             ResKit.Init();
             
-            Hp.Value = 5;
-            MaxHp.Value = 5;
+            ExpBallDropRate.Value = PlayerPrefs.GetInt("ExpBallDropRate", 60);
+            GoldDropRate.Value = PlayerPrefs.GetInt("GoldDropRate", 20);
+            Gold.Value = PlayerPrefs.GetInt("Gold", 0);
+            MaxHp.Value = PlayerPrefs.GetInt("MaxHp", 5);
+            
+            Hp.Value = MaxHp.Value;
             Exp.Value = 0;
             Level.Value = 1;
             Timer.Value = 0f;
             SimpleAbilityDamage.Value = 1f;
             SimpleAbilityCD.Value = 1.5f;
             IsEnemySpawnOver.Value = false;
-            
-            ExpBallDropRate.Value = PlayerPrefs.GetInt("ExpBallDropRate", 60);
-            GoldDropRate.Value = PlayerPrefs.GetInt("GoldDropRate", 20);
-            Gold.Value = PlayerPrefs.GetInt("Gold", 0);
             
             EnemySpawner.enemyCount.Value = 0;
             Time.timeScale = 1f;

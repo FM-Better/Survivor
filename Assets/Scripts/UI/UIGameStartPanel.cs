@@ -34,14 +34,22 @@ namespace Survivor
 			
 			BtnExpUpgrade.onClick.AddListener(() =>
 			{
-				Global.ExpBallDropRate.Value += 1;
+				Global.ExpBallDropRate.Value += 5;
 				Global.Gold.Value -= 5;
 				AudioKit.PlaySound("AbilityLevelUp");
 			});
 			
 			BtnGoldUpgrade.onClick.AddListener(() =>
 			{
-				Global.GoldDropRate.Value += 1;
+				Global.GoldDropRate.Value ++ ;
+				Global.Gold.Value -= 5;
+				AudioKit.PlaySound("AbilityLevelUp");
+			});
+			
+			BtnMaxHpUpgrade.onClick.AddListener(() =>
+			{
+				Global.MaxHp.Value ++ ;
+				Global.Hp.Value ++ ;
 				Global.Gold.Value -= 5;
 				AudioKit.PlaySound("AbilityLevelUp");
 			});
@@ -56,11 +64,13 @@ namespace Survivor
 				{
 					BtnExpUpgrade.Show();
 					BtnGoldUpgrade.Show();
+					BtnMaxHpUpgrade.Show();
 				}
 				else
 				{
 					BtnExpUpgrade.Hide();
 					BtnGoldUpgrade.Hide();
+					BtnMaxHpUpgrade.Hide();
 				}
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			
@@ -68,6 +78,11 @@ namespace Survivor
 			{
 				PlayerPrefs.SetInt("Gold", gold);
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+
+			Global.MaxHp.Register((maxHp) =>
+			{
+				PlayerPrefs.SetInt("MaxHp", maxHp);
+			});
 			#endregion
 		}
 		
