@@ -85,6 +85,7 @@ namespace Survivor
         public static void InitGameData()
         {
             ResKit.Init();
+            UIKit.Root.SetResolution(1920, 1080, 0f);
             
             ExpBallDropRate.Value = PlayerPrefs.GetInt("ExpBallDropRate", 60);
             GoldDropRate.Value = PlayerPrefs.GetInt("GoldDropRate", 20);
