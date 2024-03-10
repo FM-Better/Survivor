@@ -3,43 +3,64 @@
  ****************************************************************************/
 
 using System.Collections.Generic;
+using System.Linq;
 using QFramework;
+using Unity.VisualScripting;
 using UnityEngine.UI;
 
 namespace Survivor
 {
 	public partial class GlodUpgradePanel : UIElement,IController
 	{
-		private void Awake()
+		private List<GoldUpgradeItem> goldItems = new List<GoldUpgradeItem>();
+
+		public static EasyEvent OnGoldUpgradeSystemChanged = new EasyEvent();
+		
+		private void Refresh()
 		{
-			List<GoldUpgradeItem> goldItems = this.GetSystem<GoldUpgradeSystem>().Items;
-			
-			foreach (var item in goldItems)
+			ItemRoot.DestroyChildren();
+
+			var items = goldItems.Where(item => item.ConditionCheck());
+			foreach (var item in items)
 			{
 				GoldUpgradeItemTemplate.InstantiateWithParent(ItemRoot)
 					.Self((self) =>
 					{
 						var itemCache = item;
-						self.transform.GetComponentInChildren<Text>().text = item.Description + $"  {item.Cost}金币";
+						self.transform.GetComponentInChildren<Text>().text = 
+							itemCache.Description + $"  {itemCache.Cost}金币";
 						self.onClick.AddListener(() =>
 						{
-							item.Upgrade();
+							itemCache.Upgrade();
 							AudioKit.PlaySound("AbilityLevelUp");
 						});
-						
+
+						var selfCache = self;
 						Global.Gold.RegisterWithInitValue((gold) =>
 						{
 							if (gold >= item.Cost)
 							{
-								self.interactable = true;
+								selfCache.interactable = true;
 							}
 							else
 							{
-								self.interactable = false;
+								selfCache.interactable = false;
 							}
 						}).UnRegisterWhenGameObjectDestroyed(self);
 					}).Show();
-			}
+			}	
+		}
+		
+		private void Awake()
+		{
+			goldItems = this.GetSystem<GoldUpgradeSystem>().Items;
+
+			OnGoldUpgradeSystemChanged.Register(() =>
+			{
+				Refresh();
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+			
+			Refresh();
 			
 			#region UI相关
 			BtnClose.onClick.AddListener(() =>

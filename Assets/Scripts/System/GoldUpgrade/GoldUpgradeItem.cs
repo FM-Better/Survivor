@@ -7,11 +7,30 @@ namespace Survivor
         public string Key { get; private set; }
         public string Description { get; private set; }
         public int Cost { get; private set; }
-        private Action mOnUpgrade { get; set; }
-
-        public void Upgrade() => mOnUpgrade?.Invoke();
+        public bool UpgradeFinished { get; private set; } = false; 
         
-        // 采用链式API设计 用作配置数据
+        private Action<GoldUpgradeItem> mOnUpgrade { get; set; }
+        private Func<GoldUpgradeItem, bool> mCondition { get; set; }
+
+        public void Upgrade()
+        {
+            mOnUpgrade?.Invoke(this);
+            UpgradeFinished = true;
+            GlodUpgradePanel.OnGoldUpgradeSystemChanged.Trigger();
+        } 
+
+        public bool ConditionCheck()
+        {
+            if (mCondition != null)
+            {
+                return !UpgradeFinished && mCondition.Invoke(this);
+            }
+
+            return !UpgradeFinished;
+        }
+
+        #region 初始化相关API
+        // 采用链式API设计 用作初始化数据
         public GoldUpgradeItem WithKey(string key)
         {
             Key = key;
@@ -30,10 +49,17 @@ namespace Survivor
             return this;
         }
 
-        public GoldUpgradeItem OnUpgrade(Action onUpgrade)
+        public GoldUpgradeItem OnUpgrade(Action<GoldUpgradeItem> onUpgrade)
         {
             mOnUpgrade = onUpgrade;
             return this;
         }
+        
+        public GoldUpgradeItem WithCondition(Func<GoldUpgradeItem, bool> condition)
+        {
+            mCondition = condition;
+            return this;
+        }
+        #endregion
     }
 }
