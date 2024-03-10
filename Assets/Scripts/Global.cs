@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using QFramework;
 using UnityEngine;
 
@@ -27,6 +25,11 @@ namespace Survivor
         /// 等级
         /// </summary>
         public static BindableProperty<int> Level = new BindableProperty<int>(1);
+        
+        /// <summary>
+        /// 金币数
+        /// </summary>
+        public static BindableProperty<int> Gold = new BindableProperty<int>(0);
 
         /// <summary>
         /// 计时器
@@ -59,11 +62,6 @@ namespace Survivor
         public static BindableProperty<int> GoldDropRate = new BindableProperty<int>(20);
         
         /// <summary>
-        /// 金币数
-        /// </summary>
-        public static BindableProperty<int> Gold = new BindableProperty<int>(0);
-        
-        /// <summary>
         /// 回血道具掉落概率
         /// </summary>
         public static BindableProperty<int> HpItemDropRate = new BindableProperty<int>(2);
@@ -79,10 +77,9 @@ namespace Survivor
         public static BindableProperty<int> GetAllExpDropRate = new BindableProperty<int>(8);
         #endregion
         
-        
         protected override void Init()
         {
-            // 进行模块的注册
+            this.RegisterSystem(new GoldUpgradeSystem());
         }
         
         public static void InitGameData()

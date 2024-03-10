@@ -8,7 +8,7 @@ namespace Survivor
 	public class UIGameStartPanelData : UIPanelData
 	{
 	}
-	public partial class UIGameStartPanel : UIPanel
+	public partial class UIGameStartPanel : UIPanel, IController
 	{
 		protected override void OnInit(IUIData uiData = null)
 		{
@@ -26,54 +26,9 @@ namespace Survivor
 			{
 				SceneManager.LoadScene("Game");
 			});
-			
-			BtnClose.onClick.AddListener(() =>
-			{
-				GlodUpgradePanel.Hide();
-			});
-			
-			BtnExpUpgrade.onClick.AddListener(() =>
-			{
-				Global.ExpBallDropRate.Value += 5;
-				Global.Gold.Value -= 5;
-				AudioKit.PlaySound("AbilityLevelUp");
-			});
-			
-			BtnGoldUpgrade.onClick.AddListener(() =>
-			{
-				Global.GoldDropRate.Value ++ ;
-				Global.Gold.Value -= 5;
-				AudioKit.PlaySound("AbilityLevelUp");
-			});
-			
-			BtnMaxHpUpgrade.onClick.AddListener(() =>
-			{
-				Global.MaxHp.Value ++ ;
-				Global.Hp.Value ++ ;
-				Global.Gold.Value -= 5;
-				AudioKit.PlaySound("AbilityLevelUp");
-			});
 			#endregion
 
 			#region Global相关
-			Global.Gold.RegisterWithInitValue((gold) =>
-			{
-				TxtGold.text = "金币：" + gold;
-
-				if (gold >= 5)
-				{
-					BtnExpUpgrade.Show();
-					BtnGoldUpgrade.Show();
-					BtnMaxHpUpgrade.Show();
-				}
-				else
-				{
-					BtnExpUpgrade.Hide();
-					BtnGoldUpgrade.Hide();
-					BtnMaxHpUpgrade.Hide();
-				}
-			}).UnRegisterWhenGameObjectDestroyed(gameObject);
-			
 			Global.Gold.Register((gold) =>
 			{
 				PlayerPrefs.SetInt("Gold", gold);
@@ -100,6 +55,11 @@ namespace Survivor
 		
 		protected override void OnClose()
 		{
+		}
+
+		public IArchitecture GetArchitecture()
+		{
+			return Global.Interface;
 		}
 	}
 }
