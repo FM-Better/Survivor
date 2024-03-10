@@ -30,12 +30,12 @@ namespace Survivor
             Items.Add(new GoldUpgradeItem()
                 .WithKey("MaxHp")
                 .WithDescription("玩家最大生命值+1")
-                .WithCost(5)
+                .WithCost(20)
                 .OnUpgrade(() =>
                 {
                     Global.MaxHp.Value++;
                     Global.Hp.Value++;
-                    Global.Gold.Value -= 5;
+                    Global.Gold.Value -= 20;
                 }));
         }
     }
