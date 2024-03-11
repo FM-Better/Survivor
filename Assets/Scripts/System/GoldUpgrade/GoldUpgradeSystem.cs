@@ -4,10 +4,12 @@ using UnityEditor;
 
 namespace Survivor
 {
-    public class GoldUpgradeSystem : AbstractSystem
+    public class GoldUpgradeSystem : AbstractSystem, ICanSave
     {
         public List<GoldUpgradeItem> Items { get; } = new List<GoldUpgradeItem>();
-
+        
+        public static EasyEvent OnGoldUpgradeSystemChanged = new EasyEvent();
+        
         public GoldUpgradeItem Add(GoldUpgradeItem goldUpgradeItem)
         {
             Items.Add(goldUpgradeItem);
@@ -120,6 +122,31 @@ namespace Survivor
                 }))
                 .WithCondition((_) => maxHpLevel2.UpgradeFinished);
             #endregion
+            
+            Load(); // 加载存档数据
+
+            OnGoldUpgradeSystemChanged.Register(() =>
+            {
+                Save();
+            });
+        }
+
+        public void Save()
+        {
+            var saveSystem = this.GetSystem<SaveSystem>();
+            foreach (var item in Items)
+            {
+                saveSystem.SaveBool(item.Key, item.UpgradeFinished);
+            }
+        }
+
+        public void Load()
+        {
+            var saveSystem = this.GetSystem<SaveSystem>();
+            foreach (var item in Items)
+            {
+                item.UpgradeFinished = saveSystem.LoadBool(item.Key,false);
+            }
         }
     }
 }

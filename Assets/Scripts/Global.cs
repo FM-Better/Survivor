@@ -80,6 +80,7 @@ namespace Survivor
         protected override void Init()
         {
             this.RegisterSystem(new GoldUpgradeSystem());
+            this.RegisterSystem(new SaveSystem());
         }
         
         public static void InitGameData()

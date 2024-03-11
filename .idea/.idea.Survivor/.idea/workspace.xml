@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a2b9e56-376e-497f-9d7b-000d63ff874b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/System/Save.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/System/Save/ICanSave.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/System/Save/ICanSave.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/System/Save/SaveSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/System/Save/SaveSystem.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UIPrefab/UIGamePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UIPrefab/UIGamePanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UIPrefab/UIGameStartPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UIPrefab/UIGameStartPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestUIPanels/TestUIGamePanel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestUIPanels/TestUIGamePanel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/System/GoldUpgrade/GoldUpgradeItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/System/GoldUpgrade/GoldUpgradeItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/System/GoldUpgrade/GoldUpgradeSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/System/GoldUpgrade/GoldUpgradeSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIGameStartPanel/GlodUpgradePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIGameStartPanel/GlodUpgradePanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +25,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/34/54254e0d/PlayerPrefs.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/6f/1072cd22/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/a3/2e39b790/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/c4/40dddad2/Object.cs" root0="SKIP_HIGHLIGHTING" />
@@ -128,7 +130,7 @@
       <workItem from="1709552723617" duration="4000" />
       <workItem from="1709600695508" duration="8380000" />
       <workItem from="1709641166140" duration="58041000" />
-      <workItem from="1710040909525" duration="15468000" />
+      <workItem from="1710040909525" duration="17249000" />
     </task>
     <servers />
   </component>

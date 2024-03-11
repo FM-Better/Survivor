@@ -14,7 +14,7 @@ namespace Survivor
 	{
 		private List<GoldUpgradeItem> goldItems = new List<GoldUpgradeItem>();
 
-		public static EasyEvent OnGoldUpgradeSystemChanged = new EasyEvent();
+		
 		
 		private void Refresh()
 		{
@@ -55,7 +55,7 @@ namespace Survivor
 		{
 			goldItems = this.GetSystem<GoldUpgradeSystem>().Items;
 
-			OnGoldUpgradeSystemChanged.Register(() =>
+			GoldUpgradeSystem.OnGoldUpgradeSystemChanged.Register(() =>
 			{
 				Refresh();
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);

@@ -7,7 +7,7 @@ namespace Survivor
         public string Key { get; private set; }
         public string Description { get; private set; }
         public int Cost { get; private set; }
-        public bool UpgradeFinished { get; private set; } = false; 
+        public bool UpgradeFinished { get; set; } = false; 
         
         private Action<GoldUpgradeItem> mOnUpgrade { get; set; }
         private Func<GoldUpgradeItem, bool> mCondition { get; set; }
@@ -16,7 +16,7 @@ namespace Survivor
         {
             mOnUpgrade?.Invoke(this);
             UpgradeFinished = true;
-            GlodUpgradePanel.OnGoldUpgradeSystemChanged.Trigger();
+            GoldUpgradeSystem.OnGoldUpgradeSystemChanged.Trigger();
         } 
 
         public bool ConditionCheck()
