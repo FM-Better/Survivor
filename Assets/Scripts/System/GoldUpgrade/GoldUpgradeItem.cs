@@ -1,4 +1,5 @@
 using System;
+using QFramework;
 
 namespace Survivor
 {
@@ -7,7 +8,8 @@ namespace Survivor
         public string Key { get; private set; }
         public string Description { get; private set; }
         public int Cost { get; private set; }
-        public bool UpgradeFinished { get; set; } = false; 
+        public bool UpgradeFinished { get; set; } = false;
+        public EasyEvent OnChanged = new EasyEvent();
         
         private Action<GoldUpgradeItem> mOnUpgrade { get; set; }
         private Func<GoldUpgradeItem, bool> mCondition { get; set; }
@@ -16,6 +18,7 @@ namespace Survivor
         {
             mOnUpgrade?.Invoke(this);
             UpgradeFinished = true;
+            OnChanged.Trigger();
             GoldUpgradeSystem.OnGoldUpgradeSystemChanged.Trigger();
         } 
 

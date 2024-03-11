@@ -39,6 +39,10 @@ namespace Survivor
                     Global.Gold.Value -= item.Cost;
                 }))
                 .WithCondition((_) => expLevel1.UpgradeFinished);
+            expLevel1.OnChanged.Register(() =>
+            {
+                expLevel2.OnChanged.Trigger();
+            });
             
             var expLevel3 = Add(new GoldUpgradeItem()
                     .WithKey("ExpBallDropRate_Lv3")
@@ -50,6 +54,10 @@ namespace Survivor
                         Global.Gold.Value -= item.Cost;
                     }))
                 .WithCondition((_) => expLevel2.UpgradeFinished);
+            expLevel2.OnChanged.Register(() =>
+            {
+                expLevel3.OnChanged.Trigger();
+            });
             #endregion
 
             #region 金币相关
@@ -73,6 +81,10 @@ namespace Survivor
                     Global.Gold.Value -= item.Cost;
                 }))
                 .WithCondition((_) => goldLevel1.UpgradeFinished);
+            goldLevel1.OnChanged.Register(() =>
+            {
+                goldLevel2.OnChanged.Trigger();
+            });
             
             var goldLevel3 = Add(new GoldUpgradeItem()
                 .WithKey("GoldDropRate_Lv3")
@@ -84,6 +96,10 @@ namespace Survivor
                     Global.Gold.Value -= item.Cost;
                 }))
                 .WithCondition((_) => goldLevel2.UpgradeFinished);
+            goldLevel2.OnChanged.Register(() =>
+            {
+                goldLevel3.OnChanged.Trigger();
+            });
             #endregion
 
             #region 最大生命值相关
@@ -109,6 +125,10 @@ namespace Survivor
                     Global.Gold.Value -= item.Cost;
                 }))
                 .WithCondition((_) => maxHpLevel1.UpgradeFinished);
+            maxHpLevel1.OnChanged.Register(() =>
+            {
+                maxHpLevel2.OnChanged.Trigger();
+            });
             
             var maxHpLevel3 = Add(new GoldUpgradeItem()
                 .WithKey("MaxHp_Lv3")
@@ -121,6 +141,10 @@ namespace Survivor
                     Global.Gold.Value -= item.Cost;
                 }))
                 .WithCondition((_) => maxHpLevel2.UpgradeFinished);
+            maxHpLevel2.OnChanged.Register(() =>
+            {
+                maxHpLevel3.OnChanged.Trigger();
+            });
             #endregion
             
             Load(); // 加载存档数据
