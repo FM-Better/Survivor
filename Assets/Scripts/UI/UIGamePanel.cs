@@ -12,24 +12,6 @@ namespace Survivor
 		protected override void OnInit(IUIData uiData = null)
 		{
 			mData = uiData as UIGamePanelData ?? new UIGamePanelData();
-
-			#region UI相关
-			BtnSimpleDamage.onClick.AddListener(() =>
-			{
-				Global.SimpleAbilityDamage.Value *= 1.5f; // 简单能力伤害提升1.5倍
-				Time.timeScale = 1f;
-				UpgradeRoot.Hide();
-				AudioKit.PlaySound("AbilityLevelUp");
-			});
-			
-			BtnSimpleCD.onClick.AddListener(() =>
-			{
-				Global.SimpleAbilityCD.Value *= 0.5f; // 简单能力时间间隔缩短0.5倍
-				Time.timeScale = 1f;
-				UpgradeRoot.Hide();
-				AudioKit.PlaySound("AbilityLevelUp");
-			});
-			#endregion
 			
 			#region Gloal相关
 			Global.Hp.RegisterWithInitValue((hp) =>
@@ -69,7 +51,7 @@ namespace Survivor
 			Global.Level.Register((lv) =>
 			{
 				Time.timeScale = 0f;
-				UpgradeRoot.Show();
+				ExpUpgradePanel.Show();
 				AudioKit.PlaySound("LevelUp");
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 

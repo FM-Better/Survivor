@@ -1,4 +1,4 @@
-// Generate Id:13baeae0-6e32-4880-9974-19c8faa54e99
+// Generate Id:63b0db7a-d543-4caa-a46b-cbf7bec96bb2
 using UnityEngine;
 
 namespace Survivor

@@ -2,32 +2,31 @@
  * 2024.3 LAPTOP-FG35BCEI
  ****************************************************************************/
 using System.Collections.Generic;
-using System.Linq;
 using QFramework;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Survivor
 {
-	public partial class GlodUpgradePanel : UIElement,IController
+	public partial class ExpUpgradePanel : UIElement, IController
 	{
-		private List<GoldUpgradeItem> goldItems = new List<GoldUpgradeItem>();
-		
 		private void Awake()
 		{
-			goldItems = this.GetSystem<GoldUpgradeSystem>().Items;
+			List<ExpUpgradeItem> expUpgradeItems = this.GetSystem<ExpUpgradeSystem>().Items;
 			
-			var items = goldItems.Where(item => !item.UpgradeFinished);
-			foreach (var item in items)
+			foreach (var item in expUpgradeItems)
 			{
-				GoldUpgradeItemTemplate.InstantiateWithParent(ItemRoot)
+				BtnExpUpgradeItemTemplate.InstantiateWithParent(ItemRoot)
 					.Self((self) =>
 					{
 						var itemCache = item;
 						self.transform.GetComponentInChildren<Text>().text = 
-							itemCache.Description + $"  {itemCache.Cost}金币";
+							itemCache.Description;
 						self.onClick.AddListener(() =>
 						{
 							itemCache.Upgrade();
+							Time.timeScale = 1f;
+							this.Hide();
 							AudioKit.PlaySound("AbilityLevelUp");
 						});
 						
@@ -52,34 +51,8 @@ namespace Survivor
 						{
 							selfCache.Hide();
 						}
-						
-						Global.Gold.RegisterWithInitValue((gold) =>
-						{
-							if (gold >= item.Cost)
-							{
-								selfCache.interactable = true;
-							}
-							else
-							{
-								selfCache.interactable = false;
-							}
-						}).UnRegisterWhenGameObjectDestroyed(self);
 					});
 			}	
-			
-			#region UI相关
-			BtnClose.onClick.AddListener(() =>
-			{
-				this.Hide();
-			});
-			#endregion
-
-			#region Global相关
-			Global.Gold.RegisterWithInitValue((gold) =>
-			{
-				TxtGold.text = "金币：" + gold;
-			}).UnRegisterWhenGameObjectDestroyed(gameObject);
-			#endregion
 		}
 
 		protected override void OnBeforeDestroy()

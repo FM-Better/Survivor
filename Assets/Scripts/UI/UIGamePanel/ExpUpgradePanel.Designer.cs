@@ -8,24 +8,20 @@ using QFramework;
 
 namespace Survivor
 {
-	public partial class GlodUpgradePanel
+	public partial class ExpUpgradePanel
 	{
-		[SerializeField] public UnityEngine.UI.Text TxtGold;
-		[SerializeField] public UnityEngine.UI.Button BtnClose;
+		[SerializeField] public UnityEngine.UI.Button BtnExpUpgradeItemTemplate;
 		[SerializeField] public RectTransform ItemRoot;
-		[SerializeField] public UnityEngine.UI.Button GoldUpgradeItemTemplate;
 
 		public void Clear()
 		{
-			TxtGold = null;
-			BtnClose = null;
+			BtnExpUpgradeItemTemplate = null;
 			ItemRoot = null;
-			GoldUpgradeItemTemplate = null;
 		}
 
 		public override string ComponentName
 		{
-			get { return "GlodUpgradePanel";}
+			get { return "ExpUpgradePanel";}
 		}
 	}
 }

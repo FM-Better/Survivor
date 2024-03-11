@@ -13,8 +13,6 @@ namespace Survivor
 		protected override void OnInit(IUIData uiData = null)
 		{
 			mData = uiData as UIGameStartPanelData ?? new UIGameStartPanelData();
-			
-			Global.InitGameData();
 
 			#region UI相关
 			BtnUpgrade.onClick.AddListener(() =>

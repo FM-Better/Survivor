@@ -5,15 +5,15 @@ using QFramework;
 
 namespace Survivor
 {
-	// Generate Id:19d95075-1a87-49d2-a20d-f8740447157e
+	// Generate Id:2efcb358-6ab6-416c-9e5a-36fca45cc723
 	public partial class UIGameStartPanel
 	{
 		public const string Name = "UIGameStartPanel";
 		
 		[SerializeField]
-		public UnityEngine.UI.Button BtnUpgrade;
-		[SerializeField]
 		public UnityEngine.UI.Button BtnStart;
+		[SerializeField]
+		public UnityEngine.UI.Button BtnUpgrade;
 		[SerializeField]
 		public GlodUpgradePanel GlodUpgradePanel;
 		
@@ -21,8 +21,8 @@ namespace Survivor
 		
 		protected override void ClearUIComponents()
 		{
-			BtnUpgrade = null;
 			BtnStart = null;
+			BtnUpgrade = null;
 			GlodUpgradePanel = null;
 			
 			mData = null;

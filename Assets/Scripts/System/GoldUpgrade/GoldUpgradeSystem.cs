@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using QFramework;
-using UnityEditor;
 
 namespace Survivor
 {

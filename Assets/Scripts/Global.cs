@@ -79,10 +79,12 @@ namespace Survivor
         
         protected override void Init()
         {
-            this.RegisterSystem(new GoldUpgradeSystem());
             this.RegisterSystem(new SaveSystem());
+            this.RegisterSystem(new GoldUpgradeSystem());
+            this.RegisterSystem(new ExpUpgradeSystem());
         }
         
+        [RuntimeInitializeOnLoadMethod]
         public static void InitGameData()
         {
             ResKit.Init();

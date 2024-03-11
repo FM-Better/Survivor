@@ -1,4 +1,4 @@
-// Generate Id:7c137752-a7f5-4f42-96e8-ec25efa27ad2
+// Generate Id:32213e69-f281-4a92-b945-953eb194cfab
 using UnityEngine;
 
 namespace Survivor
@@ -7,6 +7,8 @@ namespace Survivor
 	{
 
 		public Survivor.Enemy Enemy;
+
+		public Survivor.Enemy EnemyFly;
 
 	}
 }

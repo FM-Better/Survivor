@@ -19,18 +19,18 @@ MonoBehaviour:
     From: 0
     NameToFullName: []
     BindInfos:
-    - TypeName: RectTransform
-      PathToRoot: TextRoot
-      MemberName: TextRoot
-    - TypeName: UnityEngine.UI.Text
-      PathToRoot: TextRoot/Text
-      MemberName: Text
-    ScriptsFolder: Assets/Scripts/Game
-    ClassName: FloatingTextController
+    - TypeName: Survivor.Enemy
+      PathToRoot: Enemy
+      MemberName: Enemy
+    - TypeName: Survivor.Enemy
+      PathToRoot: EnemyFly
+      MemberName: EnemyFly
+    ScriptsFolder: Assets\Scripts\Game\Enemy
+    ClassName: EnemySpawner
     Namespace: Survivor
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace Survivor\r\n{\r\n\tpublic
-      partial class FloatingTextController : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class EnemySpawner : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:ae93434f-e55d-418d-a78c-251e413e2bb6\r\nusing UnityEngine;\r\n\r\nnamespace
-      Survivor\r\n{\r\n\tpublic partial class FloatingTextController\r\n\t{\r\n\r\n\t\tpublic
-      RectTransform TextRoot;\r\n\r\n\t\tpublic UnityEngine.UI.Text Text;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:32213e69-f281-4a92-b945-953eb194cfab\r\nusing UnityEngine;\r\n\r\nnamespace
+      Survivor\r\n{\r\n\tpublic partial class EnemySpawner\r\n\t{\r\n\r\n\t\tpublic
+      Survivor.Enemy Enemy;\r\n\r\n\t\tpublic Survivor.Enemy EnemyFly;\r\n\r\n\t}\r\n}\r\n"
