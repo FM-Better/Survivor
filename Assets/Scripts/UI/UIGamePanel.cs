@@ -21,16 +21,13 @@ namespace Survivor
 			
 			Global.Exp.RegisterWithInitValue((exp) =>
 			{
-				TxtExp.text = $"经验值：({Global.Exp.Value}/{Global.CurrentLevelExp()})";
-			}).UnRegisterWhenGameObjectDestroyed(gameObject);
-			
-			Global.Exp.Register((exp) =>
-			{
 				if (exp >= Global.CurrentLevelExp())
 				{
 					Global.Exp.Value -= Global.CurrentLevelExp();
 					Global.Level.Value++;
 				}
+				
+				TxtExp.text = $"经验值：({Global.Exp.Value}/{Global.CurrentLevelExp()})";
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			
 			Global.Gold.RegisterWithInitValue((gold) =>
