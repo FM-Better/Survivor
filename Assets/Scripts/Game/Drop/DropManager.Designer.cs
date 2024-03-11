@@ -1,10 +1,12 @@
-// Generate Id:be603b0b-6759-41af-a50f-c571fef86d55
+// Generate Id:b6548062-3479-48a1-97ad-9ba2a9b43a48
 using UnityEngine;
 
 namespace Survivor
 {
 	public partial class DropManager
 	{
+
+		public Transform DropRoot;
 
 		public Survivor.ExpBall ExpBall;
 

@@ -63,7 +63,7 @@ namespace Survivor
 						spawnTimer = 0f;
 
 						var spawnPos = CalcSpawnPos(spawnDis);
-						nowWave.EnemyPrefab.Instantiate()
+						nowWave.EnemyPrefab.InstantiateWithParent(EnemyRoot)
 							.Position(spawnPos)
 							.Show();
 					}

@@ -19,18 +19,32 @@ MonoBehaviour:
     From: 0
     NameToFullName: []
     BindInfos:
-    - TypeName: Survivor.Enemy
-      PathToRoot: Enemy
-      MemberName: Enemy
-    - TypeName: Survivor.Enemy
-      PathToRoot: EnemyFly
-      MemberName: EnemyFly
-    ScriptsFolder: Assets\Scripts\Game\Enemy
-    ClassName: EnemySpawner
+    - TypeName: Transform
+      PathToRoot: DropRoot
+      MemberName: DropRoot
+    - TypeName: Survivor.ExpBall
+      PathToRoot: ExpBall
+      MemberName: ExpBall
+    - TypeName: Survivor.Gold
+      PathToRoot: Gold
+      MemberName: Gold
+    - TypeName: Survivor.HpItem
+      PathToRoot: HpItem
+      MemberName: HpItem
+    - TypeName: Survivor.Bomb
+      PathToRoot: Bomb
+      MemberName: Bomb
+    - TypeName: Survivor.GetAllExp
+      PathToRoot: GetAllExp
+      MemberName: GetAllExp
+    ScriptsFolder: Assets\Scripts\Game\Drop
+    ClassName: DropManager
     Namespace: Survivor
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace Survivor\r\n{\r\n\tpublic
-      partial class EnemySpawner : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class DropManager : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:32213e69-f281-4a92-b945-953eb194cfab\r\nusing UnityEngine;\r\n\r\nnamespace
-      Survivor\r\n{\r\n\tpublic partial class EnemySpawner\r\n\t{\r\n\r\n\t\tpublic
-      Survivor.Enemy Enemy;\r\n\r\n\t\tpublic Survivor.Enemy EnemyFly;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:b6548062-3479-48a1-97ad-9ba2a9b43a48\r\nusing UnityEngine;\r\n\r\nnamespace
+      Survivor\r\n{\r\n\tpublic partial class DropManager\r\n\t{\r\n\r\n\t\tpublic
+      Transform DropRoot;\r\n\r\n\t\tpublic Survivor.ExpBall ExpBall;\r\n\r\n\t\tpublic
+      Survivor.Gold Gold;\r\n\r\n\t\tpublic Survivor.HpItem HpItem;\r\n\r\n\t\tpublic
+      Survivor.Bomb Bomb;\r\n\r\n\t\tpublic Survivor.GetAllExp GetAllExp;\r\n\r\n\t}\r\n}\r\n"

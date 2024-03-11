@@ -1,4 +1,4 @@
-// Generate Id:32213e69-f281-4a92-b945-953eb194cfab
+// Generate Id:4313699e-3fd3-42c4-9175-09ca869f1743
 using UnityEngine;
 
 namespace Survivor
@@ -9,6 +9,8 @@ namespace Survivor
 		public Survivor.Enemy Enemy;
 
 		public Survivor.Enemy EnemyFly;
+
+		public Transform EnemyRoot;
 
 	}
 }

@@ -50,7 +50,7 @@ namespace Survivor
 
 		public void Dead()
 		{
-			Global.SpawnDrop(transform.position);
+			DropManager.Default.SpawnDrop(transform.position);
 			EnemySpawner.enemyCount.Value--;
 			
 			this.DestroyGameObjGracefully();

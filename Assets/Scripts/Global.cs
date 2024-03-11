@@ -116,40 +116,5 @@ namespace Survivor
         {
             return Level.Value * 5;
         }
-
-        public static void SpawnDrop(Vector3 spawnPosition)
-        {
-            var randomNum = Random.Range(1, 101);
-            if (randomNum <= ExpBallDropRate.Value) // 掉落经验球
-            {
-                DropManager.Default.ExpBall.Instantiate()
-                    .Position(spawnPosition)
-                    .Show();
-            }
-            if (randomNum <= GoldDropRate.Value) // 掉落金币
-            {
-                DropManager.Default.Gold.Instantiate()
-                    .Position(spawnPosition)
-                    .Show();
-            }
-            if (randomNum <= HpItemDropRate.Value) // 掉落回血道具
-            {
-                DropManager.Default.HpItem.Instantiate()
-                    .Position(spawnPosition)
-                    .Show();
-            }
-            if (randomNum <= BombDropRate.Value) // 掉落炸弹
-            {
-                DropManager.Default.Bomb.Instantiate()
-                    .Position(spawnPosition)
-                    .Show();
-            }
-            if (randomNum <= GetAllExpDropRate.Value) // 掉落获得当前所有经验
-            {
-                DropManager.Default.GetAllExp.Instantiate()
-                    .Position(spawnPosition)
-                    .Show();
-            }
-        }
     }
 }
