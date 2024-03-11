@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621f3f918dd5423d93a746ad8fc9082d, type: 3}
+  m_Name: Pipeline
+  m_EditorClassIdentifier: 
+  CurrentTask:
+    ShowLog: 0
+    Status: 1
+    GameObject: {fileID: 0}
+    From: 0
+    NameToFullName: []
+    BindInfos:
+    - TypeName: RectTransform
+      PathToRoot: TextRoot
+      MemberName: TextRoot
+    - TypeName: UnityEngine.UI.Text
+      PathToRoot: TextRoot/Text
+      MemberName: Text
+    ScriptsFolder: Assets/Scripts/Game
+    ClassName: FloatingTextController
+    Namespace: Survivor
+    MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace Survivor\r\n{\r\n\tpublic
+      partial class FloatingTextController : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:ae93434f-e55d-418d-a78c-251e413e2bb6\r\nusing UnityEngine;\r\n\r\nnamespace
+      Survivor\r\n{\r\n\tpublic partial class FloatingTextController\r\n\t{\r\n\r\n\t\tpublic
+      RectTransform TextRoot;\r\n\r\n\t\tpublic UnityEngine.UI.Text Text;\r\n\r\n\t}\r\n}\r\n"
