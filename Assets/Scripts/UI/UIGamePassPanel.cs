@@ -16,6 +16,7 @@ namespace Survivor
 			
 			BtnBackStart.onClick.AddListener(() =>
 			{
+				Global.ResetData();
 				this.CloseSelf();
 				SceneManager.LoadScene("GameStart");
 			});

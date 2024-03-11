@@ -94,7 +94,12 @@ namespace Survivor
             GoldDropRate.Value = PlayerPrefs.GetInt("GoldDropRate", 20);
             Gold.Value = PlayerPrefs.GetInt("Gold", 0);
             MaxHp.Value = PlayerPrefs.GetInt("MaxHp", 5);
-            
+
+            ResetData();
+        }
+
+        public static void ResetData()
+        {
             Hp.Value = MaxHp.Value;
             Exp.Value = 0;
             Level.Value = 1;
@@ -102,11 +107,11 @@ namespace Survivor
             SimpleAbilityDamage.Value = 1f;
             SimpleAbilityCD.Value = 1.5f;
             IsEnemySpawnOver.Value = false;
-            
             EnemySpawner.enemyCount.Value = 0;
+            Interface.GetSystem<ExpUpgradeSystem>().ResetData();
             Time.timeScale = 1f;
         }
-
+        
         public static int CurrentLevelExp()
         {
             return Level.Value * 5;
@@ -124,25 +129,25 @@ namespace Survivor
             if (randomNum <= GoldDropRate.Value) // 掉落金币
             {
                 DropManager.Default.Gold.Instantiate()
-                    .Position(spawnPosition + Vector3.right)
+                    .Position(spawnPosition)
                     .Show();
             }
             if (randomNum <= HpItemDropRate.Value) // 掉落回血道具
             {
                 DropManager.Default.HpItem.Instantiate()
-                    .Position(spawnPosition + Vector3.up)
+                    .Position(spawnPosition)
                     .Show();
             }
             if (randomNum <= BombDropRate.Value) // 掉落炸弹
             {
                 DropManager.Default.Bomb.Instantiate()
-                    .Position(spawnPosition + Vector3.left)
+                    .Position(spawnPosition)
                     .Show();
             }
             if (randomNum <= GetAllExpDropRate.Value) // 掉落获得当前所有经验
             {
                 DropManager.Default.GetAllExp.Instantiate()
-                    .Position(spawnPosition + Vector3.down)
+                    .Position(spawnPosition)
                     .Show();
             }
         }

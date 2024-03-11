@@ -29,10 +29,12 @@ namespace Survivor
 		private int nowWaveCount = 1;
 
 		public static BindableProperty<int> enemyCount = new BindableProperty<int>();
+		private bool isOver;
 		
 		void Start()
 		{
 			playerTrans = FindObjectOfType<Player>().transform; // 缓存玩家Transform
+			isOver = false;
 		}
 
 		private void Update()
@@ -77,7 +79,11 @@ namespace Survivor
 			}
 			else
 			{
-				Global.IsEnemySpawnOver.Value = true;
+				if (!isOver)
+				{
+					Global.IsEnemySpawnOver.Value = true;
+					isOver = true;
+				}
 			}
 		}
 

@@ -20,9 +20,9 @@ namespace Survivor
 					.Self((self) =>
 					{
 						var itemCache = item;
-						self.transform.GetComponentInChildren<Text>().text = 
-							itemCache.Description;
-						self.onClick.AddListener(() =>
+						var selfCache = self;
+						
+						selfCache.onClick.AddListener(() =>
 						{
 							itemCache.Upgrade();
 							Time.timeScale = 1f;
@@ -30,10 +30,9 @@ namespace Survivor
 							AudioKit.PlaySound("AbilityLevelUp");
 						});
 						
-						var selfCache = self;
-						itemCache.OnChanged.Register(() =>
+						itemCache.Visible.RegisterWithInitValue((visible) =>
 						{
-							if (itemCache.ConditionCheck())
+							if (visible)
 							{
 								selfCache.Show();
 							}
@@ -41,16 +40,13 @@ namespace Survivor
 							{
 								selfCache.Hide();
 							}
-						}).UnRegisterWhenGameObjectDestroyed(selfCache);
-						
-						if (itemCache.ConditionCheck())
+						});
+
+						itemCache.CurrentLevel.RegisterWithInitValue(_ =>
 						{
-							selfCache.Show();
-						}
-						else
-						{
-							selfCache.Hide();
-						}
+							selfCache.transform.GetComponentInChildren<Text>().text = 
+								itemCache.Description;	
+						}).UnRegisterWhenGameObjectDestroyed(gameObject);
 					});
 			}	
 		}

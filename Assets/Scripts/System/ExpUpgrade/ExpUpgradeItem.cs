@@ -6,29 +6,23 @@ namespace Survivor
     public class ExpUpgradeItem
     {
         public string Key { get; private set; }
-        public string Description { get; private set; }
+        public string Description => mDescriptionFunctory(CurrentLevel.Value);
+        public int MaxLevel { get; private set; }
+        public BindableProperty<int> CurrentLevel = new BindableProperty<int>(1);
         public bool UpgradeFinished { get; set; } = false;
-        public EasyEvent OnChanged = new EasyEvent();
+        public BindableProperty<bool> Visible = new BindableProperty<bool>(false);
+        private Func<int, string> mDescriptionFunctory;
         
         private Action<ExpUpgradeItem> mOnUpgrade { get; set; }
-        private Func<ExpUpgradeItem, bool> mCondition { get; set; }
 
         public void Upgrade()
         {
+            CurrentLevel.Value++;
             mOnUpgrade?.Invoke(this);
-            UpgradeFinished = true;
-            OnChanged.Trigger();
-            ExpUpgradeSystem.OnExpUpgradeSystemChanged.Trigger();
-        } 
-
-        public bool ConditionCheck()
-        {
-            if (mCondition != null)
+            if (CurrentLevel.Value > 10)
             {
-                return !UpgradeFinished && mCondition.Invoke(this);
+                UpgradeFinished = true;    
             }
-
-            return !UpgradeFinished;
         }
 
         #region 初始化相关API
@@ -39,9 +33,9 @@ namespace Survivor
             return this;
         }
 
-        public ExpUpgradeItem WithDescription(string description)
+        public ExpUpgradeItem WithDescription(Func<int, string> descriptionFunctory)
         {
-            Description = description;
+            mDescriptionFunctory = descriptionFunctory;
             return this;
         }
 
@@ -51,9 +45,9 @@ namespace Survivor
             return this;
         }
         
-        public ExpUpgradeItem WithCondition(Func<ExpUpgradeItem, bool> condition)
+        public ExpUpgradeItem WithMaxLevel(int maxLevel)
         {
-            mCondition = condition;
+            MaxLevel = maxLevel;
             return this;
         }
         #endregion

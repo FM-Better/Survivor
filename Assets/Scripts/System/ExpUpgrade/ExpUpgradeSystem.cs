@@ -17,73 +17,55 @@ namespace Survivor
         
         protected override void OnInit()
         {
+            ResetData();
+
+            Global.Level.Register(_ =>
+            {
+                RandomAbility();
+            });
+        }
+
+        public void ResetData()
+        {
+            Items.Clear();
+            
             var simpleDamage1 = Add(new ExpUpgradeItem()
-                .WithKey("SimpleAbilityDamage_Lv1")
-                .WithDescription("简单能力伤害提升1.5倍 Lv1")
-                .OnUpgrade((item) =>
-                {
-                    Global.SimpleAbilityDamage.Value *= 1.5f;
-                }));
-            
-            var simpleDamage2 = Add(new ExpUpgradeItem()
-                .WithKey("SimpleAbilityDamage_Lv1")
-                .WithDescription("简单能力伤害提升1.5倍 Lv2")
-                .OnUpgrade((item) =>
-                {
-                    Global.SimpleAbilityDamage.Value *= 1.5f;
-                }))
-                .WithCondition((_) => simpleDamage1.UpgradeFinished);
-            simpleDamage1.OnChanged.Register(() =>
-            {
-                simpleDamage2.OnChanged.Trigger();
-            });
-            
-            var simpleDamage3 = Add(new ExpUpgradeItem()
-                .WithKey("SimpleAbilityDamage_Lv1")
-                .WithDescription("简单能力伤害提升1.5倍 Lv3")
-                .OnUpgrade((item) =>
-                {
-                    Global.SimpleAbilityDamage.Value *= 1.5f;
-                }))
-                .WithCondition((_) => simpleDamage2.UpgradeFinished);
-            simpleDamage2.OnChanged.Register(() =>
-            {
-                simpleDamage3.OnChanged.Trigger();
-            });
+                    .WithKey("SimpleAbilityDamage")
+                    .WithDescription(lv => $"简单能力伤害提升1.5倍 Lv{lv}")
+                    .OnUpgrade((item) =>
+                    {
+                        Global.SimpleAbilityDamage.Value *= 1.5f;
+                    }))
+                .WithMaxLevel(10);
 
             var simpleCD1 = Add(new ExpUpgradeItem()
-                .WithKey("SimpleAbilityCD_Lv1")
-                .WithDescription("简单能力间隔时间缩短0.5倍 Lv1")
-                .OnUpgrade((item) =>
+                    .WithKey("SimpleAbilityCD")
+                    .WithDescription(lv => $"简单能力间隔时间缩短0.5倍 Lv{lv}")
+                    .OnUpgrade((item) =>
+                    {
+                        Global.SimpleAbilityCD.Value *= 0.5f;
+                    }))
+                .WithMaxLevel(10);
+        }
+        
+        public void RandomAbility()
+        {
+            List<ExpUpgradeItem> items = new List<ExpUpgradeItem>();
+            foreach (var expUpgradeItem in Items)
+            {
+                if (!expUpgradeItem.UpgradeFinished)
                 {
-                    Global.SimpleAbilityCD.Value *= 0.5f;
-                }));
-            
-            var simpleCD2 = Add(new ExpUpgradeItem()
-                    .WithKey("SimpleAbilityCD_Lv2")
-                    .WithDescription("简单能力间隔时间缩短0.5倍 Lv2")
-                    .OnUpgrade((item) =>
-                    {
-                        Global.SimpleAbilityCD.Value *= 0.5f;
-                    }))
-                .WithCondition((_) => simpleDamage1.UpgradeFinished);
-            simpleCD1.OnChanged.Register(() =>
+                    items.Add(expUpgradeItem);
+                }
+
+                expUpgradeItem.Visible.Value = false;
+            }
+
+            var item = items.GetRandomItem();
+            if (item != null)
             {
-                simpleCD2.OnChanged.Trigger();
-            });
-            
-            var simpleCD3 = Add(new ExpUpgradeItem()
-                    .WithKey("SimpleAbilityCD_Lv3")
-                    .WithDescription("简单能力间隔时间缩短0.5倍 Lv3")
-                    .OnUpgrade((item) =>
-                    {
-                        Global.SimpleAbilityCD.Value *= 0.5f;
-                    }))
-                .WithCondition((_) => simpleDamage2.UpgradeFinished);
-            simpleCD2.OnChanged.Register(() =>
-            {
-                simpleCD3.OnChanged.Trigger();
-            });
+                item.Visible.Value = true;
+            }
         }
     }
 }
