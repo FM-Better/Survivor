@@ -76,6 +76,11 @@ namespace Survivor
 						UIKit.OpenPanel<UIGamePassPanel>();
 					}
 				}
+
+				if (count < 0)
+				{
+					Debug.LogError("!!!");
+				}
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			#endregion
 			

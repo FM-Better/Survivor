@@ -18,8 +18,9 @@ namespace Survivor
 		public float Hp => hp;
 		[SerializeField] private float hp;
 		[SerializeField] private float hurtDurationTime;
-		
-		private Transform playerTrans;
+        private bool isDead;
+
+        private Transform playerTrans;
 		
 		enum States
 		{
@@ -139,19 +140,23 @@ namespace Survivor
 
 		public void Hurt(float damage)
 		{
-			hp -= damage;
-			AudioKit.PlaySound("Hit");
-			FloatingTextController.ShowFloatingText(transform.position + Vector3.up * 0.5f, damage.ToString()); // 伤害飘字效果
-			this.Sprite.color = Color.red;
-			
-			ActionKit.Delay((hurtDurationTime),() =>
+			if (!isDead)
 			{
-				this.Sprite.color = Color.white;
-			}).Start(this);
-			
-			if (hp <= 0)
-			{
-				Dead();
+				hp -= damage;
+				AudioKit.PlaySound("Hit");
+				FloatingTextController.ShowFloatingText(transform.position + Vector3.up * 0.5f, damage.ToString()); // 伤害飘字效果
+				this.Sprite.color = Color.red;
+
+				ActionKit.Delay((hurtDurationTime), () =>
+				{
+					this.Sprite.color = Color.white;
+				}).Start(this);
+
+				if (hp <= 0)
+				{
+					isDead = true;
+					Dead();
+				}
 			}
 		}
 
