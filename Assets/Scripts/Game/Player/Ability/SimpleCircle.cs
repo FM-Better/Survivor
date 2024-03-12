@@ -17,7 +17,7 @@ namespace Survivor
 				{
 					if (hurtBox.Owner.CompareTag("Enemy"))
 					{
-						hurtBox.Owner.GetComponent<Enemy>().Hurt(2);
+						hurtBox.Owner.GetComponent<IEnemy>().Hurt(2);
 					}
 				}
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);

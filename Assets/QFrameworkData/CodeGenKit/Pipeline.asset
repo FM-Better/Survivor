@@ -19,15 +19,15 @@ MonoBehaviour:
     From: 0
     NameToFullName: []
     BindInfos:
-    - TypeName: UnityEngine.BoxCollider2D
-      PathToRoot: Knife
-      MemberName: Knife
-    ScriptsFolder: Assets\Scripts\Game\Player\Ability
-    ClassName: SimpleKnife
+    - TypeName: SpriteRenderer
+      PathToRoot: Sprite
+      MemberName: Sprite
+    ScriptsFolder: Assets/Scripts/Game/Enemy
+    ClassName: EnemyMiniBoss
     Namespace: Survivor
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace Survivor\r\n{\r\n\tpublic
-      partial class SimpleKnife : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class EnemyMiniBoss : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:c6fa5911-8485-4dbc-b6b0-6c68f8c5b7ad\r\nusing UnityEngine;\r\n\r\nnamespace
-      Survivor\r\n{\r\n\tpublic partial class SimpleKnife\r\n\t{\r\n\r\n\t\tpublic
-      UnityEngine.BoxCollider2D Knife;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:a0fc1c25-1a6f-43e0-a93d-b830006090f1\r\nusing UnityEngine;\r\n\r\nnamespace
+      Survivor\r\n{\r\n\tpublic partial class EnemyMiniBoss\r\n\t{\r\n\r\n\t\tpublic
+      SpriteRenderer Sprite;\r\n\r\n\t\tpublic UnityEngine.Rigidbody2D selfRigidbody;\r\n\r\n\t}\r\n}\r\n"

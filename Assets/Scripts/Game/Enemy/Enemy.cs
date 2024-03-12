@@ -3,7 +3,7 @@ using QFramework;
 
 namespace Survivor
 {
-	public partial class Enemy : ViewController
+	public partial class Enemy : ViewController, IEnemy
 	{
 		[SerializeField] private float moveSpeed;
 		private Transform playerTrans;
