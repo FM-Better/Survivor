@@ -18,6 +18,26 @@ namespace Survivor
 			mDefault = null;
 		}
 
+		public static Text ShowWarning(GameObject owner, Vector3 offset)
+		{
+			Text textComp = null;
+			mDefault.TextRoot.InstantiateWithParent(mDefault.transform)
+				.Self((self) =>
+				{
+					var selfCache = self;
+					textComp = self.Find("Text").GetComponent<Text>();
+					textComp.text = "蓄力中...";
+
+					ActionKit.OnUpdate.Register(() =>
+					{
+						selfCache.position = owner.Position() + offset;
+					}).UnRegisterWhenGameObjectDestroyed(textComp);
+				})
+				.Show();
+			
+			return textComp;
+		}
+
 		public static void ShowFloatingText(Vector2 position, string message)
 		{
 			mDefault.TextRoot.InstantiateWithParent(mDefault.transform)

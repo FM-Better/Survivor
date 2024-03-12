@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using QFramework;
+using UnityEngine.UI;
 
 namespace Survivor
 {
@@ -9,6 +10,7 @@ namespace Survivor
 		[SerializeField] private float chaseSpeed;
 		[SerializeField] private float warningTime;
 		private float warningTimer;
+		private Text warningText;
 		[SerializeField] private float dashSpeed;
 		[SerializeField] private float dashDistance;
 		[SerializeField] private float dashTime;
@@ -64,6 +66,7 @@ namespace Survivor
 				{
 					warningTimer = 0f;
 					selfRigidbody.velocity = Vector2.zero;
+					warningText = FloatingTextController.ShowWarning(gameObject, Vector2.up);
 				})
 				.OnUpdate(() =>
 				{
@@ -71,6 +74,8 @@ namespace Survivor
 					if (warningTimer >= warningTime)
 					{
 						warningTimer = 0f;
+						warningText.DestroyGameObjGracefully();
+						warningText = null;
 						fsm.ChangeState(States.Dash);
 					}
 				});
