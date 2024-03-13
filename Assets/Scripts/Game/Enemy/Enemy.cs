@@ -54,6 +54,16 @@ namespace Survivor
             }
 		}
 
+		public void PopulateHp(float nowWaveHpScale)
+		{
+			hp *= nowWaveHpScale;
+		}
+
+		public void PopulateSpeed(float nowWaveSpeedScale)
+		{
+			moveSpeed *= nowWaveSpeedScale;
+		}
+
 		public void Dead()
 		{
 			DropManager.Default.SpawnDrop(transform.position);

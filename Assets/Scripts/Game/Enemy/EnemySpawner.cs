@@ -11,11 +11,15 @@ namespace Survivor
 	public partial class EnemySpawner : ViewController
 	{
 		[SerializeField] private LevelConfig LevelConfig;
+
+		[Header("刷怪点的边界")] 
+		[SerializeField] private Transform leftBottom;
+		[SerializeField] private Transform rightTop;
+		
 		private Transform playerTrans;
 		private float waitTimer = 0f;
 		private float spawnTimer = 0f;
 		private float waveTimer = 0f;
-		[SerializeField] private float spawnDis;
 		private List<EnemyWave> enemyWaveList = new List<EnemyWave>();
 		private int nowWaveCount = 1;
 		private bool isOver;
@@ -65,9 +69,15 @@ namespace Survivor
 					{
 						spawnTimer = 0f;
 
-						var spawnPos = CalcSpawnPos(spawnDis);
+						var spawnPos = CalcSpawnPos();
 						nowWave.EnemyPrefab.InstantiateWithParent(EnemyRoot)
 							.Position(spawnPos)
+							.Self((self) =>
+							{
+								var enemy = self.GetComponent<IEnemy>(); 
+								enemy.PopulateHp(nowWave.HpScale);
+								enemy.PopulateSpeed(nowWave.SpeedScale);
+							})
 							.Show();
 					}
 
@@ -90,13 +100,23 @@ namespace Survivor
 			}
 		}
 
-		private Vector3 CalcSpawnPos(float spwanDistance)
+		private Vector3 CalcSpawnPos()
 		{
-			var angle = Random.Range(0, 360f);
-			var rad = Mathf.Deg2Rad * angle;
-			var direction = new Vector3(Mathf.Cos(rad), Mathf.Sin(rad)).normalized;
+			var spwanForX = RandomUtility.Choose(true, false);
+			float randomX;
+			float randomY;
+			if (spwanForX)
+			{
+				randomX = Random.Range(leftBottom.PositionX(), rightTop.PositionX());
+				randomY = RandomUtility.Choose(leftBottom.PositionY(), rightTop.PositionY());
+			}
+			else
+			{
+				randomX = RandomUtility.Choose(leftBottom.PositionX(), rightTop.PositionX());
+				randomY = Random.Range(leftBottom.PositionY(), rightTop.PositionY());
+			}
 
-			return playerTrans.position + spwanDistance * direction;
+			return new Vector3(randomX, randomY, 0f);
 		}
 	}
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyWaveGroups:
   - Name: "1\u3001\u5E7D\u7075"
-    Active: 1
+    Active: 0
     Description: "\u7B2C\u4E00\u6CE2\uFF1A\u5E7D\u7075"
     Waves:
     - Name: EnemyA
@@ -94,14 +94,14 @@ MonoBehaviour:
       SpeedScale: 1
       HpScale: 1
   - Name: "3\u3001\u98DE\u884C"
-    Active: 0
+    Active: 1
     Description: "\u7B2C\u4E09\u6CE2\uFF1A\u98DE\u884C"
     Waves:
     - Name: EnemyFly
       Active: 1
       DurationTime: 7
       SpawnCD: 0.5
-      isWaited: 0
+      isWaited: 1
       WaitTime: 2
       EnemyPrefab: {fileID: 6331395430937204827, guid: a4d7c59f3851d71449b736dd58c7ffda, type: 3}
       SpeedScale: 1
@@ -110,7 +110,7 @@ MonoBehaviour:
       Active: 1
       DurationTime: 7
       SpawnCD: 0.3
-      isWaited: 0
+      isWaited: 1
       WaitTime: 3
       EnemyPrefab: {fileID: 6331395430937204827, guid: a4d7c59f3851d71449b736dd58c7ffda, type: 3}
       SpeedScale: 1.5
@@ -119,7 +119,7 @@ MonoBehaviour:
       Active: 1
       DurationTime: 5
       SpawnCD: 2
-      isWaited: 0
+      isWaited: 1
       WaitTime: 3
       EnemyPrefab: {fileID: 5487822965031370915, guid: f4c94bd44943c7d469ea00c0915a4f12, type: 3}
       SpeedScale: 1
@@ -128,7 +128,7 @@ MonoBehaviour:
       Active: 1
       DurationTime: 10
       SpawnCD: 5
-      isWaited: 0
+      isWaited: 1
       WaitTime: 5
       EnemyPrefab: {fileID: 3382935718133338812, guid: 7d9192968644abd4d9c4f5c04039c659, type: 3}
       SpeedScale: 1
