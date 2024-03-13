@@ -19,15 +19,15 @@ MonoBehaviour:
     From: 0
     NameToFullName: []
     BindInfos:
-    - TypeName: SpriteRenderer
-      PathToRoot: Sprite
-      MemberName: Sprite
-    ScriptsFolder: Assets/Scripts/Game/Enemy
-    ClassName: EnemyMiniBoss
+    - TypeName: Transform
+      PathToRoot: EnemyRoot
+      MemberName: EnemyRoot
+    ScriptsFolder: Assets\Scripts\Game\Enemy
+    ClassName: EnemySpawner
     Namespace: Survivor
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace Survivor\r\n{\r\n\tpublic
-      partial class EnemyMiniBoss : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class EnemySpawner : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:a0fc1c25-1a6f-43e0-a93d-b830006090f1\r\nusing UnityEngine;\r\n\r\nnamespace
-      Survivor\r\n{\r\n\tpublic partial class EnemyMiniBoss\r\n\t{\r\n\r\n\t\tpublic
-      SpriteRenderer Sprite;\r\n\r\n\t\tpublic UnityEngine.Rigidbody2D selfRigidbody;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:98832f78-5893-4c4f-ad82-3a41a25aeea3\r\nusing UnityEngine;\r\n\r\nnamespace
+      Survivor\r\n{\r\n\tpublic partial class EnemySpawner\r\n\t{\r\n\r\n\t\tpublic
+      Transform EnemyRoot;\r\n\r\n\t}\r\n}\r\n"

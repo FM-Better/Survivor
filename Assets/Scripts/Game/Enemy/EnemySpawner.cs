@@ -8,33 +8,36 @@ using Random = UnityEngine.Random;
 
 namespace Survivor
 {
-	[Serializable]
-	public class EnemyWave
-	{
-		public float DurationTime; // 持续时间
-		public float SpawnCD; // 刷怪的CD
-		public bool isWaited; // 是否等待完毕
-		public float WaitTime; // 等待下一波的时间
-		public GameObject EnemyPrefab;
-	}
-	
 	public partial class EnemySpawner : ViewController
 	{
+		[SerializeField] private LevelConfig LevelConfig;
 		private Transform playerTrans;
 		private float waitTimer = 0f;
 		private float spawnTimer = 0f;
 		private float waveTimer = 0f;
 		[SerializeField] private float spawnDis;
-		[SerializeField] private List<EnemyWave> enemyWaveList = new List<EnemyWave>();
+		private List<EnemyWave> enemyWaveList = new List<EnemyWave>();
 		private int nowWaveCount = 1;
+		private bool isOver;
 
 		public static BindableProperty<int> enemyCount = new BindableProperty<int>();
-		private bool isOver;
 		
 		void Start()
 		{
 			playerTrans = FindObjectOfType<Player>().transform; // 缓存玩家Transform
 			isOver = false;
+			
+			// 读取关卡的波次配置信息
+			foreach (var enemyWaveGroup in LevelConfig.EnemyWaveGroups)
+			{
+				if (!enemyWaveGroup.Active) 
+					continue;
+				foreach (var wave in enemyWaveGroup.Waves)
+				{
+					if (wave.Active)
+						enemyWaveList.Add(wave);	
+				}
+			}
 		}
 
 		private void Update()

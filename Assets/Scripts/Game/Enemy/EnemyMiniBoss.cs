@@ -120,7 +120,7 @@ namespace Survivor
 							}
 							else
 							{
-								fsm.ChangeState(States.Dash);
+								fsm.ChangeState(States.Warning);
 							}
 						}
 						else

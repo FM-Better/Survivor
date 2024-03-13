@@ -6,9 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="3a2b9e56-376e-497f-9d7b-000d63ff874b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Enemy/Enemy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Enemy/Enemy.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Enemy/EnemyFly.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Enemy/EnemyFly.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Enemy/MiniBoss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Enemy/MiniBoss.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemyMiniBoss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemyMiniBoss.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/FloatingTextController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/FloatingTextController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemyMiniBoss.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemyMiniBoss.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemySpawner.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemySpawner.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,10 +110,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="30736">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="30736" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -131,7 +140,9 @@
       <workItem from="1709600695508" duration="8380000" />
       <workItem from="1709641166140" duration="58041000" />
       <workItem from="1710040909525" duration="43653000" />
-      <workItem from="1710255103201" duration="3304000" />
+      <workItem from="1710255103201" duration="3380000" />
+      <workItem from="1710319279223" duration="160000" />
+      <workItem from="1710319464659" duration="3546000" />
     </task>
     <servers />
   </component>
