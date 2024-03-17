@@ -19,7 +19,7 @@ namespace Survivor
                 ActionKit.Lerp(1f, 0f, 1f, (fade) =>
                     {
                         material.SetFloat(Fade, fade);
-                        this.LocalScale(1 + (1 - 0.5f) * fade);
+                        this.LocalScale(1 + 0.2f * fade);
                     })
                     .Start(this, () =>
                     {

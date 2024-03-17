@@ -153,6 +153,7 @@ MonoBehaviour:
   waitTime: 1
   hp: 300
   hurtDurationTime: 0.2
+  dissolveColor: {r: 1, g: 0.3413029, b: 0.015686274, a: 1}
   Sprite: {fileID: 3382935719290557443}
   selfRigidbody: {fileID: 3382935718133338818}
 --- !u!114 &3382935718133338816

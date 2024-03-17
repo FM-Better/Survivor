@@ -296,6 +296,7 @@ MonoBehaviour:
   moveSpeed: 3.8
   hp: 50
   hurtDurationTime: 0.2
+  dissolveColor: {r: 0, g: 0.96862745, b: 1, a: 1}
   Sprite: {fileID: 7569138949789710331}
   selfRigidbody: {fileID: 7569138950045160022}
 --- !u!50 &7569138950045160022
