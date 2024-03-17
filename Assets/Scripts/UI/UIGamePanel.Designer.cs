@@ -5,7 +5,7 @@ using QFramework;
 
 namespace Survivor
 {
-	// Generate Id:d2401b0f-620c-4e9c-b806-28e1dd7a36e1
+	// Generate Id:6024ba6a-b117-4818-b31c-aca1142aa13a
 	public partial class UIGamePanel
 	{
 		public const string Name = "UIGamePanel";
@@ -24,6 +24,8 @@ namespace Survivor
 		public UnityEngine.UI.Text TxtGold;
 		[SerializeField]
 		public ExpUpgradePanel ExpUpgradePanel;
+		[SerializeField]
+		public UnityEngine.UI.Image ExpValue;
 		
 		private UIGamePanelData mPrivateData = null;
 		
@@ -36,6 +38,7 @@ namespace Survivor
 			TxtEnemy = null;
 			TxtGold = null;
 			ExpUpgradePanel = null;
+			ExpValue = null;
 			
 			mData = null;
 		}

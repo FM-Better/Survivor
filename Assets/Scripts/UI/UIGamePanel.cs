@@ -28,6 +28,7 @@ namespace Survivor
 				}
 				
 				TxtExp.text = $"经验值：({Global.Exp.Value}/{Global.CurrentLevelExp()})";
+				ExpValue.fillAmount = Global.Exp.Value / (float)Global.CurrentLevelExp();
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			
 			Global.Gold.RegisterWithInitValue((gold) =>
