@@ -1,5 +1,5 @@
-using System;
 using Cinemachine;
+using QAssetBundle;
 using UnityEngine;
 using QFramework;
 
@@ -25,7 +25,7 @@ namespace Survivor
 					enemy.Hurt(Damage);
 				}
 				
-				AudioKit.PlaySound("Bomb");
+				AudioKit.PlaySound(Sound.BOMB);
 				impulseSource.GenerateImpulse(); // 发生脉冲信号
 				this.DestroyGameObjGracefully();
 			}

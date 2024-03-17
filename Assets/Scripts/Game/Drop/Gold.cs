@@ -1,3 +1,4 @@
+using QAssetBundle;
 using UnityEngine;
 using QFramework;
 
@@ -9,7 +10,7 @@ namespace Survivor
 		{
 			if (other.GetComponent<PickUpArea>())
 			{
-				AudioKit.PlaySound("Gold");
+				AudioKit.PlaySound(Sound.GOLD);
 				Global.Gold.Value++;
 				this.DestroyGameObjGracefully();
 			}

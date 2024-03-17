@@ -1,3 +1,4 @@
+using QAssetBundle;
 using UnityEngine;
 using QFramework;
 
@@ -31,7 +32,7 @@ namespace Survivor
 					}).UnRegisterWhenGameObjectDestroyed(expBall);
 				}
 				
-				AudioKit.PlaySound("GetAllExp");
+				AudioKit.PlaySound(Sound.GETALLEXP);
 				this.DestroyGameObjGracefully();
 			}
 		}

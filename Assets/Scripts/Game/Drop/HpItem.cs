@@ -1,3 +1,4 @@
+using QAssetBundle;
 using UnityEngine;
 using QFramework;
 
@@ -11,7 +12,7 @@ namespace Survivor
 			{
 				if (Global.Hp.Value < Global.MaxHp.Value)
 				{
-					AudioKit.PlaySound("HpItem");
+					AudioKit.PlaySound(Sound.HPITEM);
 					Global.Hp.Value++;
 					this.DestroyGameObjGracefully();	
 				}

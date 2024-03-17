@@ -19,15 +19,15 @@ MonoBehaviour:
     From: 0
     NameToFullName: []
     BindInfos:
-    - TypeName: Transform
-      PathToRoot: EnemyRoot
-      MemberName: EnemyRoot
-    ScriptsFolder: Assets\Scripts\Game\Enemy
-    ClassName: EnemySpawner
+    - TypeName: SpriteRenderer
+      PathToRoot: EnemyDieFx
+      MemberName: EnemyDieFx
+    ScriptsFolder: Assets/Scripts/Game/Fx
+    ClassName: FxConrtoller
     Namespace: Survivor
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace Survivor\r\n{\r\n\tpublic
-      partial class EnemySpawner : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class FxConrtoller : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:98832f78-5893-4c4f-ad82-3a41a25aeea3\r\nusing UnityEngine;\r\n\r\nnamespace
-      Survivor\r\n{\r\n\tpublic partial class EnemySpawner\r\n\t{\r\n\r\n\t\tpublic
-      Transform EnemyRoot;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:fe84391d-67fa-429b-bf3f-7c3b04fa50b9\r\nusing UnityEngine;\r\n\r\nnamespace
+      Survivor\r\n{\r\n\tpublic partial class FxConrtoller\r\n\t{\r\n\r\n\t\tpublic
+      SpriteRenderer EnemyDieFx;\r\n\r\n\t}\r\n}\r\n"

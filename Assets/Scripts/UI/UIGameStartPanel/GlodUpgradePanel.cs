@@ -3,6 +3,7 @@
  ****************************************************************************/
 using System.Collections.Generic;
 using System.Linq;
+using QAssetBundle;
 using QFramework;
 using UnityEngine.UI;
 
@@ -28,7 +29,7 @@ namespace Survivor
 						self.onClick.AddListener(() =>
 						{
 							itemCache.Upgrade();
-							AudioKit.PlaySound("AbilityLevelUp");
+							AudioKit.PlaySound(Sound.ABILITYLEVELUP);
 						});
 						
 						var selfCache = self;

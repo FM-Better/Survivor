@@ -1,3 +1,4 @@
+using QAssetBundle;
 using UnityEngine;
 using QFramework;
 
@@ -19,13 +20,13 @@ namespace Survivor
 						Global.Hp.Value--;
 						if (Global.Hp.Value <= 0)
 						{
-							AudioKit.PlaySound("Die");
+							AudioKit.PlaySound(Sound.DIE);
 							this.DestroyGameObjGracefully();
 							UIKit.OpenPanel<UIGameOverPanel>();	
 						}
 						else
 						{
-							AudioKit.PlaySound("Hurt");
+							AudioKit.PlaySound(Sound.HURT);
 						}
 					}
 				}

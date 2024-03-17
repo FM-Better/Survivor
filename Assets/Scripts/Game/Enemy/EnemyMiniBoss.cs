@@ -1,4 +1,5 @@
 using System;
+using QAssetBundle;
 using UnityEngine;
 using QFramework;
 using UnityEngine.UI;
@@ -21,6 +22,7 @@ namespace Survivor
 		[SerializeField] private float hp;
 		[SerializeField] private float hurtDurationTime;
         private bool isDead;
+        [SerializeField] private Color dissolveColor = Color.yellow;
 
         private Transform playerTrans;
 		
@@ -148,7 +150,7 @@ namespace Survivor
 			if (!isDead)
 			{
 				hp -= damage;
-				AudioKit.PlaySound("Hit");
+				AudioKit.PlaySound(Sound.HIT);
 				FloatingTextController.ShowFloatingText(transform.position + Vector3.up * 0.5f, damage.ToString()); // 伤害飘字效果
 				this.Sprite.color = Color.red;
 
@@ -179,7 +181,8 @@ namespace Survivor
 		{
 			DropManager.Default.SpawnDrop(transform.position);
 			EnemySpawner.enemyCount.Value--;
-			
+			FxConrtoller.Play(Sprite, dissolveColor);
+			AudioKit.PlaySound(Sound.ENEMYDIE);
 			this.DestroyGameObjGracefully();
 		}
 	}

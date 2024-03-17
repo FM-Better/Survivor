@@ -2,6 +2,7 @@
  * 2024.3 LAPTOP-FG35BCEI
  ****************************************************************************/
 using System.Collections.Generic;
+using QAssetBundle;
 using QFramework;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,7 +28,7 @@ namespace Survivor
 							itemCache.Upgrade();
 							Time.timeScale = 1f;
 							this.Hide();
-							AudioKit.PlaySound("AbilityLevelUp");
+							AudioKit.PlaySound(Sound.ABILITYLEVELUP);
 						});
 						
 						itemCache.Visible.RegisterWithInitValue((visible) =>
