@@ -31,8 +31,20 @@ namespace Survivor
 					}
 				}
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+
+			Global.Hp.RegisterWithInitValue((hp) =>
+			{
+				UpdateHpUI();
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+			
+			Global.MaxHp.RegisterWithInitValue((hp) =>
+			{
+				UpdateHpUI();
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 		}
 
+		void UpdateHpUI() => HpValue.fillAmount = Global.Hp.Value / (float)Global.MaxHp.Value;
+		
 		private void FixedUpdate()
 		{
 			var horizontal = Input.GetAxisRaw("Horizontal");

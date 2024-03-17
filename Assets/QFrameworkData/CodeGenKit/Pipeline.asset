@@ -20,14 +20,21 @@ MonoBehaviour:
     NameToFullName: []
     BindInfos:
     - TypeName: SpriteRenderer
-      PathToRoot: EnemyDieFx
-      MemberName: EnemyDieFx
-    ScriptsFolder: Assets/Scripts/Game/Fx
-    ClassName: FxConrtoller
+      PathToRoot: Sprite
+      MemberName: Sprite
+    - TypeName: CircleCollider2D
+      PathToRoot: HurtBox
+      MemberName: HurtBox
+    - TypeName: UnityEngine.UI.Image
+      PathToRoot: Canvas/HpValue
+      MemberName: HpValue
+    ScriptsFolder: Assets\Scripts\Game\Player
+    ClassName: Player
     Namespace: Survivor
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace Survivor\r\n{\r\n\tpublic
-      partial class FxConrtoller : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class Player : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:fe84391d-67fa-429b-bf3f-7c3b04fa50b9\r\nusing UnityEngine;\r\n\r\nnamespace
-      Survivor\r\n{\r\n\tpublic partial class FxConrtoller\r\n\t{\r\n\r\n\t\tpublic
-      SpriteRenderer EnemyDieFx;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:0707ce4d-4686-42dd-9edd-ab09ed75033c\r\nusing UnityEngine;\r\n\r\nnamespace
+      Survivor\r\n{\r\n\tpublic partial class Player\r\n\t{\r\n\r\n\t\tpublic SpriteRenderer
+      Sprite;\r\n\r\n\t\tpublic CircleCollider2D HurtBox;\r\n\r\n\t\tpublic UnityEngine.UI.Image
+      HpValue;\r\n\r\n\t\tpublic UnityEngine.Rigidbody2D selfRigidbody;\r\n\r\n\t}\r\n}\r\n"
