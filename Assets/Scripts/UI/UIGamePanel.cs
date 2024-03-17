@@ -14,11 +14,6 @@ namespace Survivor
 			mData = uiData as UIGamePanelData ?? new UIGamePanelData();
 			
 			#region Gloal相关
-			Global.Hp.RegisterWithInitValue((hp) =>
-			{
-				TxtHp.text = $"HP：({hp}/{Global.MaxHp.Value})";
-			}).UnRegisterWhenGameObjectDestroyed(gameObject);
-			
 			Global.Exp.RegisterWithInitValue((exp) =>
 			{
 				if (exp >= Global.CurrentLevelExp())
@@ -26,8 +21,6 @@ namespace Survivor
 					Global.Exp.Value -= Global.CurrentLevelExp();
 					Global.Level.Value++;
 				}
-				
-				TxtExp.text = $"经验值：({Global.Exp.Value}/{Global.CurrentLevelExp()})";
 				ExpValue.fillAmount = Global.Exp.Value / (float)Global.CurrentLevelExp();
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			
