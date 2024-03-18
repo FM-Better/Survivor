@@ -66,6 +66,23 @@ namespace Survivor
         public static BindableProperty<float> SimpleKnifeCD = new BindableProperty<float>(AbilityConfig.InitSimpleKnifeCD);
         
         /// <summary>
+        /// 守卫剑的数量
+        /// </summary>
+        public static BindableProperty<int> RotateSwordCount = new BindableProperty<int>(AbilityConfig.InitRotateSwordCount);
+        /// <summary>
+        /// 守卫剑的伤害值
+        /// </summary>
+        public static BindableProperty<float> RotateSwordDamage = new BindableProperty<float>(AbilityConfig.InitRotateSwordDamage);
+        /// <summary>
+        /// 守卫剑的速度
+        /// </summary>
+        public static BindableProperty<float> RotateSwordSpeed = new BindableProperty<float>(AbilityConfig.InitRotateSwordSpeed);
+        /// <summary>
+        /// 守卫剑的范围
+        /// </summary>
+        public static BindableProperty<float> RotateSwordRange = new BindableProperty<float>(AbilityConfig.InitRotateSwordRange);
+        
+        /// <summary>
         /// 敌人是否生成完毕
         /// </summary>
         public static BindableProperty<bool> IsEnemySpawnOver = new BindableProperty<bool>(false);
@@ -129,6 +146,11 @@ namespace Survivor
             SimpleKnifeAttackCount.Value = AbilityConfig.InitSimpleKnifeAttackCount;
             SimpleKnifeDamage.Value = AbilityConfig.InitSimpleKnifeDamage;
             SimpleKnifeCD.Value = AbilityConfig.InitSimpleKnifeCD;
+
+            RotateSwordCount.Value = AbilityConfig.InitRotateSwordCount;
+            RotateSwordDamage.Value = AbilityConfig.InitRotateSwordDamage;
+            RotateSwordSpeed.Value = AbilityConfig.InitRotateSwordSpeed;
+            RotateSwordRange.Value = AbilityConfig.InitRotateSwordRange;
             
             IsEnemySpawnOver.Value = false;
             EnemySpawner.enemyCount.Value = 0;

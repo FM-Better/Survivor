@@ -12,6 +12,7 @@ namespace Survivor
 		[SerializeField] private float hp;
 		[SerializeField] private float hurtDurationTime;
 		private bool isDead;
+		private bool isHurt;
 		[SerializeField] private Color dissolveColor = Color.yellow;
 		
 		void Start()
@@ -19,10 +20,14 @@ namespace Survivor
 			playerTrans = FindObjectOfType<Player>().transform; // 缓存玩家tarnsfrom
 			EnemySpawner.enemyCount.Value++; // 计数
 			isDead = false;
-        }
+			isHurt = false;
+		}
 
 		private void Update()
 		{
+			if (isHurt) 
+				return;
+			
 			if (playerTrans)
 			{
 				var direction = (playerTrans.position - transform.position).normalized;
@@ -38,6 +43,8 @@ namespace Survivor
 		{
 			if (!isDead)
 			{
+				selfRigidbody.velocity = Vector2.zero;
+				isHurt = true;
                 hp -= damage;
                 AudioKit.PlaySound(Sound.HIT);
                 FloatingTextController.ShowFloatingText(transform.position + Vector3.up * 0.5f, damage.ToString("0")); // 伤害飘字效果
@@ -46,6 +53,7 @@ namespace Survivor
                 ActionKit.Delay((hurtDurationTime), () =>
                 {
                     this.Sprite.color = Color.white;
+                    isHurt = false;
                 }).Start(this);
 
                 if (hp <= 0)

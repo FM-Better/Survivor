@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="3a2b9e56-376e-497f-9d7b-000d63ff874b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Config/AbilityConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Config/AbilityConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SimpleCircle.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/RotateSword.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SimpleCircle.Designer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/RotateSword.Designer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SimpleCircle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/RotateSword.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SimpleCircle.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/RotateSword.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/System/ExpUpgrade/ExpUpgradeSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/System/ExpUpgrade/ExpUpgradeSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +28,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/34/54254e0d/PlayerPrefs.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/6f/1072cd22/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/79/46b22b4e/Transform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/89/4274b946/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/a3/2e39b790/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/c4/40dddad2/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/0b/e82ddd70/Math.cs" root0="SKIP_HIGHLIGHTING" />
@@ -104,10 +111,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="3900">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="3900" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -138,7 +145,7 @@
       <workItem from="1710319279223" duration="160000" />
       <workItem from="1710319464659" duration="8126000" />
       <workItem from="1710659666747" duration="6698000" />
-      <workItem from="1710731833355" duration="5188000" />
+      <workItem from="1710731833355" duration="10475000" />
     </task>
     <servers />
   </component>

@@ -2478,7 +2478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1230291219
 Transform:
   m_ObjectHideFlags: 0
@@ -2739,12 +2739,12 @@ GameObject:
   - component: {fileID: 1300093170}
   - component: {fileID: 1300093171}
   m_Layer: 0
-  m_Name: SimpleCircle
+  m_Name: RotateSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1300093170
 Transform:
   m_ObjectHideFlags: 0
@@ -2774,13 +2774,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Namespace: Survivor
-  ScriptName: SimpleCircle
+  ScriptName: RotateSword
   ScriptsFolder: Assets\Scripts\Game\Player\Ability
   GeneratePrefab: 0
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
-  radius: 2
-  Circle: {fileID: 1574853099}
+  Sword: {fileID: 1574853099}
 --- !u!4 &1372677558 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7178566475531754210, guid: c20423ab81784a3438ed0a5070c16d5e, type: 3}
@@ -2946,12 +2945,12 @@ GameObject:
   - component: {fileID: 1574853099}
   - component: {fileID: 1574853098}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1574853096
 Transform:
   m_ObjectHideFlags: 0
@@ -2961,7 +2960,7 @@ Transform:
   m_GameObject: {fileID: 1574853095}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1300093170}
@@ -3008,7 +3007,7 @@ SpriteRenderer:
   m_SortingLayerID: 1587382673
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 24950b05c7663ee438ac5fc6ef47ab2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3034,9 +3033,9 @@ MonoBehaviour:
   MarkType: 0
   CustomComponentName: Circle
   CustomComment: 
-  mComponentName: CircleCollider2D
---- !u!58 &1574853099
-CircleCollider2D:
+  mComponentName: UnityEngine.BoxCollider2D
+--- !u!61 &1574853099
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3048,9 +3047,19 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.11633754}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.49999997
+  m_Size: {x: 0.34789753, y: 0.59588015}
+  m_EdgeRadius: 0
 --- !u!1 &1620650753
 GameObject:
   m_ObjectHideFlags: 0
