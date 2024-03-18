@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a2b9e56-376e-497f-9d7b-000d63ff874b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Config/LevelConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Config/LevelConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyBBoss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyBBoss.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyBBossB.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyBBossB.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyCBossB.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyCBossB.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyD.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyDBoss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyDBoss.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyDBossB.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyDBossB.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/QFrameworkData/QAssets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFrameworkData/QAssets.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Config/AbilityConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Config/AbilityConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +142,7 @@
       <workItem from="1710319279223" duration="160000" />
       <workItem from="1710319464659" duration="8126000" />
       <workItem from="1710659666747" duration="6698000" />
-      <workItem from="1710731833355" duration="11634000" />
+      <workItem from="1710731833355" duration="13867000" />
     </task>
     <servers />
   </component>

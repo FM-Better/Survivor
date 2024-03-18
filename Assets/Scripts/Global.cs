@@ -83,6 +83,19 @@ namespace Survivor
         public static BindableProperty<float> RotateSwordRange = new BindableProperty<float>(AbilityConfig.InitRotateSwordRange);
         
         /// <summary>
+        /// 篮球的数量
+        /// </summary>
+        public static BindableProperty<int> BasketBallCount = new BindableProperty<int>(AbilityConfig.InitBasketBallCount);
+        /// <summary>
+        /// 篮球的伤害值
+        /// </summary>
+        public static BindableProperty<float> BasketBallDamage = new BindableProperty<float>(AbilityConfig.InitBasketBallDamage);
+        /// <summary>
+        /// 篮球的速度
+        /// </summary>
+        public static BindableProperty<float> BasktetBallSpeed = new BindableProperty<float>(AbilityConfig.InitBasketBallSpeed);
+        
+        /// <summary>
         /// 敌人是否生成完毕
         /// </summary>
         public static BindableProperty<bool> IsEnemySpawnOver = new BindableProperty<bool>(false);
@@ -151,6 +164,10 @@ namespace Survivor
             RotateSwordDamage.Value = AbilityConfig.InitRotateSwordDamage;
             RotateSwordSpeed.Value = AbilityConfig.InitRotateSwordSpeed;
             RotateSwordRange.Value = AbilityConfig.InitRotateSwordRange;
+
+            BasketBallCount.Value = AbilityConfig.InitBasketBallCount;
+            BasketBallDamage.Value = AbilityConfig.InitBasketBallDamage;
+            BasktetBallSpeed.Value = AbilityConfig.InitBasketBallSpeed;
             
             IsEnemySpawnOver.Value = false;
             EnemySpawner.enemyCount.Value = 0;
