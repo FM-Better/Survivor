@@ -6,9 +6,9 @@ namespace Survivor
     public class ExpUpgradeItem
     {
         public string Key { get; private set; }
-        public string Description => mDescriptionFunctory(CurrentLevel.Value);
+        public string Description => mDescriptionFunctory(CurrentLevel.Value + 1);
         public int MaxLevel { get; private set; }
-        public BindableProperty<int> CurrentLevel = new BindableProperty<int>(1);
+        public BindableProperty<int> CurrentLevel = new BindableProperty<int>(0);
         public bool UpgradeFinished { get; set; } = false;
         public BindableProperty<bool> Visible = new BindableProperty<bool>(false);
         private Func<int, string> mDescriptionFunctory;

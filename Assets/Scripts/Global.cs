@@ -53,6 +53,10 @@ namespace Survivor
         /// </summary>
         public static BindableProperty<int> SimpleKnifeCount = new BindableProperty<int>(AbilityConfig.InitSimpleKnifeCount);
         /// <summary>
+        /// 飞刀可穿透的敌人数量
+        /// </summary>
+        public static BindableProperty<int> SimpleKnifeAttackCount = new BindableProperty<int>(AbilityConfig.InitSimpleKnifeAttackCount);
+        /// <summary>
         /// 飞刀的伤害值
         /// </summary>
         public static BindableProperty<float> SimpleKnifeDamage = new BindableProperty<float>(AbilityConfig.InitSimpleKnifeDamage);
@@ -122,6 +126,7 @@ namespace Survivor
             SimpleSwordRange.Value = AbilityConfig.InitSimpleSwordRange;
 
             SimpleKnifeCount.Value = AbilityConfig.InitSimpleKnifeCount;
+            SimpleKnifeAttackCount.Value = AbilityConfig.InitSimpleKnifeAttackCount;
             SimpleKnifeDamage.Value = AbilityConfig.InitSimpleKnifeDamage;
             SimpleKnifeCD.Value = AbilityConfig.InitSimpleKnifeCD;
             

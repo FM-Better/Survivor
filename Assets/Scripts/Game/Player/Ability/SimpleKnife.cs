@@ -54,6 +54,7 @@ namespace Survivor
 									selfCache.transform.up = dir;
 									rigidbody2D.velocity = dir * 10f;
 
+									var attackCount = 0;
 									selfCache.OnTriggerEnter2DEvent((collider) =>
 									{
 										var hurtBox = collider.GetComponent<HurtBox>();
@@ -63,6 +64,12 @@ namespace Survivor
 											{
 												hurtBox.Owner.GetComponent<IEnemy>()
 													.Hurt(Global.SimpleKnifeDamage.Value);
+												attackCount++;
+
+												if (attackCount >= Global.SimpleKnifeAttackCount.Value)
+												{
+													selfCache.DestroyGameObjGracefully();
+												}
 											}
 										}
 									}).UnRegisterWhenGameObjectDestroyed(self);
