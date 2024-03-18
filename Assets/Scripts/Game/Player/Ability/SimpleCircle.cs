@@ -25,9 +25,6 @@ namespace Survivor
 
 		private void Update()
 		{
-			// var angle = Time.frameCount % 360;
-			// var rad = angle * Mathf.Deg2Rad;
-			// var pos = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad)) * radius;
 			transform.Rotate(Vector3.forward, 180 * Time.deltaTime);
 		}
 	}

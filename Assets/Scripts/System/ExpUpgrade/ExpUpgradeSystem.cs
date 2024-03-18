@@ -29,23 +29,70 @@ namespace Survivor
         {
             Items.Clear();
             
-            var simpleDamage1 = Add(new ExpUpgradeItem()
-                    .WithKey("SimpleAbilityDamage")
-                    .WithDescription(lv => $"简单能力伤害提升1.5倍 Lv{lv}")
-                    .OnUpgrade((item) =>
+            var simpleSword = Add(new ExpUpgradeItem()
+                    .WithKey("SimpleSword")
+                    .WithDescription(lv =>
                     {
-                        Global.SimpleAbilityDamage.Value *= 1.5f;
-                    }))
-                .WithMaxLevel(10);
-
-            var simpleCD1 = Add(new ExpUpgradeItem()
-                    .WithKey("SimpleAbilityCD")
-                    .WithDescription(lv => $"简单能力间隔时间缩短0.5倍 Lv{lv}")
-                    .OnUpgrade((item) =>
+                        return lv switch
+                        {
+                            1 => $"剑Lv{lv}：攻击身边的敌人",
+                            2 => $"剑Lv{lv}：\n攻击力+3 数量+2",
+                            3 => $"剑Lv{lv}：\n攻击力+2 间隔-0.25s",
+                            4 => $"剑Lv{lv}：\n攻击力+2 间隔-0.25s",
+                            5 => $"剑Lv{lv}：\n攻击力+3 数量+2",
+                            6 => $"剑Lv{lv}：\n范围+1 间隔-0.25s",
+                            7 => $"剑Lv{lv}：\n攻击力+3 数量+2",
+                            8 => $"剑Lv{lv}：\n攻击力+2 范围+1",
+                            9 => $"剑Lv{lv}：\n攻击力+3 间隔-0.25s",
+                            10 => $"剑Lv{lv}：\n攻击力+3 数量+2",
+                            _ => null,
+                        };
+                    })
+                    .WithMaxLevel(10)
+                    .OnUpgrade((_, level) =>
                     {
-                        Global.SimpleAbilityCD.Value *= 0.5f;
-                    }))
-                .WithMaxLevel(10);
+                        switch (level)  
+                        {
+                            case 1:
+                                break;
+                            case 2:
+                                Global.SimpleSwordDamage.Value += 3;
+                                Global.SimpleSwordCount.Value += 2;
+                                break;
+                            case 3:
+                                Global.SimpleSwordDamage.Value += 2;
+                                Global.SimpleSwordCD.Value -= 0.25f;
+                                break;
+                            case 4:
+                                Global.SimpleSwordDamage.Value += 2;
+                                Global.SimpleSwordCD.Value -= 0.25f;
+                                break;
+                            case 5:
+                                Global.SimpleSwordDamage.Value += 3;
+                                Global.SimpleSwordCount.Value += 2;
+                                break;
+                            case 6:
+                                Global.SimpleSwordRange.Value++;
+                                Global.SimpleSwordCD.Value -= 0.25f;
+                                break;
+                            case 7:
+                                Global.SimpleSwordDamage.Value += 3;
+                                Global.SimpleSwordCount.Value += 2;
+                                break;
+                            case 8:
+                                Global.SimpleSwordDamage.Value += 2;
+                                Global.SimpleSwordRange.Value++;
+                                break;
+                            case 9:
+                                Global.SimpleSwordDamage.Value += 3;
+                                Global.SimpleSwordCD.Value -= 0.25f;
+                                break;
+                            case 10:
+                                Global.SimpleSwordDamage.Value += 3;
+                                Global.SimpleSwordCount.Value += 2;
+                                break;
+                        }
+                    }));
         }
         
         public void RandomAbility()

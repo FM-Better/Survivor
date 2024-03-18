@@ -13,12 +13,12 @@ namespace Survivor
         public BindableProperty<bool> Visible = new BindableProperty<bool>(false);
         private Func<int, string> mDescriptionFunctory;
         
-        private Action<ExpUpgradeItem> mOnUpgrade { get; set; }
+        private Action<ExpUpgradeItem, int> mOnUpgrade { get; set; }
 
         public void Upgrade()
         {
             CurrentLevel.Value++;
-            mOnUpgrade?.Invoke(this);
+            mOnUpgrade?.Invoke(this, CurrentLevel.Value);
             if (CurrentLevel.Value > 10)
             {
                 UpgradeFinished = true;    
@@ -39,7 +39,7 @@ namespace Survivor
             return this;
         }
 
-        public ExpUpgradeItem OnUpgrade(Action<ExpUpgradeItem> onUpgrade)
+        public ExpUpgradeItem OnUpgrade(Action<ExpUpgradeItem, int> onUpgrade)
         {
             mOnUpgrade = onUpgrade;
             return this;
