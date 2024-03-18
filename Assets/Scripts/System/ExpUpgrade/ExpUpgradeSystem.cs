@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using QFramework;
 
 namespace Survivor
@@ -161,6 +162,70 @@ namespace Survivor
                                 break;
                         }
                     }));
+            
+            Add(new ExpUpgradeItem()
+                    .WithKey("RotateSword")
+                    .WithMaxLevel(10)
+                    .WithDescription(lv =>
+                    {
+                        return lv switch
+                        {
+                            1 => $"守卫剑Lv{lv}：环绕主角身边的剑",
+                            2 => $"守卫剑Lv{lv}：\n数量+1 攻击力+1",
+                            3 => $"守卫剑Lv{lv}：\n攻击力+2 速度+25%",
+                            4 => $"守卫剑Lv{lv}：\n速度+50%",
+                            5 => $"守卫剑Lv{lv}：\n数量+1 攻击力+1",
+                            6 => $"守卫剑Lv{lv}：\n攻击力+2 速度+25%",
+                            7 => $"守卫剑Lv{lv}：\n数量+1 攻击力+1",
+                            8 => $"守卫剑Lv{lv}：\n攻击力+2 速度+25%",
+                            9 => $"守卫剑Lv{lv}：\n数量+1 攻击力+1",
+                            10 => $"守卫剑Lv{lv}：\n攻击力+2 速度+25%",
+                            _ => null,
+                        };
+                    })
+                    .OnUpgrade((_, level) =>
+                    {
+                        switch (level)  
+                        {
+                            case 1:
+                                break;
+                            case 2:
+                                Global.RotateSwordCount.Value++;
+                                Global.RotateSwordDamage.Value++;
+                                break;
+                            case 3:
+                                Global.RotateSwordDamage.Value += 2;
+                                Global.RotateSwordSpeed.Value *= 1.25f;
+                                break;
+                            case 4:
+                                Global.RotateSwordSpeed.Value *= 1.5f;
+                                break;
+                            case 5:
+                                Global.RotateSwordCount.Value++;
+                                Global.RotateSwordDamage.Value++;
+                                break;
+                            case 6:
+                                Global.RotateSwordDamage.Value += 2;
+                                Global.RotateSwordSpeed.Value *= 1.25f;
+                                break;
+                            case 7:
+                                Global.RotateSwordCount.Value++;
+                                Global.RotateSwordDamage.Value++;
+                                break;
+                            case 8:
+                                Global.RotateSwordDamage.Value += 2;
+                                Global.RotateSwordSpeed.Value *= 1.25f;
+                                break;
+                            case 9:
+                                Global.RotateSwordCount.Value++;
+                                Global.RotateSwordDamage.Value++;
+                                break;
+                            case 10:
+                                Global.RotateSwordDamage.Value += 2;
+                                Global.RotateSwordSpeed.Value *= 1.25f;
+                                break;
+                        }
+                    }));
         }
         
         public void RandomAbility()
@@ -176,11 +241,19 @@ namespace Survivor
                 expUpgradeItem.Visible.Value = false;
             }
 
-            var item = items.GetRandomItem();
-            if (item != null)
+            var abilities = items.Take(3);
+            foreach (var ability in abilities)
             {
-                item.Visible.Value = true;
+                if (ability != null)
+                {
+                    ability.Visible.Value = true;
+                }
             }
+            // var item = items.GetRandomItem();
+            // if (item != null)
+            // {
+            //     item.Visible.Value = true;
+            // }
         }
     }
 }
