@@ -7,7 +7,6 @@ namespace Survivor
 	public partial class Enemy : ViewController, IEnemy
 	{
 		[SerializeField] private float moveSpeed;
-		private Transform playerTrans;
 		public float Hp => hp;
 		[SerializeField] private float hp;
 		[SerializeField] private float hurtDurationTime;
@@ -17,7 +16,6 @@ namespace Survivor
 		
 		void Start()
 		{
-			playerTrans = FindObjectOfType<Player>().transform; // 缓存玩家tarnsfrom
 			EnemySpawner.enemyCount.Value++; // 计数
 			isDead = false;
 			isHurt = false;
@@ -28,9 +26,9 @@ namespace Survivor
 			if (isHurt) 
 				return;
 			
-			if (playerTrans)
+			if (Player.Default)
 			{
-				var direction = (playerTrans.position - transform.position).normalized;
+				var direction = transform.NormalizedDirection2DTo(Player.Default);
 				selfRigidbody.velocity = direction * moveSpeed;
 			}
 			else

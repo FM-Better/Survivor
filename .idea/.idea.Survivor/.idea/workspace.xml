@@ -7,11 +7,19 @@
     <list default="true" id="3a2b9e56-376e-497f-9d7b-000d63ff874b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QFrameworkData/QAssets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFrameworkData/QAssets.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Config/AbilityConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Config/AbilityConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/GetAllExp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/GetAllExp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemyMiniBoss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemyMiniBoss.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/Ball.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/Ball.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/Ball.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/RotateSword.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/RotateSword.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SimpleAxe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SimpleAxe.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SimpleKnife.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SimpleKnife.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SimpleSword.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SimpleSword.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/System/ExpUpgrade/ExpUpgradeSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/System/ExpUpgrade/ExpUpgradeSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +31,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/34/54254e0d/PlayerPrefs.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/4c/c99987e2/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/6f/1072cd22/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/79/46b22b4e/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/89/4274b946/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
@@ -38,6 +47,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Enemy/HitBox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Enemy/HurtBox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Fx/FxConrtoller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/Basketball.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SimpleAxe.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SimpleKnife.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SimpleSword.cs" root0="FORCE_HIGHLIGHTING" />
@@ -142,7 +152,7 @@
       <workItem from="1710319279223" duration="160000" />
       <workItem from="1710319464659" duration="8126000" />
       <workItem from="1710659666747" duration="6698000" />
-      <workItem from="1710731833355" duration="13867000" />
+      <workItem from="1710731833355" duration="16379000" />
     </task>
     <servers />
   </component>

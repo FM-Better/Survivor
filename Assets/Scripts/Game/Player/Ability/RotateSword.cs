@@ -6,13 +6,11 @@ namespace Survivor
 {
 	public partial class RotateSword : ViewController
 	{
-		private Transform playerTrans;
 		private List<Collider2D> mSwords = new List<Collider2D>();
 		
 		void Start()
 		{
-			playerTrans = FindObjectOfType<Player>().transform;
-			Sword.transform.up = Sword.NormalizedDirection2DFrom(playerTrans);
+			Sword.transform.up = Sword.NormalizedDirection2DFrom(Player.Default);
 
 			Global.RotateSwordCount.RegisterWithInitValue(count =>
 			{
@@ -37,7 +35,7 @@ namespace Survivor
 									{
 										collider.attachedRigidbody.velocity =
 											collider.NormalizedDirection2DFrom(selfCache) * 5f +
-											collider.NormalizedDirection2DFrom(playerTrans) * 10f;
+											collider.NormalizedDirection2DFrom(Player.Default) * 10f;
 									}
 								}
 							}).UnRegisterWhenGameObjectDestroyed(selfCache);
@@ -63,7 +61,7 @@ namespace Survivor
 				var x = Mathf.Cos(rad) * Global.RotateSwordRange.Value;
 				var y = Mathf.Sin(rad) * Global.RotateSwordRange.Value;
 				mSwords[i].LocalPosition(x, y);
-				mSwords[i].transform.up = mSwords[i].NormalizedDirection2DFrom(playerTrans);
+				mSwords[i].transform.up = mSwords[i].NormalizedDirection2DFrom(Player.Default);
 			}
 		}
 		

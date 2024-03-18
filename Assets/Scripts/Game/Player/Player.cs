@@ -1,3 +1,4 @@
+using System;
 using QAssetBundle;
 using UnityEngine;
 using QFramework;
@@ -7,6 +8,13 @@ namespace Survivor
 	public partial class Player : ViewController
 	{
 		[SerializeField] private float moveSpeed;
+
+		public static Player Default;
+
+		private void Awake()
+		{
+			Default = this;
+		}
 
 		private void Start()
 		{

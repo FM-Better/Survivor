@@ -12,6 +12,26 @@ namespace Survivor
 		{
 			selfRigidbody.velocity = new Vector2(Random.Range(-1f, 0f), Random.Range(0f, 1f)) *
 			                         Random.Range(Global.BasktetBallSpeed.Value - 2, Global.BasktetBallSpeed.Value + 2);
+
+			HitBox.OnTriggerEnter2DEvent(collider =>
+			{
+				var hurtBox = collider.GetComponent<HurtBox>();
+				if (hurtBox)
+				{
+					if (hurtBox.Owner.CompareTag("Enemy"))
+					{
+						var enemy = hurtBox.Owner.GetComponent<IEnemy>();
+						enemy.Hurt(Global.BasketBallDamage.Value);
+
+						if (Random.Range(0, 100) < 50 && collider && collider.attachedRigidbody && Player.Default)
+						{
+							collider.attachedRigidbody.velocity =
+								collider.NormalizedDirection2DFrom(this) * 5f +
+								collider.NormalizedDirection2DFrom(Player.Default) * 10f;
+						}
+					}
+				}
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 		}
 
 		private void OnCollisionEnter2D(Collision2D other)

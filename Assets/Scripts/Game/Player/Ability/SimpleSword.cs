@@ -7,12 +7,6 @@ namespace Survivor
 	public partial class SimpleSword : ViewController
 	{
 		private float mtimer;
-		private Transform playerTrans;
-
-		private void Start()
-		{
-			playerTrans = FindObjectOfType<Player>().transform;
-		}
 		
 		private void Update()
 		{
@@ -21,8 +15,8 @@ namespace Survivor
 			if (mtimer >= Global.SimpleSwordCD.Value)
 			{
 				var enemies = FindObjectsOfType<Enemy>(false)
-					.OrderBy(enemy => enemy.Direction2DTo(playerTrans).magnitude) // 根据距离排序
-					.Where(enemy => enemy.Direction2DTo(playerTrans).magnitude <= Global.SimpleSwordRange.Value) // 挑选在攻击范围内的
+					.OrderBy(enemy => enemy.Distance2D(Player.Default)) // 根据距离排序
+					.Where(enemy => enemy.Distance2D(Player.Default) <= Global.SimpleSwordRange.Value) // 挑选在攻击范围内的
 					.Take(Global.SimpleSwordCount.Value); // 选取攻击数量
 				foreach (var enemy in enemies)
 				{

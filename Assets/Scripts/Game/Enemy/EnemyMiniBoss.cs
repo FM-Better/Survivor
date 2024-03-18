@@ -23,8 +23,6 @@ namespace Survivor
 		[SerializeField] private float hurtDurationTime;
         private bool isDead;
         [SerializeField] private Color dissolveColor = Color.yellow;
-
-        private Transform playerTrans;
 		
 		enum States
 		{
@@ -38,16 +36,15 @@ namespace Survivor
 			
 		void Start()
 		{
-			playerTrans = FindObjectOfType<Player>().transform; // 缓存玩家tarnsfrom
 			EnemySpawner.enemyCount.Value++; // 计数
 			
 			// 追逐
 			fsm.State(States.Chase)
 				.OnFixedUpdate(() =>
 				{
-					if (playerTrans)
+					if (Player.Default)
 					{
-						var dirVector = playerTrans.position - transform.position;
+						var dirVector = transform.NormalizedDirection2DTo(Player.Default);
 						if ((dirVector).magnitude > dashDistance)
 						{
 							selfRigidbody.velocity = dirVector.normalized * chaseSpeed;
@@ -85,10 +82,10 @@ namespace Survivor
 			fsm.State(States.Dash)
 				.OnEnter(() =>
 				{
-					if (playerTrans)
+					if (Player.Default)
 					{
 						dashTimer = 0f;
-						var dir = (playerTrans.position - transform.position).normalized;
+						var dir = transform.NormalizedDirection2DTo(Player.Default);
 						selfRigidbody.velocity = dir * dashSpeed;
 					}
 				})
@@ -114,9 +111,9 @@ namespace Survivor
 					if (waitTimer >= waitTime)
 					{
 						waitTimer = 0f;
-						if (playerTrans)
+						if (Player.Default)
 						{
-							if ((playerTrans.position - transform.position).magnitude > dashDistance)
+							if (transform.Distance2D(Player.Default) > dashDistance)
 							{
 								fsm.ChangeState(States.Chase);
 							}

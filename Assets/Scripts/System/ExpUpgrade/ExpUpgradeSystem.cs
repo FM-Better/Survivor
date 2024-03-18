@@ -226,6 +226,62 @@ namespace Survivor
                                 break;
                         }
                     }));
+            
+            Add(new ExpUpgradeItem()
+                    .WithKey("BasketBall")
+                    .WithMaxLevel(10)
+                    .WithDescription(lv =>
+                    {
+                        return lv switch
+                        {
+                            1 => $"篮球Lv{lv}：在屏幕内反弹的篮球",
+                            2 => $"篮球Lv{lv}：\n攻击力+3",
+                            3 => $"篮球Lv{lv}：\n数量+1",
+                            4 => $"篮球Lv{lv}：\n攻击力+3",
+                            5 => $"篮球Lv{lv}：\n数量+1",
+                            6 => $"篮球Lv{lv}：\n攻击力+3",
+                            7 => $"篮球Lv{lv}：\n速度+20%",
+                            8 => $"篮球Lv{lv}：\n攻击力+3",
+                            9 => $"篮球Lv{lv}：\n速度+20%",
+                            10 => $"篮球Lv{lv}：\n数量+1",
+                            _ => null,
+                        };
+                    })
+                    .OnUpgrade((_, level) =>
+                    {
+                        switch (level)  
+                        {
+                            case 1:
+                                break;
+                            case 2:
+                                Global.BasketBallDamage.Value += 3;
+                                break;
+                            case 3:
+                                Global.BasketBallCount.Value++;
+                                break;
+                            case 4:
+                                Global.BasketBallDamage.Value += 3;
+                                break;
+                            case 5:
+                                Global.BasketBallCount.Value++;
+                                break;
+                            case 6:
+                                Global.BasketBallDamage.Value += 3;
+                                break;
+                            case 7:
+                                Global.BasktetBallSpeed.Value *= 1.2f;
+                                break;
+                            case 8:
+                                Global.BasketBallDamage.Value += 3;
+                                break;
+                            case 9:
+                                Global.BasktetBallSpeed.Value *= 1.2f;
+                                break;
+                            case 10:
+                                Global.BasketBallCount.Value++;
+                                break;
+                        }
+                    }));
         }
         
         public void RandomAbility()
@@ -241,7 +297,7 @@ namespace Survivor
                 expUpgradeItem.Visible.Value = false;
             }
 
-            var abilities = items.Take(3);
+            var abilities = items.Take(4);
             foreach (var ability in abilities)
             {
                 if (ability != null)

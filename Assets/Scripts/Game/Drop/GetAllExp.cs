@@ -6,14 +6,8 @@ namespace Survivor
 {
 	public partial class GetAllExp : ViewController
 	{
-		private Transform playerTrans;
 		[Header("掉落物移动速度")]
 		[SerializeField] private float moveSpeed;
-		
-		private void Start()
-		{
-			playerTrans = FindObjectOfType<Player>().transform;
-		}
 
 		private void OnTriggerEnter2D(Collider2D other)
 		{
@@ -24,9 +18,9 @@ namespace Survivor
 				{
 					ActionKit.OnUpdate.Register(() =>
 					{
-						if (playerTrans)
+						if (Player.Default)
 						{
-							var direction = (playerTrans.position - expBall.transform.position).normalized;
+							var direction = expBall.NormalizedDirection2DTo(Player.Default);
 							expBall.transform.Translate(direction * (moveSpeed * Time.deltaTime));	
 						}
 					}).UnRegisterWhenGameObjectDestroyed(expBall);

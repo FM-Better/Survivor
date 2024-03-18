@@ -8,12 +8,6 @@ namespace Survivor
 	{
 		[SerializeField] private float spawnCD;
 		private float mTimer = 0f;
-		private Transform playerTrans;
-
-		private void Start()
-		{
-			playerTrans = FindObjectOfType<Player>().transform;
-		}
 
 		private void Update()
 		{
@@ -47,7 +41,7 @@ namespace Survivor
 						
 						ActionKit.OnUpdate.Register(() =>
 						{
-							if (!playerTrans || playerTrans.position.y - self.Position().y > 15)
+							if (!Player.Default || Player.Default.PositionY() - self.PositionY() > 15)
 							{
 								self.DestroyGameObjGracefully();
 							}

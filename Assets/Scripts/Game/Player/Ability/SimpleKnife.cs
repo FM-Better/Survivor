@@ -8,12 +8,6 @@ namespace Survivor
 	public partial class SimpleKnife : ViewController
 	{
 		private float mTimer = 0f;
-		private Transform playerTrans;
-
-		private void Start()
-		{
-			playerTrans = FindObjectOfType<Player>().transform;
-		}
 
 		private void Update()
 		{
@@ -23,10 +17,10 @@ namespace Survivor
 			{
 				mTimer = 0f;
 				
-				if (playerTrans)
+				if (Player.Default)
 				{
 					var enemys = FindObjectsByType<Enemy>(FindObjectsInactive.Exclude, FindObjectsSortMode.None)
-						.OrderBy(enemy => (enemy.Direction2DTo(playerTrans).magnitude))
+						.OrderBy(enemy => (enemy.Distance2D(Player.Default)))
 						.Take(Global.SimpleKnifeCount.Value);
 
 					var i = 0;
@@ -49,7 +43,7 @@ namespace Survivor
 									var selfCache = self;
 									var enemyCache = enemy;
 									var rigidbody2D = self.GetComponent<Rigidbody2D>();
-									var dir = enemyCache.NormalizedDirection2DFrom(playerTrans);
+									var dir = enemyCache.NormalizedDirection2DFrom(Player.Default);
 									
 									selfCache.transform.up = dir;
 									rigidbody2D.velocity = dir * 10f;
@@ -76,7 +70,7 @@ namespace Survivor
 
 									ActionKit.OnUpdate.Register(() =>
 									{
-										if (!playerTrans || selfCache.Direction2DTo(playerTrans).magnitude > 12)
+										if (!Player.Default || selfCache.Distance2D(Player.Default) > 12)
 										{
 											selfCache.DestroyGameObjGracefully();
 										}

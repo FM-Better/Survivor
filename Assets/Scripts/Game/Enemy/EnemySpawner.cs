@@ -16,7 +16,6 @@ namespace Survivor
 		[SerializeField] private Transform leftBottom;
 		[SerializeField] private Transform rightTop;
 		
-		private Transform playerTrans;
 		private float waitTimer = 0f;
 		private float spawnTimer = 0f;
 		private float waveTimer = 0f;
@@ -28,7 +27,6 @@ namespace Survivor
 		
 		void Start()
 		{
-			playerTrans = FindObjectOfType<Player>().transform; // 缓存玩家Transform
 			isOver = false;
 			
 			// 读取关卡的波次配置信息
@@ -46,7 +44,7 @@ namespace Survivor
 
 		private void Update()
 		{
-			if (!playerTrans || Global.IsEnemySpawnOver.Value)
+			if (!Player.Default || Global.IsEnemySpawnOver.Value)
 				return;
 
 			if (nowWaveCount <= enemyWaveList.Count)

@@ -18,13 +18,16 @@ MonoBehaviour:
     GameObject: {fileID: 0}
     From: 0
     NameToFullName: []
-    BindInfos: []
+    BindInfos:
+    - TypeName: Survivor.Ball
+      PathToRoot: Ball
+      MemberName: Ball
     ScriptsFolder: Assets/Scripts/Game/Player/Ability
-    ClassName: Ball
+    ClassName: Basketball
     Namespace: Survivor
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace Survivor\r\n{\r\n\tpublic
-      partial class Ball : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class Basketball : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:4a30d1eb-f85a-4211-a894-b927ce835b4e\r\nusing UnityEngine;\r\n\r\nnamespace
-      Survivor\r\n{\r\n\tpublic partial class Ball\r\n\t{\r\n\r\n\t\tpublic UnityEngine.Rigidbody2D
-      selfRigidbody;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:e39ef18a-4a0a-41d6-92a0-1ff43cf37a9f\r\nusing UnityEngine;\r\n\r\nnamespace
+      Survivor\r\n{\r\n\tpublic partial class Basketball\r\n\t{\r\n\r\n\t\tpublic
+      Survivor.Ball Ball;\r\n\r\n\t}\r\n}\r\n"
