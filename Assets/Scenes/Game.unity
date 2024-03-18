@@ -1208,6 +1208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 412562968}
+  - component: {fileID: 412562969}
   m_Layer: 0
   m_Name: Abilities
   m_TagString: Untagged
@@ -1229,12 +1230,33 @@ Transform:
   m_Children:
   - {fileID: 2022515667}
   - {fileID: 1300093170}
-  - {fileID: 624555985}
   - {fileID: 1230291219}
   - {fileID: 1040485918}
   m_Father: {fileID: 242494293}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &412562969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412562967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e9beaa396902f4f9b92bef52864e51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Namespace: Survivor
+  ScriptName: AbilityController
+  ScriptsFolder: Assets/Scripts/Game/Player/Ability
+  GeneratePrefab: 0
+  PrefabFolder: Assets/Art/Prefab
+  ArchitectureFullTypeName: 
+  SimpleSword: {fileID: 2022515668}
+  RotateSword: {fileID: 1300093171}
+  SimpleKnife: {fileID: 1230291220}
+  Basketball: {fileID: 1040485919}
 --- !u!1 &416588980
 GameObject:
   m_ObjectHideFlags: 0
@@ -1960,59 +1982,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2993334406328091766, guid: 542a7b4ee7f542b48bec39040438c9b2, type: 3}
   m_PrefabInstance: {fileID: 2993334405705601596}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &624555984
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 624555985}
-  - component: {fileID: 624555986}
-  m_Layer: 0
-  m_Name: SimpleAxe
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &624555985
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624555984}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1249957660}
-  m_Father: {fileID: 412562968}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &624555986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624555984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4b63e456828d6d4fa596d2e8a621ab3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Namespace: Survivor
-  ScriptName: SimpleAxe
-  ScriptsFolder: Assets/Scripts/Game/Player/Ability
-  GeneratePrefab: 0
-  PrefabFolder: Assets/Art/Prefab
-  ArchitectureFullTypeName: 
-  spawnCD: 1
-  Axe: {fileID: 1249957662}
 --- !u!4 &676456455 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5148945783987992926, guid: bdf50c717e85a5b4c80e4456c4a1aedb, type: 3}
@@ -2672,13 +2641,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1040485918}
   - component: {fileID: 1040485919}
+  - component: {fileID: 1040485920}
   m_Layer: 0
   m_Name: Basketball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1040485918
 Transform:
   m_ObjectHideFlags: 0
@@ -2693,7 +2663,7 @@ Transform:
   m_Children:
   - {fileID: 416588981}
   m_Father: {fileID: 412562968}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1040485919
 MonoBehaviour:
@@ -2714,6 +2684,22 @@ MonoBehaviour:
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
   Ball: {fileID: 416588983}
+--- !u!114 &1040485920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040485917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d51f3a7c41ab0346b49ae50d456bece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MarkType: 0
+  CustomComponentName: Basketball
+  CustomComment: 
+  mComponentName: Survivor.Basketball
 --- !u!4 &1138222981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5487822965031370914, guid: f4c94bd44943c7d469ea00c0915a4f12, type: 3}
@@ -2729,6 +2715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1230291219}
   - component: {fileID: 1230291220}
+  - component: {fileID: 1230291221}
   m_Layer: 0
   m_Name: SimpleKnife
   m_TagString: Untagged
@@ -2750,7 +2737,7 @@ Transform:
   m_Children:
   - {fileID: 689583787}
   m_Father: {fileID: 412562968}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1230291220
 MonoBehaviour:
@@ -2771,6 +2758,22 @@ MonoBehaviour:
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
   Knife: {fileID: 689583789}
+--- !u!114 &1230291221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230291218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d51f3a7c41ab0346b49ae50d456bece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MarkType: 0
+  CustomComponentName: Basketball
+  CustomComment: 
+  mComponentName: Survivor.SimpleKnife
 --- !u!4 &1235800611 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6331395430937204826, guid: a4d7c59f3851d71449b736dd58c7ffda, type: 3}
@@ -2781,156 +2784,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7483417218984268921, guid: 20d53512ef8605e428004624eef85851, type: 3}
   m_PrefabInstance: {fileID: 7483417218022631069}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1249957659
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1249957660}
-  - component: {fileID: 1249957664}
-  - component: {fileID: 1249957663}
-  - component: {fileID: 1249957662}
-  - component: {fileID: 1249957661}
-  m_Layer: 0
-  m_Name: Axe
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1249957660
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249957659}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 624555985}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1249957661
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249957659}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &1249957662
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249957659}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &1249957663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249957659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d51f3a7c41ab0346b49ae50d456bece, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MarkType: 0
-  CustomComponentName: Axe
-  CustomComment: 
-  mComponentName: UnityEngine.BoxCollider2D
---- !u!212 &1249957664
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249957659}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1587382673
-  m_SortingLayer: 1
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.7075472, g: 0.5506853, b: 0.5506853, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &1292442220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2995,6 +2848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1300093170}
   - component: {fileID: 1300093171}
+  - component: {fileID: 1300093172}
   m_Layer: 0
   m_Name: RotateSword
   m_TagString: Untagged
@@ -3037,6 +2891,22 @@ MonoBehaviour:
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
   Sword: {fileID: 1574853099}
+--- !u!114 &1300093172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300093169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d51f3a7c41ab0346b49ae50d456bece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MarkType: 0
+  CustomComponentName: Basketball
+  CustomComment: 
+  mComponentName: Survivor.RotateSword
 --- !u!1 &1344656580
 GameObject:
   m_ObjectHideFlags: 0
@@ -3366,7 +3236,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.11633754}
@@ -3917,6 +3787,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2022515667}
   - component: {fileID: 2022515668}
+  - component: {fileID: 2022515669}
   m_Layer: 0
   m_Name: SimpleSword
   m_TagString: Untagged
@@ -3959,6 +3830,22 @@ MonoBehaviour:
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
   Sword: {fileID: 479445342}
+--- !u!114 &2022515669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022515666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d51f3a7c41ab0346b49ae50d456bece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MarkType: 0
+  CustomComponentName: Basketball
+  CustomComment: 
+  mComponentName: Survivor.SimpleSword
 --- !u!4 &2033722523 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2087376265329718225, guid: 329671e65e22a6f49a3ade90c97a6dbe, type: 3}

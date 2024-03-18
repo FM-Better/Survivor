@@ -32,6 +32,10 @@ namespace Survivor
         public static BindableProperty<float> Timer = new BindableProperty<float>(0f);
         
         /// <summary>
+        /// 简单剑是否解锁
+        /// </summary>
+        public static BindableProperty<bool> SimpleSwordUnlocked = new BindableProperty<bool>(false);
+        /// <summary>
         /// 简单剑的数量
         /// </summary>
         public static BindableProperty<int> SimpleSwordCount = new BindableProperty<int>(AbilityConfig.InitSimpleSwordCount);
@@ -48,6 +52,10 @@ namespace Survivor
         /// </summary>
         public static BindableProperty<float> SimpleSwordRange = new BindableProperty<float>(AbilityConfig.InitSimpleSwordRange);
         
+        /// <summary>
+        /// 飞刀是否解锁
+        /// </summary>
+        public static BindableProperty<bool> SimpleKnifeUnlocked = new BindableProperty<bool>(false);
         /// <summary>
         /// 飞刀的数量
         /// </summary>
@@ -66,6 +74,10 @@ namespace Survivor
         public static BindableProperty<float> SimpleKnifeCD = new BindableProperty<float>(AbilityConfig.InitSimpleKnifeCD);
         
         /// <summary>
+        /// 守卫剑是否解锁
+        /// </summary>
+        public static BindableProperty<bool> RotateSwordUnlocked = new BindableProperty<bool>(false);
+        /// <summary>
         /// 守卫剑的数量
         /// </summary>
         public static BindableProperty<int> RotateSwordCount = new BindableProperty<int>(AbilityConfig.InitRotateSwordCount);
@@ -82,6 +94,10 @@ namespace Survivor
         /// </summary>
         public static BindableProperty<float> RotateSwordRange = new BindableProperty<float>(AbilityConfig.InitRotateSwordRange);
         
+        /// <summary>
+        /// 篮球是否解锁
+        /// </summary>
+        public static BindableProperty<bool> BasketBallUnlocked = new BindableProperty<bool>(false);
         /// <summary>
         /// 篮球的数量
         /// </summary>
@@ -149,22 +165,26 @@ namespace Survivor
             Exp.Value = 0;
             Level.Value = 1;
             Timer.Value = 0f;
-            
+
+            SimpleKnifeUnlocked.Value = false;
             SimpleSwordCount.Value = AbilityConfig.InitSimpleSwordCount;
             SimpleSwordDamage.Value = AbilityConfig.InitSimpleSwordDamage;
             SimpleSwordCD.Value = AbilityConfig.InitSimpleSwordCD;
             SimpleSwordRange.Value = AbilityConfig.InitSimpleSwordRange;
 
+            SimpleKnifeUnlocked.Value = false;
             SimpleKnifeCount.Value = AbilityConfig.InitSimpleKnifeCount;
             SimpleKnifeAttackCount.Value = AbilityConfig.InitSimpleKnifeAttackCount;
             SimpleKnifeDamage.Value = AbilityConfig.InitSimpleKnifeDamage;
             SimpleKnifeCD.Value = AbilityConfig.InitSimpleKnifeCD;
 
+            RotateSwordUnlocked.Value = false;
             RotateSwordCount.Value = AbilityConfig.InitRotateSwordCount;
             RotateSwordDamage.Value = AbilityConfig.InitRotateSwordDamage;
             RotateSwordSpeed.Value = AbilityConfig.InitRotateSwordSpeed;
             RotateSwordRange.Value = AbilityConfig.InitRotateSwordRange;
 
+            BasketBallUnlocked.Value = false;
             BasketBallCount.Value = AbilityConfig.InitBasketBallCount;
             BasketBallDamage.Value = AbilityConfig.InitBasketBallDamage;
             BasktetBallSpeed.Value = AbilityConfig.InitBasketBallSpeed;

@@ -55,6 +55,7 @@ namespace Survivor
                         switch (level)  
                         {
                             case 1:
+                                Global.SimpleSwordUnlocked.Value = true;
                                 break;
                             case 2:
                                 Global.SimpleSwordDamage.Value += 3;
@@ -120,6 +121,7 @@ namespace Survivor
                         switch (level)  
                         {
                             case 1:
+                                Global.SimpleKnifeUnlocked.Value = true;
                                 break;
                             case 2:
                                 Global.SimpleKnifeDamage.Value += 3;
@@ -188,6 +190,7 @@ namespace Survivor
                         switch (level)  
                         {
                             case 1:
+                                Global.RotateSwordUnlocked.Value = true;
                                 break;
                             case 2:
                                 Global.RotateSwordCount.Value++;
@@ -252,6 +255,7 @@ namespace Survivor
                         switch (level)  
                         {
                             case 1:
+                                Global.BasketBallUnlocked.Value = true;
                                 break;
                             case 2:
                                 Global.BasketBallDamage.Value += 3;

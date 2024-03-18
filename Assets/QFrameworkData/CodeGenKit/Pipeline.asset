@@ -19,15 +19,25 @@ MonoBehaviour:
     From: 0
     NameToFullName: []
     BindInfos:
-    - TypeName: Survivor.Ball
-      PathToRoot: Ball
-      MemberName: Ball
+    - TypeName: Survivor.SimpleSword
+      PathToRoot: SimpleSword
+      MemberName: SimpleSword
+    - TypeName: Survivor.RotateSword
+      PathToRoot: RotateSword
+      MemberName: RotateSword
+    - TypeName: Survivor.SimpleKnife
+      PathToRoot: SimpleKnife
+      MemberName: SimpleKnife
+    - TypeName: Survivor.Basketball
+      PathToRoot: Basketball
+      MemberName: Basketball
     ScriptsFolder: Assets/Scripts/Game/Player/Ability
-    ClassName: Basketball
+    ClassName: AbilityController
     Namespace: Survivor
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace Survivor\r\n{\r\n\tpublic
-      partial class Basketball : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class AbilityController : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:e39ef18a-4a0a-41d6-92a0-1ff43cf37a9f\r\nusing UnityEngine;\r\n\r\nnamespace
-      Survivor\r\n{\r\n\tpublic partial class Basketball\r\n\t{\r\n\r\n\t\tpublic
-      Survivor.Ball Ball;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:72e02bd9-b6c6-40ca-8a41-993305abc8d8\r\nusing UnityEngine;\r\n\r\nnamespace
+      Survivor\r\n{\r\n\tpublic partial class AbilityController\r\n\t{\r\n\r\n\t\tpublic
+      Survivor.SimpleSword SimpleSword;\r\n\r\n\t\tpublic Survivor.RotateSword RotateSword;\r\n\r\n\t\tpublic
+      Survivor.SimpleKnife SimpleKnife;\r\n\r\n\t\tpublic Survivor.Basketball Basketball;\r\n\r\n\t}\r\n}\r\n"
