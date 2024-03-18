@@ -5,6 +5,7 @@ namespace Survivor
 {
     public class ExpUpgradeItem
     {
+        public bool IsWeapon { get; private set; }
         public string Key { get; private set; }
         public string Description => mDescriptionFunctory(CurrentLevel.Value + 1);
         public int MaxLevel { get; private set; }
@@ -15,6 +16,8 @@ namespace Survivor
         
         private Action<ExpUpgradeItem, int> mOnUpgrade { get; set; }
 
+        public ExpUpgradeItem(bool isWeapon = false) => IsWeapon = isWeapon;
+        
         public void Upgrade()
         {
             CurrentLevel.Value++;

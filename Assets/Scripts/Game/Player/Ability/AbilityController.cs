@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using QFramework;
 
@@ -39,8 +40,8 @@ namespace Survivor
 				}
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			
-			// 游戏一开始随机解锁一个能力
-			this.GetSystem<ExpUpgradeSystem>().Items.GetRandomItem().Upgrade();
+			// 游戏开始随机解锁一个武器能力
+			this.GetSystem<ExpUpgradeSystem>().Items.Where(item => item.IsWeapon).ToList().GetRandomItem().Upgrade();
 		}
 
 		public IArchitecture GetArchitecture()

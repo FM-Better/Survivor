@@ -20,5 +20,8 @@
         public const int InitBasketBallCount = 1;
         public const float InitBasketBallDamage = 5f;
         public const float InitBasketBallSpeed = 10f;
+
+        public const int InitBombDropRate = 5;
+        public const float InitBombDamage = 10f;
     }
 }

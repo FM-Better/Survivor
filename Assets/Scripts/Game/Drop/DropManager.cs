@@ -40,7 +40,7 @@ namespace Survivor
 					.Position(spawnPosition + RandomInCircle())
 					.Show();
 			}
-			if (randomNum <= Global.BombDropRate.Value) // 掉落炸弹
+			if (Global.BombUnlocked.Value && randomNum <= Global.BombDropRate.Value) // 掉落炸弹
 			{
 				Bomb.InstantiateWithParent(Default.DropRoot)
 					.Position(spawnPosition + RandomInCircle())

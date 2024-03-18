@@ -110,6 +110,19 @@ namespace Survivor
         /// 篮球的速度
         /// </summary>
         public static BindableProperty<float> BasktetBallSpeed = new BindableProperty<float>(AbilityConfig.InitBasketBallSpeed);
+
+        /// <summary>
+        /// 炸弹是否解锁
+        /// </summary>
+        public static BindableProperty<bool> BombUnlocked = new BindableProperty<bool>(false);
+        /// <summary>
+        /// 炸弹的掉落概率
+        /// </summary>
+        public static BindableProperty<int> BombDropRate = new BindableProperty<int>(AbilityConfig.InitBombDropRate);
+        /// <summary>
+        /// 炸弹的伤害值
+        /// </summary>
+        public static BindableProperty<float> BombDamage = new BindableProperty<float>(AbilityConfig.InitBombDamage);
         
         /// <summary>
         /// 敌人是否生成完毕
@@ -128,10 +141,6 @@ namespace Survivor
         /// 回血道具掉落概率
         /// </summary>
         public static BindableProperty<int> HpItemDropRate = new BindableProperty<int>(2);
-        /// <summary>
-        /// 炸弹掉落概率
-        /// </summary>
-        public static BindableProperty<int> BombDropRate = new BindableProperty<int>(1);
         /// <summary>
         /// 获取当前所有经验的道具的掉落概率
         /// </summary>
@@ -188,6 +197,10 @@ namespace Survivor
             BasketBallCount.Value = AbilityConfig.InitBasketBallCount;
             BasketBallDamage.Value = AbilityConfig.InitBasketBallDamage;
             BasktetBallSpeed.Value = AbilityConfig.InitBasketBallSpeed;
+
+            BombUnlocked.Value = false;
+            BombDropRate.Value = AbilityConfig.InitBombDropRate;
+            BombDamage.Value = AbilityConfig.InitBombDamage;
             
             IsEnemySpawnOver.Value = false;
             EnemySpawner.enemyCount.Value = 0;

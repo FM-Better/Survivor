@@ -30,7 +30,7 @@ namespace Survivor
         {
             Items.Clear();
             
-            Add(new ExpUpgradeItem()
+            Add(new ExpUpgradeItem(true)
                     .WithKey("SimpleSword")
                     .WithMaxLevel(10)
                     .WithDescription(lv =>
@@ -96,7 +96,7 @@ namespace Survivor
                         }
                     }));
             
-            Add(new ExpUpgradeItem()
+            Add(new ExpUpgradeItem(true)
                     .WithKey("SimpleKnife")
                     .WithMaxLevel(10)
                     .WithDescription(lv =>
@@ -165,7 +165,7 @@ namespace Survivor
                         }
                     }));
             
-            Add(new ExpUpgradeItem()
+            Add(new ExpUpgradeItem(true)
                     .WithKey("RotateSword")
                     .WithMaxLevel(10)
                     .WithDescription(lv =>
@@ -230,7 +230,7 @@ namespace Survivor
                         }
                     }));
             
-            Add(new ExpUpgradeItem()
+            Add(new ExpUpgradeItem(true)
                     .WithKey("BasketBall")
                     .WithMaxLevel(10)
                     .WithDescription(lv =>
@@ -286,6 +286,72 @@ namespace Survivor
                                 break;
                         }
                     }));
+            
+            Add(new ExpUpgradeItem(false)
+                    .WithKey("Bomb")
+                    .WithMaxLevel(10)
+                    .WithDescription(lv =>
+                    {
+                        return lv switch
+                        {
+                            1 => $"炸弹Lv{lv}：\n攻击所有敌人(敌人掉落)",
+                            2 => $"炸弹Lv{lv}：\n掉落概率+5% 攻击力+5",
+                            3 => $"炸弹Lv{lv}：\n掉落概率+5% 攻击力+5",
+                            4 => $"炸弹Lv{lv}：\n掉落概率+5% 攻击力+5",
+                            5 => $"炸弹Lv{lv}：\n掉落概率+5% 攻击力+5",
+                            6 => $"炸弹Lv{lv}：\n掉落概率+5% 攻击力+5",
+                            7 => $"炸弹Lv{lv}：\n掉落概率+5% 攻击力+5",
+                            8 => $"炸弹Lv{lv}：\n掉落概率+5% 攻击力+5",
+                            9 => $"炸弹Lv{lv}：\n掉落概率+5% 攻击力+5",
+                            10 => $"炸弹Lv{lv}：\n掉落概率+10% 攻击力+5",
+                            _ => null,
+                        };
+                    })
+                    .OnUpgrade((_, level) =>
+                    {
+                        switch (level)  
+                        {
+                            case 1:
+                                Global.BombUnlocked.Value = true;
+                                break;
+                            case 2:
+                                Global.BombDropRate.Value += 5;
+                                Global.BombDamage.Value += 5;
+                                break;
+                            case 3:
+                                Global.BombDropRate.Value += 5;
+                                Global.BombDamage.Value += 5;
+                                break;
+                            case 4:
+                                Global.BombDropRate.Value += 5;
+                                Global.BombDamage.Value += 5;
+                                break;
+                            case 5:
+                                Global.BombDropRate.Value += 5;
+                                Global.BombDamage.Value += 5;
+                                break;
+                            case 6:
+                                Global.BombDropRate.Value += 5;
+                                Global.BombDamage.Value += 5;
+                                break;
+                            case 7:
+                                Global.BombDropRate.Value += 5;
+                                Global.BombDamage.Value += 5;
+                                break;
+                            case 8:
+                                Global.BombDropRate.Value += 5;
+                                Global.BombDamage.Value += 5;
+                                break;
+                            case 9:
+                                Global.BombDropRate.Value += 5;
+                                Global.BombDamage.Value += 5;
+                                break;
+                            case 10:
+                                Global.BombDropRate.Value += 10;
+                                Global.BombDamage.Value += 5;
+                                break;
+                        }
+                    }));
         }
         
         public void RandomAbility()
@@ -301,7 +367,7 @@ namespace Survivor
                 expUpgradeItem.Visible.Value = false;
             }
 
-            var abilities = items.Take(4);
+            var abilities = items.Take(5);
             foreach (var ability in abilities)
             {
                 if (ability != null)
