@@ -69,7 +69,7 @@ namespace Survivor
 		
 		private void Update()
 		{
-			transform.Rotate(Vector3.forward, -180 * Time.deltaTime * Global.RotateSwordSpeed.Value);
+			transform.Rotate(Vector3.forward, -60 * Time.deltaTime * Global.RotateSwordSpeed.Value);
 		}
 	}
 }
