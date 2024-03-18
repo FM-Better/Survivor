@@ -49,6 +49,19 @@ namespace Survivor
         public static BindableProperty<float> SimpleSwordRange = new BindableProperty<float>(AbilityConfig.InitSimpleSwordRange);
         
         /// <summary>
+        /// 飞刀的数量
+        /// </summary>
+        public static BindableProperty<int> SimpleKnifeCount = new BindableProperty<int>(AbilityConfig.InitSimpleKnifeCount);
+        /// <summary>
+        /// 飞刀的伤害值
+        /// </summary>
+        public static BindableProperty<float> SimpleKnifeDamage = new BindableProperty<float>(AbilityConfig.InitSimpleKnifeDamage);
+        /// <summary>
+        /// 飞刀的间隔时间
+        /// </summary>
+        public static BindableProperty<float> SimpleKnifeCD = new BindableProperty<float>(AbilityConfig.InitSimpleKnifeCD);
+        
+        /// <summary>
         /// 敌人是否生成完毕
         /// </summary>
         public static BindableProperty<bool> IsEnemySpawnOver = new BindableProperty<bool>(false);
@@ -107,6 +120,10 @@ namespace Survivor
             SimpleSwordDamage.Value = AbilityConfig.InitSimpleSwordDamage;
             SimpleSwordCD.Value = AbilityConfig.InitSimpleSwordCD;
             SimpleSwordRange.Value = AbilityConfig.InitSimpleSwordRange;
+
+            SimpleKnifeCount.Value = AbilityConfig.InitSimpleKnifeCount;
+            SimpleKnifeDamage.Value = AbilityConfig.InitSimpleKnifeDamage;
+            SimpleKnifeCD.Value = AbilityConfig.InitSimpleKnifeCD;
             
             IsEnemySpawnOver.Value = false;
             EnemySpawner.enemyCount.Value = 0;

@@ -58,7 +58,7 @@ namespace Survivor
 		{
 			var angle = Random.Range(0, 360f);
 			var rad = angle * Mathf.Deg2Rad;
-			return new Vector3(Mathf.Cos(rad), Mathf.Sin(rad));
+			return new Vector3(Mathf.Cos(rad), Mathf.Sin(rad)) * 0.3f;
 		}
 	}
 }

@@ -6,9 +6,7 @@ namespace Survivor
 {
 	public partial class SimpleSword : ViewController
 	{
-		[SerializeField] private float attackDistance;
-		private float timer;
-
+		private float mtimer;
 		private Transform playerTrans;
 
 		private void Start()
@@ -18,13 +16,13 @@ namespace Survivor
 		
 		private void Update()
 		{
-			timer += Time.deltaTime;	
+			mtimer += Time.deltaTime;	
 
-			if (timer >= Global.SimpleSwordCD.Value)
+			if (mtimer >= Global.SimpleSwordCD.Value)
 			{
 				var enemies = FindObjectsOfType<Enemy>(false)
-					.OrderBy(e=>e.Direction2DTo(playerTrans).magnitude) // 根据距离排序
-					.Where(e=>e.Direction2DTo(playerTrans).magnitude <= Global.SimpleSwordRange.Value) // 挑选在攻击范围内的
+					.OrderBy(enemy => enemy.Direction2DTo(playerTrans).magnitude) // 根据距离排序
+					.Where(enemy => enemy.Direction2DTo(playerTrans).magnitude <= Global.SimpleSwordRange.Value) // 挑选在攻击范围内的
 					.Take(Global.SimpleSwordCount.Value); // 选取攻击数量
 				foreach (var enemy in enemies)
 				{
@@ -76,7 +74,7 @@ namespace Survivor
 								.Start(this, () => { selfCache.DestroyGameObjGracefully(); });
 						});
 				}
-				timer = 0f;
+				mtimer = 0f;
 			}
 		}
 	}

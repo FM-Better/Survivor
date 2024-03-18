@@ -1,4 +1,5 @@
 using System.Linq;
+using QAssetBundle;
 using UnityEngine;
 using QFramework;
 
@@ -6,7 +7,6 @@ namespace Survivor
 {
 	public partial class SimpleKnife : ViewController
 	{
-		[SerializeField] private float spawnCD;
 		private float mTimer = 0f;
 		private Transform playerTrans;
 
@@ -19,44 +19,63 @@ namespace Survivor
 		{
 			mTimer += Time.deltaTime;
 
-			if (mTimer >= spawnCD)
+			if (mTimer >= Global.SimpleKnifeCD.Value)
 			{
 				mTimer = 0f;
 				
-				var enemys = FindObjectsByType<Enemy>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
 				if (playerTrans)
 				{
-					var enemy = enemys.OrderBy(enemy => (enemy.Position() - playerTrans.position).magnitude).FirstOrDefault();
-						if (enemy  && (enemy.Position() - playerTrans.position).magnitude <= 6f)
+					var enemys = FindObjectsByType<Enemy>(FindObjectsInactive.Exclude, FindObjectsSortMode.None)
+						.OrderBy(enemy => (enemy.Direction2DTo(playerTrans).magnitude))
+						.Take(Global.SimpleKnifeCount.Value);
+
+					var i = 0;
+					foreach (var enemy in enemys)
+					{
+						if (i < 4)
+						{
+							ActionKit.DelayFrame(10 * i, () => AudioKit.PlaySound(Sound.KNIFE))
+								.StartGlobal();
+							i++;
+						}
+						
+						if (enemy)
 						{
 							Knife.Instantiate()
 								.Show()
 								.Position(this.Position())
 								.Self(self =>
 								{
+									var selfCache = self;
+									var enemyCache = enemy;
 									var rigidbody2D = self.GetComponent<Rigidbody2D>();
-									rigidbody2D.velocity = (enemy.Position() - playerTrans.position).normalized * 10f;
+									var dir = enemyCache.NormalizedDirection2DFrom(playerTrans);
+									
+									selfCache.transform.up = dir;
+									rigidbody2D.velocity = dir * 10f;
 
-									self.OnTriggerEnter2DEvent((collider) =>
+									selfCache.OnTriggerEnter2DEvent((collider) =>
 									{
 										var hurtBox = collider.GetComponent<HurtBox>();
 										if (hurtBox)
 										{
 											if (hurtBox.Owner.CompareTag("Enemy"))
 											{
-												hurtBox.Owner.GetComponent<IEnemy>().Hurt(2);
+												hurtBox.Owner.GetComponent<IEnemy>()
+													.Hurt(Global.SimpleKnifeDamage.Value);
 											}
 										}
 									}).UnRegisterWhenGameObjectDestroyed(self);
-						
+
 									ActionKit.OnUpdate.Register(() =>
 									{
-										if (!playerTrans || (playerTrans.position - self.Position()).magnitude > 12)
+										if (!playerTrans || selfCache.Direction2DTo(playerTrans).magnitude > 12)
 										{
-											self.DestroyGameObjGracefully();
+											selfCache.DestroyGameObjGracefully();
 										}
-									}).UnRegisterWhenGameObjectDestroyed(self);
+									}).UnRegisterWhenGameObjectDestroyed(selfCache);
 								});
+						}
 					}
 				}
 			}
