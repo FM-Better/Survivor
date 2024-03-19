@@ -4,7 +4,7 @@ using QAssetBundle;
 
 namespace Survivor
 {
-	public partial class Enemy : ViewController, IEnemy
+	public partial class Enemy : GamePlayObject, IEnemy
 	{
 		[SerializeField] private float moveSpeed;
 		public float Hp => hp;
@@ -13,12 +13,26 @@ namespace Survivor
 		private bool isDead;
 		private bool isHurt;
 		[SerializeField] private Color dissolveColor = Color.yellow;
+
+		private Collider2D mHitBox;
+		protected override Collider2D collider => mHitBox;
 		
 		void Start()
 		{
 			EnemySpawner.enemyCount.Value++; // 计数
 			isDead = false;
 			isHurt = false;
+			
+			mHitBox = transform.Find("HitBox").GetComponent<Collider2D>();
+			Sprite.OnBecameVisibleEvent(() =>
+			{
+				mHitBox.enabled = true;
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+
+			Sprite.OnBecameInvisibleEvent(() =>
+			{
+				mHitBox.enabled = false;
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 		}
 
 		private void Update()

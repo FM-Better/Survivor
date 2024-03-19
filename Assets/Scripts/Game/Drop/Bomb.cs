@@ -5,10 +5,11 @@ using QFramework;
 
 namespace Survivor
 {
-	public partial class Bomb : ViewController
+	public partial class Bomb : GamePlayObject
 	{
 		private CinemachineImpulseSource impulseSource; // 脉冲源
-			
+		protected override Collider2D collider => selfCollider;
+		
 		private void Start()
 		{
 			impulseSource = GameObject.FindWithTag("CameraController").GetComponent<CinemachineImpulseSource>(); // 缓存脉冲源 用作相机抖动效果

@@ -41,7 +41,8 @@ namespace Survivor
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			
 			// 游戏开始随机解锁一个武器能力
-			this.GetSystem<ExpUpgradeSystem>().Items.Where(item => item.IsWeapon).ToList().GetRandomItem().Upgrade();
+			// this.GetSystem<ExpUpgradeSystem>().Items.Where(item => item.IsWeapon).ToList().GetRandomItem().Upgrade();
+			this.GetSystem<ExpUpgradeSystem>().Items.Where(item => item.Key == "RotateSword").First().Upgrade();
 		}
 
 		public IArchitecture GetArchitecture()

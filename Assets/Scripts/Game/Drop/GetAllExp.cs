@@ -4,11 +4,13 @@ using QFramework;
 
 namespace Survivor
 {
-	public partial class GetAllExp : ViewController
+	public partial class GetAllExp : GamePlayObject
 	{
 		[Header("掉落物移动速度")]
 		[SerializeField] private float moveSpeed;
 
+		protected override Collider2D collider => selfCollider;
+		
 		private void OnTriggerEnter2D(Collider2D other)
 		{
 			if (other.GetComponent<PickUpArea>())

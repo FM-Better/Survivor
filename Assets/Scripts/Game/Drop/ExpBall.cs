@@ -4,8 +4,10 @@ using QFramework;
 
 namespace Survivor
 {
-	public partial class ExpBall : ViewController
+	public partial class ExpBall : GamePlayObject
 	{
+		protected override Collider2D collider => selfCollider;
+		
 		private void OnTriggerEnter2D(Collider2D other)
 		{
 			if (other.GetComponent<PickUpArea>())

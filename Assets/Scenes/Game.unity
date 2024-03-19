@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 62560025}
   - component: {fileID: 62560028}
   - component: {fileID: 62560029}
+  - component: {fileID: 62560030}
   m_Layer: 0
   m_Name: ExpBall
   m_TagString: Untagged
@@ -312,6 +313,7 @@ MonoBehaviour:
   GeneratePrefab: 0
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
+  selfCollider: {fileID: 62560025}
 --- !u!114 &62560029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,6 +330,21 @@ MonoBehaviour:
   CustomComponentName: ExpBall
   CustomComment: 
   mComponentName: Survivor.ExpBall
+--- !u!114 &62560030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62560024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 411e729afed24c62a04e2b99d9122e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Binds:
+  - MemberName: selfCollider
+    Object: {fileID: 62560025}
 --- !u!1 &67890598
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,6 +838,7 @@ GameObject:
   - component: {fileID: 288694582}
   - component: {fileID: 288694580}
   - component: {fileID: 288694581}
+  - component: {fileID: 288694585}
   m_Layer: 0
   m_Name: GetAllExp
   m_TagString: Untagged
@@ -847,6 +865,7 @@ MonoBehaviour:
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
   moveSpeed: 5
+  selfCollider: {fileID: 288694582}
 --- !u!114 &288694581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -946,6 +965,21 @@ Transform:
   m_Father: {fileID: 258827204}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &288694585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288694579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 411e729afed24c62a04e2b99d9122e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Binds:
+  - MemberName: selfCollider
+    Object: {fileID: 288694582}
 --- !u!1 &332342337
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,6 +2307,7 @@ GameObject:
   - component: {fileID: 934244132}
   - component: {fileID: 934244131}
   - component: {fileID: 934244130}
+  - component: {fileID: 934244135}
   m_Layer: 0
   m_Name: Gold
   m_TagString: Untagged
@@ -2298,6 +2333,7 @@ MonoBehaviour:
   GeneratePrefab: 0
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
+  selfCollider: {fileID: 934244132}
 --- !u!114 &934244131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2397,6 +2433,21 @@ Transform:
   m_Father: {fileID: 258827204}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &934244135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934244129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 411e729afed24c62a04e2b99d9122e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Binds:
+  - MemberName: selfCollider
+    Object: {fileID: 934244132}
 --- !u!1 &971327852
 GameObject:
   m_ObjectHideFlags: 0
@@ -2507,6 +2558,7 @@ GameObject:
   - component: {fileID: 1025591542}
   - component: {fileID: 1025591541}
   - component: {fileID: 1025591540}
+  - component: {fileID: 1025591545}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -2532,6 +2584,7 @@ MonoBehaviour:
   GeneratePrefab: 0
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
+  selfCollider: {fileID: 1025591542}
 --- !u!114 &1025591541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2631,6 +2684,21 @@ Transform:
   m_Father: {fileID: 258827204}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1025591545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025591539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 411e729afed24c62a04e2b99d9122e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Binds:
+  - MemberName: selfCollider
+    Object: {fileID: 1025591542}
 --- !u!1 &1040485917
 GameObject:
   m_ObjectHideFlags: 0
@@ -3000,6 +3068,7 @@ GameObject:
   - component: {fileID: 1549918448}
   - component: {fileID: 1549918446}
   - component: {fileID: 1549918450}
+  - component: {fileID: 1549918451}
   m_Layer: 0
   m_Name: HpItem
   m_TagString: Untagged
@@ -3040,6 +3109,7 @@ MonoBehaviour:
   GeneratePrefab: 0
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
+  selfCollider: {fileID: 1549918448}
 --- !u!58 &1549918448
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3124,6 +3194,21 @@ MonoBehaviour:
   CustomComponentName: HpItem
   CustomComment: 
   mComponentName: Survivor.HpItem
+--- !u!114 &1549918451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549918444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 411e729afed24c62a04e2b99d9122e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Binds:
+  - MemberName: selfCollider
+    Object: {fileID: 1549918448}
 --- !u!1 &1574853095
 GameObject:
   m_ObjectHideFlags: 0
