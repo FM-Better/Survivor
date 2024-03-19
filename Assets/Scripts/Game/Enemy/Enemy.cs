@@ -39,27 +39,26 @@ namespace Survivor
 
 		public void Hurt(float damage, bool isCritical = false)
 		{
-			if (!isDead)
+			if (isHurt) return;
+
+			isHurt = true;
+			selfRigidbody.velocity = Vector2.zero;
+
+			AudioKit.PlaySound(Sound.HIT);
+			FloatingTextController.ShowFloatingText(transform.position + Vector3.up * 0.5f, damage.ToString("0"),
+				isCritical); // 伤害飘字效果
+			
+			Sprite.color = Color.red;
+			ActionKit.Delay((hurtDurationTime), () =>
 			{
-				selfRigidbody.velocity = Vector2.zero;
-				isHurt = true;
-                hp -= damage;
-                AudioKit.PlaySound(Sound.HIT);
-                FloatingTextController.ShowFloatingText(transform.position + Vector3.up * 0.5f, damage.ToString("0"), isCritical); // 伤害飘字效果
-                this.Sprite.color = Color.red;
-
-                ActionKit.Delay((hurtDurationTime), () =>
-                {
-                    this.Sprite.color = Color.white;
-                    isHurt = false;
-                }).Start(this);
-
-                if (hp <= 0)
-                {
-					isDead = true;
-                    Dead();
-                }
-            }
+				this.Sprite.color = Color.white;
+				isHurt = false;
+				hp -= damage;
+				if (hp <= 0)
+				{
+					Dead();
+				}
+			}).Start(this);
 		}
 
 		public void PopulateHp(float nowWaveHpScale)

@@ -17,7 +17,7 @@ namespace Survivor
 				var enemies = FindObjectsOfType<Enemy>(false)
 					.OrderBy(enemy => enemy.Distance2D(Player.Default)) // 根据距离排序
 					.Where(enemy => enemy.Distance2D(Player.Default) <= Global.SimpleSwordRange.Value) // 挑选在攻击范围内的
-					.Take(Global.SimpleSwordCount.Value); // 选取攻击数量
+					.Take(Global.SimpleSwordCount.Value + Global.AdditionalFlyCount.Value); // 选取攻击数量
 				foreach (var enemy in enemies)
 				{
 					Sword.Instantiate()

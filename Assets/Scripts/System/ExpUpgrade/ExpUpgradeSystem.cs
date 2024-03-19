@@ -354,7 +354,7 @@ namespace Survivor
                     }));
             
             Add(new ExpUpgradeItem(false)
-                    .WithKey("Critical")
+                    .WithKey("CriticalRate")
                     .WithMaxLevel(5)
                     .WithDescription(lv =>
                     {
@@ -389,6 +389,72 @@ namespace Survivor
                                 break;
                         }
                     }));
+            
+            Add(new ExpUpgradeItem(false)
+                .WithKey("DamageRate")
+                .WithMaxLevel(5)
+                .WithDescription(lv =>
+                {
+                    return lv switch
+                    {
+                        1 => $"伤害率Lv{lv}：\n增加20%额外伤害",
+                        2 => $"伤害率Lv{lv}：\n增加40%额外伤害",
+                        3 => $"伤害率Lv{lv}：\n增加60%额外伤害",
+                        4 => $"伤害率Lv{lv}：\n增加80%额外伤害",
+                        5 => $"伤害率Lv{lv}：\n增加100%额外伤害",
+                        _ => null,
+                    };
+                })
+                .OnUpgrade((_, level) =>
+                {
+                    switch (level)  
+                    {
+                        case 1:
+                            Global.DamageRate.Value = 1.2f;
+                            break;
+                        case 2:
+                            Global.DamageRate.Value = 1.4f;
+                            break;
+                        case 3:
+                            Global.DamageRate.Value = 1.6f;
+                            break;
+                        case 4:
+                            Global.DamageRate.Value = 1.8f;
+                            break;
+                        case 5:
+                            Global.DamageRate.Value = 2f;
+                            break;
+                    }
+                }));
+            
+            Add(new ExpUpgradeItem(false)
+                .WithKey("AdditionalFlyCount")
+                .WithMaxLevel(3)
+                .WithDescription(lv =>
+                {
+                    return lv switch
+                    {
+                        1 => $"飞射物Lv{lv}：\n额外飞射物数量+1",
+                        2 => $"飞射物Lv{lv}：\n额外飞射物数量+1",
+                        3 => $"飞射物Lv{lv}：\n额外飞射物数量+1",
+                        _ => null,
+                    };
+                })
+                .OnUpgrade((_, level) =>
+                {
+                    switch (level)  
+                    {
+                        case 1:
+                            Global.AdditionalFlyCount.Value++;
+                            break;
+                        case 2:
+                            Global.AdditionalFlyCount.Value++;
+                            break;
+                        case 3:
+                            Global.AdditionalFlyCount.Value++;
+                            break;
+                    }
+                }));
         }
         
         public void RandomAbility()

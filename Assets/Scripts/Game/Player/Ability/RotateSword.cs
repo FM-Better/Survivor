@@ -12,25 +12,37 @@ namespace Survivor
 		{
 			Sword.transform.up = Sword.NormalizedDirection2DFrom(Player.Default);
 
-			Global.RotateSwordCount.RegisterWithInitValue(count =>
+			Global.RotateSwordCount.Or(Global.AdditionalFlyCount).Register(() =>
 			{
-				var toAddCount = count - mSwords.Count;
-				for (int i = 0; i < toAddCount; i++)
-				{
-					mSwords.Add(Sword.InstantiateWithParent(transform)
-						.Self(self =>
-						{
-							var selfCache = self;
-							selfCache.OnTriggerEnter2DEvent((collider) =>
-							{
-								var hurtBox = collider.GetComponent<HurtBox>();
-								if (hurtBox)
-								{
-									if (hurtBox.Owner.CompareTag("Enemy"))
-									{
-										DamageSystem.CalculateDamage(Global.RotateSwordDamage.Value, hurtBox.Owner.GetComponent<IEnemy>());
-									}
+				CreateSwords();
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 
+			Global.RotateSwordRange.Register(_ =>
+			{
+				UpdatePosition();
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+			
+			CreateSwords();
+		}
+
+		void CreateSwords()
+		{
+			var toAddCount = Global.RotateSwordCount.Value + Global.AdditionalFlyCount.Value - mSwords.Count;
+			for (int i = 0; i < toAddCount; i++)
+			{
+				mSwords.Add(Sword.InstantiateWithParent(transform)
+					.Self(self =>
+					{
+						var selfCache = self;
+						selfCache.OnTriggerEnter2DEvent((collider) =>
+						{
+							var hurtBox = collider.GetComponent<HurtBox>();
+							if (hurtBox)
+							{	
+								if (hurtBox.Owner.CompareTag("Enemy"))
+								{
+									DamageSystem.CalculateDamage(Global.RotateSwordDamage.Value, hurtBox.Owner.GetComponent<IEnemy>());
+									
 									if (Random.Range(0, 100) < 50)
 									{
 										collider.attachedRigidbody.velocity =
@@ -38,24 +50,19 @@ namespace Survivor
 											collider.NormalizedDirection2DFrom(Player.Default) * 10f;
 									}
 								}
-							}).UnRegisterWhenGameObjectDestroyed(selfCache);
-						})
-						.Show());			
-				}
-
-				UpdatePosition();
-			}).UnRegisterWhenGameObjectDestroyed(gameObject);
-
-			Global.RotateSwordRange.Register(_ =>
-			{
-				UpdatePosition();
-			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+							}
+						}).UnRegisterWhenGameObjectDestroyed(selfCache);
+					})
+					.Show());	
+			}
+			
+			UpdatePosition();
 		}
-
+		
 		void UpdatePosition()
 		{
-			var offsetAngle = 360 / Global.RotateSwordCount.Value;
-			for (int i = 0; i < Global.RotateSwordCount.Value; i++)
+			var offsetAngle = 360 / mSwords.Count;
+			for (int i = 0; i < mSwords.Count; i++)
 			{
 				var rad = offsetAngle * i * Mathf.Deg2Rad;
 				var x = Mathf.Cos(rad) * Global.RotateSwordRange.Value;

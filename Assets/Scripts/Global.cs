@@ -128,6 +128,16 @@ namespace Survivor
         /// 暴击率
         /// </summary>
         public static BindableProperty<int> CriticalRate = new BindableProperty<int>(AbilityConfig.InitCriticalRate);
+        /// <summary>
+        /// 额外伤害率
+        /// </summary>
+        public static BindableProperty<float> DamageRate = new BindableProperty<float>(1f);
+        /// <summary>
+        /// 额外飞射物
+        /// </summary>
+        public static BindableProperty<int> AdditionalFlyCount = new BindableProperty<int>(0);
+        
+        
         
         /// <summary>
         /// 敌人是否生成完毕
@@ -208,6 +218,8 @@ namespace Survivor
             BombDamage.Value = AbilityConfig.InitBombDamage;
 
             CriticalRate.Value = AbilityConfig.InitCriticalRate;
+            DamageRate.Value = 1;
+            AdditionalFlyCount.Value = 0;
             
             IsEnemySpawnOver.Value = false;
             EnemySpawner.enemyCount.Value = 0;

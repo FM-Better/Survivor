@@ -10,16 +10,24 @@ namespace Survivor
 		
 		void Start()
 		{
-			Global.BasketBallCount.RegisterWithInitValue(count =>
+			Global.BasketBallCount.Or(Global.AdditionalFlyCount).Register(() =>
 			{
-				var toAddCount = count - mBalls.Count;
-				for (int i = 0; i < toAddCount; i++)
-				{
-					mBalls.Add(Ball.Instantiate()
+				CreatBalls();
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+
+			CreatBalls();
+		}
+
+		void CreatBalls()
+		{
+			var toAddCount = Global.BasketBallCount.Value + Global.AdditionalFlyCount.Value - mBalls.Count;
+			for (int i = 0; i < toAddCount; i++)
+			{
+				mBalls.Add(
+					Ball.Instantiate()
 						.SyncPositionFrom(this)
 						.Show());
-				}
-			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+			}
 		}
 	}
 }

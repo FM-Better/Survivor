@@ -21,7 +21,7 @@ namespace Survivor
 				{
 					var enemys = FindObjectsByType<Enemy>(FindObjectsInactive.Exclude, FindObjectsSortMode.None)
 						.OrderBy(enemy => (enemy.Distance2D(Player.Default)))
-						.Take(Global.SimpleKnifeCount.Value);
+						.Take(Global.SimpleKnifeCount.Value + Global.AdditionalFlyCount.Value);
 
 					var i = 0;
 					foreach (var enemy in enemys)

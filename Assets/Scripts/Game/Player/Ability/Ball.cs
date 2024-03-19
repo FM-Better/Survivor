@@ -22,7 +22,7 @@ namespace Survivor
 					{
 						var enemy = hurtBox.Owner.GetComponent<IEnemy>();
 						DamageSystem.CalculateDamage(Global.BasketBallDamage.Value, enemy);
-
+						
 						if (Random.Range(0, 100) < 50 && collider && collider.attachedRigidbody && Player.Default)
 						{
 							collider.attachedRigidbody.velocity =
