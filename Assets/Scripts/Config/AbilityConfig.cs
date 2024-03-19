@@ -23,5 +23,7 @@
 
         public const int InitBombDropRate = 5;
         public const float InitBombDamage = 10f;
+        
+        public const int InitCriticalRate = 5;
     }
 }

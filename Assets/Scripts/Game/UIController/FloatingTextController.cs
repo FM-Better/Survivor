@@ -38,7 +38,7 @@ namespace Survivor
 			return textComp;
 		}
 
-		public static void ShowFloatingText(Vector2 position, string message)
+		public static void ShowFloatingText(Vector2 position, string message, bool isCritical = false)
 		{
 			mDefault.TextRoot.InstantiateWithParent(mDefault.transform)
 				.Position(position)
@@ -48,7 +48,11 @@ namespace Survivor
 					var textTrans = self.Find("Text"); // 找到文本所在的物体缓存起来
 					var textComp = textTrans.GetComponent<Text>(); // 找到文本组件
 					textComp.text = message;
-
+					if (isCritical)
+					{
+						textComp.color = Color.red;
+					}
+					
 					ActionKit.Sequence()
 						.Lerp(0, 0.5f, 0.5f, (t) =>
 						{

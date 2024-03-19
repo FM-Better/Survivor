@@ -26,7 +26,6 @@ namespace Survivor
 						.Self(self =>
 						{
 							var selfCache = self;
-							var enemyCache = enemy;
 							selfCache.OnTriggerEnter2DEvent(collider =>
 							{
 								var hurtBox = collider.GetComponent<HurtBox>();
@@ -34,7 +33,7 @@ namespace Survivor
 								{
 									if (hurtBox.Owner.CompareTag("Enemy"))
 									{
-										enemyCache.Hurt(Global.SimpleSwordDamage.Value);
+										DamageSystem.CalculateDamage(Global.SimpleSwordDamage.Value, hurtBox.Owner.GetComponent<IEnemy>());
 									}
 								}
 							}).UnRegisterWhenGameObjectDestroyed(selfCache);

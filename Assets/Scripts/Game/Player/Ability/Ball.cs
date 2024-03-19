@@ -21,7 +21,7 @@ namespace Survivor
 					if (hurtBox.Owner.CompareTag("Enemy"))
 					{
 						var enemy = hurtBox.Owner.GetComponent<IEnemy>();
-						enemy.Hurt(Global.BasketBallDamage.Value);
+						DamageSystem.CalculateDamage(Global.BasketBallDamage.Value, enemy);
 
 						if (Random.Range(0, 100) < 50 && collider && collider.attachedRigidbody && Player.Default)
 						{

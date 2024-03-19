@@ -28,7 +28,7 @@ namespace Survivor
 								{
 									if (hurtBox.Owner.CompareTag("Enemy"))
 									{
-										hurtBox.Owner.GetComponent<IEnemy>().Hurt(Global.RotateSwordDamage.Value);
+										DamageSystem.CalculateDamage(Global.RotateSwordDamage.Value, hurtBox.Owner.GetComponent<IEnemy>());
 									}
 
 									if (Random.Range(0, 100) < 50)

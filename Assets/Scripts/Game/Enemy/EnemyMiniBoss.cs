@@ -142,13 +142,13 @@ namespace Survivor
 			fsm.FixedUpdate();
 		}
 
-		public void Hurt(float damage)
+		public void Hurt(float damage, bool isCritical = false)
 		{
 			if (!isDead)
 			{
 				hp -= damage;
 				AudioKit.PlaySound(Sound.HIT);
-				FloatingTextController.ShowFloatingText(transform.position + Vector3.up * 0.5f, damage.ToString("0")); // 伤害飘字效果
+				FloatingTextController.ShowFloatingText(transform.position + Vector3.up * 0.5f, damage.ToString("0"), isCritical); // 伤害飘字效果
 				this.Sprite.color = Color.red;
 
 				ActionKit.Delay((hurtDurationTime), () =>

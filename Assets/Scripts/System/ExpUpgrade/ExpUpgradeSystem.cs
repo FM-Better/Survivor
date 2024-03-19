@@ -352,6 +352,43 @@ namespace Survivor
                                 break;
                         }
                     }));
+            
+            Add(new ExpUpgradeItem(false)
+                    .WithKey("Critical")
+                    .WithMaxLevel(5)
+                    .WithDescription(lv =>
+                    {
+                        return lv switch
+                        {
+                            1 => $"暴击Lv{lv}：\n每次伤害15%概率暴击",
+                            2 => $"暴击Lv{lv}：\n每次伤害28%概率暴击",
+                            3 => $"暴击Lv{lv}：\n每次伤害43%概率暴击",
+                            4 => $"暴击Lv{lv}：\n每次伤害50%概率暴击",
+                            5 => $"暴击Lv{lv}：\n每次伤害80%概率暴击",
+                            _ => null,
+                        };
+                    })
+                    .OnUpgrade((_, level) =>
+                    {
+                        switch (level)  
+                        {
+                            case 1:
+                                Global.CriticalRate.Value = 15;
+                                break;
+                            case 2:
+                                Global.CriticalRate.Value = 28;
+                                break;
+                            case 3:
+                                Global.CriticalRate.Value = 43;
+                                break;
+                            case 4:
+                                Global.CriticalRate.Value = 50;
+                                break;
+                            case 5:
+                                Global.CriticalRate.Value = 80;
+                                break;
+                        }
+                    }));
         }
         
         public void RandomAbility()
@@ -367,19 +404,23 @@ namespace Survivor
                 expUpgradeItem.Visible.Value = false;
             }
 
-            var abilities = items.Take(5);
-            foreach (var ability in abilities)
+            if (items.Count >= 4)
             {
-                if (ability != null)
+                items.GetAndRemoveRandomItem().Visible.Value = true;
+                items.GetAndRemoveRandomItem().Visible.Value = true;
+                items.GetAndRemoveRandomItem().Visible.Value = true;
+                items.GetAndRemoveRandomItem().Visible.Value = true;
+            }
+            else
+            {
+                foreach (var item in items)
                 {
-                    ability.Visible.Value = true;
+                    if (item != null)
+                    {
+                        item.Visible.Value = true;
+                    }
                 }
             }
-            // var item = items.GetRandomItem();
-            // if (item != null)
-            // {
-            //     item.Visible.Value = true;
-            // }
         }
     }
 }

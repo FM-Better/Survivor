@@ -21,32 +21,32 @@ namespace Survivor
 		
 		public void SpawnDrop(Vector3 spawnPosition)
 		{
-			var randomNum = Random.Range(1, 101);
-			if (randomNum <= Global.ExpBallDropRate.Value) // 掉落经验球
+			var randomNum = Random.Range(0, 100);
+			if (randomNum < Global.ExpBallDropRate.Value) // 掉落经验球
 			{
 				ExpBall.InstantiateWithParent(DropRoot)
 					.Position(spawnPosition + RandomInCircle())
 					.Show();
 			}
-			if (randomNum <= Global.GoldDropRate.Value) // 掉落金币
+			if (randomNum < Global.GoldDropRate.Value) // 掉落金币
 			{
 				Gold.InstantiateWithParent(DropRoot)
 					.Position(spawnPosition + RandomInCircle())
 					.Show();
 			}
-			if (randomNum <= Global.HpItemDropRate.Value) // 掉落回血道具
+			if (randomNum < Global.HpItemDropRate.Value) // 掉落回血道具
 			{
 				HpItem.InstantiateWithParent(DropRoot)
 					.Position(spawnPosition + RandomInCircle())
 					.Show();
 			}
-			if (Global.BombUnlocked.Value && randomNum <= Global.BombDropRate.Value) // 掉落炸弹
+			if (Global.BombUnlocked.Value && randomNum < Global.BombDropRate.Value) // 掉落炸弹
 			{
 				Bomb.InstantiateWithParent(Default.DropRoot)
 					.Position(spawnPosition + RandomInCircle())
 					.Show();
 			}
-			if (randomNum <= Global.GetAllExpDropRate.Value) // 掉落获得当前所有经验的道具
+			if (randomNum < Global.GetAllExpDropRate.Value) // 掉落获得当前所有经验的道具
 			{
 				GetAllExp.InstantiateWithParent(DropRoot)
 					.Position(spawnPosition + RandomInCircle())

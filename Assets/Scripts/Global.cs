@@ -125,6 +125,11 @@ namespace Survivor
         public static BindableProperty<float> BombDamage = new BindableProperty<float>(AbilityConfig.InitBombDamage);
         
         /// <summary>
+        /// 暴击率
+        /// </summary>
+        public static BindableProperty<int> CriticalRate = new BindableProperty<int>(AbilityConfig.InitCriticalRate);
+        
+        /// <summary>
         /// 敌人是否生成完毕
         /// </summary>
         public static BindableProperty<bool> IsEnemySpawnOver = new BindableProperty<bool>(false);
@@ -201,6 +206,8 @@ namespace Survivor
             BombUnlocked.Value = false;
             BombDropRate.Value = AbilityConfig.InitBombDropRate;
             BombDamage.Value = AbilityConfig.InitBombDamage;
+
+            CriticalRate.Value = AbilityConfig.InitCriticalRate;
             
             IsEnemySpawnOver.Value = false;
             EnemySpawner.enemyCount.Value = 0;
