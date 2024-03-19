@@ -10,10 +10,9 @@ namespace Survivor
         
         public static EasyEvent OnExpUpgradeSystemChanged = new EasyEvent();
         
-        public ExpUpgradeItem Add(ExpUpgradeItem expUpgradeItem)
+        public void Add(ExpUpgradeItem expUpgradeItem)
         {
             Items.Add(expUpgradeItem);
-            return expUpgradeItem;
         }
         
         protected override void OnInit()
@@ -452,6 +451,109 @@ namespace Survivor
                             break;
                         case 3:
                             Global.AdditionalFlyCount.Value++;
+                            break;
+                    }
+                }));
+            
+            Add(new ExpUpgradeItem(false)
+                .WithKey("SpeedRate")
+                .WithMaxLevel(5)
+                .WithDescription(lv =>
+                {
+                    return lv switch
+                    {
+                        1 => $"移动速度Lv{lv}：\n增加25%移动速度",
+                        2 => $"移动速度Lv{lv}：\n增加50%移动速度",
+                        3 => $"移动速度Lv{lv}：\n增加75%移动速度",
+                        4 => $"移动速度Lv{lv}：\n增加100%移动速度",
+                        5 => $"移动速度Lv{lv}：\n增加150%移动速度",
+                        _ => null,
+                    };
+                })
+                .OnUpgrade((_, level) =>
+                {
+                    switch (level)  
+                    {
+                        case 1:
+                            Global.SpeedRate.Value = 1.25f;
+                            break;
+                        case 2:
+                            Global.SpeedRate.Value = 1.5f;
+                            break;
+                        case 3:
+                            Global.SpeedRate.Value = 1.75f;
+                            break;
+                        case 4:
+                            Global.SpeedRate.Value = 2f;
+                            break;
+                        case 5:
+                            Global.SpeedRate.Value = 2.5f;
+                            break;
+                    }
+                }));
+            
+            Add(new ExpUpgradeItem(false)
+                .WithKey("PickUpAreaRange")
+                .WithMaxLevel(3)
+                .WithDescription(lv =>
+                {
+                    return lv switch
+                    {
+                        1 => $"拾取范围Lv{lv}：\n额外增加100%范围",
+                        2 => $"拾取范围Lv{lv}：\n额外增加200%范围",
+                        3 => $"拾取范围Lv{lv}：\n额外增加300%范围",
+                        _ => null,
+                    };
+                })
+                .OnUpgrade((_, level) =>
+                {
+                    switch (level)  
+                    {
+                        case 1:
+                            Global.PickUpAreaRange.Value = 2f;
+                            break;
+                        case 2:
+                            Global.PickUpAreaRange.Value = 3f;
+                            break;
+                        case 3:
+                            Global.PickUpAreaRange.Value = 4f;
+                            break;
+                    }
+                }));
+            
+            Add(new ExpUpgradeItem(false)
+                .WithKey("AdditionalExp")
+                .WithMaxLevel(5)
+                .WithDescription(lv =>
+                {
+                    return lv switch
+                    {
+                        1 => $"经验值Lv{lv}：\n额外增加5%掉落概率",
+                        2 => $"经验值Lv{lv}：\n额外增加8%掉落概率",
+                        3 => $"经验值Lv{lv}：\n额外增加12%掉落概率",
+                        4 => $"经验值Lv{lv}：\n额外增加17%掉落概率",
+                        5 => $"经验值Lv{lv}：\n额外增加25%掉落概率",
+                        _ => null,
+                    };
+                })
+                .OnUpgrade((_, level) =>
+                {
+                    switch (level)  
+                    {
+                        case 1:
+                            Global.AdditionalExpRate.Value = 5;
+                            break;
+                        case 2:
+                            Global.AdditionalExpRate.Value = 8;
+                            break;
+                        case 3:
+                            Global.AdditionalExpRate.Value = 12;
+                            break;
+                        case 4:
+                            Global.AdditionalExpRate.Value = 17;
+                            break;
+                        case 5:
+                            Global.AdditionalExpRate.Value = 25;
                             break;
                     }
                 }));

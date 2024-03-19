@@ -22,7 +22,7 @@ namespace Survivor
 		public void SpawnDrop(Vector3 spawnPosition)
 		{
 			var randomNum = Random.Range(0, 100);
-			if (randomNum < Global.ExpBallDropRate.Value) // 掉落经验球
+			if (randomNum < Global.ExpBallDropRate.Value + Global.AdditionalExpRate.Value) // 掉落经验球
 			{
 				ExpBall.InstantiateWithParent(DropRoot)
 					.Position(spawnPosition + RandomInCircle())

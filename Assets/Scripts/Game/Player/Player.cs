@@ -58,8 +58,9 @@ namespace Survivor
 			var horizontal = Input.GetAxisRaw("Horizontal");
 			var vertical = Input.GetAxisRaw("Vertical");
 			var direction = new Vector2(horizontal, vertical).normalized;
-            
-			selfRigidbody.velocity =  Vector2.Lerp(selfRigidbody.velocity, direction * moveSpeed, 1 - Mathf.Exp(-Time.deltaTime * 5));
+
+			selfRigidbody.velocity = Vector2.Lerp(selfRigidbody.velocity,
+				direction * (moveSpeed * Global.SpeedRate.Value), 1 - Mathf.Exp(-Time.deltaTime * 5));
 		}
 	}
 }

@@ -137,7 +137,18 @@ namespace Survivor
         /// </summary>
         public static BindableProperty<int> AdditionalFlyCount = new BindableProperty<int>(0);
         
-        
+        /// <summary>
+        /// 额外移速
+        /// </summary>
+        public static BindableProperty<float> SpeedRate = new BindableProperty<float>(1f);
+        /// <summary>
+        /// 拾取范围
+        /// </summary>
+        public static BindableProperty<float> PickUpAreaRange = new BindableProperty<float>(1f);
+        /// <summary>
+        /// 额外的经验掉落概率
+        /// </summary>
+        public static BindableProperty<int> AdditionalExpRate = new BindableProperty<int>(0);
         
         /// <summary>
         /// 敌人是否生成完毕
@@ -220,6 +231,9 @@ namespace Survivor
             CriticalRate.Value = AbilityConfig.InitCriticalRate;
             DamageRate.Value = 1;
             AdditionalFlyCount.Value = 0;
+            SpeedRate.Value = 1f;
+            PickUpAreaRange.Value = 1f;
+            AdditionalExpRate.Value = 0;
             
             IsEnemySpawnOver.Value = false;
             EnemySpawner.enemyCount.Value = 0;
