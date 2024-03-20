@@ -19,8 +19,15 @@ namespace Survivor
 			Default = null;
 		}
 		
-		public void SpawnDrop(Vector3 spawnPosition)
+		public void SpawnDrop(Vector3 spawnPosition, bool isSpawnTreasure)
 		{
+			if (isSpawnTreasure)
+			{
+				TreasureChest.InstantiateWithParent(DropRoot)
+					.Position(spawnPosition + RandomInCircle())
+					.Show();
+			}
+			
 			var randomNum = Random.Range(0, 100);
 			if (randomNum < Global.ExpBallDropRate.Value + Global.AdditionalExpRate.Value) // 掉落经验球
 			{

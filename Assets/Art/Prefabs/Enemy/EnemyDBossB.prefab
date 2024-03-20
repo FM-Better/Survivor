@@ -381,6 +381,7 @@ MonoBehaviour:
   hp: 600
   hurtDurationTime: 0.2
   dissolveColor: {r: 0.9490196, g: 1, b: 0, a: 1}
+  isTreasureEnemy: 1
   Sprite: {fileID: 8689062272586817765}
   selfRigidbody: {fileID: 8689062273841957117}
 --- !u!50 &8689062273841957117

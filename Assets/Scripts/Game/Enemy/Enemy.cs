@@ -16,6 +16,7 @@ namespace Survivor
 
 		private Collider2D mHitBox;
 		protected override Collider2D collider => mHitBox;
+		[SerializeField] private bool isTreasureEnemy;
 		
 		void Start()
 		{
@@ -59,8 +60,8 @@ namespace Survivor
 			selfRigidbody.velocity = Vector2.zero;
 
 			AudioKit.PlaySound(Sound.HIT);
-			FloatingTextController.ShowFloatingText(transform.position + Vector3.up * 0.5f, damage.ToString("0"),
-				isCritical); // 伤害飘字效果
+			FloatingTextController.ShowFloatingText(transform.position + Vector3.up * 0.5f, damage.ToString("0")
+				,isCritical); // 伤害飘字效果
 			
 			Sprite.color = Color.red;
 			ActionKit.Delay((hurtDurationTime), () =>
@@ -87,7 +88,7 @@ namespace Survivor
 
 		public void Dead()
 		{
-			DropManager.Default.SpawnDrop(transform.position);
+			DropManager.Default.SpawnDrop(transform.position, isTreasureEnemy);
 			EnemySpawner.enemyCount.Value--;
 			FxConrtoller.Play(Sprite, dissolveColor);
 			AudioKit.PlaySound(Sound.ENEMYDIE);

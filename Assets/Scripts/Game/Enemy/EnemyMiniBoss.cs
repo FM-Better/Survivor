@@ -176,7 +176,7 @@ namespace Survivor
 
 		public void Dead()
 		{
-			DropManager.Default.SpawnDrop(transform.position);
+			DropManager.Default.SpawnDrop(transform.position,true);
 			EnemySpawner.enemyCount.Value--;
 			FxConrtoller.Play(Sprite, dissolveColor);
 			AudioKit.PlaySound(Sound.ENEMYDIE);

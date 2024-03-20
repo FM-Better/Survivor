@@ -52,10 +52,6 @@ namespace Survivor
 			}	
 		}
 
-		protected override void OnBeforeDestroy()
-		{
-		}
-
 		public IArchitecture GetArchitecture()
 		{
 			return Global.Interface;

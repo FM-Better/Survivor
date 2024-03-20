@@ -10,6 +10,7 @@ namespace Survivor
 	public partial class UIGamePanel : UIPanel
 	{
 		public static EasyEvent FlashScreen = new EasyEvent();
+		public static EasyEvent OpenTreasurePanel = new EasyEvent();
 		
 		protected override void OnInit(IUIData uiData = null)
 		{
@@ -85,7 +86,9 @@ namespace Survivor
 			{
 				Global.Timer.Value += Time.deltaTime; // 在Update中计时
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
-			
+			#endregion
+
+			#region 事件相关
 			FlashScreen.Register(() =>
 			{
 				ActionKit.Sequence()
@@ -98,6 +101,12 @@ namespace Survivor
 						ScreenColor.ColorAlpha(alpha);
 					}, () => ScreenColor.ColorAlpha(0f))
 					.Start(this);
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+
+			OpenTreasurePanel.Register(() =>
+			{
+				Time.timeScale = 0f;
+				TreasurePanel.Show();
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			#endregion
 		}
