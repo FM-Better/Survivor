@@ -19,29 +19,15 @@ MonoBehaviour:
     From: 0
     NameToFullName: []
     BindInfos:
-    - TypeName: Survivor.SimpleSword
-      PathToRoot: SimpleSword
-      MemberName: SimpleSword
-    - TypeName: Survivor.RotateSword
-      PathToRoot: RotateSword
-      MemberName: RotateSword
-    - TypeName: Survivor.SimpleKnife
-      PathToRoot: SimpleKnife
-      MemberName: SimpleKnife
-    - TypeName: Survivor.Basketball
-      PathToRoot: Basketball
-      MemberName: Basketball
-    - TypeName: Survivor.SuperBomb
-      PathToRoot: SuperBomb
-      MemberName: SuperBomb
-    ScriptsFolder: Assets/Scripts/Game/Player/Ability
-    ClassName: AbilityController
+    - TypeName: UnityEngine.Tilemaps.Tilemap
+      PathToRoot: Tilemap
+      MemberName: Tilemap
+    ScriptsFolder: Assets/Scripts/Game
+    ClassName: Map
     Namespace: Survivor
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace Survivor\r\n{\r\n\tpublic
-      partial class AbilityController : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class Map : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:0d473c65-42cf-4ac8-bed1-1c85723eda76\r\nusing UnityEngine;\r\n\r\nnamespace
-      Survivor\r\n{\r\n\tpublic partial class AbilityController\r\n\t{\r\n\r\n\t\tpublic
-      Survivor.SimpleSword SimpleSword;\r\n\r\n\t\tpublic Survivor.RotateSword RotateSword;\r\n\r\n\t\tpublic
-      Survivor.SimpleKnife SimpleKnife;\r\n\r\n\t\tpublic Survivor.Basketball Basketball;\r\n\r\n\t\tpublic
-      Survivor.SuperBomb SuperBomb;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:3efb6da6-e92d-4714-98ae-ba9035968047\r\nusing UnityEngine;\r\n\r\nnamespace
+      Survivor\r\n{\r\n\tpublic partial class Map\r\n\t{\r\n\r\n\t\tpublic UnityEngine.Tilemaps.Tilemap
+      Tilemap;\r\n\r\n\t}\r\n}\r\n"
