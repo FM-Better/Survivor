@@ -7,29 +7,31 @@ namespace Survivor
 {
 	public partial class Bomb : GamePlayObject
 	{
-		private CinemachineImpulseSource impulseSource; // 脉冲源
 		protected override Collider2D collider => selfCollider;
-		
-		private void Start()
-		{
-			impulseSource = GameObject.FindWithTag("CameraController").GetComponent<CinemachineImpulseSource>(); // 缓存脉冲源 用作相机抖动效果
-		}
 
 		private void OnTriggerEnter2D(Collider2D other)
 		{
 			if (other.GetComponent<PickUpArea>())
 			{
-				var enemies = FindObjectsByType<Enemy>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
-				foreach (var enemy in enemies)
-				{
-					enemy.Hurt(Global.BombDamage.Value);
-				}
-				
-				AudioKit.PlaySound(Sound.BOMB);
-				impulseSource.GenerateImpulse(); // 发生脉冲信号
-				UIGamePanel.FlashScreen.Trigger(); // 触发闪屏事件
+				Excute();
 				this.DestroyGameObjGracefully();
 			}
+		}
+
+		public static void Excute()
+		{
+			var enemies = FindObjectsByType<Enemy>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+			foreach (var enemy in enemies)
+			{
+				if (enemy)
+				{
+					DamageSystem.CalculateDamage(Global.BombDamage.Value, enemy);	
+				}
+			}
+				
+			AudioKit.PlaySound(Sound.BOMB);
+			CameraController.ShakeCamera.Trigger(); // 触发震屏事件
+			UIGamePanel.FlashScreen.Trigger(); // 触发闪屏事件
 		}
 	}
 }

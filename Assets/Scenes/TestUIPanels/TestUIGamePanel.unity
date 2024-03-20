@@ -248,10 +248,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 224360354183100122}
     m_Modifications:
-    - target: {fileID: 816456951075164581, guid: 3b9d999705c31154e98eb7310b254ed7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1478000922824720123, guid: 3b9d999705c31154e98eb7310b254ed7, type: 3}
       propertyPath: m_Name
       value: UIGamePanel

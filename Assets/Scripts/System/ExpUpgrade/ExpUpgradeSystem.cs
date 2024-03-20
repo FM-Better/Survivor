@@ -9,10 +9,40 @@ namespace Survivor
         public List<ExpUpgradeItem> Items { get; } = new List<ExpUpgradeItem>();
         
         public static EasyEvent OnExpUpgradeSystemChanged = new EasyEvent();
+
+        // 记录配套的能力组合
+        public Dictionary<string, string> Combines = new Dictionary<string, string>()
+        {
+            {"SimpleSword", "CriticalRate"},
+            {"Bomb", "DamageRate"},
+            {"SimpleKnife", "AdditionalFlyCount"},
+            {"BasketBall", "SpeedRate"},
+            {"RotateSword", "AdditionalExp"},
+            
+            {"CriticalRate", "SimpleSword"},
+            {"DamageRate", "Bomb"},
+            {"AdditionalFlyCount", "SimpleKnife"},
+            {"SpeedRate", "BasketBall"},
+            {"AdditionalExp", "RotateSword"},
+        };
+        
+        // 记录每个key对应的超级武器是否合成
+        public Dictionary<string, BindableProperty<bool>> keyToSuperIsAlive = new Dictionary<string, BindableProperty<bool>>()
+        {
+            {"SimpleSword", Global.SuperSimpleSword},
+            {"Bomb", Global.SuperBomb},
+            {"SimpleKnife", Global.SuperKnife},
+            {"BasketBall", Global.SuperBasketBall},
+            {"RotateSword", Global.SuperRotateSword},
+        };
+        
+        // 记录每个key对应的item
+        public Dictionary<string, ExpUpgradeItem> keyToItems = new Dictionary<string, ExpUpgradeItem>();
         
         public void Add(ExpUpgradeItem expUpgradeItem)
         {
             Items.Add(expUpgradeItem);
+            keyToItems.Add(expUpgradeItem.Key, expUpgradeItem);
         }
         
         protected override void OnInit()
@@ -28,6 +58,7 @@ namespace Survivor
         public void ResetData()
         {
             Items.Clear();
+            keyToItems.Clear();
             
             Add(new ExpUpgradeItem(true)
                     .WithKey("SimpleSword")

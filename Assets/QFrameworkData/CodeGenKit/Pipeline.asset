@@ -19,36 +19,29 @@ MonoBehaviour:
     From: 0
     NameToFullName: []
     BindInfos:
-    - TypeName: Transform
-      PathToRoot: DropRoot
-      MemberName: DropRoot
-    - TypeName: Survivor.ExpBall
-      PathToRoot: ExpBall
-      MemberName: ExpBall
-    - TypeName: Survivor.Gold
-      PathToRoot: Gold
-      MemberName: Gold
-    - TypeName: Survivor.HpItem
-      PathToRoot: HpItem
-      MemberName: HpItem
-    - TypeName: Survivor.Bomb
-      PathToRoot: Bomb
-      MemberName: Bomb
-    - TypeName: Survivor.GetAllExp
-      PathToRoot: GetAllExp
-      MemberName: GetAllExp
-    - TypeName: QFramework.ViewController
-      PathToRoot: TreasureChest
-      MemberName: TreasureChest
-    ScriptsFolder: Assets\Scripts\Game\Drop
-    ClassName: DropManager
+    - TypeName: Survivor.SimpleSword
+      PathToRoot: SimpleSword
+      MemberName: SimpleSword
+    - TypeName: Survivor.RotateSword
+      PathToRoot: RotateSword
+      MemberName: RotateSword
+    - TypeName: Survivor.SimpleKnife
+      PathToRoot: SimpleKnife
+      MemberName: SimpleKnife
+    - TypeName: Survivor.Basketball
+      PathToRoot: Basketball
+      MemberName: Basketball
+    - TypeName: Survivor.SuperBomb
+      PathToRoot: SuperBomb
+      MemberName: SuperBomb
+    ScriptsFolder: Assets/Scripts/Game/Player/Ability
+    ClassName: AbilityController
     Namespace: Survivor
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace Survivor\r\n{\r\n\tpublic
-      partial class DropManager : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class AbilityController : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:938ed461-519e-4cfa-89cb-f87fc5907d6e\r\nusing UnityEngine;\r\n\r\nnamespace
-      Survivor\r\n{\r\n\tpublic partial class DropManager\r\n\t{\r\n\r\n\t\tpublic
-      Transform DropRoot;\r\n\r\n\t\tpublic Survivor.ExpBall ExpBall;\r\n\r\n\t\tpublic
-      Survivor.Gold Gold;\r\n\r\n\t\tpublic Survivor.HpItem HpItem;\r\n\r\n\t\tpublic
-      Survivor.Bomb Bomb;\r\n\r\n\t\tpublic Survivor.GetAllExp GetAllExp;\r\n\r\n\t\tpublic
-      QFramework.ViewController TreasureChest;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:0d473c65-42cf-4ac8-bed1-1c85723eda76\r\nusing UnityEngine;\r\n\r\nnamespace
+      Survivor\r\n{\r\n\tpublic partial class AbilityController\r\n\t{\r\n\r\n\t\tpublic
+      Survivor.SimpleSword SimpleSword;\r\n\r\n\t\tpublic Survivor.RotateSword RotateSword;\r\n\r\n\t\tpublic
+      Survivor.SimpleKnife SimpleKnife;\r\n\r\n\t\tpublic Survivor.Basketball Basketball;\r\n\r\n\t\tpublic
+      Survivor.SuperBomb SuperBomb;\r\n\r\n\t}\r\n}\r\n"

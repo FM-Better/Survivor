@@ -14,10 +14,15 @@ namespace Survivor
 
 			if (mtimer >= Global.SimpleSwordCD.Value)
 			{
+				var isSuper = Global.SuperSimpleSword.Value;
+				var countTimes = isSuper ? 2 : 1;
+				var damageTimes = isSuper ? Random.Range(2, 4) : 1;
+				var distanceTimes = isSuper ? 2 : 1;
+				
 				var enemies = FindObjectsOfType<Enemy>(false)
 					.OrderBy(enemy => enemy.Distance2D(Player.Default)) // 根据距离排序
-					.Where(enemy => enemy.Distance2D(Player.Default) <= Global.SimpleSwordRange.Value) // 挑选在攻击范围内的
-					.Take(Global.SimpleSwordCount.Value + Global.AdditionalFlyCount.Value); // 选取攻击数量
+					.Where(enemy => enemy.Distance2D(Player.Default) <= Global.SimpleSwordRange.Value * distanceTimes) // 挑选在攻击范围内的
+					.Take((Global.SimpleSwordCount.Value + Global.AdditionalFlyCount.Value) * countTimes); // 选取攻击数量
 				foreach (var enemy in enemies)
 				{
 					Sword.Instantiate()
@@ -33,7 +38,7 @@ namespace Survivor
 								{
 									if (hurtBox.Owner.CompareTag("Enemy"))
 									{
-										DamageSystem.CalculateDamage(Global.SimpleSwordDamage.Value, hurtBox.Owner.GetComponent<IEnemy>());
+										DamageSystem.CalculateDamage(Global.SimpleSwordDamage.Value * damageTimes, hurtBox.Owner.GetComponent<IEnemy>());
 									}
 								}
 							}).UnRegisterWhenGameObjectDestroyed(selfCache);

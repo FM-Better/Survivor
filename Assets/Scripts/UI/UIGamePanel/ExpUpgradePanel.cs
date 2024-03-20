@@ -13,7 +13,8 @@ namespace Survivor
 	{
 		private void Awake()
 		{
-			List<ExpUpgradeItem> expUpgradeItems = this.GetSystem<ExpUpgradeSystem>().Items;
+			var expUpgradeSystem = this.GetSystem<ExpUpgradeSystem>();
+			List<ExpUpgradeItem> expUpgradeItems = expUpgradeSystem.Items;
 			
 			foreach (var item in expUpgradeItems)
 			{
@@ -36,6 +37,24 @@ namespace Survivor
 							if (visible)
 							{
 								selfCache.Show();
+								if (expUpgradeSystem.Combines.TryGetValue(itemCache.Key, out var otherKey))
+								{
+									var otherItem = expUpgradeSystem.keyToItems[otherKey];
+									if (otherItem.CurrentLevel.Value > 0 && itemCache.CurrentLevel.Value == 0) // 如果遇到现有技能的未解锁的配对技能
+									{
+										var txtOtherKey = selfCache.transform.Find("TxtOtherKey").GetComponent<Text>();
+										txtOtherKey.text = $"配对技能：{otherItem.Key}";
+										txtOtherKey.Show();
+									}
+									else
+									{
+										selfCache.transform.Find("TxtOtherKey").Hide();	
+									}
+								}
+								else
+								{
+									selfCache.transform.Find("TxtOtherKey").Hide();
+								}
 							}
 							else
 							{
@@ -46,7 +65,7 @@ namespace Survivor
 						itemCache.CurrentLevel.RegisterWithInitValue(_ =>
 						{
 							selfCache.transform.GetComponentInChildren<Text>().text = 
-								itemCache.Description;	
+								itemCache.Description;
 						}).UnRegisterWhenGameObjectDestroyed(gameObject);
 					});
 			}	

@@ -1,4 +1,4 @@
-// Generate Id:72e02bd9-b6c6-40ca-8a41-993305abc8d8
+// Generate Id:0d473c65-42cf-4ac8-bed1-1c85723eda76
 using UnityEngine;
 
 namespace Survivor
@@ -13,6 +13,8 @@ namespace Survivor
 		public Survivor.SimpleKnife SimpleKnife;
 
 		public Survivor.Basketball Basketball;
+
+		public Survivor.SuperBomb SuperBomb;
 
 	}
 }

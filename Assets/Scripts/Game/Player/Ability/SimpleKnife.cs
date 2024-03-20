@@ -56,7 +56,8 @@ namespace Survivor
 										{
 											if (hurtBox.Owner.CompareTag("Enemy"))
 											{
-												DamageSystem.CalculateDamage(Global.SimpleKnifeDamage.Value, hurtBox.Owner.GetComponent<IEnemy>());
+												var damageTimes = Global.SuperKnife.Value ? Random.Range(2, 4) : 1;
+												DamageSystem.CalculateDamage(Global.SimpleKnifeDamage.Value * damageTimes, hurtBox.Owner.GetComponent<IEnemy>());
 												attackCount++;
 
 												if (attackCount >= Global.SimpleKnifeAttackCount.Value)

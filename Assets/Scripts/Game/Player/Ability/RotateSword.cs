@@ -41,7 +41,8 @@ namespace Survivor
 							{	
 								if (hurtBox.Owner.CompareTag("Enemy"))
 								{
-									DamageSystem.CalculateDamage(Global.RotateSwordDamage.Value, hurtBox.Owner.GetComponent<IEnemy>());
+									var damageTimes = Global.SuperRotateSword.Value ? Random.Range(2, 4) : 1;
+									DamageSystem.CalculateDamage(Global.RotateSwordDamage.Value * damageTimes, hurtBox.Owner.GetComponent<IEnemy>());
 									
 									if (Random.Range(0, 100) < 50)
 									{
@@ -74,7 +75,8 @@ namespace Survivor
 		
 		private void Update()
 		{
-			transform.Rotate(Vector3.forward, -60 * Time.deltaTime * Global.RotateSwordSpeed.Value);
+			var speedTimes = Global.SuperRotateSword.Value ? 10 : 1;
+			transform.Rotate(Vector3.forward, -60 * Time.deltaTime * Global.RotateSwordSpeed.Value * speedTimes);
 		}
 	}
 }

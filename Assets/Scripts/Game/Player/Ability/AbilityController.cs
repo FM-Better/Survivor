@@ -39,6 +39,14 @@ namespace Survivor
 					Basketball.Show();
 				}
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+
+			Global.SuperBomb.Register((isUnlocked) =>
+			{
+				if (isUnlocked)
+				{
+					SuperBomb.Show();
+				}
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			
 			// 游戏开始随机解锁一个武器能力
 			this.GetSystem<ExpUpgradeSystem>().Items.Where(item => item.IsWeapon).ToList().GetRandomItem().Upgrade();

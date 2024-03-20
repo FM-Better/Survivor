@@ -6,171 +6,62 @@ namespace Survivor
     public class Global : Architecture<Global>
     {
         #region Model
-        /// <summary>
-        /// 血量
-        /// </summary>
-        public static BindableProperty<int> Hp = new BindableProperty<int>(5);
-        /// <summary>
-        /// 最大血量
-        /// </summary>
-        public static BindableProperty<int> MaxHp = new BindableProperty<int>(5);
-        /// <summary>
-        /// 经验值
-        /// </summary>
-        public static BindableProperty<int> Exp = new BindableProperty<int>(0);
-        /// <summary>
-        /// 等级
-        /// </summary>
-        public static BindableProperty<int> Level = new BindableProperty<int>(1);
-        /// <summary>
-        /// 金币数
-        /// </summary>
-        public static BindableProperty<int> Gold = new BindableProperty<int>(0);
-        /// <summary>
-        /// 计时器
-        /// </summary>
-        public static BindableProperty<float> Timer = new BindableProperty<float>(0f);
-        
-        /// <summary>
-        /// 简单剑是否解锁
-        /// </summary>
-        public static BindableProperty<bool> SimpleSwordUnlocked = new BindableProperty<bool>(false);
-        /// <summary>
-        /// 简单剑的数量
-        /// </summary>
-        public static BindableProperty<int> SimpleSwordCount = new BindableProperty<int>(AbilityConfig.InitSimpleSwordCount);
-        /// <summary>
-        /// 简单剑的伤害值
-        /// </summary>
-        public static BindableProperty<float> SimpleSwordDamage = new BindableProperty<float>(AbilityConfig.InitSimpleSwordDamage);
-        /// <summary>
-        /// 简单剑的间隔时间
-        /// </summary>
-        public static BindableProperty<float> SimpleSwordCD = new BindableProperty<float>(AbilityConfig.InitSimpleSwordCD);
-        /// <summary>
-        /// 简单剑的攻击范围
-        /// </summary>
-        public static BindableProperty<float> SimpleSwordRange = new BindableProperty<float>(AbilityConfig.InitSimpleSwordRange);
-        
-        /// <summary>
-        /// 飞刀是否解锁
-        /// </summary>
-        public static BindableProperty<bool> SimpleKnifeUnlocked = new BindableProperty<bool>(false);
-        /// <summary>
-        /// 飞刀的数量
-        /// </summary>
-        public static BindableProperty<int> SimpleKnifeCount = new BindableProperty<int>(AbilityConfig.InitSimpleKnifeCount);
-        /// <summary>
-        /// 飞刀可穿透的敌人数量
-        /// </summary>
-        public static BindableProperty<int> SimpleKnifeAttackCount = new BindableProperty<int>(AbilityConfig.InitSimpleKnifeAttackCount);
-        /// <summary>
-        /// 飞刀的伤害值
-        /// </summary>
-        public static BindableProperty<float> SimpleKnifeDamage = new BindableProperty<float>(AbilityConfig.InitSimpleKnifeDamage);
-        /// <summary>
-        /// 飞刀的间隔时间
-        /// </summary>
-        public static BindableProperty<float> SimpleKnifeCD = new BindableProperty<float>(AbilityConfig.InitSimpleKnifeCD);
-        
-        /// <summary>
-        /// 守卫剑是否解锁
-        /// </summary>
-        public static BindableProperty<bool> RotateSwordUnlocked = new BindableProperty<bool>(false);
-        /// <summary>
-        /// 守卫剑的数量
-        /// </summary>
-        public static BindableProperty<int> RotateSwordCount = new BindableProperty<int>(AbilityConfig.InitRotateSwordCount);
-        /// <summary>
-        /// 守卫剑的伤害值
-        /// </summary>
-        public static BindableProperty<float> RotateSwordDamage = new BindableProperty<float>(AbilityConfig.InitRotateSwordDamage);
-        /// <summary>
-        /// 守卫剑的速度
-        /// </summary>
-        public static BindableProperty<float> RotateSwordSpeed = new BindableProperty<float>(AbilityConfig.InitRotateSwordSpeed);
-        /// <summary>
-        /// 守卫剑的范围
-        /// </summary>
-        public static BindableProperty<float> RotateSwordRange = new BindableProperty<float>(AbilityConfig.InitRotateSwordRange);
-        
-        /// <summary>
-        /// 篮球是否解锁
-        /// </summary>
-        public static BindableProperty<bool> BasketBallUnlocked = new BindableProperty<bool>(false);
-        /// <summary>
-        /// 篮球的数量
-        /// </summary>
-        public static BindableProperty<int> BasketBallCount = new BindableProperty<int>(AbilityConfig.InitBasketBallCount);
-        /// <summary>
-        /// 篮球的伤害值
-        /// </summary>
-        public static BindableProperty<float> BasketBallDamage = new BindableProperty<float>(AbilityConfig.InitBasketBallDamage);
-        /// <summary>
-        /// 篮球的速度
-        /// </summary>
-        public static BindableProperty<float> BasktetBallSpeed = new BindableProperty<float>(AbilityConfig.InitBasketBallSpeed);
+        public static BindableProperty<int> Hp = new BindableProperty<int>(5); // 血量
+        public static BindableProperty<int> MaxHp = new BindableProperty<int>(5); // 最大血量
+        public static BindableProperty<int> Exp = new BindableProperty<int>(0); // 经验值
+        public static BindableProperty<int> Level = new BindableProperty<int>(1); // 等级
+        public static BindableProperty<int> Gold = new BindableProperty<int>(0); // 金币数
+        public static BindableProperty<float> Timer = new BindableProperty<float>(0f); // 计时器
 
-        /// <summary>
-        /// 炸弹是否解锁
-        /// </summary>
-        public static BindableProperty<bool> BombUnlocked = new BindableProperty<bool>(false);
-        /// <summary>
-        /// 炸弹的掉落概率
-        /// </summary>
-        public static BindableProperty<int> BombDropRate = new BindableProperty<int>(AbilityConfig.InitBombDropRate);
-        /// <summary>
-        /// 炸弹的伤害值
-        /// </summary>
-        public static BindableProperty<float> BombDamage = new BindableProperty<float>(AbilityConfig.InitBombDamage);
+        #region 能力相关
+        public static BindableProperty<bool> SimpleSwordUnlocked = new BindableProperty<bool>(false); // 简单剑是否解锁
+        public static BindableProperty<int> SimpleSwordCount = new BindableProperty<int>(AbilityConfig.InitSimpleSwordCount); // 简单剑的数量
+        public static BindableProperty<float> SimpleSwordDamage = new BindableProperty<float>(AbilityConfig.InitSimpleSwordDamage); // 简单剑的伤害值
+        public static BindableProperty<float> SimpleSwordCD = new BindableProperty<float>(AbilityConfig.InitSimpleSwordCD); // 简单剑的间隔时间
+        public static BindableProperty<float> SimpleSwordRange = new BindableProperty<float>(AbilityConfig.InitSimpleSwordRange); // 简单剑的攻击范围
         
-        /// <summary>
-        /// 暴击率
-        /// </summary>
-        public static BindableProperty<int> CriticalRate = new BindableProperty<int>(AbilityConfig.InitCriticalRate);
-        /// <summary>
-        /// 额外伤害率
-        /// </summary>
-        public static BindableProperty<float> DamageRate = new BindableProperty<float>(1f);
-        /// <summary>
-        /// 额外飞射物
-        /// </summary>
-        public static BindableProperty<int> AdditionalFlyCount = new BindableProperty<int>(0);
+        public static BindableProperty<bool> SimpleKnifeUnlocked = new BindableProperty<bool>(false); // 飞刀是否解锁
+        public static BindableProperty<int> SimpleKnifeCount = new BindableProperty<int>(AbilityConfig.InitSimpleKnifeCount); // 飞刀的数量
+        public static BindableProperty<int> SimpleKnifeAttackCount = new BindableProperty<int>(AbilityConfig.InitSimpleKnifeAttackCount); // 飞刀可穿透的敌人数量
+        public static BindableProperty<float> SimpleKnifeDamage = new BindableProperty<float>(AbilityConfig.InitSimpleKnifeDamage); // 飞刀的伤害值
+        public static BindableProperty<float> SimpleKnifeCD = new BindableProperty<float>(AbilityConfig.InitSimpleKnifeCD); // 飞刀的间隔时间
         
-        /// <summary>
-        /// 额外移速
-        /// </summary>
-        public static BindableProperty<float> SpeedRate = new BindableProperty<float>(1f);
-        /// <summary>
-        /// 拾取范围
-        /// </summary>
-        public static BindableProperty<float> PickUpAreaRange = new BindableProperty<float>(1f);
-        /// <summary>
-        /// 额外的经验掉落概率
-        /// </summary>
-        public static BindableProperty<int> AdditionalExpRate = new BindableProperty<int>(0);
+        public static BindableProperty<bool> RotateSwordUnlocked = new BindableProperty<bool>(false); // 守卫剑是否解锁
+        public static BindableProperty<int> RotateSwordCount = new BindableProperty<int>(AbilityConfig.InitRotateSwordCount); // 守卫剑的数量
+        public static BindableProperty<float> RotateSwordDamage = new BindableProperty<float>(AbilityConfig.InitRotateSwordDamage); // 守卫剑的伤害值
+        public static BindableProperty<float> RotateSwordSpeed = new BindableProperty<float>(AbilityConfig.InitRotateSwordSpeed); // 守卫剑的速度
+        public static BindableProperty<float> RotateSwordRange = new BindableProperty<float>(AbilityConfig.InitRotateSwordRange); // 守卫剑的范围
         
-        /// <summary>
-        /// 敌人是否生成完毕
-        /// </summary>
-        public static BindableProperty<bool> IsEnemySpawnOver = new BindableProperty<bool>(false);
+        public static BindableProperty<bool> BasketBallUnlocked = new BindableProperty<bool>(false); // 篮球是否解锁
+        public static BindableProperty<int> BasketBallCount = new BindableProperty<int>(AbilityConfig.InitBasketBallCount); // 篮球的数量
+        public static BindableProperty<float> BasketBallDamage = new BindableProperty<float>(AbilityConfig.InitBasketBallDamage); // 篮球的伤害值
+        public static BindableProperty<float> BasktetBallSpeed = new BindableProperty<float>(AbilityConfig.InitBasketBallSpeed); // 篮球的速度
+
+        public static BindableProperty<bool> BombUnlocked = new BindableProperty<bool>(false); // 炸弹是否解锁
+        public static BindableProperty<int> BombDropRate = new BindableProperty<int>(AbilityConfig.InitBombDropRate); // 炸弹的掉落概率
+        public static BindableProperty<float> BombDamage = new BindableProperty<float>(AbilityConfig.InitBombDamage); // 炸弹的伤害值
         
-        /// <summary>
-        /// 经验球掉落概率
-        /// </summary>
-        public static BindableProperty<int> ExpBallDropRate = new BindableProperty<int>(60);
-        /// <summary>
-        /// 金币掉落概率
-        /// </summary>
-        public static BindableProperty<int> GoldDropRate = new BindableProperty<int>(20);
-        /// <summary>
-        /// 回血道具掉落概率
-        /// </summary>
-        public static BindableProperty<int> HpItemDropRate = new BindableProperty<int>(2);
-        /// <summary>
-        /// 获取当前所有经验的道具的掉落概率
-        /// </summary>
-        public static BindableProperty<int> GetAllExpDropRate = new BindableProperty<int>(8);
+        public static BindableProperty<int> CriticalRate = new BindableProperty<int>(AbilityConfig.InitCriticalRate); // 暴击率
+        public static BindableProperty<float> DamageRate = new BindableProperty<float>(1f); // 额外伤害率
+        public static BindableProperty<int> AdditionalFlyCount = new BindableProperty<int>(0); // 额外飞射物
+        
+        public static BindableProperty<float> SpeedRate = new BindableProperty<float>(1f); // 额外移速
+        public static BindableProperty<float> PickUpAreaRange = new BindableProperty<float>(1f); // 拾取范围
+        public static BindableProperty<int> AdditionalExpRate = new BindableProperty<int>(0); // 额外的经验掉落概率
+        
+        public static BindableProperty<bool> SuperSimpleSword = new BindableProperty<bool>(false); // 超级简单剑是否合成
+        public static BindableProperty<bool> SuperKnife = new BindableProperty<bool>(false); // 超级飞刀是否合成
+        public static BindableProperty<bool> SuperRotateSword = new BindableProperty<bool>(false); // 超级守卫剑是否合成
+        public static BindableProperty<bool> SuperBasketBall = new BindableProperty<bool>(false); // 超级篮球是否合成
+        public static BindableProperty<bool> SuperBomb = new BindableProperty<bool>(false); // 超级炸弹是否合成
+        #endregion
+        
+        public static BindableProperty<bool> IsEnemySpawnOver = new BindableProperty<bool>(false); // 敌人是否生成完毕
+        
+        public static BindableProperty<int> ExpBallDropRate = new BindableProperty<int>(60); // 经验球掉落概率
+        public static BindableProperty<int> GoldDropRate = new BindableProperty<int>(20); // 金币掉落概率
+        public static BindableProperty<int> HpItemDropRate = new BindableProperty<int>(2); // 回血道具掉落概率
+        public static BindableProperty<int> GetAllExpDropRate = new BindableProperty<int>(8); // 获取当前所有经验的道具的掉落概率
         #endregion
         
         protected override void Init()
@@ -234,6 +125,12 @@ namespace Survivor
             SpeedRate.Value = 1f;
             PickUpAreaRange.Value = 1f;
             AdditionalExpRate.Value = 0;
+
+            SuperSimpleSword.Value = false;
+            SuperKnife.Value = false;
+            SuperRotateSword.Value = false;
+            SuperBasketBall.Value = false;
+            SuperBomb.Value = false;
             
             IsEnemySpawnOver.Value = false;
             EnemySpawner.enemyCount.Value = 0;
