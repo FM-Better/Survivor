@@ -11,6 +11,8 @@ namespace Survivor
 {
 	public partial class TreasurePanel : UIElement, IController
 	{
+		private ResLoader mLoader = ResLoader.Allocate();
+		
 		private void Awake()
 		{
 				BtnSure.onClick.AddListener(() =>
@@ -28,13 +30,13 @@ namespace Survivor
 			{
 				if (item.CurrentLevel.Value >= 7)
 				{
-					var isInCombine = expUpgradeSystem.Combines.ContainsKey(item.Key);
+					var isInCombine = expUpgradeSystem.PairedKeys.ContainsKey(item.Key);
 					if (isInCombine)
 					{ 
 						var superIsUnlocked = expUpgradeSystem.keyToSuperIsAlive[item.Key].Value;
 						if (!superIsUnlocked)
 						{
-							var otherItemKey = expUpgradeSystem.Combines[item.Key];
+							var otherItemKey = expUpgradeSystem.PairedKeys[item.Key];
 							var otherIsUnlocked = expUpgradeSystem.keyToItems[otherItemKey].CurrentLevel.Value > 0;
 							if (otherIsUnlocked)
 							{
@@ -50,11 +52,14 @@ namespace Survivor
 			if (canCombineItems.Any())
 			{
 				var item = canCombineItems.ToList().GetRandomItem();
-				TxtContent.text = $"<b>合成后的{item.Key}</b>\n";
 				while (!item.UpgradeFinished)
 				{
 					item.Upgrade();
 				}
+
+				ImgIcon.sprite = mLoader.LoadSync<Sprite>(item.PairedIconName);
+				ImgIcon.Show();
+				TxtContent.text = $"<b>{item.PairedName}</b>\n{item.PairedDescription}";
 				
 				expUpgradeSystem.keyToSuperIsAlive[item.Key].Value = true;
 			}
@@ -65,6 +70,8 @@ namespace Survivor
 				if (items.Any())
 				{
 					var item = items.ToList().GetRandomItem();
+					ImgIcon.sprite = mLoader.LoadSync<Sprite>(item.IconName);
+					ImgIcon.Show();
 					TxtContent.text = item.Description;
 					item.Upgrade();
 				}
@@ -77,14 +84,22 @@ namespace Survivor
 							Global.Hp.Value++;
 							TxtContent.text = "恢复1点血量";
 							AudioKit.PlaySound(Sound.HPITEM);
+							ImgIcon.Hide();
 							return;
 						}	
 					}
 				
 					TxtContent.text = "增加50金币";
 					Global.Gold.Value += 50;
+					ImgIcon.Hide();
 				}	
 			}
+		}
+
+		protected override void OnBeforeDestroy()
+		{
+			mLoader.Recycle2Cache();
+			mLoader = null;
 		}
 
 		public IArchitecture GetArchitecture()

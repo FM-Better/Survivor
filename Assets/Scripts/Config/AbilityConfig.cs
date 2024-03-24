@@ -28,7 +28,21 @@
         public const int InitCriticalRate = 5;
         #endregion
 
-        #region IconName相关
+        #region Key
+        public const string SpeedKey = "Speed";
+        public const string SimpleSwordKey = "SimpleSword";
+        public const string SimpleKnifeKey = "SimpleKnife";
+        public const string RotateSwordKey = "RotateSword";
+        public const string BasketballKey = "BasketBall";
+        public const string BombKey = "Bomb";
+        public const string CriticalKey = "Critical";
+        public const string DamageKey = "Damage";
+        public const string FlyKey = "Fly";
+        public const string PickUpAreaKey = "PickUpArea";
+        public const string ExpKey = "Exp";
+        #endregion
+        
+        #region IconName
         public const string SuperBasketballIconName = "paired_ball_icon";
         public const string SuperBombIconName = "paired_bomb_icon";
         public const string SuperRotateSwordIconName = "paired_rotate_sword_icon";

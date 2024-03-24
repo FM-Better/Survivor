@@ -11,20 +11,22 @@ namespace Survivor
 {
 	public partial class ExpUpgradePanel : UIElement, IController
 	{
+		private ResLoader loader;
+		
 		private void Awake()
 		{
-			ResLoader loader = ResLoader.Allocate();
+			loader = ResLoader.Allocate();
 			var expUpgradeSystem = this.GetSystem<ExpUpgradeSystem>();
 			List<ExpUpgradeItem> expUpgradeItems = expUpgradeSystem.Items;
 			
 			foreach (var item in expUpgradeItems)
 			{
+				var itemCache = item;
+				
 				BtnExpUpgradeItemTemplate.InstantiateWithParent(ItemRoot)
 					.Self((self) =>
 					{
-						var itemCache = item;
-						var selfCache = self;
-						
+						var selfCache = self;		
 						selfCache.onClick.AddListener(() =>
 						{
 							itemCache.Upgrade();
@@ -37,23 +39,23 @@ namespace Survivor
 						{
 							if (visible)
 							{
-								selfCache.Show();
 								selfCache.transform.Find("ImgIcon").GetComponent<Image>().sprite =
 									loader.LoadSync<Sprite>(itemCache.IconName);
+								selfCache.Show();
 								
 								var txtOtherKey = selfCache.transform.Find("TxtOtherKey");
-								if (expUpgradeSystem.Combines.TryGetValue(itemCache.Key, out var otherKey))
+								if (expUpgradeSystem.PairedKeys.TryGetValue(itemCache.Key, out var otherKey))
 								{
-									var otherItem = expUpgradeSystem.keyToItems[otherKey];
-									if (otherItem.CurrentLevel.Value > 0 && itemCache.CurrentLevel.Value == 0) // 如果遇到现有技能的未解锁的配对技能
+									var pairedItem = expUpgradeSystem.keyToItems[otherKey];
+									if (pairedItem.CurrentLevel.Value > 0 && itemCache.CurrentLevel.Value == 0) // 如果遇到现有技能的未解锁的配对技能
 									{
-										txtOtherKey.Show();
 										txtOtherKey.Find("ImgOtherIcon").GetComponent<Image>().sprite =
-											loader.LoadSync<Sprite>(otherItem.IconName);
+											loader.LoadSync<Sprite>(pairedItem.IconName);
+										txtOtherKey.Show();
 									}
 									else
 									{
-										selfCache.transform.Find("TxtOtherKey").Hide();	
+										selfCache.transform.Find("TxtOtherKey").Hide();
 									}
 								}
 								else
@@ -74,6 +76,12 @@ namespace Survivor
 						}).UnRegisterWhenGameObjectDestroyed(gameObject);
 					});
 			}	
+		}
+
+		protected override void OnBeforeDestroy()
+		{
+			loader.Recycle2Cache();
+			loader = null;
 		}
 
 		public IArchitecture GetArchitecture()

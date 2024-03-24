@@ -13,6 +13,11 @@ namespace Survivor
         public BindableProperty<int> CurrentLevel = new BindableProperty<int>(0);
         public bool UpgradeFinished { get; set; } = false;
         public BindableProperty<bool> Visible = new BindableProperty<bool>(false);
+        
+        public string PairedName { get; private set; }
+        public string PairedIconName { get; private set; }
+        public string PairedDescription { get; private set; }
+        
         private Func<int, string> mDescriptionFunctory;
         
         private Action<ExpUpgradeItem, int> mOnUpgrade { get; set; }
@@ -58,6 +63,24 @@ namespace Survivor
         public ExpUpgradeItem WithMaxLevel(int maxLevel)
         {
             MaxLevel = maxLevel;
+            return this;
+        }
+        
+        public ExpUpgradeItem WithPairedName(string pairedName)
+        {
+            PairedName = pairedName;
+            return this;
+        }
+        
+        public ExpUpgradeItem WithPairedIconName(string pairedIconName)
+        {
+            PairedIconName = pairedIconName;
+            return this;
+        }
+        
+        public ExpUpgradeItem WithPairedDescription(string pairedDescription)
+        {
+            PairedDescription = pairedDescription;
             return this;
         }
         #endregion

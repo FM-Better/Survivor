@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
+using QAssetBundle;
 using QFramework;
+using UnityEngine.Serialization;
 
 namespace Survivor
 {
@@ -11,29 +13,29 @@ namespace Survivor
         public static EasyEvent OnExpUpgradeSystemChanged = new EasyEvent();
 
         // 记录配套的能力组合
-        public Dictionary<string, string> Combines = new Dictionary<string, string>()
+        public Dictionary<string, string> PairedKeys = new Dictionary<string, string>()
         {
-            {"SimpleSword", "CriticalRate"},
-            {"Bomb", "DamageRate"},
-            {"SimpleKnife", "AdditionalFlyCount"},
-            {"BasketBall", "SpeedRate"},
-            {"RotateSword", "AdditionalExp"},
+            {AbilityConfig.SimpleSwordKey, AbilityConfig.CriticalKey},
+            {AbilityConfig.BombKey, AbilityConfig.DamageKey},
+            {AbilityConfig.SimpleKnifeKey, AbilityConfig.FlyKey},
+            {AbilityConfig.BasketballKey, AbilityConfig.SpeedKey},
+            {AbilityConfig.RotateSwordKey, AbilityConfig.ExpKey},
             
-            {"CriticalRate", "SimpleSword"},
-            {"DamageRate", "Bomb"},
-            {"AdditionalFlyCount", "SimpleKnife"},
-            {"SpeedRate", "BasketBall"},
-            {"AdditionalExp", "RotateSword"},
+            {AbilityConfig.CriticalKey, AbilityConfig.SimpleSwordKey},
+            {AbilityConfig.DamageKey, AbilityConfig.BombKey},
+            {AbilityConfig.FlyKey, AbilityConfig.SimpleKnifeKey},
+            {AbilityConfig.SpeedKey, AbilityConfig.BasketballKey},
+            {AbilityConfig.ExpKey, AbilityConfig.RotateSwordKey},
         };
         
         // 记录每个key对应的超级武器是否合成
         public Dictionary<string, BindableProperty<bool>> keyToSuperIsAlive = new Dictionary<string, BindableProperty<bool>>()
         {
-            {"SimpleSword", Global.SuperSimpleSword},
-            {"Bomb", Global.SuperBomb},
-            {"SimpleKnife", Global.SuperKnife},
-            {"BasketBall", Global.SuperBasketBall},
-            {"RotateSword", Global.SuperRotateSword},
+            {AbilityConfig.SimpleSwordKey, Global.SuperSimpleSword},
+            {AbilityConfig.BombKey, Global.SuperBomb},
+            {AbilityConfig.SimpleKnifeKey, Global.SuperKnife},
+            {AbilityConfig.BasketballKey, Global.SuperBasketBall},
+            {AbilityConfig.RotateSwordKey, Global.SuperRotateSword},
         };
         
         // 记录每个key对应的item
@@ -61,8 +63,11 @@ namespace Survivor
             keyToItems.Clear();
             
             Add(new ExpUpgradeItem(true)
-                    .WithKey("SimpleSword")
+                    .WithKey(AbilityConfig.SimpleSwordKey)
                     .WithIconName(AbilityConfig.SimpleSwordIconName)
+                    .WithPairedName("合成后的剑")
+                    .WithPairedIconName(Icon.PAIRED_SIMPLE_SWORD_ICON)
+                    .WithPairedDescription("攻击力翻倍 攻击范围翻倍")
                     .WithMaxLevel(10)
                     .WithDescription(lv =>
                     {
@@ -128,8 +133,11 @@ namespace Survivor
                     }));
             
             Add(new ExpUpgradeItem(true)
-                    .WithKey("SimpleKnife")
+                    .WithKey(AbilityConfig.SimpleKnifeKey)
                     .WithIconName(AbilityConfig.SimpleKnifeIconName)
+                    .WithPairedName("合成后的飞刀")
+                    .WithPairedIconName(Icon.PAIRED_SIMPLE_KNIFE_ICON)
+                    .WithPairedDescription("攻击力翻倍")
                     .WithMaxLevel(10)
                     .WithDescription(lv =>
                     {
@@ -198,8 +206,11 @@ namespace Survivor
                     }));
             
             Add(new ExpUpgradeItem(true)
-                    .WithKey("RotateSword")
+                    .WithKey(AbilityConfig.RotateSwordKey)
                     .WithIconName(AbilityConfig.RotateSwordIconName)
+                    .WithPairedName("合成后的守卫剑")
+                    .WithPairedIconName(Icon.PAIRED_ROTATE_SWORD_ICON)
+                    .WithPairedDescription("攻击力翻倍 旋转速度翻倍")
                     .WithMaxLevel(10)
                     .WithDescription(lv =>
                     {
@@ -264,8 +275,11 @@ namespace Survivor
                     }));
             
             Add(new ExpUpgradeItem(true)
-                    .WithKey("BasketBall")
+                    .WithKey(AbilityConfig.BasketballKey)
                     .WithIconName(AbilityConfig.BasketballIconName)
+                    .WithPairedName("合成后的篮球")
+                    .WithPairedIconName(Icon.PAIRED_BALL_ICON)
+                    .WithPairedDescription("攻击力翻倍 体积翻倍")
                     .WithMaxLevel(10)
                     .WithDescription(lv =>
                     {
@@ -322,8 +336,11 @@ namespace Survivor
                     }));
             
             Add(new ExpUpgradeItem(false)
-                    .WithKey("Bomb")
+                    .WithKey(AbilityConfig.BombKey)
                     .WithIconName(AbilityConfig.BombIconName)
+                    .WithPairedName("合成后的炸弹")
+                    .WithPairedIconName(Icon.PAIRED_BOMB_ICON)
+                    .WithPairedDescription("每隔15秒爆炸一次")
                     .WithMaxLevel(10)
                     .WithDescription(lv =>
                     {
@@ -389,7 +406,7 @@ namespace Survivor
                     }));
             
             Add(new ExpUpgradeItem(false)
-                    .WithKey("CriticalRate")
+                    .WithKey(AbilityConfig.CriticalKey)
                     .WithIconName(AbilityConfig.CriticalIconName)
                     .WithMaxLevel(5)
                     .WithDescription(lv =>
@@ -427,7 +444,7 @@ namespace Survivor
                     }));
             
             Add(new ExpUpgradeItem(false)
-                .WithKey("DamageRate")
+                .WithKey(AbilityConfig.DamageKey)
                 .WithIconName(AbilityConfig.DamageIconName)
                 .WithMaxLevel(5)
                 .WithDescription(lv =>
@@ -465,7 +482,7 @@ namespace Survivor
                 }));
             
             Add(new ExpUpgradeItem(false)
-                .WithKey("AdditionalFlyCount")
+                .WithKey(AbilityConfig.FlyKey)
                 .WithIconName(AbilityConfig.FlyIconName)
                 .WithMaxLevel(3)
                 .WithDescription(lv =>
@@ -495,7 +512,7 @@ namespace Survivor
                 }));
             
             Add(new ExpUpgradeItem(false)
-                .WithKey("SpeedRate")
+                .WithKey(AbilityConfig.SpeedKey)
                 .WithIconName(AbilityConfig.SpeedIconName)
                 .WithMaxLevel(5)
                 .WithDescription(lv =>
@@ -533,7 +550,7 @@ namespace Survivor
                 }));
             
             Add(new ExpUpgradeItem(false)
-                .WithKey("PickUpAreaRange")
+                .WithKey(AbilityConfig.PickUpAreaKey)
                 .WithIconName(AbilityConfig.PickUpAreaIconName)
                 .WithMaxLevel(3)
                 .WithDescription(lv =>
@@ -563,7 +580,7 @@ namespace Survivor
                 }));
             
             Add(new ExpUpgradeItem(false)
-                .WithKey("AdditionalExp")
+                .WithKey(AbilityConfig.ExpKey)
                 .WithIconName(AbilityConfig.ExpIconName)
                 .WithMaxLevel(5)
                 .WithDescription(lv =>
