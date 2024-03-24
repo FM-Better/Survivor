@@ -11,6 +11,29 @@
 namespace QAssetBundle
 {
     
+    public class Icon
+    {
+        public const string BundleName = "icon";
+        public const string ACHIEVEMENT = "achievement";
+        public const string ACHIEVEMENT_ALL_ICON = "achievement_all_icon";
+        public const string ACHIEVEMENT_TIME_ICON = "achievement_time_icon";
+        public const string BALL_ICON = "ball_icon";
+        public const string BOMB_ICON = "bomb_icon";
+        public const string COLLECTABLE_ICON = "collectable_icon";
+        public const string CRITICAL_ICON = "critical_icon";
+        public const string DAMAGE_ICON = "damage_icon";
+        public const string EXP_ICON = "exp_icon";
+        public const string FLY_ICON = "fly_icon";
+        public const string MOVEMENT_ICON = "movement_icon";
+        public const string PAIRED_BALL_ICON = "paired_ball_icon";
+        public const string PAIRED_BOMB_ICON = "paired_bomb_icon";
+        public const string PAIRED_ROTATE_SWORD_ICON = "paired_rotate_sword_icon";
+        public const string PAIRED_SIMPLE_KNIFE_ICON = "paired_simple_knife_icon";
+        public const string PAIRED_SIMPLE_SWORD_ICON = "paired_simple_sword_icon";
+        public const string ROTATE_SWORD_ICON = "rotate_sword_icon";
+        public const string SIMPLE_KNIFE_ICON = "simple_knife_icon";
+        public const string SIMPLE_SWORD_ICON = "simple_sword_icon";
+    }
     public class Sound
     {
         public const string BundleName = "sound";

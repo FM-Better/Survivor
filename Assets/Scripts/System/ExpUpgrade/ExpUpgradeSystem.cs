@@ -62,6 +62,7 @@ namespace Survivor
             
             Add(new ExpUpgradeItem(true)
                     .WithKey("SimpleSword")
+                    .WithIconName(AbilityConfig.SimpleSwordIconName)
                     .WithMaxLevel(10)
                     .WithDescription(lv =>
                     {
@@ -128,6 +129,7 @@ namespace Survivor
             
             Add(new ExpUpgradeItem(true)
                     .WithKey("SimpleKnife")
+                    .WithIconName(AbilityConfig.SimpleKnifeIconName)
                     .WithMaxLevel(10)
                     .WithDescription(lv =>
                     {
@@ -197,6 +199,7 @@ namespace Survivor
             
             Add(new ExpUpgradeItem(true)
                     .WithKey("RotateSword")
+                    .WithIconName(AbilityConfig.RotateSwordIconName)
                     .WithMaxLevel(10)
                     .WithDescription(lv =>
                     {
@@ -262,6 +265,7 @@ namespace Survivor
             
             Add(new ExpUpgradeItem(true)
                     .WithKey("BasketBall")
+                    .WithIconName(AbilityConfig.BasketballIconName)
                     .WithMaxLevel(10)
                     .WithDescription(lv =>
                     {
@@ -319,6 +323,7 @@ namespace Survivor
             
             Add(new ExpUpgradeItem(false)
                     .WithKey("Bomb")
+                    .WithIconName(AbilityConfig.BombIconName)
                     .WithMaxLevel(10)
                     .WithDescription(lv =>
                     {
@@ -385,6 +390,7 @@ namespace Survivor
             
             Add(new ExpUpgradeItem(false)
                     .WithKey("CriticalRate")
+                    .WithIconName(AbilityConfig.CriticalIconName)
                     .WithMaxLevel(5)
                     .WithDescription(lv =>
                     {
@@ -422,6 +428,7 @@ namespace Survivor
             
             Add(new ExpUpgradeItem(false)
                 .WithKey("DamageRate")
+                .WithIconName(AbilityConfig.DamageIconName)
                 .WithMaxLevel(5)
                 .WithDescription(lv =>
                 {
@@ -459,6 +466,7 @@ namespace Survivor
             
             Add(new ExpUpgradeItem(false)
                 .WithKey("AdditionalFlyCount")
+                .WithIconName(AbilityConfig.FlyIconName)
                 .WithMaxLevel(3)
                 .WithDescription(lv =>
                 {
@@ -488,6 +496,7 @@ namespace Survivor
             
             Add(new ExpUpgradeItem(false)
                 .WithKey("SpeedRate")
+                .WithIconName(AbilityConfig.SpeedIconName)
                 .WithMaxLevel(5)
                 .WithDescription(lv =>
                 {
@@ -525,6 +534,7 @@ namespace Survivor
             
             Add(new ExpUpgradeItem(false)
                 .WithKey("PickUpAreaRange")
+                .WithIconName(AbilityConfig.PickUpAreaIconName)
                 .WithMaxLevel(3)
                 .WithDescription(lv =>
                 {
@@ -554,6 +564,7 @@ namespace Survivor
             
             Add(new ExpUpgradeItem(false)
                 .WithKey("AdditionalExp")
+                .WithIconName(AbilityConfig.ExpIconName)
                 .WithMaxLevel(5)
                 .WithDescription(lv =>
                 {

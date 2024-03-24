@@ -7,6 +7,7 @@ namespace Survivor
     {
         public bool IsWeapon { get; private set; }
         public string Key { get; private set; }
+        public string IconName { get; private set; }
         public string Description => mDescriptionFunctory(CurrentLevel.Value + 1);
         public int MaxLevel { get; private set; }
         public BindableProperty<int> CurrentLevel = new BindableProperty<int>(0);
@@ -36,6 +37,12 @@ namespace Survivor
             return this;
         }
 
+        public ExpUpgradeItem WithIconName(string iconName)
+        {
+            IconName = iconName;
+            return this;
+        }
+        
         public ExpUpgradeItem WithDescription(Func<int, string> descriptionFunctory)
         {
             mDescriptionFunctory = descriptionFunctory;
