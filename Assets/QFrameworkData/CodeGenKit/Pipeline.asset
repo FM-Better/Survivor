@@ -19,15 +19,22 @@ MonoBehaviour:
     From: 0
     NameToFullName: []
     BindInfos:
-    - TypeName: UnityEngine.Tilemaps.Tilemap
-      PathToRoot: Tilemap
-      MemberName: Tilemap
-    ScriptsFolder: Assets/Scripts/Game
-    ClassName: Map
+    - TypeName: UnityEngine.Animator
+      PathToRoot: Sprite
+      MemberName: Sprite
+    - TypeName: CircleCollider2D
+      PathToRoot: HurtBox
+      MemberName: HurtBox
+    - TypeName: UnityEngine.UI.Image
+      PathToRoot: Canvas/HpValue
+      MemberName: HpValue
+    ScriptsFolder: Assets\Scripts\Game\Player
+    ClassName: Player
     Namespace: Survivor
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace Survivor\r\n{\r\n\tpublic
-      partial class Map : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class Player : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:3efb6da6-e92d-4714-98ae-ba9035968047\r\nusing UnityEngine;\r\n\r\nnamespace
-      Survivor\r\n{\r\n\tpublic partial class Map\r\n\t{\r\n\r\n\t\tpublic UnityEngine.Tilemaps.Tilemap
-      Tilemap;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:3bf151a6-da5d-4725-b3fc-5b9da8d7f03f\r\nusing UnityEngine;\r\n\r\nnamespace
+      Survivor\r\n{\r\n\tpublic partial class Player\r\n\t{\r\n\r\n\t\tpublic UnityEngine.Animator
+      Sprite;\r\n\r\n\t\tpublic CircleCollider2D HurtBox;\r\n\r\n\t\tpublic UnityEngine.UI.Image
+      HpValue;\r\n\r\n\t\tpublic UnityEngine.Rigidbody2D selfRigidbody;\r\n\r\n\t}\r\n}\r\n"

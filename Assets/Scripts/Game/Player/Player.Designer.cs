@@ -1,4 +1,4 @@
-// Generate Id:0707ce4d-4686-42dd-9edd-ab09ed75033c
+// Generate Id:3bf151a6-da5d-4725-b3fc-5b9da8d7f03f
 using UnityEngine;
 
 namespace Survivor
@@ -6,7 +6,7 @@ namespace Survivor
 	public partial class Player
 	{
 
-		public SpriteRenderer Sprite;
+		public UnityEngine.Animator Sprite;
 
 		public CircleCollider2D HurtBox;
 
