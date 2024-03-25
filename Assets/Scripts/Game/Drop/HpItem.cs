@@ -4,7 +4,7 @@ using QFramework;
 
 namespace Survivor
 {
-	public partial class HpItem : GamePlayObject
+	public partial class HpItem : PickUpObject
 	{
 		protected override Collider2D collider => selfCollider;
 		
@@ -14,11 +14,16 @@ namespace Survivor
 			{
 				if (Global.Hp.Value < Global.MaxHp.Value)
 				{
-					AudioKit.PlaySound(Sound.HPITEM);
-					Global.Hp.Value++;
-					this.DestroyGameObjGracefully();	
+					StartPickUpAnim();
 				}
 			}
+		}
+
+		protected override void Excute()
+		{
+			AudioKit.PlaySound(Sound.HPITEM);
+			Global.Hp.Value++;
+			this.DestroyGameObjGracefully();
 		}
 	}
 }

@@ -4,7 +4,7 @@ using QFramework;
 
 namespace Survivor
 {
-	public partial class ExpBall : GamePlayObject
+	public partial class ExpBall : PickUpObject
 	{
 		protected override Collider2D collider => selfCollider;
 		
@@ -12,10 +12,15 @@ namespace Survivor
 		{
 			if (other.GetComponent<PickUpArea>())
 			{
-				AudioKit.PlaySound(Sound.EXP);
-				Global.Exp.Value++;
-				this.DestroyGameObjGracefully();
+				StartPickUpAnim();
 			}
+		}
+
+		protected override void Excute()
+		{
+			AudioKit.PlaySound(Sound.EXP);
+			Global.Exp.Value++;
+			this.DestroyGameObjGracefully();
 		}
 	}
 }

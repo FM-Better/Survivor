@@ -28,7 +28,7 @@ namespace Survivor
         {
             CurrentLevel.Value++;
             mOnUpgrade?.Invoke(this, CurrentLevel.Value);
-            if (CurrentLevel.Value > 10)
+            if (CurrentLevel.Value >= 10)
             {
                 UpgradeFinished = true;    
             }

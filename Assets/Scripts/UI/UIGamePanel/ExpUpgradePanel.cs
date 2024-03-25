@@ -11,11 +11,10 @@ namespace Survivor
 {
 	public partial class ExpUpgradePanel : UIElement, IController
 	{
-		private ResLoader loader;
+		private ResLoader loader = ResLoader.Allocate();
 		
 		private void Awake()
 		{
-			loader = ResLoader.Allocate();
 			var expUpgradeSystem = this.GetSystem<ExpUpgradeSystem>();
 			List<ExpUpgradeItem> expUpgradeItems = expUpgradeSystem.Items;
 			
@@ -50,7 +49,7 @@ namespace Survivor
 									if (pairedItem.CurrentLevel.Value > 0 && itemCache.CurrentLevel.Value == 0) // 如果遇到现有技能的未解锁的配对技能
 									{
 										txtOtherKey.Find("ImgOtherIcon").GetComponent<Image>().sprite =
-											loader.LoadSync<Sprite>(pairedItem.IconName);
+											loader.LoadSync<Sprite>(pairedItem.IconName); // Todo: 打包图集优化
 										txtOtherKey.Show();
 									}
 									else

@@ -18,14 +18,29 @@ namespace Survivor
 				var expBalls = FindObjectsByType<ExpBall>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
 				foreach (var expBall in expBalls)
 				{
+					var expCache = expBall;
 					ActionKit.OnUpdate.Register(() =>
 					{
 						if (Player.Default)
 						{
-							var direction = expBall.NormalizedDirection2DTo(Player.Default);
-							expBall.transform.Translate(direction * (moveSpeed * Time.deltaTime));	
+							var direction = expCache.NormalizedDirection2DTo(Player.Default);
+							expCache.transform.Translate(direction * (moveSpeed * Time.deltaTime));	
 						}
-					}).UnRegisterWhenGameObjectDestroyed(expBall);
+					}).UnRegisterWhenGameObjectDestroyed(expCache);
+				}
+				
+				var golds = FindObjectsByType<Gold>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+				foreach (var gold in golds)
+				{
+					var goldCache = gold;
+					ActionKit.OnUpdate.Register(() =>
+					{
+						if (Player.Default)
+						{
+							var direction = goldCache.NormalizedDirection2DTo(Player.Default);
+							goldCache.transform.Translate(direction * (moveSpeed * Time.deltaTime));	
+						}
+					}).UnRegisterWhenGameObjectDestroyed(goldCache);
 				}
 				
 				AudioKit.PlaySound(Sound.GETALLEXP);
