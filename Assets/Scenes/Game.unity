@@ -430,7 +430,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &67890601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10539,11 +10539,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2024750781610213809, guid: a174e1b1865908f42a52f951894a1346, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.15
+      value: 2.128
       objectReference: {fileID: 0}
     - target: {fileID: 2024750781610213809, guid: a174e1b1865908f42a52f951894a1346, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.99
+      value: 0.538
       objectReference: {fileID: 0}
     - target: {fileID: 2024750781610213809, guid: a174e1b1865908f42a52f951894a1346, type: 3}
       propertyPath: m_LocalPosition.z

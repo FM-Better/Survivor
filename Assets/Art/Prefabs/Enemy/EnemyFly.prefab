@@ -162,7 +162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6331395430246756618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -220,7 +220,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &6331395430246756620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,6 +381,7 @@ MonoBehaviour:
   hp: 4
   hurtDurationTime: 0.2
   dissolveColor: {r: 0.18039216, g: 1, b: 0, a: 1}
+  isTreasureEnemy: 0
   Sprite: {fileID: 6331395430246756623}
   selfRigidbody: {fileID: 6331395430937204828}
 --- !u!50 &6331395430937204828

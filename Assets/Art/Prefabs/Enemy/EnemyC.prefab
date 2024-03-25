@@ -60,6 +60,7 @@ MonoBehaviour:
   hp: 12
   hurtDurationTime: 0.2
   dissolveColor: {r: 1, g: 0, b: 0.83137256, a: 1}
+  isTreasureEnemy: 0
   Sprite: {fileID: 5148945785986213641}
   selfRigidbody: {fileID: 5148945783987992912}
 --- !u!50 &5148945783987992912
@@ -344,7 +345,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5148945785986213652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -402,7 +403,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &5148945785986213654
 MonoBehaviour:
   m_ObjectHideFlags: 0
