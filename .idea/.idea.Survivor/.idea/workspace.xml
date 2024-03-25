@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a2b9e56-376e-497f-9d7b-000d63ff874b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/PickUpObject.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/PickUpObject.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/ExpBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/ExpBall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/GetAllExp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/GetAllExp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/Gold.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/Gold.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/HpItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/HpItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/System/ExpUpgrade/ExpUpgradeItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/System/ExpUpgrade/ExpUpgradeItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel/ExpUpgradePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel/ExpUpgradePanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/System/GoldUpgrade/GoldUpgradeItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/System/GoldUpgrade/GoldUpgradeItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/System/GoldUpgrade/GoldUpgradeSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/System/GoldUpgrade/GoldUpgradeSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +153,7 @@
       <workItem from="1710731833355" duration="37633000" />
       <workItem from="1710898900963" duration="13301000" />
       <workItem from="1711251306715" duration="15431000" />
-      <workItem from="1711298840549" duration="13129000" />
+      <workItem from="1711298840549" duration="16353000" />
     </task>
     <servers />
   </component>

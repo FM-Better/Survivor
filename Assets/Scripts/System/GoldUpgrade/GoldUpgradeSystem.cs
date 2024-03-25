@@ -18,132 +18,148 @@ namespace Survivor
         protected override void OnInit()
         {
             #region 经验相关
-            var expLevel1 = Add(new GoldUpgradeItem()
-                .WithKey("ExpBallDropRate_Lv1")
-                .WithDescription("提升经验掉落概率5% Lv1")
-                .WithCost(5)
-                .OnUpgrade((item) =>
-                {
-                    Global.ExpBallDropRate.Value += 5;
-                    Global.Gold.Value -= item.Cost;
-                }));
-
-            var expLevel2 = Add(new GoldUpgradeItem()
-                .WithKey("ExpBallDropRate_Lv2")
-                .WithDescription("提升经验掉落概率5% Lv2")
-                .WithCost(15)
-                .OnUpgrade((item) =>
-                {
-                    Global.ExpBallDropRate.Value += 5;
-                    Global.Gold.Value -= item.Cost;
-                }))
-                .WithCondition((_) => expLevel1.UpgradeFinished);
-            expLevel1.OnChanged.Register(() =>
-            {
-                expLevel2.OnChanged.Trigger();
-            });
-            
-            var expLevel3 = Add(new GoldUpgradeItem()
-                    .WithKey("ExpBallDropRate_Lv3")
-                    .WithDescription("提升经验掉落概率5% Lv3")
-                    .WithCost(25)
+            Add(new GoldUpgradeItem()
+                    .WithKey("ExpBallDropRate_Lv1")
+                    .WithDescription("提升经验掉落概率1% Lv1")
+                    .WithCost(100)
                     .OnUpgrade((item) =>
                     {
-                        Global.ExpBallDropRate.Value += 5;
+                        Global.ExpBallDropRate.Value++;
                         Global.Gold.Value -= item.Cost;
                     }))
-                .WithCondition((_) => expLevel2.UpgradeFinished);
-            expLevel2.OnChanged.Register(() =>
-            {
-                expLevel3.OnChanged.Trigger();
-            });
+                .WithNext(Add(new GoldUpgradeItem()
+                    .WithKey("ExpBallDropRate_Lv2")
+                    .WithDescription("提升经验掉落概率1% Lv2")
+                    .WithCost(500)
+                    .OnUpgrade((item) =>
+                    {
+                        Global.ExpBallDropRate.Value++;
+                        Global.Gold.Value -= item.Cost;
+                    })))
+                .WithNext(Add(new GoldUpgradeItem()
+                    .WithKey("ExpBallDropRate_Lv3")
+                    .WithDescription("提升经验掉落概率2% Lv3")
+                    .WithCost(3000)
+                    .OnUpgrade((item) =>
+                    {
+                        Global.ExpBallDropRate.Value++;
+                        Global.Gold.Value -= item.Cost;
+                    })));
             #endregion
 
             #region 金币相关
-            var goldLevel1 = Add(new GoldUpgradeItem()
+            Add(new GoldUpgradeItem()
                 .WithKey("GoldDropRate_Lv1")
                 .WithDescription("提升金币掉落概率1% Lv1")
-                .WithCost(5)
+                .WithCost(100)
                 .OnUpgrade((item) =>
                 {
                     Global.GoldDropRate.Value++;
                     Global.Gold.Value -= item.Cost;
-                }));
-            
-            var goldLevel2 = Add(new GoldUpgradeItem()
-                .WithKey("GoldDropRate_Lv2")
-                .WithDescription("提升金币掉落概率2%")
-                .WithCost(20)
-                .OnUpgrade((item) =>
-                {
-                    Global.GoldDropRate.Value += 2;
-                    Global.Gold.Value -= item.Cost;
                 }))
-                .WithCondition((_) => goldLevel1.UpgradeFinished);
-            goldLevel1.OnChanged.Register(() =>
-            {
-                goldLevel2.OnChanged.Trigger();
-            });
-            
-            var goldLevel3 = Add(new GoldUpgradeItem()
-                .WithKey("GoldDropRate_Lv3")
-                .WithDescription("提升金币掉落概率3% Lv3")
-                .WithCost(50)
-                .OnUpgrade((item) =>
-                {
-                    Global.GoldDropRate.Value += 3;
-                    Global.Gold.Value -= item.Cost;
-                }))
-                .WithCondition((_) => goldLevel2.UpgradeFinished);
-            goldLevel2.OnChanged.Register(() =>
-            {
-                goldLevel3.OnChanged.Trigger();
-            });
+                .WithNext(Add(new GoldUpgradeItem()
+                    .WithKey("GoldDropRate_Lv2")
+                    .WithDescription("提升金币掉落概率2%")
+                    .WithCost(1000)
+                    .OnUpgrade((item) =>
+                    {
+                        Global.GoldDropRate.Value += 2;
+                        Global.Gold.Value -= item.Cost;
+                    })))
+                .WithNext(Add(new GoldUpgradeItem()
+                    .WithKey("GoldDropRate_Lv3")
+                    .WithDescription("提升金币掉落概率3% Lv3")
+                    .WithCost(2000)
+                    .OnUpgrade((item) =>
+                    {
+                        Global.GoldDropRate.Value += 3;
+                        Global.Gold.Value -= item.Cost;
+                    })))
+                .WithNext(Add(new GoldUpgradeItem()
+                    .WithKey("GoldDropRate_Lv4")
+                    .WithDescription("提升金币掉落概率4% Lv4")
+                    .WithCost(5000)
+                    .OnUpgrade((item) =>
+                    {
+                        Global.GoldDropRate.Value += 4;
+                        Global.Gold.Value -= item.Cost;
+                    })));
             #endregion
 
             #region 最大生命值相关
-            var maxHpLevel1 = Add(new GoldUpgradeItem()
+            Add(new GoldUpgradeItem()
                 .WithKey("MaxHp_Lv1")
                 .WithDescription("玩家最大生命值+1 Lv1")
-                .WithCost(20)
+                .WithCost(1000)
                 .OnUpgrade((item) =>
                 {
                     Global.MaxHp.Value++;
-                    Global.Hp.Value++;
-                    Global.Gold.Value -= item.Cost;
-                }));
-            
-            var maxHpLevel2 = Add(new GoldUpgradeItem()
-                .WithKey("MaxHp_Lv2")
-                .WithDescription("玩家最大生命值+2 Lv2")
-                .WithCost(40)
-                .OnUpgrade((item) =>
-                {
-                    Global.MaxHp.Value += 2;
-                    Global.Hp.Value += 2;
                     Global.Gold.Value -= item.Cost;
                 }))
-                .WithCondition((_) => maxHpLevel1.UpgradeFinished);
-            maxHpLevel1.OnChanged.Register(() =>
-            {
-                maxHpLevel2.OnChanged.Trigger();
-            });
-            
-            var maxHpLevel3 = Add(new GoldUpgradeItem()
-                .WithKey("MaxHp_Lv3")
-                .WithDescription("玩家最大生命值+4 Lv3")
-                .WithCost(70)
-                .OnUpgrade((item) =>
-                {
-                    Global.MaxHp.Value += 4;
-                    Global.Hp.Value += 4;
-                    Global.Gold.Value -= item.Cost;
-                }))
-                .WithCondition((_) => maxHpLevel2.UpgradeFinished);
-            maxHpLevel2.OnChanged.Register(() =>
-            {
-                maxHpLevel3.OnChanged.Trigger();
-            });
+                .WithNext(Add(new GoldUpgradeItem()
+                    .WithKey("MaxHp_Lv2")
+                    .WithDescription("玩家最大生命值+1 Lv2")
+                    .WithCost(2000)
+                    .OnUpgrade((item) =>
+                    {
+                        Global.MaxHp.Value ++;
+                        Global.Gold.Value -= item.Cost;
+                    })))
+                .WithNext(Add(new GoldUpgradeItem()
+                    .WithKey("MaxHp_Lv3")
+                    .WithDescription("玩家最大生命值+1 Lv3")
+                    .WithCost(4000)
+                    .OnUpgrade((item) =>
+                    {
+                        Global.MaxHp.Value++;
+                        Global.Gold.Value -= item.Cost;
+                    })))
+                .WithNext(Add(new GoldUpgradeItem()
+                    .WithKey("MaxHp_Lv4")
+                    .WithDescription("玩家最大生命值+1 Lv4")
+                    .WithCost(5000)
+                    .OnUpgrade((item) =>
+                    {
+                        Global.MaxHp.Value++;
+                        Global.Gold.Value -= item.Cost;
+                    })))
+                .WithNext(Add(new GoldUpgradeItem()
+                    .WithKey("MaxHp_Lv5")
+                    .WithDescription("玩家最大生命值+1 Lv5")
+                    .WithCost(6000)
+                    .OnUpgrade((item) =>
+                    {
+                        Global.MaxHp.Value++;
+                        Global.Gold.Value -= item.Cost;
+                    })))
+                .WithNext(Add(new GoldUpgradeItem()
+                    .WithKey("MaxHp_Lv6")
+                    .WithDescription("玩家最大生命值+1 Lv6")
+                    .WithCost(7000)
+                    .OnUpgrade((item) =>
+                    {
+                        Global.MaxHp.Value++;
+                        Global.Gold.Value -= item.Cost;
+                    })))
+                .WithNext(Add(new GoldUpgradeItem()
+                    .WithKey("MaxHp_Lv7")
+                    .WithDescription("玩家最大生命值+1 Lv7")
+                    .WithCost(8000)
+                    .OnUpgrade((item) =>
+                    {
+                        Global.MaxHp.Value++;
+                        Global.Gold.Value -= item.Cost;
+                    })))
+                .WithNext(Add(new GoldUpgradeItem()
+                    .WithKey("MaxHp_Lv8")
+                    .WithDescription("玩家最大生命值+1 Lv8")
+                    .WithCost(9000)
+                    .OnUpgrade((item) =>
+                    {
+                        Global.MaxHp.Value++;
+                        Global.Hp.Value++;
+                        Global.Gold.Value -= item.Cost;
+                    })));
             #endregion
             
             Load(); // 加载存档数据

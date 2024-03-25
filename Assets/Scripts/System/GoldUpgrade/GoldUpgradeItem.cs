@@ -10,6 +10,8 @@ namespace Survivor
         public int Cost { get; private set; }
         public bool UpgradeFinished { get; set; } = false;
         public EasyEvent OnChanged = new EasyEvent();
+
+        private GoldUpgradeItem mNext = null;
         
         private Action<GoldUpgradeItem> mOnUpgrade { get; set; }
         private Func<GoldUpgradeItem, bool> mCondition { get; set; }
@@ -18,9 +20,15 @@ namespace Survivor
         {
             mOnUpgrade?.Invoke(this);
             UpgradeFinished = true;
-            OnChanged.Trigger();
+            TriggerOnChanged();
             GoldUpgradeSystem.OnGoldUpgradeSystemChanged.Trigger();
-        } 
+        }
+
+        public void TriggerOnChanged()
+        {
+            OnChanged.Trigger();
+            mNext?.TriggerOnChanged();
+        }
 
         public bool ConditionCheck()
         {
@@ -56,6 +64,13 @@ namespace Survivor
         {
             mOnUpgrade = onUpgrade;
             return this;
+        }
+        
+        public GoldUpgradeItem WithNext(GoldUpgradeItem next)
+        {
+            mNext = next;
+            mNext.WithCondition(_ => UpgradeFinished);
+            return mNext;
         }
         
         public GoldUpgradeItem WithCondition(Func<GoldUpgradeItem, bool> condition)

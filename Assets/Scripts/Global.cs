@@ -74,8 +74,11 @@ namespace Survivor
         [RuntimeInitializeOnLoadMethod]
         public static void InitGameData()
         {
+            AudioKit.PlaySoundMode = AudioKit.PlaySoundModes.IgnoreSameSoundInGlobalFrames; // 声音优化
             ResKit.Init();
             UIKit.Root.SetResolution(1920, 1080, 0f);
+            
+            PlayerPrefs.DeleteAll();
             
             ExpBallDropRate.Value = PlayerPrefs.GetInt("ExpBallDropRate", 60);
             GoldDropRate.Value = PlayerPrefs.GetInt("GoldDropRate", 20);
