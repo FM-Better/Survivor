@@ -9,7 +9,8 @@ namespace Survivor
     public class ExpUpgradeSystem : AbstractSystem
     {
         public List<ExpUpgradeItem> Items { get; } = new List<ExpUpgradeItem>();
-        
+        public static bool AllUnlockedFinish = false;
+
         public static EasyEvent OnExpUpgradeSystemChanged = new EasyEvent();
 
         // 记录配套的能力组合
@@ -57,6 +58,12 @@ namespace Survivor
             });
         }
 
+        public static void CheckAllUnlockedFinish()
+        {
+            AllUnlockedFinish = Global.Interface.GetSystem<ExpUpgradeSystem>().Items
+                .All(item => item.UpgradeFinished);
+        }
+        
         public void ResetData()
         {
             Items.Clear();

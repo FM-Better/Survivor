@@ -5,7 +5,7 @@ using QFramework;
 
 namespace Survivor
 {
-	// Generate Id:2efcb358-6ab6-416c-9e5a-36fca45cc723
+	// Generate Id:701dbaea-3400-4c0f-9062-5f50c1521867
 	public partial class UIGameStartPanel
 	{
 		public const string Name = "UIGameStartPanel";
@@ -15,7 +15,11 @@ namespace Survivor
 		[SerializeField]
 		public UnityEngine.UI.Button BtnUpgrade;
 		[SerializeField]
+		public UnityEngine.UI.Button BtnAchievement;
+		[SerializeField]
 		public GlodUpgradePanel GlodUpgradePanel;
+		[SerializeField]
+		public AchievementPanel AchievementPanel;
 		
 		private UIGameStartPanelData mPrivateData = null;
 		
@@ -23,7 +27,9 @@ namespace Survivor
 		{
 			BtnStart = null;
 			BtnUpgrade = null;
+			BtnAchievement = null;
 			GlodUpgradePanel = null;
+			AchievementPanel = null;
 			
 			mData = null;
 		}

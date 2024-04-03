@@ -39,7 +39,7 @@ namespace Survivor
 							if (visible)
 							{
 								selfCache.transform.Find("ImgIcon").GetComponent<Image>().sprite =
-									loader.LoadSync<Sprite>(itemCache.IconName);
+									loader.LoadSync<Sprite>(itemCache.IconName); // Todo: 打包图集优化
 								selfCache.Show();
 								
 								var txtOtherKey = selfCache.transform.Find("TxtOtherKey");

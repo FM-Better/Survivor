@@ -73,10 +73,9 @@ namespace Survivor
             return mNext;
         }
         
-        public GoldUpgradeItem WithCondition(Func<GoldUpgradeItem, bool> condition)
+        private void WithCondition(Func<GoldUpgradeItem, bool> condition)
         {
             mCondition = condition;
-            return this;
         }
         #endregion
     }

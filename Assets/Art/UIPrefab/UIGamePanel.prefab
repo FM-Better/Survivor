@@ -790,6 +790,7 @@ MonoBehaviour:
   TreasurePanel: {fileID: -1570606764873628996}
   ScreenColor: {fileID: 5861682869547936020}
   UnLockedIconPanel: {fileID: -4821172866244090378}
+  Btn: {fileID: 0}
 --- !u!1 &1693071444747136057
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,14 +15,19 @@ namespace Survivor
 			mData = uiData as UIGameStartPanelData ?? new UIGameStartPanelData();
 
 			#region UI相关
+			BtnStart.onClick.AddListener(() =>
+			{
+				SceneManager.LoadScene("Game");
+			});
+			
 			BtnUpgrade.onClick.AddListener(() =>
 			{
 				GlodUpgradePanel.Show();
 			});
 			
-			BtnStart.onClick.AddListener(() =>
+			BtnAchievement.onClick.AddListener(() =>
 			{
-				SceneManager.LoadScene("Game");
+				AchievementPanel.Show();
 			});
 			#endregion
 

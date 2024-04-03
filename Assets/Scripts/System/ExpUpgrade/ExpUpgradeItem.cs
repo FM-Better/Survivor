@@ -11,7 +11,7 @@ namespace Survivor
         public string Description => mDescriptionFunctory(CurrentLevel.Value + 1);
         public int MaxLevel { get; private set; }
         public BindableProperty<int> CurrentLevel = new BindableProperty<int>(0);
-        public bool UpgradeFinished { get; set; } = false;
+        public bool UpgradeFinished => CurrentLevel.Value >= MaxLevel;
         public BindableProperty<bool> Visible = new BindableProperty<bool>(false);
         
         public string PairedName { get; private set; }
@@ -28,10 +28,7 @@ namespace Survivor
         {
             CurrentLevel.Value++;
             mOnUpgrade?.Invoke(this, CurrentLevel.Value);
-            if (CurrentLevel.Value >= 10)
-            {
-                UpgradeFinished = true;    
-            }
+            ExpUpgradeSystem.CheckAllUnlockedFinish();
         }
 
         #region 初始化相关API

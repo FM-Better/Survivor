@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Survivor
 {
-    public abstract class PickUpObject:GamePlayObject
+    public abstract class PickUpObject: GamePlayObject
     {
         protected int retreatFrameCount = 20;
         protected float retreatSpeed = 4f;

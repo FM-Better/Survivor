@@ -69,6 +69,7 @@ namespace Survivor
             this.RegisterSystem(new SaveSystem());
             this.RegisterSystem(new GoldUpgradeSystem());
             this.RegisterSystem(new ExpUpgradeSystem());
+            this.RegisterSystem(new AchievementSystem());
         }
         
         [RuntimeInitializeOnLoadMethod]
