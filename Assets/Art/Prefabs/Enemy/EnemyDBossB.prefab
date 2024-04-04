@@ -339,7 +339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8689062273841957119
 Transform:
   m_ObjectHideFlags: 0
@@ -377,7 +377,7 @@ MonoBehaviour:
   GeneratePrefab: 0
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
-  moveSpeed: 3.7
+  moveSpeed: 2
   hp: 600
   hurtDurationTime: 0.2
   dissolveColor: {r: 0.9490196, g: 1, b: 0, a: 1}

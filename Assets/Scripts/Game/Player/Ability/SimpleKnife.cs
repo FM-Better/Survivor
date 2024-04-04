@@ -40,16 +40,15 @@ namespace Survivor
 								.Position(this.Position())
 								.Self(self =>
 								{
-									var selfCache = self;
 									var enemyCache = enemy;
 									var rigidbody2D = self.GetComponent<Rigidbody2D>();
 									var dir = enemyCache.NormalizedDirection2DFrom(Player.Default);
 									
-									selfCache.transform.up = dir;
+									self.transform.up = dir;
 									rigidbody2D.velocity = dir * 10f;
 
 									var attackCount = 0;
-									selfCache.OnTriggerEnter2DEvent((collider) =>
+									self.OnTriggerEnter2DEvent((collider) =>
 									{
 										var hurtBox = collider.GetComponent<HurtBox>();
 										if (hurtBox)
@@ -62,19 +61,17 @@ namespace Survivor
 
 												if (attackCount >= Global.SimpleKnifeAttackCount.Value)
 												{
-													selfCache.DestroyGameObjGracefully();
+													self.DestroyGameObjGracefully();
 												}
 											}
 										}
 									}).UnRegisterWhenGameObjectDestroyed(self);
-
-									ActionKit.OnUpdate.Register(() =>
+									
+									//  到相机外则销毁
+									self.OnBecameInvisibleEvent(() =>
 									{
-										if (!Player.Default || selfCache.Distance2D(Player.Default) > 12)
-										{
-											selfCache.DestroyGameObjGracefully();
-										}
-									}).UnRegisterWhenGameObjectDestroyed(selfCache);
+										self.DestroyGameObjGracefully();
+									}).UnRegisterWhenGameObjectDestroyed(self);
 								});
 						}
 					}

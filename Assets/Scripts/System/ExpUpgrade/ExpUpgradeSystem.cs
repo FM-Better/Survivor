@@ -69,7 +69,7 @@ namespace Survivor
             Items.Clear();
             keyToItems.Clear();
             
-            Add(new ExpUpgradeItem(true)
+            Add(new ExpUpgradeItem(true,true)
                     .WithKey(AbilityConfig.SimpleSwordKey)
                     .WithIconName(AbilityConfig.SimpleSwordIconName)
                     .WithPairedName("合成后的剑")
@@ -139,7 +139,7 @@ namespace Survivor
                         }
                     }));
             
-            Add(new ExpUpgradeItem(true)
+            Add(new ExpUpgradeItem(true,true)
                     .WithKey(AbilityConfig.SimpleKnifeKey)
                     .WithIconName(AbilityConfig.SimpleKnifeIconName)
                     .WithPairedName("合成后的飞刀")
@@ -212,7 +212,7 @@ namespace Survivor
                         }
                     }));
             
-            Add(new ExpUpgradeItem(true)
+            Add(new ExpUpgradeItem(true,true)
                     .WithKey(AbilityConfig.RotateSwordKey)
                     .WithIconName(AbilityConfig.RotateSwordIconName)
                     .WithPairedName("合成后的守卫剑")
@@ -281,7 +281,7 @@ namespace Survivor
                         }
                     }));
             
-            Add(new ExpUpgradeItem(true)
+            Add(new ExpUpgradeItem(true,true)
                     .WithKey(AbilityConfig.BasketballKey)
                     .WithIconName(AbilityConfig.BasketballIconName)
                     .WithPairedName("合成后的篮球")
@@ -342,7 +342,7 @@ namespace Survivor
                         }
                     }));
             
-            Add(new ExpUpgradeItem(false)
+            Add(new ExpUpgradeItem(false,true)
                     .WithKey(AbilityConfig.BombKey)
                     .WithIconName(AbilityConfig.BombIconName)
                     .WithPairedName("合成后的炸弹")

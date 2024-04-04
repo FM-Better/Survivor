@@ -105,7 +105,7 @@ namespace Survivor
 					{
 						var item = mUnLockedKeys[AbilityConfig.SimpleSwordKey].Item1;
 						mUnLockedKeys[AbilityConfig.SimpleSwordKey].Item2.sprite =
-							mLoader.LoadSync<Sprite>(Icon.PAIRED_ROTATE_SWORD_ICON);
+							mLoader.LoadSync<Sprite>(Icon.PAIRED_SIMPLE_SWORD_ICON);
 					}
 				}
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);

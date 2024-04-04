@@ -6,6 +6,7 @@ namespace Survivor
     public class ExpUpgradeItem
     {
         public bool IsWeapon { get; private set; }
+        public bool HasSuper { get; private set; }
         public string Key { get; private set; }
         public string IconName { get; private set; }
         public string Description => mDescriptionFunctory(CurrentLevel.Value + 1);
@@ -22,7 +23,11 @@ namespace Survivor
         
         private Action<ExpUpgradeItem, int> mOnUpgrade { get; set; }
 
-        public ExpUpgradeItem(bool isWeapon = false) => IsWeapon = isWeapon;
+        public ExpUpgradeItem(bool isWeapon = false, bool hasSuper = false)
+        {
+            IsWeapon = isWeapon;
+            HasSuper = hasSuper;
+        }
         
         public void Upgrade()
         {

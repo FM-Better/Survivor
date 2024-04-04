@@ -126,8 +126,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167348908561753910}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -0.88, z: 0}
-  m_LocalScale: {x: 2.6, y: 2.6, z: 1}
+  m_LocalPosition: {x: 0.01, y: -0.3132, z: 0}
+  m_LocalScale: {x: 2.6, y: 1.4664, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 167348909161916972}
@@ -231,9 +231,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.035604477, y: -0.17545676}
+  m_Offset: {x: 0.01231575, y: 0.62960315}
   serializedVersion: 2
-  m_Radius: 0.9838991
+  m_Radius: 1.0126512
 --- !u!114 &167348908634775456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,7 +309,7 @@ MonoBehaviour:
   GeneratePrefab: 0
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
-  moveSpeed: 3
+  moveSpeed: 2.5
   hp: 500
   hurtDurationTime: 0.2
   dissolveColor: {r: 0.9490196, g: 1, b: 0, a: 1}
@@ -398,9 +398,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.011754513, y: -0.09582424}
+  m_Offset: {x: 0.0021703243, y: 0.9105003}
   serializedVersion: 2
-  m_Radius: 1.2880936
+  m_Radius: 1.2305894
 --- !u!114 &167348909327030276
 MonoBehaviour:
   m_ObjectHideFlags: 0

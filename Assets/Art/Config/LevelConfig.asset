@@ -215,14 +215,14 @@ MonoBehaviour:
       SpeedScale: 2
       HpScale: 5
   - Name: "4\u3001\u72EC\u773C\u602A"
-    Active: 0
+    Active: 1
     Description: "\u7B2C\u56DB\u6CE2\uFF1A\u72EC\u773C\u602A"
     Waves:
     - Name: EnemyC
       Active: 1
       DurationTime: 20
       SpawnCD: 0.1
-      isWaited: 0
+      isWaited: 1
       WaitTime: 1
       EnemyPrefab: {fileID: 5148945783987992927, guid: bdf50c717e85a5b4c80e4456c4a1aedb, type: 3}
       SpeedScale: 2
@@ -231,7 +231,7 @@ MonoBehaviour:
       Active: 1
       DurationTime: 30
       SpawnCD: 0.05
-      isWaited: 0
+      isWaited: 1
       WaitTime: 1
       EnemyPrefab: {fileID: 5148945783987992927, guid: bdf50c717e85a5b4c80e4456c4a1aedb, type: 3}
       SpeedScale: 2
@@ -240,7 +240,7 @@ MonoBehaviour:
       Active: 1
       DurationTime: 11
       SpawnCD: 5
-      isWaited: 0
+      isWaited: 1
       WaitTime: 1
       EnemyPrefab: {fileID: 2087376265329718224, guid: 329671e65e22a6f49a3ade90c97a6dbe, type: 3}
       SpeedScale: 2
@@ -249,7 +249,7 @@ MonoBehaviour:
       Active: 1
       DurationTime: 40
       SpawnCD: 0.025
-      isWaited: 0
+      isWaited: 1
       WaitTime: 2
       EnemyPrefab: {fileID: 5148945783987992927, guid: bdf50c717e85a5b4c80e4456c4a1aedb, type: 3}
       SpeedScale: 2
@@ -258,7 +258,7 @@ MonoBehaviour:
       Active: 1
       DurationTime: 11
       SpawnCD: 5
-      isWaited: 0
+      isWaited: 1
       WaitTime: 2
       EnemyPrefab: {fileID: 2087376265329718224, guid: 329671e65e22a6f49a3ade90c97a6dbe, type: 3}
       SpeedScale: 2
@@ -267,7 +267,7 @@ MonoBehaviour:
       Active: 1
       DurationTime: 40
       SpawnCD: 0.0125
-      isWaited: 0
+      isWaited: 1
       WaitTime: 2
       EnemyPrefab: {fileID: 5148945783987992927, guid: bdf50c717e85a5b4c80e4456c4a1aedb, type: 3}
       SpeedScale: 2
@@ -276,20 +276,20 @@ MonoBehaviour:
       Active: 1
       DurationTime: 16
       SpawnCD: 5
-      isWaited: 0
+      isWaited: 1
       WaitTime: 2
       EnemyPrefab: {fileID: 7178566475531754209, guid: c20423ab81784a3438ed0a5070c16d5e, type: 3}
       SpeedScale: 2
       HpScale: 5
   - Name: "5\u3001\u5976\u916A"
-    Active: 0
+    Active: 1
     Description: "\u7B2C\u4E94\u6CE2\uFF1A\u5976\u916A"
     Waves:
     - Name: EnemyD
       Active: 1
       DurationTime: 30
       SpawnCD: 0.1
-      isWaited: 0
+      isWaited: 1
       WaitTime: 2
       EnemyPrefab: {fileID: 7569138950045160043, guid: eb85603ac1103fd41836de3b97b911fd, type: 3}
       SpeedScale: 2.5
@@ -298,7 +298,7 @@ MonoBehaviour:
       Active: 1
       DurationTime: 30
       SpawnCD: 0.025
-      isWaited: 0
+      isWaited: 1
       WaitTime: 2
       EnemyPrefab: {fileID: 7569138950045160043, guid: eb85603ac1103fd41836de3b97b911fd, type: 3}
       SpeedScale: 6
@@ -307,7 +307,7 @@ MonoBehaviour:
       Active: 1
       DurationTime: 11
       SpawnCD: 10
-      isWaited: 0
+      isWaited: 1
       WaitTime: 1
       EnemyPrefab: {fileID: 3382935718133338812, guid: 7d9192968644abd4d9c4f5c04039c659, type: 3}
       SpeedScale: 2.5
@@ -316,7 +316,7 @@ MonoBehaviour:
       Active: 1
       DurationTime: 40
       SpawnCD: 0.0125
-      isWaited: 0
+      isWaited: 1
       WaitTime: 1
       EnemyPrefab: {fileID: 7569138950045160043, guid: eb85603ac1103fd41836de3b97b911fd, type: 3}
       SpeedScale: 2.5
@@ -325,7 +325,7 @@ MonoBehaviour:
       Active: 1
       DurationTime: 50
       SpawnCD: 0.01
-      isWaited: 0
+      isWaited: 1
       WaitTime: 2
       EnemyPrefab: {fileID: 7569138950045160043, guid: eb85603ac1103fd41836de3b97b911fd, type: 3}
       SpeedScale: 2.5
@@ -334,13 +334,13 @@ MonoBehaviour:
       Active: 1
       DurationTime: 46
       SpawnCD: 15
-      isWaited: 0
+      isWaited: 1
       WaitTime: 2
       EnemyPrefab: {fileID: 167348909161916975, guid: b067c175e5f0d4f47aeac05c23ea7da4, type: 3}
       SpeedScale: 2.5
       HpScale: 6
   - Name: "6\u3001\u9B54\u6CD5\u5E08"
-    Active: 0
+    Active: 1
     Description: "\u7B2C\u516D\u6CE2\uFF1A\u9B54\u6CD5\u5E08"
     Waves:
     - Name: EnemyE

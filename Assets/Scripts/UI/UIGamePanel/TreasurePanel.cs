@@ -26,9 +26,9 @@ namespace Survivor
 		{
 			var expUpgradeSystem = this.GetSystem<ExpUpgradeSystem>();
 			// 检测是否有可合成的超级武器
-			var canCombineItems = expUpgradeSystem.Items.Where(item =>
+			var canPairedItems = expUpgradeSystem.Items.Where(item =>
 			{
-				if (item.CurrentLevel.Value >= 7)
+				if (item.HasSuper && item.CurrentLevel.Value >= item.MaxLevel) // 满级且配对
 				{
 					var isInCombine = expUpgradeSystem.PairedKeys.ContainsKey(item.Key);
 					if (isInCombine)
@@ -49,13 +49,9 @@ namespace Survivor
 				return false;
 			});
 
-			if (canCombineItems.Any())
+			if (canPairedItems.Any())
 			{
-				var item = canCombineItems.ToList().GetRandomItem();
-				while (!item.UpgradeFinished)
-				{
-					item.Upgrade();
-				}
+				var item = canPairedItems.ToList().GetRandomItem();
 
 				ImgIcon.sprite = mLoader.LoadSync<Sprite>(item.PairedIconName);
 				ImgIcon.Show();

@@ -23,6 +23,7 @@ namespace Survivor
 		{
 			AudioKit.PlaySound(Sound.HPITEM);
 			Global.Hp.Value++;
+			DropManager.s_HpItemCount--;
 			this.DestroyGameObjGracefully();
 		}
 	}

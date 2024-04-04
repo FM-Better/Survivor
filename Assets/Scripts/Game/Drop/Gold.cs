@@ -7,12 +7,20 @@ namespace Survivor
 	public partial class Gold : PickUpObject
 	{
 		protected override Collider2D collider => selfCollider;
+		public bool IsForced = false; // 是否强行拾取 即不进行后退再飞行的动画
 		
 		private void OnTriggerEnter2D(Collider2D other)
 		{
 			if (other.GetComponent<PickUpArea>())
 			{
-				StartPickUpAnim();
+				if (IsForced)
+				{
+					Excute();
+				}
+				else
+				{
+					StartPickUpAnim();	
+				}
 			}
 		}
 

@@ -8,6 +8,9 @@ namespace Survivor
 	public partial class DropManager : ViewController
 	{
 		public static DropManager Default;
+		public static int s_HpItemCount = 0;
+		public static int s_GetAllExpCount = 0;
+		public static int s_BombCount = 0;
 
 		private void Awake()
 		{
@@ -18,6 +21,18 @@ namespace Survivor
 		{
 			Default = null;
 		}
+
+#if UNITY_EDITOR
+		private void OnGUI()
+		{
+			var guiStyle = new GUIStyle();
+			guiStyle.fontSize = 20;
+			guiStyle.normal.textColor = Color.white;
+			GUI.Label(new Rect(10, 80, 150, 20), $"回血道具： {s_HpItemCount}", guiStyle);
+			GUI.Label(new Rect(10, 110, 150, 20), $"拾取经验道具： {s_GetAllExpCount}", guiStyle);
+			GUI.Label(new Rect(10, 140, 150, 20), $"炸弹： {s_BombCount}", guiStyle);
+		}
+#endif
 		
 		public void SpawnDrop(Vector3 spawnPosition, bool isSpawnTreasure)
 		{
@@ -41,20 +56,23 @@ namespace Survivor
 					.Position(spawnPosition + RandomInCircle())
 					.Show();
 			}
-			if (randomNum < Global.HpItemDropRate.Value) // 掉落回血道具
+			if (s_HpItemCount < 2 && randomNum < Global.HpItemDropRate.Value) // 掉落回血道具
 			{
+				s_HpItemCount++;
 				HpItem.InstantiateWithParent(DropRoot)
 					.Position(spawnPosition + RandomInCircle())
 					.Show();
 			}
-			if (Global.BombUnlocked.Value && randomNum < Global.BombDropRate.Value) // 掉落炸弹
+			if (s_BombCount < 4 && Global.BombUnlocked.Value && randomNum < Global.BombDropRate.Value) // 掉落炸弹
 			{
+				s_BombCount++;
 				Bomb.InstantiateWithParent(Default.DropRoot)
 					.Position(spawnPosition + RandomInCircle())
 					.Show();
 			}
-			if (randomNum < Global.GetAllExpDropRate.Value) // 掉落获得当前所有经验的道具
+			if (s_GetAllExpCount < 2 && randomNum < Global.GetAllExpDropRate.Value) // 掉落获得当前所有经验的道具
 			{
+				s_GetAllExpCount++;
 				GetAllExp.InstantiateWithParent(DropRoot)
 					.Position(spawnPosition + RandomInCircle())
 					.Show();

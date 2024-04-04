@@ -6,18 +6,39 @@
   <component name="ChangeListManager">
     <list default="true" id="3a2b9e56-376e-497f-9d7b-000d63ff874b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UIPrefab/UIGamePanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UIPrefab/UIGamePanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QFrameworkData/QAssets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFrameworkData/QAssets.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameStart.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameStart.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/System/Achievement/AchievementSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/System/Achievement/AchievementSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel/ExpUpgradePanel.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel/ExpUpgradePanel/BtnUpgradeItem.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel/ExpUpgradePanel/BtnUpgradeItem.Designer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel/ExpUpgradePanel/BtnUpgradeItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel/ExpUpgradePanel/BtnUpgradeItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIGameStartPanel/AchievementPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIGameStartPanel/AchievementPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Config/LevelConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Config/LevelConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyA.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyA.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyABoss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyABoss.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyABossB.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyABossB.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyB.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyB.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyBBoss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyBBoss.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyBBossB.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyBBossB.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyC.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyC.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyCBoss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyCBoss.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyCBossB.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyCBossB.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyD.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyDBoss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyDBoss.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyDBossB.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyDBossB.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyE.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyE.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyEBoss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyEBoss.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyFly.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyFly.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyFlyBoss.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Enemy/EnemyFlyBoss.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Enemy/enemy_c_boss.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Enemy/enemy_c_boss.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/Bomb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/Bomb.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/DropManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/DropManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/ExpBall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/ExpBall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/GetAllExp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/GetAllExp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/Gold.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/Gold.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/HpItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/HpItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SimpleKnife.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SimpleKnife.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/System/ExpUpgrade/ExpUpgradeItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/System/ExpUpgrade/ExpUpgradeItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/System/ExpUpgrade/ExpUpgradeSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/System/ExpUpgrade/ExpUpgradeSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel/TreasurePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel/TreasurePanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel/UnLockedIconPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel/UnLockedIconPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,10 +61,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6f90d6f5b89a4c0bb080b24b55df81433a00/ac/c9161bdc/NativeInputSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/0b/e82ddd70/Math.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/3c/a21cdeaa/Int32.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/aee51588ad164755868b318973b751f729400/30/a0ac3b36/GUIStyle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c904b8e8a22c41cbad3c62e10a9032f9820c00/2b/f4d96664/ScriptableWizard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c904b8e8a22c41cbad3c62e10a9032f9820c00/5d/c29cf8f4/EditorWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d7b7bc88591045ff92cb7479fe1bd52445400/41/0226d073/IPointerClickHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f97e358e7a5e4bf5ba1b3e551d91914610fc00/29/327d40bc/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fb55cc4a6b3c4122bd62ad5a1575ab5f7a00/0f/d269026a/FontStyle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/RenameEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/TestEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Drop/Bomb.cs" root0="FORCE_HIGHLIGHTING" />
@@ -176,7 +199,7 @@
       <workItem from="1711606023650" duration="505000" />
       <workItem from="1711775954690" duration="1952000" />
       <workItem from="1712039165595" duration="8167000" />
-      <workItem from="1712212896349" duration="3930000" />
+      <workItem from="1712212896349" duration="11653000" />
     </task>
     <servers />
   </component>

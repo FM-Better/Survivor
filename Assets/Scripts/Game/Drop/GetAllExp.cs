@@ -19,6 +19,7 @@ namespace Survivor
 				foreach (var expBall in expBalls)
 				{
 					var expCache = expBall;
+					expCache.IsForced = true;
 					ActionKit.OnUpdate.Register(() =>
 					{
 						if (Player.Default)
@@ -33,6 +34,7 @@ namespace Survivor
 				foreach (var gold in golds)
 				{
 					var goldCache = gold;
+					goldCache.IsForced = true;
 					ActionKit.OnUpdate.Register(() =>
 					{
 						if (Player.Default)
@@ -44,6 +46,7 @@ namespace Survivor
 				}
 				
 				AudioKit.PlaySound(Sound.GETALLEXP);
+				DropManager.s_GetAllExpCount--;
 				this.DestroyGameObjGracefully();
 			}
 		}

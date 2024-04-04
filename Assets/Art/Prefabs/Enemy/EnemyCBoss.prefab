@@ -46,9 +46,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1283822, y: 0.018897891}
+  m_Offset: {x: 0.1283822, y: -0.3775022}
   serializedVersion: 2
-  m_Radius: 0.8794532
+  m_Radius: 0.6193156
 --- !u!114 &2087376263607367198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,9 +114,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.13322616, y: -0.09582424}
+  m_Offset: {x: 0.031028986, y: -0.45815855}
   serializedVersion: 2
-  m_Radius: 1.1269677
+  m_Radius: 0.9039927
 --- !u!114 &2087376263711572130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,8 +262,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087376264953734646}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.15, y: -1.51, z: 0}
-  m_LocalScale: {x: 2.8, y: 0.8, z: 1}
+  m_LocalPosition: {x: 0.064, y: -1.322, z: 0}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2087376265329718225}
@@ -349,8 +349,8 @@ Transform:
   m_GameObject: {fileID: 2087376265329718224}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.12, y: -1.54, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2087376264159421014}
   - {fileID: 2087376263607367193}
@@ -378,7 +378,7 @@ MonoBehaviour:
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
   moveSpeed: 2.5
-  hp: 400
+  hp: 300
   hurtDurationTime: 0.2
   dissolveColor: {r: 0.9490196, g: 1, b: 0, a: 1}
   isTreasureEnemy: 1

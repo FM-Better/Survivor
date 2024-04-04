@@ -29,6 +29,7 @@ namespace Survivor
 			}
 				
 			AudioKit.PlaySound(Sound.BOMB);
+			DropManager.s_BombCount--;			
 			CameraController.ShakeCamera.Trigger(); // 触发震屏事件
 			UIGamePanel.FlashScreen.Trigger(); // 触发闪屏事件
 		}

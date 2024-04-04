@@ -56,8 +56,8 @@ MonoBehaviour:
   GeneratePrefab: 0
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
-  moveSpeed: 3.5
-  hp: 12
+  moveSpeed: 1.5
+  hp: 30
   hurtDurationTime: 0.2
   dissolveColor: {r: 1, g: 0, b: 0.83137256, a: 1}
   isTreasureEnemy: 0

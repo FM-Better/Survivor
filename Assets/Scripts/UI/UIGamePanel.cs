@@ -44,8 +44,12 @@ namespace Survivor
 
 			Global.Level.Register((lv) =>
 			{
-				Time.timeScale = 0f;
-				ExpUpgradePanel.Show();
+				if (!ExpUpgradeSystem.AllUnlockedFinish) // 能力未全部升级 才能打开升级面板
+				{
+					Time.timeScale = 0f;
+					ExpUpgradePanel.Show();	
+				}
+				
 				AudioKit.PlaySound("LevelUp");
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 

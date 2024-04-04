@@ -293,7 +293,7 @@ MonoBehaviour:
   GeneratePrefab: 0
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
-  moveSpeed: 1.2
+  moveSpeed: 1.25
   hp: 3
   hurtDurationTime: 0.2
   dissolveColor: {r: 1, g: 0.53333336, b: 0, a: 1}
