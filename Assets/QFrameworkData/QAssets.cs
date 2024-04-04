@@ -11,11 +11,76 @@
 namespace QAssetBundle
 {
     
+    public class Ability
+    {
+        public const string BundleName = "ability";
+        public const string BALL = "ball";
+        public const string ROTATE_SWORD = "rotate_sword";
+        public const string SIMPLE_KNIFE = "simple_knife";
+        public const string SIMPLE_SWORD = "simple_sword";
+    }
+    public class Animation
+    {
+        public const string BundleName = "animation";
+        public const string PLAYER = "Player";
+        public const string PLAYERLEFTIDLE = "PlayerLeftIdle";
+        public const string PLAYERLEFTWALK = "PlayerLeftWalk";
+        public const string PLAYERRIGHTIDLE = "PlayerRightIdle";
+        public const string PLAYERRIGHTWALK = "PlayerRightWalk";
+    }
+    public class Drop
+    {
+        public const string BundleName = "drop";
+        public const string BOMB = "Bomb";
+        public const string EXPBALL = "ExpBall";
+        public const string GETALLEXP = "GetAllExp";
+        public const string GOLD = "Gold";
+        public const string HPITEM = "HpItem";
+        public const string TREASURECHEST = "TreasureChest";
+    }
+    public class Enemy
+    {
+        public const string BundleName = "enemy";
+        public const string ENEMYA = "EnemyA";
+        public const string ENEMYABOSS = "EnemyABoss";
+        public const string ENEMYABOSSB = "EnemyABossB";
+        public const string ENEMYB = "EnemyB";
+        public const string ENEMYBBOSS = "EnemyBBoss";
+        public const string ENEMYBBOSSB = "EnemyBBossB";
+        public const string ENEMYC = "EnemyC";
+        public const string ENEMYCBOSS = "EnemyCBoss";
+        public const string ENEMYCBOSSB = "EnemyCBossB";
+        public const string ENEMYD = "EnemyD";
+        public const string ENEMYDBOSS = "EnemyDBoss";
+        public const string ENEMYDBOSSB = "EnemyDBossB";
+        public const string ENEMYE = "EnemyE";
+        public const string ENEMYEBOSS = "EnemyEBoss";
+        public const string ENEMYFLY = "EnemyFly";
+        public const string ENEMYFLYBOSS = "EnemyFlyBoss";
+        public const string ENEMYMINIBOSS = "EnemyMiniBoss";
+        public const string ENEMY_A = "enemy_a";
+        public const string ENEMY_A_BOSS = "enemy_a_boss";
+        public const string ENEMY_B = "enemy_b";
+        public const string ENEMY_B_BOSS = "enemy_b_boss";
+        public const string ENEMY_C = "enemy_c";
+        public const string ENEMY_C_BOSS = "enemy_c_boss";
+        public const string ENEMY_D = "enemy_d";
+        public const string ENEMY_D_BOSS = "enemy_d_boss";
+        public const string ENEMY_E = "enemy_e";
+        public const string ENEMY_FLY = "enemy_fly";
+        public const string ENEMY_FLY_BOSS = "enemy_fly_boss";
+        public const string MINI_BOSS = "mini_Boss";
+    }
+    public class Floor_png
+    {
+        public const string BundleName = "floor_png";
+        public const string FLOOR = "Floor";
+    }
     public class Icon
     {
         public const string BundleName = "icon";
-        public const string ACHIEVEMENT = "achievement";
         public const string ACHIEVEMENT_ALL_ICON = "achievement_all_icon";
+        public const string ACHIEVEMENT_LEVEL_ICON = "achievement_level_icon";
         public const string ACHIEVEMENT_TIME_ICON = "achievement_time_icon";
         public const string BALL_ICON = "ball_icon";
         public const string BOMB_ICON = "bomb_icon";
@@ -34,12 +99,20 @@ namespace QAssetBundle
         public const string SIMPLE_KNIFE_ICON = "simple_knife_icon";
         public const string SIMPLE_SWORD_ICON = "simple_sword_icon";
     }
+    public class Music
+    {
+        public const string BundleName = "music";
+        public const string GAMEBG = "GameBg";
+        public const string HOMEBG = "HomeBg";
+    }
     public class Sound
     {
         public const string BundleName = "sound";
         public const string ABILITYLEVELUP = "AbilityLevelUp";
+        public const string ACHIEVEMENT = "Achievement";
         public const string BALL = "Ball";
         public const string BOMB = "Bomb";
+        public const string BUTTONCLICK = "ButtonClick";
         public const string DIE = "Die";
         public const string ENEMYDIE = "EnemyDie";
         public const string EXP = "Exp";
@@ -53,6 +126,11 @@ namespace QAssetBundle
         public const string LEVELUP = "LevelUp";
         public const string TREASURECHEST = "TreasureChest";
         public const string WALK = "Walk";
+    }
+    public class Ui_bg_png
+    {
+        public const string BundleName = "ui_bg_png";
+        public const string UI_BG = "ui_bg";
     }
     public class Uigameoverpanel_prefab
     {

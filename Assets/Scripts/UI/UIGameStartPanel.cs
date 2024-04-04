@@ -1,3 +1,4 @@
+using QAssetBundle;
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
@@ -17,16 +18,19 @@ namespace Survivor
 			#region UI相关
 			BtnStart.onClick.AddListener(() =>
 			{
+				AudioKit.PlaySound(Sound.BUTTONCLICK);
 				SceneManager.LoadScene("Game");
 			});
 			
 			BtnUpgrade.onClick.AddListener(() =>
 			{
+				AudioKit.PlaySound(Sound.BUTTONCLICK);
 				GlodUpgradePanel.Show();
 			});
 			
 			BtnAchievement.onClick.AddListener(() =>
 			{
+				AudioKit.PlaySound(Sound.BUTTONCLICK);
 				AchievementPanel.Show();
 			});
 			#endregion

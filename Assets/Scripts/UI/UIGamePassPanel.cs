@@ -1,3 +1,4 @@
+using QAssetBundle;
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
@@ -16,6 +17,7 @@ namespace Survivor
 			
 			BtnBackStart.onClick.AddListener(() =>
 			{
+				AudioKit.PlaySound(Sound.BUTTONCLICK);
 				Global.ResetData();
 				this.CloseSelf();
 				SceneManager.LoadScene("GameStart");

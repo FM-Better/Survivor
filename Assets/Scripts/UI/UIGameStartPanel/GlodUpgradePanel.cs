@@ -71,6 +71,7 @@ namespace Survivor
 			#region UI相关
 			BtnClose.onClick.AddListener(() =>
 			{
+				AudioKit.PlaySound(Sound.BUTTONCLICK);
 				this.Hide();
 			});
 			#endregion
