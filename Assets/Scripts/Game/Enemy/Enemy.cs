@@ -10,7 +10,6 @@ namespace Survivor
 		public float Hp => hp;
 		[SerializeField] private float hp;
 		[SerializeField] private float hurtDurationTime;
-		private bool isDead;
 		private bool isHurt;
 		[SerializeField] private Color dissolveColor = Color.yellow;
 
@@ -21,7 +20,6 @@ namespace Survivor
 		void Start()
 		{
 			EnemySpawner.enemyCount.Value++; // 计数
-			isDead = false;
 			isHurt = false;
 			
 			mHitBox = transform.Find("HitBox").GetComponent<Collider2D>();

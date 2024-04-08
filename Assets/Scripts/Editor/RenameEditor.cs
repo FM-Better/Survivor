@@ -7,16 +7,16 @@ namespace Survivor
 {
     public class RenameUnityAssets : ScriptableWizard
     {
-        public bool IsRetainOldName = true; // 是否应用原文件名
+        public bool IsRetainOldName = false; // 是否应用原文件名
         
         public string Prefix = "null"; // 类型
         public string Name = "null"; // 名称
         public string Suffix = "null"; // 后缀
         
         public bool IsSingle = false; // 是否是单个Asset
-        public int BeginID = 1; // 起始ID
+        public int BeginID = 0; // 起始ID
 
-        [MenuItem("Tools/Unity Assets/批量重命名")]
+        [MenuItem("Tools/Unity Assets/批量重命名 %&r")]
         static void CreateWizard()
         {
             DisplayWizard<RenameUnityAssets>("Unity Assets 批量重命名", "取消", "重命名");
@@ -121,7 +121,7 @@ namespace Survivor
                 if (!IsSingle)
                 {
                     newName.Append("_");
-                    newName.Append(mNowID.ToString("d3")); // 添加ID    
+                    newName.Append(mNowID.ToString()); // 添加ID    
                 }
             }
 

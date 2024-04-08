@@ -5,7 +5,7 @@ namespace Survivor
 {
     public abstract class GamePlayObject : ViewController
     {
-        protected abstract Collider2D collider { get; }
+        protected abstract new Collider2D  collider { get; }
         
         private void OnBecameVisible()
         {

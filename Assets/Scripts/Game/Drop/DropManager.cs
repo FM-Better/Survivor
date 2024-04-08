@@ -21,18 +21,6 @@ namespace Survivor
 		{
 			Default = null;
 		}
-
-#if UNITY_EDITOR
-		private void OnGUI()
-		{
-			var guiStyle = new GUIStyle();
-			guiStyle.fontSize = 20;
-			guiStyle.normal.textColor = Color.white;
-			GUI.Label(new Rect(10, 80, 150, 20), $"回血道具： {s_HpItemCount}", guiStyle);
-			GUI.Label(new Rect(10, 110, 150, 20), $"拾取经验道具： {s_GetAllExpCount}", guiStyle);
-			GUI.Label(new Rect(10, 140, 150, 20), $"炸弹： {s_BombCount}", guiStyle);
-		}
-#endif
 		
 		public void SpawnDrop(Vector3 spawnPosition, bool isSpawnTreasure)
 		{

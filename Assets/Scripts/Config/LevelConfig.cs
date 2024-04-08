@@ -23,7 +23,7 @@ namespace Survivor
     [Serializable]
     public class EnemyWave
     {
-        public string Name;
+        public string Name; // 名字
         public bool Active = true; // 是否激活
         public float DurationTime; // 持续时间
         public float SpawnCD; // 刷怪的CD

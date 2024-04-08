@@ -28,16 +28,15 @@ namespace Survivor
 		void Start()
 		{
 			isOver = false;
-			
 			// 读取关卡的波次配置信息
 			foreach (var enemyWaveGroup in LevelConfig.EnemyWaveGroups)
 			{
-				if (!enemyWaveGroup.Active) 
+				if (!enemyWaveGroup.Active)
 					continue;
 				foreach (var wave in enemyWaveGroup.Waves)
 				{
 					if (wave.Active)
-						enemyWaveList.Add(wave);	
+						enemyWaveList.Add(wave);
 				}
 			}
 		}
