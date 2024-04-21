@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyWaveGroups:
   - Name: "1\u3001\u5E7D\u7075"
-    Active: 1
+    Active: 0
     Description: "\u7B2C\u4E00\u6CE2\uFF1A\u5E7D\u7075"
     Waves:
     - Name: EnemyA
@@ -72,7 +72,7 @@ MonoBehaviour:
       SpeedScale: 1
       HpScale: 1
   - Name: "2\u3001\u8718\u86DB"
-    Active: 1
+    Active: 0
     Description: "\u7B2C\u4E8C\u6CE2\uFF1A\u8718\u86DB"
     Waves:
     - Name: EnemyB
@@ -139,7 +139,7 @@ MonoBehaviour:
       SpeedScale: 1.5
       HpScale: 2
   - Name: "3\u3001\u8759\u8760"
-    Active: 1
+    Active: 0
     Description: "\u7B2C\u4E09\u6CE2\uFF1A\u8759\u8760"
     Waves:
     - Name: EnemyFly
