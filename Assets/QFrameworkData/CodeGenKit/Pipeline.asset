@@ -19,18 +19,22 @@ MonoBehaviour:
     From: 0
     NameToFullName: []
     BindInfos:
-    - TypeName: RectTransform
-      PathToRoot: TextRoot
-      MemberName: TextRoot
-    - TypeName: UnityEngine.UI.Text
-      PathToRoot: TextRoot/Text
-      MemberName: Text
-    ScriptsFolder: Assets/Scripts/Game
-    ClassName: FloatingTextController
+    - TypeName: UnityEngine.Animator
+      PathToRoot: Sprite
+      MemberName: Sprite
+    - TypeName: CircleCollider2D
+      PathToRoot: HurtBox
+      MemberName: HurtBox
+    - TypeName: UnityEngine.UI.Image
+      PathToRoot: Canvas/HpValue
+      MemberName: HpValue
+    ScriptsFolder: Assets\Scripts\Game\Player
+    ClassName: Player
     Namespace: Survivor
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace Survivor\r\n{\r\n\tpublic
-      partial class FloatingTextController : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class Player : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:ae93434f-e55d-418d-a78c-251e413e2bb6\r\nusing UnityEngine;\r\n\r\nnamespace
-      Survivor\r\n{\r\n\tpublic partial class FloatingTextController\r\n\t{\r\n\r\n\t\tpublic
-      RectTransform TextRoot;\r\n\r\n\t\tpublic UnityEngine.UI.Text Text;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:3bf151a6-da5d-4725-b3fc-5b9da8d7f03f\r\nusing UnityEngine;\r\n\r\nnamespace
+      Survivor\r\n{\r\n\tpublic partial class Player\r\n\t{\r\n\r\n\t\tpublic UnityEngine.Animator
+      Sprite;\r\n\r\n\t\tpublic CircleCollider2D HurtBox;\r\n\r\n\t\tpublic UnityEngine.UI.Image
+      HpValue;\r\n\r\n\t\tpublic UnityEngine.Rigidbody2D selfRigidbody;\r\n\r\n\t}\r\n}\r\n"

@@ -1,10 +1,12 @@
-// Generate Id:3cc819e4-7d14-4c66-b7bd-855caae87bc2
+// Generate Id:ddf9c9db-ceb2-4dcd-b669-704140cd1bd3
 using UnityEngine;
 
 namespace Survivor
 {
 	public partial class Bomb
 	{
+
+		public UnityEngine.CircleCollider2D selfCollider;
 
 	}
 }

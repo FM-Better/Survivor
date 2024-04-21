@@ -1,5 +1,5 @@
 ﻿/****************************************************************************
- * 2024.3 LAPTOP-FG35BCEI
+ * 2024.4 LAPTOP-FG35BCEI
  ****************************************************************************/
 
 using UnityEngine;
@@ -12,9 +12,6 @@ namespace Survivor
 	{
 		[SerializeField] public UnityEngine.UI.Text TxtGold;
 		[SerializeField] public UnityEngine.UI.Button BtnClose;
-		[SerializeField] public UnityEngine.UI.Button BtnExpUpgrade;
-		[SerializeField] public UnityEngine.UI.Button BtnGoldUpgrade;
-		[SerializeField] public UnityEngine.UI.Button BtnMaxHpUpgrade;
 		[SerializeField] public RectTransform ItemRoot;
 		[SerializeField] public UnityEngine.UI.Button GoldUpgradeItemTemplate;
 
@@ -22,9 +19,6 @@ namespace Survivor
 		{
 			TxtGold = null;
 			BtnClose = null;
-			BtnExpUpgrade = null;
-			BtnGoldUpgrade = null;
-			BtnMaxHpUpgrade = null;
 			ItemRoot = null;
 			GoldUpgradeItemTemplate = null;
 		}

@@ -1,11 +1,10 @@
 /****************************************************************************
  * 2024.3 LAPTOP-FG35BCEI
  ****************************************************************************/
-
 using System.Collections.Generic;
 using System.Linq;
+using QAssetBundle;
 using QFramework;
-using Unity.VisualScripting;
 using UnityEngine.UI;
 
 namespace Survivor
@@ -13,14 +12,12 @@ namespace Survivor
 	public partial class GlodUpgradePanel : UIElement,IController
 	{
 		private List<GoldUpgradeItem> goldItems = new List<GoldUpgradeItem>();
-
 		
-		
-		private void Refresh()
+		private void Awake()
 		{
-			ItemRoot.DestroyChildren();
-
-			var items = goldItems.Where(item => item.ConditionCheck());
+			goldItems = this.GetSystem<GoldUpgradeSystem>().Items;
+			
+			var items = goldItems.Where(item => !item.UpgradeFinished);
 			foreach (var item in items)
 			{
 				GoldUpgradeItemTemplate.InstantiateWithParent(ItemRoot)
@@ -32,10 +29,31 @@ namespace Survivor
 						self.onClick.AddListener(() =>
 						{
 							itemCache.Upgrade();
-							AudioKit.PlaySound("AbilityLevelUp");
+							AudioKit.PlaySound(Sound.ABILITYLEVELUP);
 						});
-
+						
 						var selfCache = self;
+						itemCache.OnChanged.Register(() =>
+						{
+							if (itemCache.ConditionCheck())
+							{
+								selfCache.Show();
+							}
+							else
+							{
+								selfCache.Hide();
+							}
+						}).UnRegisterWhenGameObjectDestroyed(selfCache);
+						
+						if (itemCache.ConditionCheck())
+						{
+							selfCache.Show();
+						}
+						else
+						{
+							selfCache.Hide();
+						}
+						
 						Global.Gold.RegisterWithInitValue((gold) =>
 						{
 							if (gold >= item.Cost)
@@ -47,24 +65,13 @@ namespace Survivor
 								selfCache.interactable = false;
 							}
 						}).UnRegisterWhenGameObjectDestroyed(self);
-					}).Show();
+					});
 			}	
-		}
-		
-		private void Awake()
-		{
-			goldItems = this.GetSystem<GoldUpgradeSystem>().Items;
-
-			GoldUpgradeSystem.OnGoldUpgradeSystemChanged.Register(() =>
-			{
-				Refresh();
-			}).UnRegisterWhenGameObjectDestroyed(gameObject);
-			
-			Refresh();
 			
 			#region UI相关
 			BtnClose.onClick.AddListener(() =>
 			{
+				AudioKit.PlaySound(Sound.BUTTONCLICK);
 				this.Hide();
 			});
 			#endregion

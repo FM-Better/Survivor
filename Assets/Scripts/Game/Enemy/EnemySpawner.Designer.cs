@@ -1,4 +1,4 @@
-// Generate Id:7c137752-a7f5-4f42-96e8-ec25efa27ad2
+// Generate Id:98832f78-5893-4c4f-ad82-3a41a25aeea3
 using UnityEngine;
 
 namespace Survivor
@@ -6,7 +6,7 @@ namespace Survivor
 	public partial class EnemySpawner
 	{
 
-		public Survivor.Enemy Enemy;
+		public Transform EnemyRoot;
 
 	}
 }

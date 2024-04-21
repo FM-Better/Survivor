@@ -1,3 +1,4 @@
+using QAssetBundle;
 using UnityEngine;
 using UnityEngine.UI;
 using QFramework;
@@ -13,18 +14,24 @@ namespace Survivor
 		protected override void OnInit(IUIData uiData = null)
 		{
 			mData = uiData as UIGameStartPanelData ?? new UIGameStartPanelData();
-			
-			Global.InitGameData();
 
 			#region UI相关
+			BtnStart.onClick.AddListener(() =>
+			{
+				AudioKit.PlaySound(Sound.BUTTONCLICK);
+				SceneManager.LoadScene("Game");
+			});
+			
 			BtnUpgrade.onClick.AddListener(() =>
 			{
+				AudioKit.PlaySound(Sound.BUTTONCLICK);
 				GlodUpgradePanel.Show();
 			});
 			
-			BtnStart.onClick.AddListener(() =>
+			BtnAchievement.onClick.AddListener(() =>
 			{
-				SceneManager.LoadScene("Game");
+				AudioKit.PlaySound(Sound.BUTTONCLICK);
+				AchievementPanel.Show();
 			});
 			#endregion
 

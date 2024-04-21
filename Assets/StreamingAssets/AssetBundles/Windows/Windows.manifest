@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 2589659933
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: uigamepanel_prefab
+      Dependencies:
+        Dependency_0: icon
+    Info_1:
+      Name: sound
+      Dependencies: {}
+    Info_2:
+      Name: uigameoverpanel_prefab
+      Dependencies: {}
+    Info_3:
+      Name: uigamestartpanel_prefab
+      Dependencies: {}
+    Info_4:
+      Name: uigamepasspanel_prefab
+      Dependencies: {}
+    Info_5:
+      Name: icon
+      Dependencies: {}

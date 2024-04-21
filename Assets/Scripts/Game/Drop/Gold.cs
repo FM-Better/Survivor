@@ -1,18 +1,34 @@
+using QAssetBundle;
 using UnityEngine;
 using QFramework;
 
 namespace Survivor
 {
-	public partial class Gold : ViewController
+	public partial class Gold : PickUpObject
 	{
+		protected override Collider2D collider => selfCollider;
+		public bool IsForced = false; // 是否强行拾取 即不进行后退再飞行的动画
+		
 		private void OnTriggerEnter2D(Collider2D other)
 		{
 			if (other.GetComponent<PickUpArea>())
 			{
-				AudioKit.PlaySound("Gold");
-				Global.Gold.Value++;
-				this.DestroyGameObjGracefully();
+				if (IsForced)
+				{
+					Excute();
+				}
+				else
+				{
+					StartPickUpAnim();	
+				}
 			}
+		}
+
+		protected override void Excute()
+		{
+			AudioKit.PlaySound(Sound.GOLD);
+			Global.Gold.Value++;
+			this.DestroyGameObjGracefully();
 		}
 	}
 }

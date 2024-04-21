@@ -1,19 +1,16 @@
+using QAssetBundle;
 using UnityEngine;
 using QFramework;
 
 namespace Survivor
 {
-	public partial class GetAllExp : ViewController
+	public partial class GetAllExp : GamePlayObject
 	{
-		private Transform playerTrans;
 		[Header("掉落物移动速度")]
 		[SerializeField] private float moveSpeed;
-		
-		private void Start()
-		{
-			playerTrans = FindObjectOfType<Player>().transform;
-		}
 
+		protected override Collider2D collider => selfCollider;
+		
 		private void OnTriggerEnter2D(Collider2D other)
 		{
 			if (other.GetComponent<PickUpArea>())
@@ -21,17 +18,35 @@ namespace Survivor
 				var expBalls = FindObjectsByType<ExpBall>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
 				foreach (var expBall in expBalls)
 				{
+					var expCache = expBall;
+					expCache.IsForced = true;
 					ActionKit.OnUpdate.Register(() =>
 					{
-						if (playerTrans)
+						if (Player.Default)
 						{
-							var direction = (playerTrans.position - expBall.transform.position).normalized;
-							expBall.transform.Translate(direction * (moveSpeed * Time.deltaTime));	
+							var direction = expCache.NormalizedDirection2DTo(Player.Default);
+							expCache.transform.Translate(direction * (moveSpeed * Time.deltaTime));	
 						}
-					}).UnRegisterWhenGameObjectDestroyed(expBall);
+					}).UnRegisterWhenGameObjectDestroyed(expCache);
 				}
 				
-				AudioKit.PlaySound("GetAllExp");
+				var golds = FindObjectsByType<Gold>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+				foreach (var gold in golds)
+				{
+					var goldCache = gold;
+					goldCache.IsForced = true;
+					ActionKit.OnUpdate.Register(() =>
+					{
+						if (Player.Default)
+						{
+							var direction = goldCache.NormalizedDirection2DTo(Player.Default);
+							goldCache.transform.Translate(direction * (moveSpeed * Time.deltaTime));	
+						}
+					}).UnRegisterWhenGameObjectDestroyed(goldCache);
+				}
+				
+				AudioKit.PlaySound(Sound.GETALLEXP);
+				DropManager.s_GetAllExpCount--;
 				this.DestroyGameObjGracefully();
 			}
 		}

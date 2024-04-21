@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using QFramework;
 
@@ -5,9 +6,19 @@ namespace Survivor
 {
 	public partial class PickUpArea : ViewController
 	{
-		void Start()
+		private float mInitRadius;
+		
+		private void Awake()
 		{
-			// Code Here
+			mInitRadius = mInitRadius = GetComponent<CircleCollider2D>().radius;
+		}
+
+		private void Start()
+		{
+			Global.PickUpAreaRange.Register(range =>
+			{
+				GetComponent<CircleCollider2D>().radius = mInitRadius * range;
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 		}
 	}
 }

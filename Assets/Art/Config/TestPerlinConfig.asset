@@ -1,0 +1,399 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2e7fae370cb4be49a48aa4e1dd05c68, type: 3}
+  m_Name: TestPerlinConfig
+  m_EditorClassIdentifier: 
+  EnemyWaveGroups:
+  - Name: "1\u3001\u5E7D\u7075"
+    Active: 0
+    Description: "\u7B2C\u4E00\u6CE2\uFF1A\u5E7D\u7075"
+    Waves:
+    - Name: EnemyA
+      Active: 1
+      DurationTime: 15
+      SpawnCD: 0.8
+      isWaited: 1
+      WaitTime: 1
+      EnemyPrefab: {fileID: 2024750781610213812, guid: a174e1b1865908f42a52f951894a1346, type: 3}
+      SpeedScale: 1
+      HpScale: 1
+    - Name: EnemyA
+      Active: 1
+      DurationTime: 30
+      SpawnCD: 0.5
+      isWaited: 1
+      WaitTime: 2
+      EnemyPrefab: {fileID: 2024750781610213812, guid: a174e1b1865908f42a52f951894a1346, type: 3}
+      SpeedScale: 1
+      HpScale: 1
+    - Name: EnemyABoss
+      Active: 1
+      DurationTime: 6
+      SpawnCD: 5
+      isWaited: 1
+      WaitTime: 2
+      EnemyPrefab: {fileID: 2993334406328091765, guid: 542a7b4ee7f542b48bec39040438c9b2, type: 3}
+      SpeedScale: 1
+      HpScale: 1
+    - Name: EnemyA
+      Active: 1
+      DurationTime: 40
+      SpawnCD: 0.2
+      isWaited: 1
+      WaitTime: 2
+      EnemyPrefab: {fileID: 2024750781610213812, guid: a174e1b1865908f42a52f951894a1346, type: 3}
+      SpeedScale: 1
+      HpScale: 1
+    - Name: EnemyABoss
+      Active: 1
+      DurationTime: 6
+      SpawnCD: 5
+      isWaited: 1
+      WaitTime: 2
+      EnemyPrefab: {fileID: 2993334406328091765, guid: 542a7b4ee7f542b48bec39040438c9b2, type: 3}
+      SpeedScale: 1
+      HpScale: 1
+    - Name: EnemyABossB
+      Active: 1
+      DurationTime: 6
+      SpawnCD: 5
+      isWaited: 1
+      WaitTime: 2
+      EnemyPrefab: {fileID: 1226821153819582727, guid: 30958f77f82c4e1459ce724e865f8103, type: 3}
+      SpeedScale: 1
+      HpScale: 1
+  - Name: "2\u3001\u8718\u86DB"
+    Active: 0
+    Description: "\u7B2C\u4E8C\u6CE2\uFF1A\u8718\u86DB"
+    Waves:
+    - Name: EnemyB
+      Active: 1
+      DurationTime: 30
+      SpawnCD: 0.8
+      isWaited: 1
+      WaitTime: 1
+      EnemyPrefab: {fileID: 2400164781331330944, guid: f39ddf4deb21a7248908a2e2f392c31a, type: 3}
+      SpeedScale: 1
+      HpScale: 1
+    - Name: EnemyB
+      Active: 1
+      DurationTime: 40
+      SpawnCD: 0.5
+      isWaited: 1
+      WaitTime: 1
+      EnemyPrefab: {fileID: 2400164781331330944, guid: f39ddf4deb21a7248908a2e2f392c31a, type: 3}
+      SpeedScale: 1
+      HpScale: 1
+    - Name: EnemyBBossB
+      Active: 1
+      DurationTime: 11
+      SpawnCD: 5
+      isWaited: 1
+      WaitTime: 2
+      EnemyPrefab: {fileID: 1093518926472734822, guid: 21d034eeedb0ebf4086244c7f45d2d74, type: 3}
+      SpeedScale: 1
+      HpScale: 1
+    - Name: EnemyB
+      Active: 1
+      DurationTime: 50
+      SpawnCD: 0.2
+      isWaited: 1
+      WaitTime: 2
+      EnemyPrefab: {fileID: 2400164781331330944, guid: f39ddf4deb21a7248908a2e2f392c31a, type: 3}
+      SpeedScale: 1.5
+      HpScale: 2
+    - Name: EnemyBBossB
+      Active: 1
+      DurationTime: 12
+      SpawnCD: 5
+      isWaited: 1
+      WaitTime: 1
+      EnemyPrefab: {fileID: 1093518926472734822, guid: 21d034eeedb0ebf4086244c7f45d2d74, type: 3}
+      SpeedScale: 1
+      HpScale: 1
+    - Name: EnemyB
+      Active: 1
+      DurationTime: 30
+      SpawnCD: 0.1
+      isWaited: 1
+      WaitTime: 2
+      EnemyPrefab: {fileID: 2400164781331330944, guid: f39ddf4deb21a7248908a2e2f392c31a, type: 3}
+      SpeedScale: 1.5
+      HpScale: 2
+    - Name: EnemyBBoss
+      Active: 1
+      DurationTime: 16
+      SpawnCD: 5
+      isWaited: 1
+      WaitTime: 2
+      EnemyPrefab: {fileID: 5540681707097925934, guid: f7ac0d350312d8b4fa001420b13f4109, type: 3}
+      SpeedScale: 1.5
+      HpScale: 2
+  - Name: "3\u3001\u8759\u8760"
+    Active: 0
+    Description: "\u7B2C\u4E09\u6CE2\uFF1A\u8759\u8760"
+    Waves:
+    - Name: EnemyFly
+      Active: 1
+      DurationTime: 15
+      SpawnCD: 0.5
+      isWaited: 1
+      WaitTime: 2
+      EnemyPrefab: {fileID: 6331395430937204827, guid: a4d7c59f3851d71449b736dd58c7ffda, type: 3}
+      SpeedScale: 1.5
+      HpScale: 4
+    - Name: EnemyFly
+      Active: 1
+      DurationTime: 7
+      SpawnCD: 0.2
+      isWaited: 1
+      WaitTime: 1
+      EnemyPrefab: {fileID: 6331395430937204827, guid: a4d7c59f3851d71449b736dd58c7ffda, type: 3}
+      SpeedScale: 1.5
+      HpScale: 4
+    - Name: EnemyFly
+      Active: 1
+      DurationTime: 20
+      SpawnCD: 0.1
+      isWaited: 1
+      WaitTime: 1
+      EnemyPrefab: {fileID: 6331395430937204827, guid: a4d7c59f3851d71449b736dd58c7ffda, type: 3}
+      SpeedScale: 1.5
+      HpScale: 4
+    - Name: EnemyFly
+      Active: 1
+      DurationTime: 30
+      SpawnCD: 0.05
+      isWaited: 1
+      WaitTime: 1
+      EnemyPrefab: {fileID: 6331395430937204827, guid: a4d7c59f3851d71449b736dd58c7ffda, type: 3}
+      SpeedScale: 1.5
+      HpScale: 4
+    - Name: EnemyFlyBoss
+      Active: 1
+      DurationTime: 6
+      SpawnCD: 5
+      isWaited: 1
+      WaitTime: 1
+      EnemyPrefab: {fileID: 5487822965031370915, guid: f4c94bd44943c7d469ea00c0915a4f12, type: 3}
+      SpeedScale: 1.5
+      HpScale: 4
+    - Name: EnemyFly
+      Active: 1
+      DurationTime: 30
+      SpawnCD: 0.025
+      isWaited: 1
+      WaitTime: 1
+      EnemyPrefab: {fileID: 6331395430937204827, guid: a4d7c59f3851d71449b736dd58c7ffda, type: 3}
+      SpeedScale: 1.5
+      HpScale: 4
+    - Name: EnemyCBossB
+      Active: 1
+      DurationTime: 11
+      SpawnCD: 5
+      isWaited: 1
+      WaitTime: 2
+      EnemyPrefab: {fileID: 7178566475531754209, guid: c20423ab81784a3438ed0a5070c16d5e, type: 3}
+      SpeedScale: 2
+      HpScale: 4
+    - Name: EnemyCBossB
+      Active: 1
+      DurationTime: 16
+      SpawnCD: 5
+      isWaited: 1
+      WaitTime: 5
+      EnemyPrefab: {fileID: 7178566475531754209, guid: c20423ab81784a3438ed0a5070c16d5e, type: 3}
+      SpeedScale: 2
+      HpScale: 5
+  - Name: "4\u3001\u72EC\u773C\u602A"
+    Active: 0
+    Description: "\u7B2C\u56DB\u6CE2\uFF1A\u72EC\u773C\u602A"
+    Waves:
+    - Name: EnemyC
+      Active: 1
+      DurationTime: 20
+      SpawnCD: 0.1
+      isWaited: 1
+      WaitTime: 1
+      EnemyPrefab: {fileID: 5148945783987992927, guid: bdf50c717e85a5b4c80e4456c4a1aedb, type: 3}
+      SpeedScale: 2
+      HpScale: 5
+    - Name: EnemyC
+      Active: 1
+      DurationTime: 30
+      SpawnCD: 0.05
+      isWaited: 1
+      WaitTime: 1
+      EnemyPrefab: {fileID: 5148945783987992927, guid: bdf50c717e85a5b4c80e4456c4a1aedb, type: 3}
+      SpeedScale: 2
+      HpScale: 5
+    - Name: EnemyCBoss
+      Active: 1
+      DurationTime: 11
+      SpawnCD: 5
+      isWaited: 1
+      WaitTime: 1
+      EnemyPrefab: {fileID: 2087376265329718224, guid: 329671e65e22a6f49a3ade90c97a6dbe, type: 3}
+      SpeedScale: 2
+      HpScale: 5
+    - Name: EnemyC
+      Active: 1
+      DurationTime: 40
+      SpawnCD: 0.025
+      isWaited: 1
+      WaitTime: 2
+      EnemyPrefab: {fileID: 5148945783987992927, guid: bdf50c717e85a5b4c80e4456c4a1aedb, type: 3}
+      SpeedScale: 2
+      HpScale: 5
+    - Name: EnemyCBoss
+      Active: 1
+      DurationTime: 11
+      SpawnCD: 5
+      isWaited: 1
+      WaitTime: 2
+      EnemyPrefab: {fileID: 2087376265329718224, guid: 329671e65e22a6f49a3ade90c97a6dbe, type: 3}
+      SpeedScale: 2
+      HpScale: 5
+    - Name: EnemyC
+      Active: 1
+      DurationTime: 40
+      SpawnCD: 0.0125
+      isWaited: 1
+      WaitTime: 2
+      EnemyPrefab: {fileID: 5148945783987992927, guid: bdf50c717e85a5b4c80e4456c4a1aedb, type: 3}
+      SpeedScale: 2
+      HpScale: 5
+    - Name: EnemyC
+      Active: 1
+      DurationTime: 16
+      SpawnCD: 5
+      isWaited: 1
+      WaitTime: 2
+      EnemyPrefab: {fileID: 7178566475531754209, guid: c20423ab81784a3438ed0a5070c16d5e, type: 3}
+      SpeedScale: 2
+      HpScale: 5
+  - Name: "5\u3001\u5976\u916A"
+    Active: 0
+    Description: "\u7B2C\u4E94\u6CE2\uFF1A\u5976\u916A"
+    Waves:
+    - Name: EnemyD
+      Active: 1
+      DurationTime: 30
+      SpawnCD: 0.1
+      isWaited: 1
+      WaitTime: 2
+      EnemyPrefab: {fileID: 7569138950045160043, guid: eb85603ac1103fd41836de3b97b911fd, type: 3}
+      SpeedScale: 2.5
+      HpScale: 6
+    - Name: EnemyD
+      Active: 1
+      DurationTime: 30
+      SpawnCD: 0.025
+      isWaited: 1
+      WaitTime: 2
+      EnemyPrefab: {fileID: 7569138950045160043, guid: eb85603ac1103fd41836de3b97b911fd, type: 3}
+      SpeedScale: 6
+      HpScale: 2.5
+    - Name: EnemyMiniBoss
+      Active: 1
+      DurationTime: 11
+      SpawnCD: 10
+      isWaited: 1
+      WaitTime: 1
+      EnemyPrefab: {fileID: 3382935718133338812, guid: 7d9192968644abd4d9c4f5c04039c659, type: 3}
+      SpeedScale: 2.5
+      HpScale: 6
+    - Name: EnemyD
+      Active: 1
+      DurationTime: 40
+      SpawnCD: 0.0125
+      isWaited: 1
+      WaitTime: 1
+      EnemyPrefab: {fileID: 7569138950045160043, guid: eb85603ac1103fd41836de3b97b911fd, type: 3}
+      SpeedScale: 2.5
+      HpScale: 6
+    - Name: EnemyD
+      Active: 1
+      DurationTime: 50
+      SpawnCD: 0.01
+      isWaited: 1
+      WaitTime: 2
+      EnemyPrefab: {fileID: 7569138950045160043, guid: eb85603ac1103fd41836de3b97b911fd, type: 3}
+      SpeedScale: 2.5
+      HpScale: 6
+    - Name: EnemyDBoss
+      Active: 1
+      DurationTime: 46
+      SpawnCD: 15
+      isWaited: 1
+      WaitTime: 2
+      EnemyPrefab: {fileID: 167348909161916975, guid: b067c175e5f0d4f47aeac05c23ea7da4, type: 3}
+      SpeedScale: 2.5
+      HpScale: 6
+  - Name: "6\u3001\u9B54\u6CD5\u5E08"
+    Active: 0
+    Description: "\u7B2C\u516D\u6CE2\uFF1A\u9B54\u6CD5\u5E08"
+    Waves:
+    - Name: EnemyE
+      Active: 1
+      DurationTime: 30
+      SpawnCD: 0.05
+      isWaited: 0
+      WaitTime: 1
+      EnemyPrefab: {fileID: 7483417218984268926, guid: 20d53512ef8605e428004624eef85851, type: 3}
+      SpeedScale: 3
+      HpScale: 6
+    - Name: EnemyE
+      Active: 1
+      DurationTime: 40
+      SpawnCD: 0.025
+      isWaited: 0
+      WaitTime: 2
+      EnemyPrefab: {fileID: 7483417218984268926, guid: 20d53512ef8605e428004624eef85851, type: 3}
+      SpeedScale: 3
+      HpScale: 6
+    - Name: EnemyMiniBoss
+      Active: 1
+      DurationTime: 11
+      SpawnCD: 10
+      isWaited: 0
+      WaitTime: 2
+      EnemyPrefab: {fileID: 3382935718133338812, guid: 7d9192968644abd4d9c4f5c04039c659, type: 3}
+      SpeedScale: 3
+      HpScale: 6
+    - Name: EnemyE
+      Active: 1
+      DurationTime: 60
+      SpawnCD: 0.0125
+      isWaited: 0
+      WaitTime: 3
+      EnemyPrefab: {fileID: 7483417218984268926, guid: 20d53512ef8605e428004624eef85851, type: 3}
+      SpeedScale: 3
+      HpScale: 6
+    - Name: EnemyE
+      Active: 1
+      DurationTime: 60
+      SpawnCD: 0.01
+      isWaited: 0
+      WaitTime: 2
+      EnemyPrefab: {fileID: 7483417218984268926, guid: 20d53512ef8605e428004624eef85851, type: 3}
+      SpeedScale: 2.5
+      HpScale: 6
+    - Name: EnemyEBoss
+      Active: 1
+      DurationTime: 40
+      SpawnCD: 8
+      isWaited: 0
+      WaitTime: 2
+      EnemyPrefab: {fileID: 2572751432552562213, guid: efe2827e76d6edf48a1ed5e25845b2af, type: 3}
+      SpeedScale: 2.5
+      HpScale: 6

@@ -8,36 +8,42 @@ using Random = UnityEngine.Random;
 
 namespace Survivor
 {
-	[Serializable]
-	public class EnemyWave
-	{
-		public float DurationTime; // 持续时间
-		public float SpawnCD; // 刷怪的CD
-		public bool isWaited; // 是否等待完毕
-		public float WaitTime; // 等待下一波的时间
-		public GameObject EnemyPrefab;
-	}
-	
 	public partial class EnemySpawner : ViewController
 	{
-		private Transform playerTrans;
+		[SerializeField] private LevelConfig LevelConfig;
+
+		[Header("刷怪点的边界")] 
+		[SerializeField] private Transform leftBottom;
+		[SerializeField] private Transform rightTop;
+		
 		private float waitTimer = 0f;
 		private float spawnTimer = 0f;
 		private float waveTimer = 0f;
-		[SerializeField] private float spawnDis;
-		[SerializeField] private List<EnemyWave> enemyWaveList = new List<EnemyWave>();
+		private List<EnemyWave> enemyWaveList = new List<EnemyWave>();
 		private int nowWaveCount = 1;
+		private bool isOver;
 
 		public static BindableProperty<int> enemyCount = new BindableProperty<int>();
 		
 		void Start()
 		{
-			playerTrans = FindObjectOfType<Player>().transform; // 缓存玩家Transform
+			isOver = false;
+			// 读取关卡的波次配置信息
+			foreach (var enemyWaveGroup in LevelConfig.EnemyWaveGroups)
+			{
+				if (!enemyWaveGroup.Active)
+					continue;
+				foreach (var wave in enemyWaveGroup.Waves)
+				{
+					if (wave.Active)
+						enemyWaveList.Add(wave);
+				}
+			}
 		}
 
 		private void Update()
 		{
-			if (!playerTrans || Global.IsEnemySpawnOver.Value)
+			if (!Player.Default || Global.IsEnemySpawnOver.Value)
 				return;
 
 			if (nowWaveCount <= enemyWaveList.Count)
@@ -60,9 +66,15 @@ namespace Survivor
 					{
 						spawnTimer = 0f;
 
-						var spawnPos = CalcSpawnPos(spawnDis);
-						nowWave.EnemyPrefab.Instantiate()
+						var spawnPos = CalcSpawnPos();
+						nowWave.EnemyPrefab.InstantiateWithParent(EnemyRoot)
 							.Position(spawnPos)
+							.Self((self) =>
+							{
+								var enemy = self.GetComponent<IEnemy>(); 
+								enemy.PopulateHp(nowWave.HpScale);
+								enemy.PopulateSpeed(nowWave.SpeedScale);
+							})
 							.Show();
 					}
 
@@ -77,17 +89,31 @@ namespace Survivor
 			}
 			else
 			{
-				Global.IsEnemySpawnOver.Value = true;
+				if (!isOver)
+				{
+					Global.IsEnemySpawnOver.Value = true;
+					isOver = true;
+				}
 			}
 		}
 
-		private Vector3 CalcSpawnPos(float spwanDistance)
+		private Vector3 CalcSpawnPos()
 		{
-			var angle = Random.Range(0, 360f);
-			var rad = Mathf.Deg2Rad * angle;
-			var direction = new Vector3(Mathf.Cos(rad), Mathf.Sin(rad)).normalized;
+			var spwanForX = RandomUtility.Choose(true, false);
+			float randomX;
+			float randomY;
+			if (spwanForX)
+			{
+				randomX = Random.Range(leftBottom.PositionX(), rightTop.PositionX());
+				randomY = RandomUtility.Choose(leftBottom.PositionY(), rightTop.PositionY());
+			}
+			else
+			{
+				randomX = RandomUtility.Choose(leftBottom.PositionX(), rightTop.PositionX());
+				randomY = Random.Range(leftBottom.PositionY(), rightTop.PositionY());
+			}
 
-			return playerTrans.position + spwanDistance * direction;
+			return new Vector3(randomX, randomY, 0f);
 		}
 	}
 }

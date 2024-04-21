@@ -193,6 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BtnBackStart: {fileID: 7446916325090396510}
+  BtnTest: {fileID: 0}
 --- !u!222 &8859371785001748740
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -1,21 +1,30 @@
+using QAssetBundle;
 using UnityEngine;
 using QFramework;
 
 namespace Survivor
 {
-	public partial class HpItem : ViewController
+	public partial class HpItem : PickUpObject
 	{
+		protected override Collider2D collider => selfCollider;
+		
 		private void OnTriggerEnter2D(Collider2D other)
 		{
 			if (other.GetComponent<PickUpArea>())
 			{
 				if (Global.Hp.Value < Global.MaxHp.Value)
 				{
-					AudioKit.PlaySound("HpItem");
-					Global.Hp.Value++;
-					this.DestroyGameObjGracefully();	
+					StartPickUpAnim();
 				}
 			}
+		}
+
+		protected override void Excute()
+		{
+			AudioKit.PlaySound(Sound.HPITEM);
+			Global.Hp.Value++;
+			DropManager.s_HpItemCount--;
+			this.DestroyGameObjGracefully();
 		}
 	}
 }

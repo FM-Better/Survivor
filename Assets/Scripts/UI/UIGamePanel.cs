@@ -9,46 +9,22 @@ namespace Survivor
 	}
 	public partial class UIGamePanel : UIPanel
 	{
+		public static EasyEvent FlashScreen = new EasyEvent();
+		public static EasyEvent OpenTreasurePanel = new EasyEvent();
+		
 		protected override void OnInit(IUIData uiData = null)
 		{
 			mData = uiData as UIGamePanelData ?? new UIGamePanelData();
-
-			#region UI相关
-			BtnSimpleDamage.onClick.AddListener(() =>
-			{
-				Global.SimpleAbilityDamage.Value *= 1.5f; // 简单能力伤害提升1.5倍
-				Time.timeScale = 1f;
-				UpgradeRoot.Hide();
-				AudioKit.PlaySound("AbilityLevelUp");
-			});
-			
-			BtnSimpleCD.onClick.AddListener(() =>
-			{
-				Global.SimpleAbilityCD.Value *= 0.5f; // 简单能力时间间隔缩短0.5倍
-				Time.timeScale = 1f;
-				UpgradeRoot.Hide();
-				AudioKit.PlaySound("AbilityLevelUp");
-			});
-			#endregion
 			
 			#region Gloal相关
-			Global.Hp.RegisterWithInitValue((hp) =>
-			{
-				TxtHp.text = $"HP：({hp}/{Global.MaxHp.Value})";
-			}).UnRegisterWhenGameObjectDestroyed(gameObject);
-			
 			Global.Exp.RegisterWithInitValue((exp) =>
-			{
-				TxtExp.text = $"经验值：({Global.Exp.Value}/{Global.CurrentLevelExp()})";
-			}).UnRegisterWhenGameObjectDestroyed(gameObject);
-			
-			Global.Exp.Register((exp) =>
 			{
 				if (exp >= Global.CurrentLevelExp())
 				{
 					Global.Exp.Value -= Global.CurrentLevelExp();
 					Global.Level.Value++;
 				}
+				ExpValue.fillAmount = Global.Exp.Value / (float)Global.CurrentLevelExp();
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			
 			Global.Gold.RegisterWithInitValue((gold) =>
@@ -68,8 +44,12 @@ namespace Survivor
 
 			Global.Level.Register((lv) =>
 			{
-				Time.timeScale = 0f;
-				UpgradeRoot.Show();
+				if (!ExpUpgradeSystem.AllUnlockedFinish) // 能力未全部升级 才能打开升级面板
+				{
+					Time.timeScale = 0f;
+					ExpUpgradePanel.Show();	
+				}
+				
 				AudioKit.PlaySound("LevelUp");
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 
@@ -97,6 +77,11 @@ namespace Survivor
 						UIKit.OpenPanel<UIGamePassPanel>();
 					}
 				}
+
+				if (count < 0)
+				{
+					Debug.LogError("!!!");
+				}
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			#endregion
 			
@@ -104,6 +89,28 @@ namespace Survivor
 			ActionKit.OnUpdate.Register(() =>
 			{
 				Global.Timer.Value += Time.deltaTime; // 在Update中计时
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+			#endregion
+
+			#region 事件相关
+			FlashScreen.Register(() =>
+			{
+				ActionKit.Sequence()
+					.Lerp(0f, 0.5f, 0.1f, alpha =>
+					{
+						ScreenColor.ColorAlpha(alpha);
+					})
+					.Lerp(0.5f, 0f, 0.2f, alpha =>
+					{
+						ScreenColor.ColorAlpha(alpha);
+					}, () => ScreenColor.ColorAlpha(0f))
+					.Start(this);
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+
+			OpenTreasurePanel.Register(() =>
+			{
+				Time.timeScale = 0f;
+				TreasurePanel.Show();
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 			#endregion
 		}

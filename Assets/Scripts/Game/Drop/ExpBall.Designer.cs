@@ -1,10 +1,12 @@
-// Generate Id:cc0a5a3d-30ff-4b2b-8db4-4f5993368e0f
+// Generate Id:33c22c01-7e29-4b16-8583-b5c7ec36567b
 using UnityEngine;
 
 namespace Survivor
 {
 	public partial class ExpBall
 	{
+
+		public UnityEngine.CircleCollider2D selfCollider;
 
 	}
 }

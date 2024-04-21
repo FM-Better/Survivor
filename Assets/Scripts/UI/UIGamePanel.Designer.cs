@@ -5,15 +5,11 @@ using QFramework;
 
 namespace Survivor
 {
-	// Generate Id:19092949-0f0b-439e-9e83-a9004bc1e062
+	// Generate Id:c1ab7680-5ad2-4b14-92c7-805a8646afc6
 	public partial class UIGamePanel
 	{
 		public const string Name = "UIGamePanel";
 		
-		[SerializeField]
-		public UnityEngine.UI.Text TxtHp;
-		[SerializeField]
-		public UnityEngine.UI.Text TxtExp;
 		[SerializeField]
 		public UnityEngine.UI.Text TxtLv;
 		[SerializeField]
@@ -23,25 +19,32 @@ namespace Survivor
 		[SerializeField]
 		public UnityEngine.UI.Text TxtGold;
 		[SerializeField]
-		public RectTransform UpgradeRoot;
+		public UnityEngine.UI.Image ExpValue;
 		[SerializeField]
-		public UnityEngine.UI.Button BtnSimpleDamage;
+		public ExpUpgradePanel ExpUpgradePanel;
 		[SerializeField]
-		public UnityEngine.UI.Button BtnSimpleCD;
+		public TreasurePanel TreasurePanel;
+		[SerializeField]
+		public UnityEngine.UI.Image ScreenColor;
+		[SerializeField]
+		public UnLockedIconPanel UnLockedIconPanel;
+		[SerializeField]
+		public AchievementController AchievementController;
 		
 		private UIGamePanelData mPrivateData = null;
 		
 		protected override void ClearUIComponents()
 		{
-			TxtHp = null;
-			TxtExp = null;
 			TxtLv = null;
 			TxtTimer = null;
 			TxtEnemy = null;
 			TxtGold = null;
-			UpgradeRoot = null;
-			BtnSimpleDamage = null;
-			BtnSimpleCD = null;
+			ExpValue = null;
+			ExpUpgradePanel = null;
+			TreasurePanel = null;
+			ScreenColor = null;
+			UnLockedIconPanel = null;
+			AchievementController = null;
 			
 			mData = null;
 		}

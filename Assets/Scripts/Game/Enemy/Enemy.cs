@@ -1,28 +1,47 @@
-using System;
 using UnityEngine;
 using QFramework;
+using QAssetBundle;
 
 namespace Survivor
 {
-	public partial class Enemy : ViewController
+	public partial class Enemy : GamePlayObject, IEnemy
 	{
 		[SerializeField] private float moveSpeed;
-		private Transform playerTrans;
 		public float Hp => hp;
 		[SerializeField] private float hp;
 		[SerializeField] private float hurtDurationTime;
+		private bool isHurt;
+		[SerializeField] private Color dissolveColor = Color.yellow;
+
+		private Collider2D mHitBox;
+		protected override Collider2D collider => mHitBox;
+		[SerializeField] private bool isTreasureEnemy;
 		
 		void Start()
 		{
-			playerTrans = FindObjectOfType<Player>().transform; // 缓存玩家tarnsfrom
 			EnemySpawner.enemyCount.Value++; // 计数
+			isHurt = false;
+			
+			mHitBox = transform.Find("HitBox").GetComponent<Collider2D>();
+			Sprite.OnBecameVisibleEvent(() =>
+			{
+				mHitBox.enabled = true;
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
+
+			Sprite.OnBecameInvisibleEvent(() =>
+			{
+				mHitBox.enabled = false;
+			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 		}
 
 		private void Update()
 		{
-			if (playerTrans)
+			if (isHurt) 
+				return;
+			
+			if (Player.Default)
 			{
-				var direction = (playerTrans.position - transform.position).normalized;
+				var direction = transform.NormalizedDirection2DTo(Player.Default);
 				selfRigidbody.velocity = direction * moveSpeed;
 			}
 			else
@@ -31,29 +50,46 @@ namespace Survivor
 			}
 		}
 
-		public void Hurt(float damage)
+		public void Hurt(float damage, bool isCritical = false)
 		{
-			hp -= damage;
-			AudioKit.PlaySound("Hit");
-			FloatingTextController.ShowFloatingText(transform.position + Vector3.up * 0.5f, damage.ToString()); // 伤害飘字效果
-			this.Sprite.color = Color.red;
+			if (isHurt) return;
+
+			isHurt = true;
+			selfRigidbody.velocity = Vector2.zero;
+
+			AudioKit.PlaySound(Sound.HIT);
+			FloatingTextController.ShowFloatingText(transform.position + Vector3.up * 0.5f, damage.ToString("0")
+				,isCritical); // 伤害飘字效果
 			
-			ActionKit.Delay((hurtDurationTime),() =>
+			Sprite.color = Color.red;
+			ActionKit.Delay((hurtDurationTime), () =>
 			{
 				this.Sprite.color = Color.white;
+				isHurt = false;
+				hp -= damage;
+				if (hp <= 0)
+				{
+					Dead();
+				}
 			}).Start(this);
-			
-			if (hp <= 0)
-			{
-				Dead();
-			}
+		}
+
+		public void PopulateHp(float nowWaveHpScale)
+		{
+			hp *= nowWaveHpScale;
+		}
+
+		public void PopulateSpeed(float nowWaveSpeedScale)
+		{
+			moveSpeed *= nowWaveSpeedScale;
 		}
 
 		public void Dead()
 		{
-			Global.SpawnDrop(transform.position);
+			DropManager.Default.SpawnDrop(transform.position, isTreasureEnemy);
 			EnemySpawner.enemyCount.Value--;
-			
+			FxConrtoller.Play(Sprite, dissolveColor);
+			AudioKit.PlaySound(Sound.ENEMYDIE);
 			this.DestroyGameObjGracefully();
 		}
 	}

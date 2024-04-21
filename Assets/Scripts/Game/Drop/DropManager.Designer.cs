@@ -1,10 +1,12 @@
-// Generate Id:be603b0b-6759-41af-a50f-c571fef86d55
+// Generate Id:938ed461-519e-4cfa-89cb-f87fc5907d6e
 using UnityEngine;
 
 namespace Survivor
 {
 	public partial class DropManager
 	{
+
+		public Transform DropRoot;
 
 		public Survivor.ExpBall ExpBall;
 
@@ -15,6 +17,8 @@ namespace Survivor
 		public Survivor.Bomb Bomb;
 
 		public Survivor.GetAllExp GetAllExp;
+
+		public QFramework.ViewController TreasureChest;
 
 	}
 }
