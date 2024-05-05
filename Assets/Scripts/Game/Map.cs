@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using QFramework;
+using UnityEngine.Serialization;
 using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 
@@ -61,16 +62,16 @@ namespace Survivor
 		private int girdWidth;
 		private int girdHeight;
 
-		[SerializeField] private float mSeed; // 每局的随机种子
-		[SerializeField] private float mLacunarity; // 间隙
-		[SerializeField] private float mWaterThred; // 水流的阈值
-		[SerializeField] private float mSoilThred; // 土地的阈值
+		[SerializeField] private float _Seed; // 每局的随机种子
+		[SerializeField] private float _Lacunarity; // 间隙
+		[SerializeField] private float _WaterThred; // 水流的阈值
+		[SerializeField] private float _SoilThred; // 土地的阈值
 		Tilemap nowGridMap = null; // 当前更新的格子地图
 
 		private ResLoader mLoader = ResLoader.Allocate();
-		[Space] [SerializeField] private int mWaterBaseCount;
-		[SerializeField] private int mSoilBaseCount;
-		[SerializeField] private int mGrassBaseCount;
+		[Space] [SerializeField] private int _WaterBaseCount;
+		[SerializeField] private int _SoilBaseCount;
+		[SerializeField] private int _GrassBaseCount;
 
 		// Test:
 		public BindableProperty<float> Lacunarity = new BindableProperty<float>();
@@ -81,10 +82,10 @@ namespace Survivor
 		{
 			Tilemap.GetComponent<Tilemap>().CompressBounds();
 
-			mSeed = Random.Range(100, 1001);
-			Lacunarity.Value = mLacunarity;
-			WaterThred.Value = mWaterThred;
-			SoilThred.Value = mSoilThred;
+			_Seed = Random.Range(100, 1001);
+			Lacunarity.Value = _Lacunarity;
+			WaterThred.Value = _WaterThred;
+			SoilThred.Value = _SoilThred;
 
 			girdWidth = Tilemap.size.x;
 			girdHeight = Tilemap.size.y;
@@ -111,9 +112,9 @@ namespace Survivor
 				playerTilePos = Tilemap.layoutGrid.WorldToCell(Player.Default.Position());
 				gridIndex.Value = new GridIndex(playerTilePos.x / girdWidth, playerTilePos.y / girdHeight);
 
-				Lacunarity.Value = mLacunarity;
-				WaterThred.Value = mWaterThred;
-				SoilThred.Value = mSoilThred;
+				Lacunarity.Value = _Lacunarity;
+				WaterThred.Value = _WaterThred;
+				SoilThred.Value = _SoilThred;
 			}
 		}
 
@@ -243,7 +244,7 @@ namespace Survivor
 				foreach (var gridTilePos in gridInitPositions)
 				{
 					endPos = gridTilePos + tileOffset;
-					perlinValue = Mathf.PerlinNoise(endPos.x * mLacunarity + mSeed, endPos.y * mLacunarity + mSeed);
+					perlinValue = Mathf.PerlinNoise(endPos.x * _Lacunarity + _Seed, endPos.y * _Lacunarity + _Seed);
 					GenerateTile(gridTilePos, perlinValue);
 					gridDic.Add(endPos, perlinValue);
 				}
@@ -253,17 +254,17 @@ namespace Survivor
 
 		void GenerateTile(Vector3Int tilePos, float perlinValue)
 		{
-			if (perlinValue < mWaterThred)
+			if (perlinValue < _WaterThred)
 			{
-				nowGridMap.SetTile(tilePos,mLoader.LoadSync<Tile>($"{GridType.Water.ToString()}_Base_{Random.Range(0, mWaterBaseCount)}"));
+				nowGridMap.SetTile(tilePos,mLoader.LoadSync<Tile>($"{GridType.Water.ToString()}_Base_{Random.Range(0, _WaterBaseCount)}"));
 			}
-			else if (perlinValue < mSoilThred)
+			else if (perlinValue < _SoilThred)
 			{
-				nowGridMap.SetTile(tilePos,mLoader.LoadSync<Tile>($"{GridType.Soil.ToString()}_Base_{Random.Range(0, mSoilBaseCount)}"));
+				nowGridMap.SetTile(tilePos,mLoader.LoadSync<Tile>($"{GridType.Soil.ToString()}_Base_{Random.Range(0, _SoilBaseCount)}"));
 			}
 			else
 			{
-				nowGridMap.SetTile(tilePos, mLoader.LoadSync<Tile>($"{GridType.Grass.ToString()}_Base_{Random.Range(0, mGrassBaseCount)}"));
+				nowGridMap.SetTile(tilePos, mLoader.LoadSync<Tile>($"{GridType.Grass.ToString()}_Base_{Random.Range(0, _GrassBaseCount)}"));
 			}
 		}
 	}
