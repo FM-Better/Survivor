@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI
+  serializedVersion: 2
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 512
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 2
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 15031c101d247a54ab2aed4f8cfa4447, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 3bb2006000a00e143a834085c3d6738a, type: 3}
+  - {fileID: 21300000, guid: bc1705517674619468384b4e5142709a, type: 3}
+  - {fileID: 21300000, guid: 0f58620214f8dc64486b36693ef2f357, type: 3}
+  - {fileID: 21300000, guid: 9def1f3267ddfc742bb40e9813aced64, type: 3}
+  - {fileID: 21300000, guid: 3164f1927b8da4543b26262eb8d49cae, type: 3}
+  - {fileID: 21300000, guid: bfd89595fa913f74fbe93f1bc5cd9c1b, type: 3}
+  - {fileID: 21300000, guid: 038699c5caa44fa4f8906788119eaa44, type: 3}
+  - {fileID: 21300000, guid: 31c8f9d5bc338e946bc061c5b6a5f21d, type: 3}
+  - {fileID: 21300000, guid: 9f0b6ce6177abb84ea3690e4f4c63d74, type: 3}
+  - {fileID: 21300000, guid: 98bb7639de3267b40a16c9fb45361956, type: 3}
+  - {fileID: 21300000, guid: 8a68dc49475ec7d40a97715bbd349e30, type: 3}
+  - {fileID: 21300000, guid: 012458ea2af50c245b3f2dfff2015820, type: 3}
+  - {fileID: 21300000, guid: 2289cf2b0681ef444a99aea98ab955c7, type: 3}
+  - {fileID: 21300000, guid: 0424872c7ebd10e40b45e3afcdc15236, type: 3}
+  - {fileID: 21300000, guid: d7c9d64cf3b187d4eb919d87d2b248f9, type: 3}
+  - {fileID: 21300000, guid: b1caa36c682fd9242babeee322df7a37, type: 3}
+  - {fileID: 21300000, guid: 1700130daf2dcbf4793cc332eba8530d, type: 3}
+  - {fileID: 21300000, guid: ebfa345dc66fb9a498846b37210cea59, type: 3}
+  - {fileID: 21300000, guid: 1d9e1c7dc9c67f94d86d47ad981f122c, type: 3}
+  - {fileID: 21300000, guid: ca92007e60bcb0e47af50587fe29a9f1, type: 3}
+  - {fileID: 21300000, guid: 37911eeee8366c54691bb8197192e1ea, type: 3}
+  - {fileID: 21300000, guid: ce1e3b1f257a4534799b6c4ce0f279ba, type: 3}
+  - {fileID: 21300000, guid: b62a24bfea8fff94daa40898fed4c80d, type: 3}
+  - {fileID: 21300000, guid: 831f5adfcbdac084c8c6e13507652aa2, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - hp_value
+  - fly_icon
+  - critical_icon
+  - collectable_icon
+  - paired_simple_knife_icon
+  - achievement_level_icon
+  - exp_bg
+  - paired_ball_icon
+  - bomb_icon
+  - paired_bomb_icon
+  - achievement_all_icon
+  - ui_bg
+  - rotate_sword_icon
+  - paired_rotate_sword_icon
+  - exp_value
+  - simple_knife_icon
+  - ball_icon
+  - paired_simple_sword_icon
+  - achievement_time_icon
+  - movement_icon
+  - exp_icon
+  - damage_icon
+  - button_bg
+  - simple_sword_icon
+  m_RenderDataMap: {}
+  m_Tag: UI
+  m_IsVariant: 0
+  m_IsPlaceholder: 0

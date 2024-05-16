@@ -577,7 +577,7 @@ SpriteRenderer:
   m_SortingLayerID: 1587382673
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: 5551a8ec3b73b2142ba5cc14dcd2954a, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.53333336}
   m_FlipX: 0
   m_FlipY: 0
@@ -1190,7 +1190,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 3bb2006000a00e143a834085c3d6738a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10466,13 +10466,13 @@ MonoBehaviour:
   GeneratePrefab: 0
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
-  mSeed: 0
-  mLacunarity: 0.15
-  mWaterThred: 0.27
-  mSoilThred: 0.76
-  mWaterBaseCount: 7
-  mSoilBaseCount: 3
-  mGrassBaseCount: 4
+  _Seed: 0
+  _Lacunarity: 0.15
+  _WaterThred: 0.27
+  _SoilThred: 0.76
+  _WaterBaseCount: 7
+  _SoilBaseCount: 3
+  _GrassBaseCount: 4
   Tilemap: {fileID: 504056060}
 --- !u!156049354 &1685054177
 Grid:

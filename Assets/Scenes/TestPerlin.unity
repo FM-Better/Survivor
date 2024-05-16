@@ -3506,13 +3506,13 @@ MonoBehaviour:
   GeneratePrefab: 0
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
-  mSeed: 0
-  mLacunarity: 0.15
-  mWaterThred: 0.27
-  mSoilThred: 0.76
-  mWaterBaseCount: 7
-  mSoilBaseCount: 3
-  mGrassBaseCount: 4
+  _Seed: 0
+  _Lacunarity: 0.15
+  _WaterThred: 0.27
+  _SoilThred: 0.76
+  _WaterBaseCount: 7
+  _SoilBaseCount: 3
+  _GrassBaseCount: 4
   Tilemap: {fileID: 2083557639}
 --- !u!1 &982629197
 GameObject:

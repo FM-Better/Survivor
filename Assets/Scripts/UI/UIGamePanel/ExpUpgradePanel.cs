@@ -5,18 +5,21 @@ using System.Collections.Generic;
 using QAssetBundle;
 using QFramework;
 using UnityEngine;
+using UnityEngine.U2D;
 using UnityEngine.UI;
 
 namespace Survivor
 {
 	public partial class ExpUpgradePanel : UIElement, IController
 	{
-		private ResLoader loader = ResLoader.Allocate();
+		private ResLoader mLoader = ResLoader.Allocate();
+		private SpriteAtlas gameAtlas = null;
 		
 		private void Awake()
 		{
 			var expUpgradeSystem = this.GetSystem<ExpUpgradeSystem>();
 			List<ExpUpgradeItem> expUpgradeItems = expUpgradeSystem.Items;
+			gameAtlas = mLoader.LoadSync<SpriteAtlas>("Game");
 			
 			foreach (var item in expUpgradeItems)
 			{
@@ -39,7 +42,7 @@ namespace Survivor
 							if (visible)
 							{
 								selfCache.transform.Find("ImgIcon").GetComponent<Image>().sprite =
-									loader.LoadSync<Sprite>(itemCache.IconName); // Todo: 打包图集优化
+									gameAtlas.GetSprite(itemCache.IconName);
 								selfCache.Show();
 								
 								var txtOtherKey = selfCache.transform.Find("TxtOtherKey");
@@ -49,7 +52,7 @@ namespace Survivor
 									if (pairedItem.CurrentLevel.Value > 0 && itemCache.CurrentLevel.Value == 0) // 如果遇到现有技能的未解锁的配对技能
 									{
 										txtOtherKey.Find("ImgOtherIcon").GetComponent<Image>().sprite =
-											loader.LoadSync<Sprite>(pairedItem.IconName); // Todo: 打包图集优化
+											gameAtlas.GetSprite(pairedItem.IconName);
 										txtOtherKey.Show();
 									}
 									else
@@ -79,8 +82,9 @@ namespace Survivor
 
 		protected override void OnBeforeDestroy()
 		{
-			loader.Recycle2Cache();
-			loader = null;
+			gameAtlas = null;
+			mLoader.Recycle2Cache();
+			mLoader = null;
 		}
 
 		public IArchitecture GetArchitecture()

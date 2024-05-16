@@ -6,17 +6,20 @@ using System.Linq;
 using QAssetBundle;
 using QFramework;
 using UnityEngine;
+using UnityEngine.U2D;
 using UnityEngine.UI;
 
 namespace Survivor
 {
 	public partial class AchievementPanel : UIElement, IController
 	{
-		private ResLoader mloader = ResLoader.Allocate();
+		private ResLoader mLoader = ResLoader.Allocate();
+		private SpriteAtlas gameAtlas = null;
 		
 		private void Awake()
 		{
 			var items = this.GetSystem<AchievementSystem>().Items;
+			gameAtlas = mLoader.LoadSync<SpriteAtlas>("UI");
 			
 			foreach (var item in items.OrderByDescending(item => item.Unlocked))
 			{
@@ -25,8 +28,8 @@ namespace Survivor
 						{
 							template.GetComponentInChildren<Text>().text =
 								$"<b>{item.Name}{(item.Unlocked ? "<color=green>[已完成]</color>" : "")}</b>\n{item.Description}";
-							var sprite = mloader.LoadSync<Sprite>(item.IconName);
-							template.transform.Find("Icon").GetComponent<Image>().sprite = sprite;
+							template.transform.Find("Icon").GetComponent<Image>().sprite = 
+								gameAtlas.GetSprite(item.IconName);
 						})
 					.Show();
 			}
@@ -40,8 +43,8 @@ namespace Survivor
 
 		protected override void OnBeforeDestroy()
 		{
-			mloader.Recycle2Cache();
-			mloader = null;
+			mLoader.Recycle2Cache();
+			mLoader = null;
 		}
 
 		public IArchitecture GetArchitecture()

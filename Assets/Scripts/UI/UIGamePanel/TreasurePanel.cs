@@ -6,20 +6,24 @@ using System.Linq;
 using QAssetBundle;
 using UnityEngine;
 using QFramework;
+using UnityEngine.U2D;
 
 namespace Survivor
 {
 	public partial class TreasurePanel : UIElement, IController
 	{
 		private ResLoader mLoader = ResLoader.Allocate();
-		
+		private SpriteAtlas gameAtlas = null;
+
 		private void Awake()
 		{
-				BtnSure.onClick.AddListener(() =>
-				{
-					Time.timeScale = 1f;
-					this.Hide();
-				});
+			gameAtlas = mLoader.LoadSync<SpriteAtlas>("Game");
+
+			BtnSure.onClick.AddListener(() =>
+			{
+				Time.timeScale = 1f;
+				this.Hide();
+			});
 		}
 
 		private void OnEnable()
@@ -53,7 +57,7 @@ namespace Survivor
 			{
 				var item = canPairedItems.ToList().GetRandomItem();
 
-				ImgIcon.sprite = mLoader.LoadSync<Sprite>(item.PairedIconName);
+				ImgIcon.sprite = gameAtlas.GetSprite(item.PairedIconName);
 				ImgIcon.Show();
 				TxtContent.text = $"<b>{item.PairedName}</b>\n{item.PairedDescription}";
 				
@@ -66,7 +70,7 @@ namespace Survivor
 				if (items.Any())
 				{
 					var item = items.ToList().GetRandomItem();
-					ImgIcon.sprite = mLoader.LoadSync<Sprite>(item.IconName);
+					ImgIcon.sprite = gameAtlas.GetSprite(item.IconName);
 					ImgIcon.Show();
 					TxtContent.text = item.Description;
 					item.Upgrade();
