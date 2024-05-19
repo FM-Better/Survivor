@@ -1,5 +1,6 @@
 using QFramework;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace Survivor
 {
@@ -66,6 +67,7 @@ namespace Survivor
         
         protected override void Init()
         {
+            GraphicsSettings.useScriptableRenderPipelineBatching = true; // 打开SRP Batcher
             this.RegisterSystem(new SaveSystem());
             this.RegisterSystem(new GoldUpgradeSystem());
             this.RegisterSystem(new ExpUpgradeSystem());
@@ -75,8 +77,8 @@ namespace Survivor
         [RuntimeInitializeOnLoadMethod]
         public static void InitGameData()
         {
-            AudioKit.PlaySoundMode = AudioKit.PlaySoundModes.IgnoreSameSoundInGlobalFrames; // 声音优化
             ResKit.Init();
+            AudioKit.PlaySoundMode = AudioKit.PlaySoundModes.IgnoreSameSoundInGlobalFrames; // 声音优化
             UIKit.Root.SetResolution(1920, 1080, 0f);
             
             ExpBallDropRate.Value = PlayerPrefs.GetInt("ExpBallDropRate", 60);

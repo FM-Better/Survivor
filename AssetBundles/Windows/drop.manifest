@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 167835807
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 184a885a1226f639636eba0db3ae3266
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ba740a701dfcd3eaa22374d723b44054
+HashAppended: 0
+ClassTypes:
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 687078895
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Art/Sprites/Drop/Bomb.png
+- Assets/Art/Sprites/Drop/ExpBall.png
+- Assets/Art/Sprites/Drop/HpItem.png
+- Assets/Art/Sprites/Drop/TreasureChest.png
+- Assets/Art/Sprites/Drop/Gold.png
+- Assets/Art/Sprites/Drop/GetAllExp.png
+Dependencies: []

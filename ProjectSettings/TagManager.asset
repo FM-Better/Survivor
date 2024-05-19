@@ -13,12 +13,12 @@ TagManager:
   - 
   - Water
   - UI
-  - CollisionWithoutDefault
-  - 
-  - 
-  - 
-  - 
-  - 
+  - CameraSide
+  - Player
+  - Enemy
+  - Drop
+  - Ability
+  - Ball
   - 
   - 
   - 

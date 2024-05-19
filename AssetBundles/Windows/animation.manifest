@@ -1,0 +1,26 @@
+ManifestFileVersion: 0
+CRC: 2284694141
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f9809a73fd393fce59520a0624c9b672
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 79bfbbfb45a737124c4c276d36f44713
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Art/Animation/Player.controller
+- Assets/Art/Animation/PlayerRightIdle.anim
+- Assets/Art/Animation/PlayerLeftWalk.anim
+- Assets/Art/Animation/PlayerLeftIdle.anim
+- Assets/Art/Animation/PlayerRightWalk.anim
+Dependencies:
+- E:/Unity/Survivor/AssetBundles/Windows/player_png

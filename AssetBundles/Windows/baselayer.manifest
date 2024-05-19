@@ -1,0 +1,71 @@
+ManifestFileVersion: 0
+CRC: 3538122291
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e6b2529f4add2255d625a92219886faf
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 04aa42f8ad29e2618ea0e7ad34d799f1
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 156049354
+  Script: {instanceID: 0}
+- Class: 483693784
+  Script: {instanceID: 0}
+- Class: 1839735485
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Grass_Base_0.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/BaseLayer.prefab
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Grass_Base_2.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water_14.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water_5.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water_17.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water_6.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Grass_Base_1.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water_10.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water_13.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Soil_Base_2.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water_Base_3.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water_16.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water_Base_6.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water_15.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water_9.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Soil_Base_0.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Soil_Base_1.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water_0.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water_2.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water_Base_0.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water_Base_5.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water_Base_4.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water.prefab
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water_11.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water_19.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water_1.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water_Base_2.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water_3.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water_18.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water_20.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water_7.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water_Base_1.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water_4.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Grass_Base_3.asset
+- Assets/Art/Tilemap/Pallete/TerrainTile/BaseLayer/Water/Water_12.asset
+Dependencies:
+- E:/Unity/Survivor/AssetBundles/Windows/terrain_png

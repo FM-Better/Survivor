@@ -1,0 +1,94 @@
+ManifestFileVersion: 0
+CRC: 1061670742
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ac59aaf43b0315897f50caa1ca78120d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 6ab75432a8484d319539e939c3bc7a51
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f6a26bae723ea3345943da2ed05b115b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4124feb67bfd816459614505bd0899bb, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c2abc629ce3627145a3b3633c454e242, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c66fb14ade1b46a4583f1e251b14d45d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 63afa23cf0b4ccd48957a37f7e2c352a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: eb1ed1b7cb0690741a9ab06d7c063dca, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0d51f3a7c41ab0346b49ae50d456bece, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0c884b937747c6240b381e59e4988bfb, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b89d685a367e46c46a2d1e922632b2ad, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f116fe111b2ef447a0f7f84b46a48d5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5594a005745fd0e48bce1a519ba1010e, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.PersistentCallGroup
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.RectOffset
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.AnimationTriggers
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.Button/ButtonClickedEvent
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.ColorBlock
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.FontData
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.Navigation
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.ScrollRect/ScrollRectEvent
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.SpriteState
+Assets:
+- Assets/Art/UIPrefab/UIGameOverPanel.prefab
+- Assets/Art/UIPrefab/UIGamePassPanel.prefab
+- Assets/Art/UIPrefab/UIGamePanel.prefab
+- Assets/Art/UIPrefab/UIGameStartPanel.prefab
+Dependencies:
+- E:/Unity/Survivor/AssetBundles/Windows/fusion-pixel_ttf
+- E:/Unity/Survivor/AssetBundles/Windows/uires

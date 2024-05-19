@@ -36,13 +36,13 @@ namespace Survivor
 						var selfCache = self;
 						selfCache.OnTriggerEnter2DEvent((collider) =>
 						{
-							var hurtBox = collider.GetComponent<HurtBox>();
-							if (hurtBox)
+							var enemyCollider = collider.GetComponent<EnemyCollider>();
+							if (enemyCollider)
 							{	
-								if (hurtBox.Owner.CompareTag("Enemy"))
+								if (enemyCollider.Owner.CompareTag("Enemy"))
 								{
 									var damageTimes = Global.SuperRotateSword.Value ? Random.Range(2, 4) : 1;
-									DamageSystem.CalculateDamage(Global.RotateSwordDamage.Value * damageTimes, hurtBox.Owner.GetComponent<IEnemy>());
+									DamageSystem.CalculateDamage(Global.RotateSwordDamage.Value * damageTimes, enemyCollider.Owner.GetComponent<IEnemy>());
 									
 									if (Random.Range(0, 100) < 50)
 									{

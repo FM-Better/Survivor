@@ -33,12 +33,12 @@ namespace Survivor
 							var selfCache = self;
 							selfCache.OnTriggerEnter2DEvent(collider =>
 							{
-								var hurtBox = collider.GetComponent<HurtBox>();
-								if (hurtBox)
+								var enemyCollider = collider.GetComponent<EnemyCollider>();
+								if (enemyCollider)
 								{
-									if (hurtBox.Owner.CompareTag("Enemy"))
+									if (enemyCollider.Owner.CompareTag("Enemy"))
 									{
-										DamageSystem.CalculateDamage(Global.SimpleSwordDamage.Value * damageTimes, hurtBox.Owner.GetComponent<IEnemy>());
+										DamageSystem.CalculateDamage(Global.SimpleSwordDamage.Value * damageTimes, enemyCollider.Owner.GetComponent<IEnemy>());
 									}
 								}
 							}).UnRegisterWhenGameObjectDestroyed(selfCache);

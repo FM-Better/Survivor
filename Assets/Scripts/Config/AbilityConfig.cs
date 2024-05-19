@@ -15,7 +15,7 @@
         
         public const int InitRotateSwordCount = 1;
         public const float InitRotateSwordDamage = 5f;
-        public const float InitRotateSwordSpeed = 2f;
+        public const float InitRotateSwordSpeed = 2.5f;
         public const float InitRotateSwordRange = 2f;
 
         public const int InitBasketBallCount = 1;

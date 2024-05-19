@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1294724130
+CRC: 2847201054
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d6fd22824c78617e97f69b6827de3157
+    Hash: e108f0680a79e008d0629c8652b2b778
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9a2ca7bdbd1871f7131daf57de908e0c
@@ -20,6 +20,7 @@ Assets:
 - Assets/Art/Audio/Sound/Knife.wav
 - Assets/Art/Audio/Sound/Gold.wav
 - Assets/Art/Audio/Sound/LevelUp.ogg
+- Assets/Art/Audio/Sound/Achievement.wav
 - Assets/Art/Audio/Sound/Hurt.wav
 - Assets/Art/Audio/Sound/Exp.wav
 - Assets/Art/Audio/Sound/Die.wav
@@ -28,5 +29,6 @@ Assets:
 - Assets/Art/Audio/Sound/Bomb.wav
 - Assets/Art/Audio/Sound/Ball.wav
 - Assets/Art/Audio/Sound/TreasureChest.wav
+- Assets/Art/Audio/Sound/ButtonClick.wav
 - Assets/Art/Audio/Sound/HpItem.wav
 Dependencies: []

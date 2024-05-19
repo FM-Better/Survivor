@@ -1,0 +1,78 @@
+ManifestFileVersion: 0
+CRC: 2391847842
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f99c73116c9d05323da3c02d4fb935b7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e45f66c986ec9643d86ac2ec1e7637f7
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 50
+  Script: {instanceID: 0}
+- Class: 58
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0d51f3a7c41ab0346b49ae50d456bece, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dc0ce709bf3e8ee4cb111823c087bc1c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9ba8662f150f44041921d09b2186a320, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 411e729afed24c62a04e2b99d9122e78, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9a3d60fb5e1f3ba44935a73c493f6874, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 687078895
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: QFramework.CoreKit
+  ClassName: QFramework.OtherBind
+Assets:
+- Assets/Art/Sprites/Enemy/enemy_d_boss.png
+- Assets/Art/Prefabs/Enemy/EnemyABoss.prefab
+- Assets/Art/Prefabs/Enemy/EnemyCBoss.prefab
+- Assets/Art/Prefabs/Enemy/EnemyDBossB.prefab
+- Assets/Art/Sprites/Enemy/enemy_b_boss.png
+- Assets/Art/Sprites/Enemy/enemy_d.png
+- Assets/Art/Prefabs/Enemy/EnemyBBossB.prefab
+- Assets/Art/Prefabs/Enemy/EnemyE.prefab
+- Assets/Art/Sprites/Enemy/enemy_c.png
+- Assets/Art/Prefabs/Enemy/EnemyD.prefab
+- Assets/Art/Prefabs/Enemy/EnemyBBoss.prefab
+- Assets/Art/Sprites/Enemy/enemy_fly_boss.png
+- Assets/Art/Sprites/Enemy/enemy_e.png
+- Assets/Art/Prefabs/Enemy/EnemyMiniBoss.prefab
+- Assets/Art/Sprites/Enemy/enemy_b.png
+- Assets/Art/Sprites/Enemy/mini_Boss.png
+- Assets/Art/Prefabs/Enemy/EnemyA.prefab
+- Assets/Art/Sprites/Enemy/enemy_fly.png
+- Assets/Art/Sprites/Enemy/enemy_c_boss.png
+- Assets/Art/Prefabs/Enemy/EnemyDBoss.prefab
+- Assets/Art/Prefabs/Enemy/EnemyB.prefab
+- Assets/Art/Prefabs/Enemy/EnemyC.prefab
+- Assets/Art/Prefabs/Enemy/EnemyFlyBoss.prefab
+- Assets/Art/Prefabs/Enemy/EnemyCBossB.prefab
+- Assets/Art/Prefabs/Enemy/EnemyEBoss.prefab
+- Assets/Art/Prefabs/Enemy/EnemyFly.prefab
+- Assets/Art/Sprites/Enemy/enemy_a_boss.png
+- Assets/Art/Prefabs/Enemy/EnemyABossB.prefab
+- Assets/Art/Sprites/Enemy/enemy_a.png
+Dependencies:
+- E:/Unity/Survivor/AssetBundles/Windows/unity2d

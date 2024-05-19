@@ -1,0 +1,42 @@
+ManifestFileVersion: 0
+CRC: 3818706550
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8b2b8b7bc08ff63f58fe310c96e86ae0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ba740a701dfcd3eaa22374d723b44054
+HashAppended: 0
+ClassTypes:
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 687078895
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Art/Sprites/UIRes/Icon/fly_icon.png
+- Assets/Art/Sprites/UIRes/exp_bg.png
+- Assets/Art/Sprites/UIRes/Icon/collectable_icon.png
+- Assets/Art/Sprites/UIRes/Icon/exp_icon.png
+- Assets/Art/Sprites/UIRes/Icon/movement_icon.png
+- Assets/Art/Sprites/UIRes/hp_value.png
+- Assets/Art/Sprites/UIRes/Icon/simple_knife_icon.png
+- Assets/Art/Sprites/UIRes/Icon/paired_ball_icon.png
+- Assets/Art/Sprites/UIRes/exp_value.png
+- Assets/Art/Sprites/UIRes/Icon/damage_icon.png
+- Assets/Art/Sprites/UIRes/Icon/paired_simple_knife_icon.png
+- Assets/Art/Sprites/UIRes/Icon/ball_icon.png
+- Assets/Art/Sprites/UIRes/Icon/paired_bomb_icon.png
+- Assets/Art/Sprites/UIRes/Icon/rotate_sword_icon.png
+- Assets/Art/Sprites/UIRes/Icon/critical_icon.png
+- Assets/Art/Sprites/UIRes/Icon/bomb_icon.png
+- Assets/Art/Sprites/UIRes/Icon/achievement_all_icon.png
+- Assets/Art/Sprites/UIRes/Icon/simple_sword_icon.png
+- Assets/Art/Sprites/UIRes/Icon/paired_rotate_sword_icon.png
+- Assets/Art/Sprites/UIRes/button_bg.png
+- Assets/Art/Sprites/UIRes/Icon/achievement_time_icon.png
+- Assets/Art/Sprites/UIRes/Icon/paired_simple_sword_icon.png
+- Assets/Art/Sprites/UIRes/ui_bg.png
+- Assets/Art/Sprites/UIRes/Icon/achievement_level_icon.png
+Dependencies: []

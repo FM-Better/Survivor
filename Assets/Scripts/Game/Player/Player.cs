@@ -20,7 +20,7 @@ namespace Survivor
 		{
 			HurtBox.OnTriggerEnter2DEvent((colider) =>
 			{
-				var hitBox = colider.GetComponent<HitBox>();
+				var hitBox = colider.GetComponent<EnemyCollider>();
 				if (hitBox)
 				{
 					if (hitBox.Owner.CompareTag("Enemy"))

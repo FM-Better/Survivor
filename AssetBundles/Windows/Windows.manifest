@@ -1,23 +1,66 @@
 ManifestFileVersion: 0
-CRC: 2589659933
+CRC: 4237935275
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: uigamepanel_prefab
+      Name: enemy
       Dependencies:
-        Dependency_0: icon
+        Dependency_0: unity2d
     Info_1:
-      Name: sound
+      Name: music
       Dependencies: {}
     Info_2:
-      Name: uigameoverpanel_prefab
-      Dependencies: {}
+      Name: animation
+      Dependencies:
+        Dependency_0: player_png
     Info_3:
-      Name: uigamestartpanel_prefab
+      Name: sound
       Dependencies: {}
     Info_4:
-      Name: uigamepasspanel_prefab
-      Dependencies: {}
+      Name: baselayer
+      Dependencies:
+        Dependency_0: terrain_png
     Info_5:
-      Name: icon
+      Name: game_spriteatlas
+      Dependencies:
+        Dependency_0: enemy
+        Dependency_1: drop
+        Dependency_2: ability
+        Dependency_3: unity2d
+        Dependency_4: player_png
+        Dependency_5: terrain_png
+        Dependency_6: uires
+    Info_6:
+      Name: drop
+      Dependencies: {}
+    Info_7:
+      Name: atlas
+      Dependencies:
+        Dependency_0: uires
+    Info_8:
+      Name: ability
+      Dependencies: {}
+    Info_9:
+      Name: unity2d
+      Dependencies: {}
+    Info_10:
+      Name: player_png
+      Dependencies: {}
+    Info_11:
+      Name: terrain_png
+      Dependencies: {}
+    Info_12:
+      Name: levelconfig_asset
+      Dependencies:
+        Dependency_0: enemy
+    Info_13:
+      Name: uiprefab
+      Dependencies:
+        Dependency_0: fusion-pixel_ttf
+        Dependency_1: uires
+    Info_14:
+      Name: fusion-pixel_ttf
+      Dependencies: {}
+    Info_15:
+      Name: uires
       Dependencies: {}

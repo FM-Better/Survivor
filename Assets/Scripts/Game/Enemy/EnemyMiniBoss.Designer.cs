@@ -1,4 +1,4 @@
-// Generate Id:6ea168f3-d13e-4de1-8174-5e61ddc10cb1
+// Generate Id:a57fceff-f6c2-48e8-93ad-d12f1abdee97
 using UnityEngine;
 
 namespace Survivor
@@ -7,6 +7,8 @@ namespace Survivor
 	{
 
 		public SpriteRenderer Sprite;
+
+		public UnityEngine.CircleCollider2D Collider;
 
 		public UnityEngine.Rigidbody2D selfRigidbody;
 

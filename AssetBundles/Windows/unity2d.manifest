@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 1717533733
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9fd3a175e8830b63cf83373b3a201754
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ba740a701dfcd3eaa22374d723b44054
+HashAppended: 0
+ClassTypes:
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 687078895
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Art/Sprites/Unity2D/IsometricDiamondSprite.png
+- Assets/Art/Sprites/Unity2D/HexagonFlatTopSprite.png
+- Assets/Art/Sprites/Unity2D/SquareSprite.png
+- Assets/Art/Sprites/Unity2D/TriangleSprite.png
+- Assets/Art/Sprites/Unity2D/CircleSprite.png
+- Assets/Art/Sprites/Unity2D/HexagonPointedTopSprite.png
+Dependencies: []

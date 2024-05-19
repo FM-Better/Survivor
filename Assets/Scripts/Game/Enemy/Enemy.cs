@@ -13,8 +13,7 @@ namespace Survivor
 		private bool isHurt;
 		[SerializeField] private Color dissolveColor = Color.yellow;
 
-		private Collider2D mHitBox;
-		protected override Collider2D collider => mHitBox;
+		protected override Collider2D collider => Collider;
 		[SerializeField] private bool isTreasureEnemy;
 		
 		void Start()
@@ -22,15 +21,14 @@ namespace Survivor
 			EnemySpawner.enemyCount.Value++; // 计数
 			isHurt = false;
 			
-			mHitBox = transform.Find("HitBox").GetComponent<Collider2D>();
 			Sprite.OnBecameVisibleEvent(() =>
 			{
-				mHitBox.enabled = true;
+				collider.enabled = true;
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 
 			Sprite.OnBecameInvisibleEvent(() =>
 			{
-				mHitBox.enabled = false;
+				collider.enabled = false;
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 		}
 

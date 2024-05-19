@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 2024750780876228276}
   - component: {fileID: 2024750780876228279}
   - component: {fileID: 2024750780876228278}
-  m_Layer: 0
-  m_Name: HitBox
+  - component: {fileID: 2734329241908227668}
+  m_Layer: 8
+  m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,79 +64,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Namespace: Survivor
   ScriptName: HitBox
-  ScriptsFolder: Assets/Scripts/Game/Enemy
-  GeneratePrefab: 0
-  PrefabFolder: Assets/Art/Prefab
-  ArchitectureFullTypeName: 
-  Owner: {fileID: 0}
---- !u!1 &2024750780908985464
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2024750780908985467}
-  - component: {fileID: 2024750780908985461}
-  - component: {fileID: 2024750780908985466}
-  m_Layer: 0
-  m_Name: HurtBox
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2024750780908985467
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024750780908985464}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2024750781610213809}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &2024750780908985461
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024750780908985464}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.02000001, y: -0.11552647}
-  serializedVersion: 2
-  m_Radius: 0.3585153
---- !u!114 &2024750780908985466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024750780908985464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c4e557659337224082ae2f9ced6e39f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Namespace: Survivor
-  ScriptName: HurtBox
   ScriptsFolder: Assets\Scripts\Game\Enemy
   GeneratePrefab: 0
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
   Owner: {fileID: 0}
+--- !u!114 &2734329241908227668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024750780876228277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d51f3a7c41ab0346b49ae50d456bece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MarkType: 0
+  CustomComponentName: Collider
+  CustomComment: 
+  mComponentName: UnityEngine.CircleCollider2D
 --- !u!1 &2024750781541544208
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +96,7 @@ GameObject:
   - component: {fileID: 2024750781541544211}
   - component: {fileID: 2024750781541544210}
   - component: {fileID: 2024750781541544205}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +198,7 @@ GameObject:
   - component: {fileID: 2024750781610213815}
   - component: {fileID: 2024750781610213811}
   - component: {fileID: 2024750781610213810}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyA
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -270,7 +219,6 @@ Transform:
   m_Children:
   - {fileID: 2024750781541544211}
   - {fileID: 2024750780876228276}
-  - {fileID: 2024750780908985467}
   - {fileID: 2024750781916809770}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -299,6 +247,7 @@ MonoBehaviour:
   dissolveColor: {r: 1, g: 0.53333336, b: 0, a: 1}
   isTreasureEnemy: 0
   Sprite: {fileID: 2024750781541544210}
+  Collider: {fileID: 2024750780876228279}
   selfRigidbody: {fileID: 2024750781610213811}
 --- !u!50 &2024750781610213811
 Rigidbody2D:
@@ -346,7 +295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2024750781916809770}
   - component: {fileID: 2024750781916809765}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +315,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2024750781610213809}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2024750781916809765
 SpriteRenderer:

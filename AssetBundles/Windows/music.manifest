@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 212795273
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 075aa55f1b60f5782b301e792c04ba3e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9a2ca7bdbd1871f7131daf57de908e0c
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Art/Audio/Music/GameBg.mp3
+- Assets/Art/Audio/Music/HomeBg.mp3
+Dependencies: []

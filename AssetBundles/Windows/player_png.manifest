@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 1867007148
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c6b08d108cefab9fbde9336415ac00c6
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ba740a701dfcd3eaa22374d723b44054
+HashAppended: 0
+ClassTypes:
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 687078895
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Art/Sprites/Player.png
+Dependencies: []

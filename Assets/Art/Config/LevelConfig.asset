@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e7fae370cb4be49a48aa4e1dd05c68, type: 3}
   m_Name: LevelConfig
   m_EditorClassIdentifier: 
-  IsAllActive: 0
   EnemyWaveGroups:
   - Name: "1\u3001\u5E7D\u7075"
     Active: 1

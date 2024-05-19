@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 3734685503
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3c3d9f4350bbb123dd7847173c256455
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ba740a701dfcd3eaa22374d723b44054
+HashAppended: 0
+ClassTypes:
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 687078895
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Art/Sprites/Ability/simple_knife.png
+- Assets/Art/Sprites/Ability/simple_sword.png
+- Assets/Art/Sprites/Ability/rotate_sword.png
+- Assets/Art/Sprites/Ability/ball.png
+Dependencies: []

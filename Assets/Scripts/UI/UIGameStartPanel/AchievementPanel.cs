@@ -19,7 +19,7 @@ namespace Survivor
 		private void Awake()
 		{
 			var items = this.GetSystem<AchievementSystem>().Items;
-			gameAtlas = mLoader.LoadSync<SpriteAtlas>("UI");
+			gameAtlas = mLoader.LoadSync<SpriteAtlas>("Game");
 			
 			foreach (var item in items.OrderByDescending(item => item.Unlocked))
 			{

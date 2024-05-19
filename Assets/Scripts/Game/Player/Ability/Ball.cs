@@ -10,7 +10,7 @@ namespace Survivor
 	{
 		void Start()
 		{
-			selfRigidbody.velocity = new Vector2(Random.Range(-1f, 0f), Random.Range(0f, 1f)) *
+			selfRigidbody.velocity = new Vector2(Random.Range(-2f, 2f), Random.Range(-1f, 1f)) *
 			                         Random.Range(Global.BasktetBallSpeed.Value - 2, Global.BasktetBallSpeed.Value + 2);
 
 			Global.SuperBasketBall.Register((isUnlocked) =>
@@ -23,12 +23,12 @@ namespace Survivor
 			
 			HitBox.OnTriggerEnter2DEvent(collider =>
 			{
-				var hurtBox = collider.GetComponent<HurtBox>();
-				if (hurtBox)
+				var enemyCollider = collider.GetComponent<EnemyCollider>();
+				if (enemyCollider)
 				{
-					if (hurtBox.Owner.CompareTag("Enemy"))
+					if (enemyCollider.Owner.CompareTag("Enemy"))
 					{
-						var enemy = hurtBox.Owner.GetComponent<IEnemy>();
+						var enemy = enemyCollider.Owner.GetComponent<IEnemy>();
 						var damageTimes = Global.SuperBasketBall.Value ? Random.Range(2, 4) : 1;
 						DamageSystem.CalculateDamage(Global.BasketBallDamage.Value * damageTimes, enemy);
 						

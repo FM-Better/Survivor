@@ -50,13 +50,13 @@ namespace Survivor
 									var attackCount = 0;
 									self.OnTriggerEnter2DEvent((collider) =>
 									{
-										var hurtBox = collider.GetComponent<HurtBox>();
-										if (hurtBox)
+										var enemyCollider = collider.GetComponent<EnemyCollider>();
+										if (enemyCollider)
 										{
-											if (hurtBox.Owner.CompareTag("Enemy"))
+											if (enemyCollider.Owner.CompareTag("Enemy"))
 											{
 												var damageTimes = Global.SuperKnife.Value ? Random.Range(2, 4) : 1;
-												DamageSystem.CalculateDamage(Global.SimpleKnifeDamage.Value * damageTimes, hurtBox.Owner.GetComponent<IEnemy>());
+												DamageSystem.CalculateDamage(Global.SimpleKnifeDamage.Value * damageTimes, enemyCollider.Owner.GetComponent<IEnemy>());
 												attackCount++;
 
 												if (attackCount >= Global.SimpleKnifeAttackCount.Value)

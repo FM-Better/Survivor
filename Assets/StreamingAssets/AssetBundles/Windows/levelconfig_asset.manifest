@@ -1,0 +1,26 @@
+ManifestFileVersion: 0
+CRC: 2733455560
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 480fff72312a7e40e6122bfca44518ef
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 3daed5542901167b2cd2475fc3e0970b
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: a2e7fae370cb4be49a48aa4e1dd05c68, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Assembly-CSharp
+  ClassName: Survivor.EnemyWave
+- AssemblyName: Assembly-CSharp
+  ClassName: Survivor.EnemyWaveGroup
+Assets:
+- Assets/Art/Config/LevelConfig.asset
+Dependencies:
+- E:/Unity/Survivor/AssetBundles/Windows/enemy

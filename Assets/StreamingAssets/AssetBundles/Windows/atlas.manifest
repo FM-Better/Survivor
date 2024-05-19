@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 3549754538
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b2e872cf9e449a7f499f24d069db0917
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 0d677c6dec2405a43fe6dd294cca7c3e
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 687078895
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Art/Sprites/Atlas/UI.spriteatlas
+Dependencies:
+- E:/Unity/Survivor/AssetBundles/Windows/uires
