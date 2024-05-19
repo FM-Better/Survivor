@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 4237935275
+CRC: 2005823260
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -21,7 +21,10 @@ AssetBundleManifest:
       Dependencies:
         Dependency_0: terrain_png
     Info_5:
-      Name: game_spriteatlas
+      Name: drop
+      Dependencies: {}
+    Info_6:
+      Name: atlas
       Dependencies:
         Dependency_0: enemy
         Dependency_1: drop
@@ -30,37 +33,30 @@ AssetBundleManifest:
         Dependency_4: player_png
         Dependency_5: terrain_png
         Dependency_6: uires
-    Info_6:
-      Name: drop
-      Dependencies: {}
     Info_7:
-      Name: atlas
-      Dependencies:
-        Dependency_0: uires
-    Info_8:
       Name: ability
       Dependencies: {}
-    Info_9:
+    Info_8:
       Name: unity2d
       Dependencies: {}
-    Info_10:
+    Info_9:
       Name: player_png
       Dependencies: {}
-    Info_11:
+    Info_10:
       Name: terrain_png
       Dependencies: {}
-    Info_12:
+    Info_11:
       Name: levelconfig_asset
       Dependencies:
         Dependency_0: enemy
-    Info_13:
+    Info_12:
       Name: uiprefab
       Dependencies:
         Dependency_0: fusion-pixel_ttf
         Dependency_1: uires
-    Info_14:
+    Info_13:
       Name: fusion-pixel_ttf
       Dependencies: {}
-    Info_15:
+    Info_14:
       Name: uires
       Dependencies: {}

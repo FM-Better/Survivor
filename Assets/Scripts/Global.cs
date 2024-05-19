@@ -67,7 +67,6 @@ namespace Survivor
         
         protected override void Init()
         {
-            GraphicsSettings.useScriptableRenderPipelineBatching = true; // 打开SRP Batcher
             this.RegisterSystem(new SaveSystem());
             this.RegisterSystem(new GoldUpgradeSystem());
             this.RegisterSystem(new ExpUpgradeSystem());

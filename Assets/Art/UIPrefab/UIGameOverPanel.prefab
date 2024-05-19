@@ -148,9 +148,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9021122338064996971}
-  - component: {fileID: -3748973713614631156}
   - component: {fileID: 8859371785001748740}
   - component: {fileID: 8859371785001748739}
+  - component: {fileID: -3748973713614631156}
   m_Layer: 0
   m_Name: UIGameOverPanel
   m_TagString: Untagged
@@ -180,20 +180,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &-3748973713614631156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3333040034793932050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2abc629ce3627145a3b3633c454e242, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BtnBackStart: {fileID: 7446916325090396510}
-  BtnTest: {fileID: 0}
 --- !u!222 &8859371785001748740
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -232,6 +218,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &-3748973713614631156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3333040034793932050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2abc629ce3627145a3b3633c454e242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BtnBackStart: {fileID: 7446916325090396510}
 --- !u!1 &5102685526023854094
 GameObject:
   m_ObjectHideFlags: 0

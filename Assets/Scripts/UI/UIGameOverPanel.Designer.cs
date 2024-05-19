@@ -12,15 +12,12 @@ namespace Survivor
 		
 		[SerializeField]
 		public UnityEngine.UI.Button BtnBackStart;
-		[SerializeField]
-		public UnityEngine.UI.Button BtnTest;
 		
 		private UIGameOverPanelData mPrivateData = null;
 		
 		protected override void ClearUIComponents()
 		{
 			BtnBackStart = null;
-			BtnTest = null;
 			
 			mData = null;
 		}
