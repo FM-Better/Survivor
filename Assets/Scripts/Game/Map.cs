@@ -54,6 +54,9 @@ namespace Survivor
 		// key: Gird的(x,y) value: Grid的所有Tile的Pos -> PerlinValue
 		private Dictionary<GridIndex, Dictionary<Vector3Int, float>> nineGridDic =
 			new Dictionary<GridIndex, Dictionary<Vector3Int, float>>();
+		// Tile的Pos -> Tile图片Index
+		private Dictionary<Vector3Int, int> tile2IndexDic =
+			new Dictionary<Vector3Int, int>();
 		
 		BindableProperty<GridIndex> gridIndex = new BindableProperty<GridIndex>(new GridIndex(0, 0)); // 当前九宫格格子所在坐标
 
@@ -72,8 +75,7 @@ namespace Survivor
 		[Space] [SerializeField] private int _WaterBaseCount;
 		[SerializeField] private int _SoilBaseCount;
 		[SerializeField] private int _GrassBaseCount;
-
-		// Test:
+		
 		public BindableProperty<float> Lacunarity = new BindableProperty<float>();
 		public BindableProperty<float> WaterThred = new BindableProperty<float>();
 		public BindableProperty<float> SoilThred = new BindableProperty<float>();
@@ -227,7 +229,7 @@ namespace Survivor
 			var perlinValue = 0f;
 			var endPos = Vector3Int.zero;
 			var nowTilePos = Vector3Int.zero;
-			
+				
 			if (nineGridDic.ContainsKey(updateGridIndex)) // 已经在九宫格字典则直接取出来用即可
 			{
 				gridDic = nineGridDic[updateGridIndex];
@@ -236,7 +238,7 @@ namespace Survivor
 					endPos = keyValue.Key;
 					perlinValue = keyValue.Value;
 					nowTilePos = endPos - tileOffset;
-					GenerateTile(nowTilePos, perlinValue);
+					GenerateTile(nowTilePos, tileOffset, perlinValue, true);
 				}
 			}
 			else // 否则进行计算 并加入九宫格字典
@@ -245,27 +247,59 @@ namespace Survivor
 				{
 					endPos = gridTilePos + tileOffset;
 					perlinValue = Mathf.PerlinNoise(endPos.x * _Lacunarity + _Seed, endPos.y * _Lacunarity + _Seed);
-					GenerateTile(gridTilePos, perlinValue);
+					GenerateTile(gridTilePos, tileOffset, perlinValue);
 					gridDic.Add(endPos, perlinValue);
 				}
 				nineGridDic.Add(updateGridIndex, gridDic);
 			}
 		}
 
-		void GenerateTile(Vector3Int tilePos, float perlinValue)
+		void GenerateTile(Vector3Int tilePos, Vector3Int tileOffset, float perlinValue, bool isSaved = false)
 		{
+			int tileIndex = 0;
+			int baseCount = 0;
+			string tileTypeName = "";
+			
+			// 根据噪声值区分Tile种类
 			if (perlinValue < _WaterThred)
 			{
-				nowGridMap.SetTile(tilePos,mLoader.LoadSync<Tile>($"{GridType.Water.ToString()}_Base_{Random.Range(0, _WaterBaseCount)}"));
+				if (!isSaved)
+				{
+					baseCount = _WaterBaseCount;
+				}
+
+				tileTypeName = GridType.Water.ToString();
 			}
 			else if (perlinValue < _SoilThred)
 			{
-				nowGridMap.SetTile(tilePos,mLoader.LoadSync<Tile>($"{GridType.Soil.ToString()}_Base_{Random.Range(0, _SoilBaseCount)}"));
+				if (!isSaved)
+				{
+					baseCount = _SoilBaseCount;	
+				}
+				
+				tileTypeName = GridType.Soil.ToString();
 			}
 			else
 			{
-				nowGridMap.SetTile(tilePos, mLoader.LoadSync<Tile>($"{GridType.Grass.ToString()}_Base_{Random.Range(0, _GrassBaseCount)}"));
+				if (!isSaved)
+				{
+					baseCount = _GrassBaseCount;
+				}
+				
+				tileTypeName = GridType.Grass.ToString();
 			}
+			
+			// 如果是存储过的 直接取出来用
+			if (isSaved)
+			{
+				tileIndex = tile2IndexDic[tilePos + tileOffset];
+			}
+			else // 否则根据类型随机 并存储
+			{
+				tileIndex = Random.Range(0, baseCount);
+				tile2IndexDic.Add(tilePos + tileOffset, tileIndex);
+			}
+			nowGridMap.SetTile(tilePos,mLoader.LoadSync<Tile>($"{tileTypeName}_Base_{tileIndex}"));
 		}
 	}
 }

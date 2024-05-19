@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2624422745
+CRC: 2889225555
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f4471440814d350b98e4fea9e419801b
+    Hash: 00a4bdbf97803d3746913a5f143b6f22
   TypeTreeHash:
     serializedVersion: 2
     Hash: 0d677c6dec2405a43fe6dd294cca7c3e
@@ -18,7 +18,6 @@ ClassTypes:
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/Art/Sprites/Atlas/Game.spriteatlas
-- Assets/Art/Sprites/Atlas/UI.spriteatlas
 Dependencies:
 - E:/Unity/Survivor/AssetBundles/Windows/ability
 - E:/Unity/Survivor/AssetBundles/Windows/drop

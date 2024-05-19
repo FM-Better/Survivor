@@ -4,54 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a2b9e56-376e-497f-9d7b-000d63ff874b" name="Changes" comment="[fix] 将敌人的受击、攻击碰撞盒合并为一个，优化性能，支持同屏敌人到2k左右&#10;[fix] 增加多个Layer，设置碰撞检测层级，优化性能&#10;[fix] 修改守卫剑、篮球的初始速度 &#10;[clean] 整理资源&#10;[clean] 重新生成AB包，以打包测试">
+    <list default="true" id="3a2b9e56-376e-497f-9d7b-000d63ff874b" name="Changes" comment="[clean] 整理资源和代码">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/Windows" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/Windows" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/Windows.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/Windows.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/ability" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/ability" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/ability.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/ability.manifest" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/atlas" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/atlas" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/atlas.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/atlas.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/drop" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/drop" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/drop.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/drop.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/enemy" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/enemy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/enemy.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/enemy.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/game_spriteatlas" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/game_spriteatlas.manifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/player_png" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/player_png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/player_png.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/player_png.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/terrain_png" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/terrain_png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/terrain_png.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/terrain_png.manifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/uiprefab" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/uiprefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/uiprefab.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/uiprefab.manifest" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/uires" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/uires" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/uires.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/uires.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/unity2d" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/unity2d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/unity2d.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/unity2d.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Atlas/Game.spriteatlas.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Atlas/Game.spriteatlas.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Atlas/UI.spriteatlas" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Atlas/UI.spriteatlas.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel/TreasurePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel/TreasurePanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/Windows" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/Windows" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/Windows.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/Windows.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/ability" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/ability" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/ability.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/ability.manifest" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/asset_bundle_config.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/asset_bundle_config.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/atlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/atlas" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/atlas.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/atlas.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/drop" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/drop" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/drop.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/drop.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/enemy" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/enemy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/enemy.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/enemy.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/game_spriteatlas" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/game_spriteatlas.manifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/game_spriteatlas.manifest.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/game_spriteatlas.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/player_png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/player_png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/player_png.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/player_png.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/terrain_png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/terrain_png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/terrain_png.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/terrain_png.manifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/uiprefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/uiprefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/uiprefab.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/uiprefab.manifest" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/uires" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/uires" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/uires.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/uires.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/unity2d" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/unity2d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/unity2d.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/unity2d.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +216,7 @@
       <workItem from="1712924555085" duration="259000" />
       <workItem from="1715874426381" duration="3731000" />
       <workItem from="1716084362969" duration="6978000" />
-      <workItem from="1716095148072" duration="1950000" />
+      <workItem from="1716095148072" duration="4628000" />
     </task>
     <task id="LOCAL-00001" summary="[feat]增加图集优化，减少DC">
       <option name="closed" value="true" />
@@ -258,7 +234,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716095566972</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[clean] 整理资源和代码">
+      <option name="closed" value="true" />
+      <created>1716097178866</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716097178866</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +287,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="[feat]增加图集优化，减少DC" />
     <MESSAGE value="[fix] 将敌人的受击、攻击碰撞盒合并为一个，优化性能，支持同屏敌人到2k左右&#10;[fix] 增加多个Layer，设置碰撞检测层级，优化性能&#10;[fix] 修改守卫剑、篮球的初始速度 &#10;[clean] 整理资源&#10;[clean] 重新生成AB包，以打包测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="[fix] 将敌人的受击、攻击碰撞盒合并为一个，优化性能，支持同屏敌人到2k左右&#10;[fix] 增加多个Layer，设置碰撞检测层级，优化性能&#10;[fix] 修改守卫剑、篮球的初始速度 &#10;[clean] 整理资源&#10;[clean] 重新生成AB包，以打包测试" />
+    <MESSAGE value="[clean] 整理资源和代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="[clean] 整理资源和代码" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

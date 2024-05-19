@@ -89,8 +89,8 @@ namespace Survivor
 						}	
 					}
 				
-					TxtContent.text = "增加50金币";
-					Global.Gold.Value += 50;
+					TxtContent.text = "增加500金币";
+					Global.Gold.Value += 500;
 					ImgIcon.Hide();
 				}	
 			}
