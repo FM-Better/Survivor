@@ -4,30 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a2b9e56-376e-497f-9d7b-000d63ff874b" name="Changes" comment="[clean] 整理资源和代码">
+    <list default="true" id="3a2b9e56-376e-497f-9d7b-000d63ff874b" name="Changes" comment="[feat] 增加每局格子随机索引值的记录，每局随机之后就取出来直接用，否则每次随机效果很奇怪&#10;[fix] 将宝箱的金币奖励改为500">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/Windows" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/Windows" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/Windows.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/Windows.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/atlas" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/atlas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/atlas.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/atlas.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/uiprefab" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/uiprefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/uiprefab.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/uiprefab.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/uires" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/uires" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssetBundles/Windows/uires.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/Windows/uires.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Atlas/UI.spriteatlas" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Atlas/UI.spriteatlas.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel/TreasurePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel/TreasurePanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/Windows" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/Windows" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/Windows.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/Windows.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/asset_bundle_config.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/asset_bundle_config.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/atlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/atlas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/atlas.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/atlas.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/uiprefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/uiprefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/uiprefab.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/uiprefab.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/uires" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/uires" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/uires.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/uires.manifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +21,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/34/54254e0d/PlayerPrefs.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/44/3a71ea3a/Resources.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/4c/c99987e2/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/4d/cf20f90d/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/6f/1072cd22/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/79/46b22b4e/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/89/4274b946/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
@@ -69,6 +49,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemyCollider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Fx/FxConrtoller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity/Survivor/Assets/Scripts/Game/Map.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/Basketball.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SimpleKnife.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SimpleSword.cs" root0="FORCE_HIGHLIGHTING" />
@@ -167,10 +148,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="26868">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="26868" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -216,7 +197,7 @@
       <workItem from="1712924555085" duration="259000" />
       <workItem from="1715874426381" duration="3731000" />
       <workItem from="1716084362969" duration="6978000" />
-      <workItem from="1716095148072" duration="4628000" />
+      <workItem from="1716095148072" duration="7508000" />
     </task>
     <task id="LOCAL-00001" summary="[feat]增加图集优化，减少DC">
       <option name="closed" value="true" />
@@ -242,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716097178866</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="[feat] 增加每局格子随机索引值的记录，每局随机之后就取出来直接用，否则每次随机效果很奇怪&#10;[fix] 将宝箱的金币奖励改为500">
+      <option name="closed" value="true" />
+      <created>1716112576695</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716112576695</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,36 +277,37 @@
     <MESSAGE value="[feat]增加图集优化，减少DC" />
     <MESSAGE value="[fix] 将敌人的受击、攻击碰撞盒合并为一个，优化性能，支持同屏敌人到2k左右&#10;[fix] 增加多个Layer，设置碰撞检测层级，优化性能&#10;[fix] 修改守卫剑、篮球的初始速度 &#10;[clean] 整理资源&#10;[clean] 重新生成AB包，以打包测试" />
     <MESSAGE value="[clean] 整理资源和代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="[clean] 整理资源和代码" />
+    <MESSAGE value="[feat] 增加每局格子随机索引值的记录，每局随机之后就取出来直接用，否则每次随机效果很奇怪&#10;[fix] 将宝箱的金币奖励改为500" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] 增加每局格子随机索引值的记录，每局随机之后就取出来直接用，否则每次随机效果很奇怪&#10;[fix] 将宝箱的金币奖励改为500" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/QFramework/Toolkits/ResKit/Scripts/Framework/ResLoader/ResLoader.cs</url>
-          <line>223</line>
-          <properties documentPath="E:\Unity\Survivor\Assets\QFramework\Toolkits\ResKit\Scripts\Framework\ResLoader\ResLoader.cs" initialLine="223" containingFunctionPresentation="Method 'Add2Load'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/UIGameOverPanel.cs</url>
+          <line>17</line>
+          <properties documentPath="E:\Unity\Survivor\Assets\Scripts\UI\UIGameOverPanel.cs" initialLine="17" containingFunctionPresentation="Method 'OnInit'">
             <startOffsets>
-              <option value="5860" />
+              <option value="379" />
             </startOffsets>
             <endOffsets>
-              <option value="5881" />
+              <option value="559" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/QFramework/Toolkits/ResKit/Scripts/Implements/AssetBundleSupport/Res/AssetBundleRes.cs</url>
-          <line>36</line>
-          <properties documentPath="E:\Unity\Survivor\Assets\QFramework\Toolkits\ResKit\Scripts\Implements\AssetBundleSupport\Res\AssetBundleRes.cs" initialLine="36" containingFunctionPresentation="Method 'InitAssetBundleName'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/UIGameStartPanel.cs</url>
+          <line>18</line>
+          <properties documentPath="E:\Unity\Survivor\Assets\Scripts\UI\UIGameStartPanel.cs" initialLine="18" containingFunctionPresentation="Method 'OnInit'">
             <startOffsets>
-              <option value="1122" />
+              <option value="409" />
             </startOffsets>
             <endOffsets>
-              <option value="1217" />
+              <option value="534" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using QFramework;
@@ -118,6 +119,12 @@ namespace Survivor
 				WaterThred.Value = _WaterThred;
 				SoilThred.Value = _SoilThred;
 			}
+		}
+
+		private void OnDestroy()
+		{
+			mLoader.Recycle2Cache();
+			mLoader = null;
 		}
 
 		void CreateNineGridMaps()
@@ -299,7 +306,7 @@ namespace Survivor
 				tileIndex = Random.Range(0, baseCount);
 				tile2IndexDic.Add(tilePos + tileOffset, tileIndex);
 			}
-			nowGridMap.SetTile(tilePos,mLoader.LoadSync<Tile>($"{tileTypeName}_Base_{tileIndex}"));
+			nowGridMap.SetTile(tilePos,mLoader.LoadSync<Tile>($"{tileTypeName}_Base_{tileIndex.ToString()}"));
 		}
 	}
 }
