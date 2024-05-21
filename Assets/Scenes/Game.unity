@@ -637,7 +637,7 @@ MonoBehaviour:
   MarkType: 0
   CustomComponentName: Mark
   CustomComment: 
-  mComponentName: UnityEngine.Transform
+  mComponentName: UnityEngine.Animator
 --- !u!212 &226673613
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11436,7 +11436,7 @@ MonoBehaviour:
   GeneratePrefab: 0
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
-  Mark: {fileID: 226673611}
+  Mark: {fileID: 226673614}
 --- !u!4 &2050788475
 Transform:
   m_ObjectHideFlags: 0

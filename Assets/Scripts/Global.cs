@@ -64,6 +64,7 @@ namespace Survivor
         public static BindableProperty<int> HpItemDropRate = new BindableProperty<int>(2); // 回血道具掉落概率
         public static BindableProperty<int> GetAllExpDropRate = new BindableProperty<int>(8); // 获取当前所有经验的道具的掉落概率
 
+        public static BindableProperty<bool> CanMark = new BindableProperty<bool>(false); // 是否可以标记
         public static BindableProperty<bool> IsMarked = new BindableProperty<bool>(false); // 是否标记
         public static Vector2 MarkPos = Vector2.zero; // 标记的位置
         #endregion
@@ -138,6 +139,7 @@ namespace Survivor
             SuperBasketBall.Value = false;
             SuperBomb.Value = false;
 
+            CanMark.Value = true;
             IsMarked.Value = false;
             MarkPos = Vector2.zero;
             

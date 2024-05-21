@@ -4,25 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a2b9e56-376e-497f-9d7b-000d63ff874b" name="Changes" comment="[feat] 加入玩家受伤闪烁和1s无敌效果">
+    <list default="true" id="3a2b9e56-376e-497f-9d7b-000d63ff874b" name="Changes" comment="[feat] 增加玩家标记和方向指引功能以及相关图片和动画资源">
+      <change afterPath="$PROJECT_DIR$/AssetBundles/Windows/direction_png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AssetBundles/Windows/direction_png.manifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animation/Mark.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animation/Mark/Mark.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animation/Mark/Mark.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animation/Mark/Mark.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animation/Mark/Mark.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animation/Player.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animation/Player/Direction.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animation/Player/Direction.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animation/Player/Direction.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animation/Player/Direction.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animation/Player/Player.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animation/Player/Player.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animation/Player/PlayerLeftIdle.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animation/Player/PlayerLeftIdle.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animation/Player/PlayerLeftWalk.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animation/Player/PlayerLeftWalk.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animation/Player/PlayerRightIdle.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animation/Player/PlayerRightIdle.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animation/Player/PlayerRightWalk.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animation/Player/PlayerRightWalk.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Direction.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Direction.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Mark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Mark.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/MarkController.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/MarkController.Designer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/MarkController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/MarkController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/direction_png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/direction_png.manifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/direction_png.manifest.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StreamingAssets/AssetBundles/Windows/direction_png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/Player.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/Player.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/PlayerLeftIdle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/PlayerLeftIdle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/PlayerLeftWalk.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/PlayerLeftWalk.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/PlayerRightIdle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/PlayerRightIdle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/PlayerRightWalk.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/PlayerRightWalk.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Config/LevelConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Config/LevelConfig.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/DropManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/DropManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Player.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Player.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel/ExpUpgradePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIGamePanel/ExpUpgradePanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +83,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/RenameEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/TestEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Drop/Bomb.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity/Survivor/Assets/Scripts/Game/Drop/DropManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Drop/GetAllExp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Drop/HpItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemyCollider.cs" root0="FORCE_HIGHLIGHTING" />
@@ -209,7 +232,7 @@
       <workItem from="1715874426381" duration="3731000" />
       <workItem from="1716084362969" duration="6978000" />
       <workItem from="1716095148072" duration="8335000" />
-      <workItem from="1716261011441" duration="18016000" />
+      <workItem from="1716261011441" duration="20691000" />
     </task>
     <task id="LOCAL-00001" summary="[feat]增加图集优化，减少DC">
       <option name="closed" value="true" />
@@ -267,7 +290,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716263781078</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="[feat] 增加玩家标记和方向指引功能以及相关图片和动画资源">
+      <option name="closed" value="true" />
+      <created>1716297888179</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716297888179</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +348,8 @@
     <MESSAGE value="[fix] 更改打包之后第二次进入游戏地图资源丢失问题，将Map中的资源加载器在销毁时回收" />
     <MESSAGE value="[fix] 游戏结束时重置掉落物计数&#10;[style] 修改代码格式" />
     <MESSAGE value="[feat] 加入玩家受伤闪烁和1s无敌效果" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] 加入玩家受伤闪烁和1s无敌效果" />
+    <MESSAGE value="[feat] 增加玩家标记和方向指引功能以及相关图片和动画资源" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] 增加玩家标记和方向指引功能以及相关图片和动画资源" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

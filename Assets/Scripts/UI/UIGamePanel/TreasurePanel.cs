@@ -96,6 +96,10 @@ namespace Survivor
 			}
 		}
 
+		protected override void OnShow() => Global.CanMark.Value = false;
+		
+		protected override void OnHide() => Global.CanMark.Value = true;
+		
 		protected override void OnBeforeDestroy()
 		{
 			mLoader.Recycle2Cache();
