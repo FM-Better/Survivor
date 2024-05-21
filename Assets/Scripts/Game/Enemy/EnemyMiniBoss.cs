@@ -1,4 +1,3 @@
-using System;
 using QAssetBundle;
 using UnityEngine;
 using QFramework;
@@ -130,18 +129,12 @@ namespace Survivor
 				});
 			
 			fsm.StartState(States.Chase);
-		}		
+		}
+
+		private void Update() => fsm.Update();
+
+		private void FixedUpdate() => fsm.FixedUpdate();
 		
-		private void Update()
-		{
-			fsm.Update();
-		}
-
-		private void FixedUpdate()
-		{
-			fsm.FixedUpdate();
-		}
-
 		public void Hurt(float damage, bool isCritical = false)
 		{
 			if (!isDead)
@@ -164,15 +157,9 @@ namespace Survivor
 			}
 		}
 
-		public void PopulateHp(float nowWaveHpScale)
-		{
-			hp *= nowWaveHpScale;
-		}
+		public void PopulateHp(float nowWaveHpScale) => hp *= nowWaveHpScale;
 
-		public void PopulateSpeed(float nowWaveSpeedScale)
-		{
-			chaseSpeed *= chaseSpeed;
-		}
+		public void PopulateSpeed(float nowWaveSpeedScale) => chaseSpeed *= chaseSpeed;
 
 		public void Dead()
 		{

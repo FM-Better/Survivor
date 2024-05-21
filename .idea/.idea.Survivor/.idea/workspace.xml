@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a2b9e56-376e-497f-9d7b-000d63ff874b" name="Changes" comment="[feat] 增加每局格子随机索引值的记录，每局随机之后就取出来直接用，否则每次随机效果很奇怪&#10;[fix] 将宝箱的金币奖励改为500">
+    <list default="true" id="3a2b9e56-376e-497f-9d7b-000d63ff874b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/DropManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/DropManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemyMiniBoss.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemyMiniBoss.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +52,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemyCollider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Fx/FxConrtoller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://E:/Unity/Survivor/Assets/Scripts/Game/Map.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity/Survivor/Assets/Scripts/Game/Map.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/Basketball.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SimpleKnife.cs" root0="FORCE_HIGHLIGHTING" />
@@ -148,10 +152,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="26868">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="26868" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -197,7 +201,8 @@
       <workItem from="1712924555085" duration="259000" />
       <workItem from="1715874426381" duration="3731000" />
       <workItem from="1716084362969" duration="6978000" />
-      <workItem from="1716095148072" duration="7508000" />
+      <workItem from="1716095148072" duration="8335000" />
+      <workItem from="1716261011441" duration="1472000" />
     </task>
     <task id="LOCAL-00001" summary="[feat]增加图集优化，减少DC">
       <option name="closed" value="true" />
@@ -231,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716112576695</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[fix] 更改打包之后第二次进入游戏地图资源丢失问题，将Map中的资源加载器在销毁时回收">
+      <option name="closed" value="true" />
+      <created>1716221625957</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716221625957</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,39 +291,10 @@
     <MESSAGE value="[fix] 将敌人的受击、攻击碰撞盒合并为一个，优化性能，支持同屏敌人到2k左右&#10;[fix] 增加多个Layer，设置碰撞检测层级，优化性能&#10;[fix] 修改守卫剑、篮球的初始速度 &#10;[clean] 整理资源&#10;[clean] 重新生成AB包，以打包测试" />
     <MESSAGE value="[clean] 整理资源和代码" />
     <MESSAGE value="[feat] 增加每局格子随机索引值的记录，每局随机之后就取出来直接用，否则每次随机效果很奇怪&#10;[fix] 将宝箱的金币奖励改为500" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] 增加每局格子随机索引值的记录，每局随机之后就取出来直接用，否则每次随机效果很奇怪&#10;[fix] 将宝箱的金币奖励改为500" />
+    <MESSAGE value="[fix] 更改打包之后第二次进入游戏地图资源丢失问题，将Map中的资源加载器在销毁时回收" />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix] 更改打包之后第二次进入游戏地图资源丢失问题，将Map中的资源加载器在销毁时回收" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/UIGameOverPanel.cs</url>
-          <line>17</line>
-          <properties documentPath="E:\Unity\Survivor\Assets\Scripts\UI\UIGameOverPanel.cs" initialLine="17" containingFunctionPresentation="Method 'OnInit'">
-            <startOffsets>
-              <option value="379" />
-            </startOffsets>
-            <endOffsets>
-              <option value="559" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/UIGameStartPanel.cs</url>
-          <line>18</line>
-          <properties documentPath="E:\Unity\Survivor\Assets\Scripts\UI\UIGameStartPanel.cs" initialLine="18" containingFunctionPresentation="Method 'OnInit'">
-            <startOffsets>
-              <option value="409" />
-            </startOffsets>
-            <endOffsets>
-              <option value="534" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#UnityEngine.Behaviour" memberName="enabled" />

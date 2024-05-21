@@ -15,11 +15,15 @@ namespace Survivor
 		private void Awake()
 		{
 			Default = this;
+			Debug.Log($"HpItemCount:{s_HpItemCount}");
 		}
 
 		private void OnDestroy()
 		{
 			Default = null;
+			s_HpItemCount = 0;
+			s_GetAllExpCount = 0;
+			s_BombCount = 0;
 		}
 		
 		public void SpawnDrop(Vector3 spawnPosition, bool isSpawnTreasure)

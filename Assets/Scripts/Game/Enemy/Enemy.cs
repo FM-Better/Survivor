@@ -40,7 +40,10 @@ namespace Survivor
 			if (Player.Default)
 			{
 				var direction = transform.NormalizedDirection2DTo(Player.Default);
-				selfRigidbody.velocity = direction * moveSpeed;
+				if (direction.magnitude > 0)
+				{
+					selfRigidbody.velocity = direction * moveSpeed;	
+				}
 			}
 			else
 			{
@@ -72,15 +75,9 @@ namespace Survivor
 			}).Start(this);
 		}
 
-		public void PopulateHp(float nowWaveHpScale)
-		{
-			hp *= nowWaveHpScale;
-		}
+		public void PopulateHp(float nowWaveHpScale) => hp *= nowWaveHpScale;
 
-		public void PopulateSpeed(float nowWaveSpeedScale)
-		{
-			moveSpeed *= nowWaveSpeedScale;
-		}
+		public void PopulateSpeed(float nowWaveSpeedScale) => moveSpeed *= nowWaveSpeedScale;
 
 		public void Dead()
 		{
