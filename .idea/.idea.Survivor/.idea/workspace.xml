@@ -4,13 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a2b9e56-376e-497f-9d7b-000d63ff874b" name="Changes" comment="[fix] 游戏结束时重置掉落物计数&#10;[style] 修改代码格式">
+    <list default="true" id="3a2b9e56-376e-497f-9d7b-000d63ff874b" name="Changes" comment="[feat] 加入玩家受伤闪烁和1s无敌效果">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Survivor/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/Player.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/Player.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/PlayerLeftIdle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/PlayerLeftIdle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/PlayerLeftWalk.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/PlayerLeftWalk.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/PlayerRightIdle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/PlayerRightIdle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/PlayerRightWalk.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Animation/PlayerRightWalk.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Config/LevelConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Config/LevelConfig.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/DropManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Drop/DropManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Player.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Player.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Global.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Global.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,11 +39,14 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/4c/c99987e2/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/4d/cf20f90d/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/6f/1072cd22/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/73/fa61f8a3/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/79/46b22b4e/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/89/4274b946/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/94/e4e7bdeb/Camera.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/99/669419e4/BoundsInt.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/a3/2e39b790/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/28d694a2939e4826992577f826717d3b15a000/c4/40dddad2/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46b1d98d2dd74f23b6cebf5354de98851f800/71/9968354d/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6f90d6f5b89a4c0bb080b24b55df81433a00/ac/c9161bdc/NativeInputSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/0b/e82ddd70/Math.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/3c/a21cdeaa/Int32.cs" root0="SKIP_HIGHLIGHTING" />
@@ -43,8 +58,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d7b7bc88591045ff92cb7479fe1bd52445400/41/0226d073/IPointerClickHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f97e358e7a5e4bf5ba1b3e551d91914610fc00/29/327d40bc/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fb55cc4a6b3c4122bd62ad5a1575ab5f7a00/0f/d269026a/FontStyle.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity/Survivor/Assets/Art/Sprites/UIRes/button_bg.png.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity/Survivor/Assets/Scripts/Config/AbilityConfig.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/RenameEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/TestEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Drop/Bomb.cs" root0="FORCE_HIGHLIGHTING" />
@@ -53,13 +66,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemyCollider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Enemy/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Fx/FxConrtoller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity/Survivor/Assets/Scripts/Game/Map.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity/Survivor/Assets/Scripts/Game/Map.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/Basketball.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SimpleKnife.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SimpleSword.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Player/Ability/SuperBomb.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity/Survivor/Assets/Scripts/Global.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Global.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/System/ExpUpgrade/ExpUpgradeSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/System/GoldUpgrade/GoldUpgradeItem.cs" root0="FORCE_HIGHLIGHTING" />
@@ -79,10 +89,6 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Selectable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/SQLite/SQLite.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Plugins/PluginConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity/Survivor/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity/Survivor/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity/Survivor/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://E:/Unity/Survivor/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://E:/Unity/Survivor/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -203,7 +209,7 @@
       <workItem from="1715874426381" duration="3731000" />
       <workItem from="1716084362969" duration="6978000" />
       <workItem from="1716095148072" duration="8335000" />
-      <workItem from="1716261011441" duration="2569000" />
+      <workItem from="1716261011441" duration="18016000" />
     </task>
     <task id="LOCAL-00001" summary="[feat]增加图集优化，减少DC">
       <option name="closed" value="true" />
@@ -253,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716262612359</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="[feat] 加入玩家受伤闪烁和1s无敌效果">
+      <option name="closed" value="true" />
+      <created>1716263781078</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716263781078</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +316,8 @@
     <MESSAGE value="[feat] 增加每局格子随机索引值的记录，每局随机之后就取出来直接用，否则每次随机效果很奇怪&#10;[fix] 将宝箱的金币奖励改为500" />
     <MESSAGE value="[fix] 更改打包之后第二次进入游戏地图资源丢失问题，将Map中的资源加载器在销毁时回收" />
     <MESSAGE value="[fix] 游戏结束时重置掉落物计数&#10;[style] 修改代码格式" />
-    <option name="LAST_COMMIT_MESSAGE" value="[fix] 游戏结束时重置掉落物计数&#10;[style] 修改代码格式" />
+    <MESSAGE value="[feat] 加入玩家受伤闪烁和1s无敌效果" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] 加入玩家受伤闪烁和1s无敌效果" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

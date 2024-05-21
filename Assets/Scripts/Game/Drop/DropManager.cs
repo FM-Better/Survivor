@@ -15,7 +15,6 @@ namespace Survivor
 		private void Awake()
 		{
 			Default = this;
-			Debug.Log($"HpItemCount:{s_HpItemCount}");
 		}
 
 		private void OnDestroy()

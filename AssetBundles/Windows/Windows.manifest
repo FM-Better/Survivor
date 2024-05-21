@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 2076999613
+CRC: 297253806
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -33,6 +33,7 @@ AssetBundleManifest:
         Dependency_4: player_png
         Dependency_5: terrain_png
         Dependency_6: uires
+        Dependency_7: direction_png
     Info_7:
       Name: ability
       Dependencies: {}
@@ -59,4 +60,7 @@ AssetBundleManifest:
       Dependencies: {}
     Info_14:
       Name: uires
+      Dependencies: {}
+    Info_15:
+      Name: direction_png
       Dependencies: {}

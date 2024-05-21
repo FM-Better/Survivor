@@ -53,6 +53,8 @@ SpriteAtlas:
     - {fileID: 2800000, guid: cff8f4b41be93d6478c8fc3636bb835c, type: 3}
     - {fileID: 2800000, guid: 0704db97661efdf48b0df9522ad446b9, type: 3}
     - {fileID: 2800000, guid: 3bb2006000a00e143a834085c3d6738a, type: 3}
+    - {fileID: 2800000, guid: 984f6205809ff3d499a51876ac7394d2, type: 3}
+    - {fileID: 2800000, guid: 2d97ca9907c98394981dcd554e7af06d, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -88,6 +90,7 @@ SpriteAtlas:
   - {fileID: 1358495518, guid: cff8f4b41be93d6478c8fc3636bb835c, type: 3}
   - {fileID: -1522949198, guid: cff8f4b41be93d6478c8fc3636bb835c, type: 3}
   - {fileID: 1373427191, guid: cff8f4b41be93d6478c8fc3636bb835c, type: 3}
+  - {fileID: 21300000, guid: 984f6205809ff3d499a51876ac7394d2, type: 3}
   - {fileID: 21300000, guid: 24950b05c7663ee438ac5fc6ef47ab2c, type: 3}
   - {fileID: 21300000, guid: bfd89595fa913f74fbe93f1bc5cd9c1b, type: 3}
   - {fileID: 21300000, guid: 31c8f9d5bc338e946bc061c5b6a5f21d, type: 3}
@@ -143,6 +146,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: dbec1a983884d254baafe6bb7e7357a3, type: 3}
   - {fileID: 21300000, guid: 98bb7639de3267b40a16c9fb45361956, type: 3}
   - {fileID: 21300000, guid: 8a68dc49475ec7d40a97715bbd349e30, type: 3}
+  - {fileID: 21300000, guid: 2d97ca9907c98394981dcd554e7af06d, type: 3}
   - {fileID: 21300000, guid: 2fa95eb9e5fb9db48aac4acdc2ba3317, type: 3}
   - {fileID: 21300000, guid: ffef1e0a07414d546a26655e99518dce, type: 3}
   - {fileID: 21300000, guid: 4c94df0a88226f3439c1344d92e14f31, type: 3}
@@ -198,6 +202,7 @@ SpriteAtlas:
   - Playe_Right_Walk_1
   - Playe_Right_Idle_1
   - Playe_Right_Idle_0
+  - Direction
   - rotate_sword
   - achievement_level_icon
   - paired_ball_icon
@@ -253,6 +258,7 @@ SpriteAtlas:
   - enemy_c_boss
   - paired_bomb_icon
   - achievement_all_icon
+  - Mark
   - enemy_a
   - HpItem
   - enemy_fly

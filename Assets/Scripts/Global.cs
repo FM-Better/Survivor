@@ -63,6 +63,9 @@ namespace Survivor
         public static BindableProperty<int> GoldDropRate = new BindableProperty<int>(20); // 金币掉落概率
         public static BindableProperty<int> HpItemDropRate = new BindableProperty<int>(2); // 回血道具掉落概率
         public static BindableProperty<int> GetAllExpDropRate = new BindableProperty<int>(8); // 获取当前所有经验的道具的掉落概率
+
+        public static BindableProperty<bool> IsMarked = new BindableProperty<bool>(false); // 是否标记
+        public static Vector2 MarkPos = Vector2.zero; // 标记的位置
         #endregion
         
         protected override void Init()
@@ -134,6 +137,9 @@ namespace Survivor
             SuperRotateSword.Value = false;
             SuperBasketBall.Value = false;
             SuperBomb.Value = false;
+
+            IsMarked.Value = false;
+            MarkPos = Vector2.zero;
             
             IsEnemySpawnOver.Value = false;
             EnemySpawner.enemyCount.Value = 0;

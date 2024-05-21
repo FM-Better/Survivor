@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2889225555
+CRC: 3947888886
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 00a4bdbf97803d3746913a5f143b6f22
+    Hash: 621f5f17752b5a86b088d96c5ca22461
   TypeTreeHash:
     serializedVersion: 2
     Hash: 0d677c6dec2405a43fe6dd294cca7c3e
@@ -20,6 +20,7 @@ Assets:
 - Assets/Art/Sprites/Atlas/Game.spriteatlas
 Dependencies:
 - E:/Unity/Survivor/AssetBundles/Windows/ability
+- E:/Unity/Survivor/AssetBundles/Windows/direction_png
 - E:/Unity/Survivor/AssetBundles/Windows/drop
 - E:/Unity/Survivor/AssetBundles/Windows/enemy
 - E:/Unity/Survivor/AssetBundles/Windows/player_png

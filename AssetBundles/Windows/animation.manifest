@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2284694141
+CRC: 2376984848
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f9809a73fd393fce59520a0624c9b672
+    Hash: 6eb15f41412e2de086976f95244a6b0f
   TypeTreeHash:
     serializedVersion: 2
     Hash: 79bfbbfb45a737124c4c276d36f44713
@@ -17,10 +17,14 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/Art/Animation/Player.controller
-- Assets/Art/Animation/PlayerRightIdle.anim
-- Assets/Art/Animation/PlayerLeftWalk.anim
-- Assets/Art/Animation/PlayerLeftIdle.anim
-- Assets/Art/Animation/PlayerRightWalk.anim
+- Assets/Art/Animation/Player/Direction.anim
+- Assets/Art/Animation/Mark/Mark.anim
+- Assets/Art/Animation/Player/Player.controller
+- Assets/Art/Animation/Player/PlayerRightIdle.anim
+- Assets/Art/Animation/Player/PlayerLeftWalk.anim
+- Assets/Art/Animation/Mark/Mark.controller
+- Assets/Art/Animation/Player/PlayerLeftIdle.anim
+- Assets/Art/Animation/Player/PlayerRightWalk.anim
+- Assets/Art/Animation/Player/Direction.controller
 Dependencies:
 - E:/Unity/Survivor/AssetBundles/Windows/player_png
