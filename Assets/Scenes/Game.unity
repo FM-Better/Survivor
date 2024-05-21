@@ -379,7 +379,7 @@ MonoBehaviour:
   MarkType: 0
   CustomComponentName: Sprite
   CustomComment: 
-  mComponentName: UnityEngine.Animator
+  mComponentName: UnityEngine.SpriteRenderer
 --- !u!95 &67890602
 Animator:
   serializedVersion: 5
@@ -662,7 +662,9 @@ MonoBehaviour:
   PrefabFolder: Assets/Art/Prefab
   ArchitectureFullTypeName: 
   moveSpeed: 2.5
-  Sprite: {fileID: 67890602}
+  _animator: {fileID: 67890602}
+  twinkleCircle: 10
+  Sprite: {fileID: 67890600}
   HurtBox: {fileID: 1945414767}
   HpValue: {fileID: 1909616651}
   selfRigidbody: {fileID: 242494290}

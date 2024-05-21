@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using QAssetBundle;
 using UnityEngine;
 using QFramework;
@@ -7,6 +9,8 @@ namespace Survivor
 	public partial class Player : ViewController
 	{
 		[SerializeField] private float moveSpeed;
+		[SerializeField] private Animator _animator;
+		[SerializeField] private int twinkleCircle;
 
 		public static Player Default;
 		private AudioPlayer mWalkSound;
@@ -35,6 +39,11 @@ namespace Survivor
 						else
 						{
 							AudioKit.PlaySound(Sound.HURT);
+							HurtBox.enabled = false;
+							StartCoroutine(Cou_Hurt(() =>
+							{
+								HurtBox.enabled = true;
+							}));
 						}
 					}
 				}
@@ -51,6 +60,36 @@ namespace Survivor
 			}).UnRegisterWhenGameObjectDestroyed(gameObject);
 		}
 
+		IEnumerator Cou_Hurt(Action onComplete = null)
+		{
+			float trinkleTime = 1f;
+			int count = 0;
+			bool isTwinkle = false;
+			while (trinkleTime > 0f)
+			{
+				trinkleTime -= Time.deltaTime;
+				count++;
+				// 每过一个闪烁周期则闪烁
+
+				if (count % twinkleCircle == 0)
+					isTwinkle = !isTwinkle;
+
+				if (isTwinkle)
+				{
+					Sprite.enabled = false;
+				}
+				else
+				{
+					Sprite.enabled = true;
+				}
+
+				yield return null;
+			}
+			
+			Sprite.enabled = true; // 结束时打开渲染器
+			onComplete?.Invoke(); // 结束的回调
+		}
+		
 		void UpdateHpUI() => HpValue.fillAmount = Global.Hp.Value / (float)Global.MaxHp.Value;
 
 		private bool mIsFaceLeft = true;
@@ -74,11 +113,11 @@ namespace Survivor
 				
 				if (mIsFaceLeft)
 				{
-					Sprite.Play("PlayerLeftIdle");	
+					_animator.Play("PlayerLeftIdle");	
 				}
 				else
 				{
-					Sprite.Play("PlayerRightIdle");
+					_animator.Play("PlayerRightIdle");
 				}
 			}
 			else // Walk
@@ -99,11 +138,11 @@ namespace Survivor
 				
 				if (mIsFaceLeft)
 				{
-					Sprite.Play("PlayerLeftWalk");	
+					_animator.Play("PlayerLeftWalk");	
 				}
 				else
 				{
-					Sprite.Play("PlayerRightWalk");
+					_animator.Play("PlayerRightWalk");
 				}
 			}
 		}

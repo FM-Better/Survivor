@@ -19,19 +19,22 @@ MonoBehaviour:
     From: 0
     NameToFullName: []
     BindInfos:
-    - TypeName: SpriteRenderer
+    - TypeName: UnityEngine.SpriteRenderer
       PathToRoot: Sprite
       MemberName: Sprite
-    - TypeName: UnityEngine.CircleCollider2D
-      PathToRoot: Collider
-      MemberName: Collider
-    ScriptsFolder: Assets/Scripts/Game/Enemy
-    ClassName: EnemyMiniBoss
+    - TypeName: CircleCollider2D
+      PathToRoot: HurtBox
+      MemberName: HurtBox
+    - TypeName: UnityEngine.UI.Image
+      PathToRoot: Canvas/HpValue
+      MemberName: HpValue
+    ScriptsFolder: Assets\Scripts\Game\Player
+    ClassName: Player
     Namespace: Survivor
     MainCode: "using UnityEngine;\r\nusing QFramework;\r\n\r\nnamespace Survivor\r\n{\r\n\tpublic
-      partial class EnemyMiniBoss : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
+      partial class Player : ViewController\r\n\t{\r\n\t\tvoid Start()\r\n\t\t{\r\n\t\t\t//
       Code Here\r\n\t\t}\r\n\t}\r\n}\r\n"
-    DesignerCode: "// Generate Id:a57fceff-f6c2-48e8-93ad-d12f1abdee97\r\nusing UnityEngine;\r\n\r\nnamespace
-      Survivor\r\n{\r\n\tpublic partial class EnemyMiniBoss\r\n\t{\r\n\r\n\t\tpublic
-      SpriteRenderer Sprite;\r\n\r\n\t\tpublic UnityEngine.CircleCollider2D Collider;\r\n\r\n\t\tpublic
-      UnityEngine.Rigidbody2D selfRigidbody;\r\n\r\n\t}\r\n}\r\n"
+    DesignerCode: "// Generate Id:2076d5b3-390d-4a82-91fa-f679c5720d34\r\nusing UnityEngine;\r\n\r\nnamespace
+      Survivor\r\n{\r\n\tpublic partial class Player\r\n\t{\r\n\r\n\t\tpublic UnityEngine.SpriteRenderer
+      Sprite;\r\n\r\n\t\tpublic CircleCollider2D HurtBox;\r\n\r\n\t\tpublic UnityEngine.UI.Image
+      HpValue;\r\n\r\n\t\tpublic UnityEngine.Rigidbody2D selfRigidbody;\r\n\r\n\t}\r\n}\r\n"
