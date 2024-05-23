@@ -171,7 +171,7 @@ namespace Survivor
             });
         }
 
-        public AchievementItem Add(AchievementItem item)
+        private AchievementItem Add(AchievementItem item)
         {
             Items.Add(item);
             return item;

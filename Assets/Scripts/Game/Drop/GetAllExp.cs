@@ -6,10 +6,10 @@ namespace Survivor
 {
 	public partial class GetAllExp : GamePlayObject
 	{
+		protected override Collider2D collider => selfCollider;
+		
 		[Header("掉落物移动速度")]
 		[SerializeField] private float moveSpeed;
-
-		protected override Collider2D collider => selfCollider;
 		
 		private void OnTriggerEnter2D(Collider2D other)
 		{
