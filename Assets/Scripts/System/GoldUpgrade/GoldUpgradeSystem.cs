@@ -9,7 +9,7 @@ namespace Survivor
         
         public static EasyEvent OnGoldUpgradeSystemChanged = new EasyEvent();
         
-        public GoldUpgradeItem Add(GoldUpgradeItem goldUpgradeItem)
+        private GoldUpgradeItem Add(GoldUpgradeItem goldUpgradeItem)
         {
             Items.Add(goldUpgradeItem);
             return goldUpgradeItem;

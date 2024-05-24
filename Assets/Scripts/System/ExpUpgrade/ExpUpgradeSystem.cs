@@ -11,8 +11,6 @@ namespace Survivor
         public List<ExpUpgradeItem> Items { get; } = new List<ExpUpgradeItem>();
         public static bool AllUnlockedFinish = false;
 
-        public static EasyEvent OnExpUpgradeSystemChanged = new EasyEvent();
-
         // 记录配套的能力组合
         public Dictionary<string, string> PairedKeys = new Dictionary<string, string>()
         {
@@ -42,7 +40,7 @@ namespace Survivor
         // 记录每个key对应的item
         public Dictionary<string, ExpUpgradeItem> keyToItems = new Dictionary<string, ExpUpgradeItem>();
         
-        public void Add(ExpUpgradeItem expUpgradeItem)
+        private void Add(ExpUpgradeItem expUpgradeItem)
         {
             Items.Add(expUpgradeItem);
             keyToItems.Add(expUpgradeItem.Key, expUpgradeItem);

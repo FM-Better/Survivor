@@ -52,12 +52,6 @@ namespace Survivor
             mOnUnlocked = onUnlocked;
             return this;
         }
-        
-        public AchievementItem OnUpdate(Action<AchievementItem> onUnlocked)
-        {
-            mOnUnlocked = onUnlocked;
-            return this;
-        }
 
         public AchievementItem Load(SaveSystem saveSystem)
         {
